@@ -153,8 +153,148 @@
       "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-file-post.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.UploadNewDocuments",
+    "implementationId" : "cmis-uploadnewdocuments-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-uploadnewdocuments",
+    "definitionVersion" : "1.0.0",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-uploadnewdocuments.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.ListDocuments",
+    "implementationId" : "cmis-listdocuments-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-listdocuments",
+    "definitionVersion" : "1.0.0",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-listdocuments.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.DownloadDocument",
+    "implementationId" : "cmis-downloaddocument-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-downloaddocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-downloaddocument.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.DeleteDocument",
+    "implementationId" : "cmis-deletedocument-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-deletedocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-deletedocument.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.UploadNewDocument",
+    "implementationId" : "cmis-uploadnewdocument-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-uploadnewdocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-uploadnewdocument.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.CreateFolder",
+    "implementationId" : "cmis-createfolder-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-createfolder",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-createfolder.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.UploadNewVersionOfDocument",
+    "implementationId" : "cmis-uploadnewversionofdocument-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-uploadnewversionofdocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-uploadnewversionofdocument.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.DeleteVersionOfDocument",
+    "implementationId" : "cmis-deleteversionofdocument-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-deleteversionofdocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-deleteversionofdocument.impl"
+  }, {
+    "type" : "CONNECTOR",
+    "className" : "org.bonitasoft.connectors.cmis.DeleteFolder",
+    "implementationId" : "cmis-deletefolder-impl",
+    "implementationVersion" : "3.0.5",
+    "definitionId" : "cmis-deletefolder",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-deletefolder.impl"
   } ],
-  "filterImplementations" : [ ],
+  "filterImplementations" : [ {
+    "type" : "ACTOR_FILTER",
+    "className" : "org.bonitasoft.actorfilter.initiator.manager.ProcessInitiatorManagerUserFilter",
+    "implementationId" : "bonita-actorfilter-initiator-manager-impl",
+    "implementationVersion" : "1.0.0",
+    "definitionId" : "bonita-actorfilter-initiator-manager",
+    "definitionVersion" : "1.0",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.actorfilter",
+      "artifactId" : "bonita-actorfilter-initiator-manager",
+      "version" : "1.0.0",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator-manager\\1.0.0\\bonita-actorfilter-initiator-manager-1.0.0.jar"
+    },
+    "jarEntry" : "bonita-actorfilter-initiator-manager.impl"
+  } ],
   "connectorDefinitions" : [ {
     "definitionId" : "email",
     "definitionVersion" : "1.2.0",
@@ -265,8 +405,108 @@
       "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-file-post.def"
+  }, {
+    "definitionId" : "cmis-uploadnewversionofdocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-uploadnewversionofdocument.def"
+  }, {
+    "definitionId" : "cmis-uploadnewdocuments",
+    "definitionVersion" : "1.0.0",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-uploadnewdocuments.def"
+  }, {
+    "definitionId" : "cmis-deletefolder",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-deletefolder.def"
+  }, {
+    "definitionId" : "cmis-deleteversionofdocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-deleteversionofdocument.def"
+  }, {
+    "definitionId" : "cmis-listdocuments",
+    "definitionVersion" : "1.0.0",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-listdocuments.def"
+  }, {
+    "definitionId" : "cmis-uploadnewdocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-uploadnewdocument.def"
+  }, {
+    "definitionId" : "cmis-deletedocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-deletedocument.def"
+  }, {
+    "definitionId" : "cmis-createfolder",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-createfolder.def"
+  }, {
+    "definitionId" : "cmis-downloaddocument",
+    "definitionVersion" : "2.0.1",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.connectors",
+      "artifactId" : "bonita-connector-cmis",
+      "version" : "3.0.5",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+    },
+    "jarEntry" : "cmis-downloaddocument.def"
   } ],
-  "filterDefinitions" : [ ],
+  "filterDefinitions" : [ {
+    "definitionId" : "bonita-actorfilter-initiator-manager",
+    "definitionVersion" : "1.0",
+    "artifact" : {
+      "groupId" : "org.bonitasoft.actorfilter",
+      "artifactId" : "bonita-actorfilter-initiator-manager",
+      "version" : "1.0.0",
+      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator-manager\\1.0.0\\bonita-actorfilter-initiator-manager-1.0.0.jar"
+    },
+    "jarEntry" : "bonita-actorfilter-initiator-manager.def"
+  } ],
   "restApiExtensions" : [ ],
   "pages" : [ ],
   "forms" : [ ],
