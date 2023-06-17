@@ -547,43 +547,15 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_CM1nEvteEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_CM1nEfteEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_CM1nE_teEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_YkBaIQCxEe6sb6sijDVsJQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_YkBaIgCxEe6sb6sijDVsJQ" name="docSolicitudPertinencia" content="docSolicitudPertinencia" type="DOCUMENT_REF_TYPE">
-              <referencedElements xmi:type="process:Document" xmi:id="_YkBaIwCxEe6sb6sijDVsJQ" name="docSolicitudPertinencia"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_YkBaJACxEe6sb6sijDVsJQ" name="docSolicitudPertinenciaDocumentInput" content="docSolicitudPertinenciaDocumentInput" type="TYPE_CONTRACT_INPUT" returnType="org.bonitasoft.engine.bpm.contract.FileInputValue">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_YkBaJQCxEe6sb6sijDVsJQ" name="docSolicitudPertinenciaDocumentInput" type="FILE"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_YkBaJgCxEe6sb6sijDVsJQ" type="DOCUMENT_CREATE_UPDATE"/>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_cOV6UQCyEe6sb6sijDVsJQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_cOV6UgCyEe6sb6sijDVsJQ" name="adjuntarTIC" content="adjuntarTIC" type="TYPE_VARIABLE" returnType="com.company.model.AdjuntarTIC">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cOV6UwCyEe6sb6sijDVsJQ" name="adjuntarTIC" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.company.model.AdjuntarTIC"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_cOV6VACyEe6sb6sijDVsJQ" name="adjuntarTICInput.tituloTIC" content="adjuntarTICInput?.tituloTIC" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_cOV6VQCyEe6sb6sijDVsJQ" name="adjuntarTICInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_cOV6VgCyEe6sb6sijDVsJQ" type="JAVA_METHOD" expression="setTituloTIC">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_CM1nFPteEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_CM1nFfteEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_CM1nFvteEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_CM1nGPteEe2jXvmcOqjeoQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_CM1nF_teEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_EymIavteEe2jXvmcOqjeoQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_lJt54ACyEe6sb6sijDVsJQ" name="solicitarPerinenciaForm" content="662158c0-06ab-4f3a-b821-f932cea9a428" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_qtHUwA1aEe6PZ5B22YyoKw" name="newForm" content="c3460afd-b21f-4dcc-9eab-86673a7c2d62" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_EymIafteEe2jXvmcOqjeoQ">
-            <inputs xmi:type="process:ContractInput" xmi:id="_YkBaIACxEe6sb6sijDVsJQ" name="docSolicitudPertinenciaDocumentInput" type="FILE" dataReference="docSolicitudPertinencia"/>
-            <inputs xmi:type="process:ContractInput" xmi:id="_cOVTQACyEe6sb6sijDVsJQ" name="adjuntarTICInput" type="COMPLEX" dataReference="adjuntarTIC" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_cOVTQQCyEe6sb6sijDVsJQ" name="tituloTIC" createMode="false"/>
-            </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_cOV6UACyEe6sb6sijDVsJQ" expression="adjuntarTICInput?.tituloTIC != null" errorMessage="tituloTIC is mandatory for AdjuntarTIC" name="mandatory_adjuntarTICInput_tituloTIC">
-              <inputNames>adjuntarTICInput</inputNames>
-            </constraints>
-          </contract>
+          <contract xmi:type="process:Contract" xmi:id="_EymIafteEe2jXvmcOqjeoQ"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_EymIbPteEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_Maft4PteEe2jXvmcOqjeoQ" name="Validar informe de pertinencia" outgoing="_mx6ygADNEe6HV9kvsjmhKg" incoming="_teNbUAmUEe6trv2l625ITA" overrideActorsOfTheLane="false">
@@ -1130,6 +1102,11 @@
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_3ECyYAPcEe68HpEeYcxuGA" name="asignarDirector" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.company.model.Director">
         <defaultValue xmi:type="expression:Expression" xmi:id="_3ECyYQPcEe68HpEeYcxuGA" name="" content="" interpreter="GROOVY"/>
+      </data>
+      <data xmi:type="process:JavaObjectData" xmi:id="_mA6sYA1PEe6PZ5B22YyoKw" documentation="Es la lista que mostrará a los docentes agregados" name="listaDocentes" dataType="_uX_rIvtaEe2jXvmcOqjeoQ" className="java.util.List">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_mA6sYQ1PEe6PZ5B22YyoKw" name="init_listaDocentes()" content="import org.bonitasoft.engine.api.IdentityAPI&#xD;&#xA;import org.bonitasoft.engine.session.APISession&#xD;&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Obtiene una instancia de IdentityAPI utilizando APIAccessor&#xD;&#xA;IdentityAPI identityAPI = apiAccessor.getIdentityAPI()&#xD;&#xA;&#xD;&#xA;// Obtiene la lista de usuarios asociados al rol&#xD;&#xA;def rol = identityAPI.getRoleByName(&quot;DocenteEspecialista&quot;)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;List&lt;Long> docentes = identityAPI.getActiveUsersInRole(rol.id, 0, Integer.MAX_VALUE, UserCriterion.FIRST_NAME_ASC)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return docentes&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_yATrAA1ZEe6PZ5B22YyoKw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_uX_rBPtaEe2jXvmcOqjeoQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_bsBCsP_pEe2RMNFfE4AEhQ" name="inicioForm" content="37513a38-8e4c-4737-97d1-78bc4daf4309" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
