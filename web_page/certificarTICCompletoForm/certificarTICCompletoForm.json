@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "newForm",
-  "name" : "newForm",
-  "lastUpdate" : 1687125646543,
+  "id" : "certificarTICCompletoForm",
+  "name" : "certificarTICCompletoForm",
+  "lastUpdate" : 1687119363916,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "45353a8d-6b01-4c73-96f5-9ef363a0eb1d",
+        "reference" : "f0dada6c-9ab5-4bb0-a72d-c1bee5abc10f",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "543d1025-6618-4d7a-a0ba-bbe72e5eb3ef",
+              "reference" : "e1a2fb2f-e003-4d91-b633-d0673e03f251",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "13b0b9ca-4321-41f4-8b70-57007cb6c3a2",
+              "reference" : "437b4275-f81f-47e4-bbb9-888be3927a9d",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "8da93a62-1e19-44ff-9dab-d1a2b3d5a0dc",
+        "reference" : "3fab9ca7-5834-47a7-9233-a84ba1f16899",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,10 +123,80 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "d04f9e31-5362-40a9-b345-860b5bc743d4",
+          "reference" : "50bde9ca-e0a0-4db2-be87-26b0cdc28e05",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "66724a85-e1e0-4323-b7e5-fc1d41766751",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "Process document"
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "document" : {
+                          "type" : "variable",
+                          "value" : "context.docAvancesTIC_ref"
+                        },
+                        "showPreview" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "82882102-a3bd-41fe-b6ef-1a9d6d496f1c",
+                      "hasValidationError" : false,
+                      "id" : "pbFileViewer"
+                    }
+                  ]
+                ]
+              }
+            ],
             [
               {
                 "type" : "component",
@@ -151,7 +221,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Solicitar Pertinencia Docente"
+                    "value" : "Tic Completo"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -162,7 +232,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "eafd309e-3f19-4a54-a849-f8682ddea8f3",
+                "reference" : "77dc39d8-b5bd-4da7-9f7a-ee45c059c9fa",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -194,7 +264,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a9fc6c91-4fc4-4db7-a930-77e6a1a7ea09",
+                "reference" : "602e247f-b714-4f99-881e-b5c779bbf48b",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -216,32 +286,17 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
+                        "disabled" : {
                           "type" : "constant",
                           "value" : false
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Email"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
+                          "value" : "Completo"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -249,16 +304,16 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "solicitarPertinenciaDocente.email"
+                          "value" : "ticCompleto.completo"
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         }
                       },
-                      "reference" : "c86984ad-01a8-4b1b-a1f3-b6f05005de21",
+                      "reference" : "6895c17d-a443-486b-9ad9-23c30439590f",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbCheckbox",
                       "description" : ""
                     }
                   ]
@@ -336,7 +391,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "9fed7cae-f900-4400-a729-808fbad10d0a",
+                "reference" : "1dcd412a-04f3-4150-8ee6-7e8ef1932037",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -388,7 +443,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "af91344f-98a0-471c-8e9b-7a695bec5a79",
+                "reference" : "704fd29d-e683-4b3d-bda2-cf0418e9c4b5",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -401,14 +456,14 @@
   ],
   "assets" : [
     {
-      "id" : "b489b250-aa6e-4580-aa84-af6f333a590f",
+      "id" : "3e0291b0-6982-4ec3-b7f4-a4182cff3bd0",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "db2acfec-a933-4e87-89c4-4c59ace7967e",
+      "id" : "34061e62-d0d7-4719-b894-44827b428c66",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -442,14 +497,21 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.solicitarPertinenciaDocente ){",
+        "if( $data.ticCompleto ){",
         "\treturn {",
-        "\t\t//map solicitarPertinenciaDocente variable to expected task contract input",
-        "\t\tsolicitarPertinenciaDocenteInput: {",
-        "\t\t\temail: $data.solicitarPertinenciaDocente.email !== undefined ? $data.solicitarPertinenciaDocente.email : null",
+        "\t\t//map ticCompleto variable to expected task contract input",
+        "\t\tticCompletoInput: {",
+        "\t\t\tcompleto: $data.ticCompleto.completo !== undefined ? $data.ticCompleto.completo : null",
         "\t\t}",
         "\t}",
         "}"
+      ],
+      "exposed" : false
+    },
+    "ticCompleto" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.ticCompleto_ref.link}}"
       ],
       "exposed" : false
     },
@@ -466,17 +528,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "solicitarPertinenciaDocente" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.solicitarPertinenciaDocente_ref.link}}"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "d7cdd9ad-6da3-44b4-a1d4-3b513d927715",
+  "uuid" : "b6597af5-a8c6-4679-9074-95cea7e49258",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

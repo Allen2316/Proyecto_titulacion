@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "newForm",
-  "name" : "newForm",
-  "lastUpdate" : 1687125646543,
+  "id" : "solicitudPertinenciaForm22",
+  "name" : "solicitudPertinenciaForm22",
+  "lastUpdate" : 1687123980333,
   "rows" : [
     [
       {
@@ -10,8 +10,21 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
-        "reference" : "45353a8d-6b01-4c73-96f5-9ef363a0eb1d",
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "f6541a20-4b4b-40de-8569-91419405ff47",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +63,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "543d1025-6618-4d7a-a0ba-bbe72e5eb3ef",
+              "reference" : "53c1e7ba-a28e-424e-ad9e-83c9c1c422c6",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +111,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "13b0b9ca-4321-41f4-8b70-57007cb6c3a2",
+              "reference" : "91200f1a-7309-47f2-b521-f671325dba73",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -113,8 +126,17 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
-        "reference" : "8da93a62-1e19-44ff-9dab-d1a2b3d5a0dc",
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "6aa70041-ce79-4e6c-a074-97f75d3b1375",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,49 +145,78 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "d04f9e31-5362-40a9-b345-860b5bc743d4",
+          "reference" : "56e1cadf-cefe-4a03-ab83-7baac39fbf27",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
             [
               {
-                "type" : "component",
+                "type" : "container",
                 "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
                   "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 4"
-                  },
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "Solicitar Pertinencia Docente"
-                  },
-                  "alignment" : {
+                  "hidden" : {
                     "type" : "constant",
-                    "value" : "left"
+                    "value" : false
                   },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
                   }
                 },
-                "reference" : "eafd309e-3f19-4a54-a849-f8682ddea8f3",
+                "reference" : "2f1fe546-1819-4793-8603-288604902695",
                 "hasValidationError" : false,
-                "id" : "pbTitle",
-                "description" : ""
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "Process document"
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "document" : {
+                          "type" : "variable",
+                          "value" : "context.docSolicitudTIC_ref"
+                        },
+                        "showPreview" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "45bb6840-4cf7-4d1b-96b1-bd557698e779",
+                      "hasValidationError" : false,
+                      "id" : "pbFileViewer"
+                    }
+                  ]
+                ]
               }
             ],
             [
@@ -194,7 +245,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a9fc6c91-4fc4-4db7-a930-77e6a1a7ea09",
+                "reference" : "b8319572-0b83-4fcf-b4ee-2a521d192c8a",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -208,58 +259,114 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : ""
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
+                        "disabled" : {
                           "type" : "constant",
-                          "value" : "top"
+                          "value" : false
                         },
-                        "cssClasses" : {
+                        "required" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : true
                         },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
+                        "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Email"
+                          "value" : "Designar docente como Director"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
                         },
                         "placeholder" : {
-                          "type" : "constant"
+                          "type" : "interpolation",
+                          "value" : "Selecionar docente"
                         },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
+                        "availableValues" : {
+                          "type" : "expression",
+                          "value" : "obtenerLista"
                         },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
+                        "displayedKey" : {
+                          "type" : "expression",
+                          "value" : "\"fullName\""
+                        },
+                        "returnedKey" : {
+                          "type" : "expression",
+                          "value" : "\"email\""
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "solicitarPertinenciaDocente.email"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
+                          "value" : "docenteEmail.email"
                         }
                       },
-                      "reference" : "c86984ad-01a8-4b1b-a1f3-b6f05005de21",
+                      "reference" : "7c5c0e15-df86-4f24-81bb-43f36b72e979",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
+                      "id" : "pbSelect"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{obtenerLista}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "25ea703e-5e9c-4b5d-bfc2-67151fd5d4b0",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
                     }
                   ]
                 ]
@@ -292,7 +399,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Enviar"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -334,9 +441,32 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
-                "reference" : "9fed7cae-f900-4400-a729-808fbad10d0a",
+                "reference" : "f4338ae4-ecc8-4283-8b56-94d3342c3392",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -388,7 +518,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "af91344f-98a0-471c-8e9b-7a695bec5a79",
+                "reference" : "9a47ae8e-e55f-46ff-9181-9fffb240aac0",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -401,16 +531,16 @@
   ],
   "assets" : [
     {
-      "id" : "b489b250-aa6e-4580-aa84-af6f333a590f",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "842285ed-6d18-4e29-8aab-dab58ec0b307",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "db2acfec-a933-4e87-89c4-4c59ace7967e",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "a656080b-c03b-45b8-9d73-a39668d71d56",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -442,11 +572,11 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.solicitarPertinenciaDocente ){",
+        "if( $data.docenteEmail ){",
         "\treturn {",
-        "\t\t//map solicitarPertinenciaDocente variable to expected task contract input",
-        "\t\tsolicitarPertinenciaDocenteInput: {",
-        "\t\t\temail: $data.solicitarPertinenciaDocente.email !== undefined ? $data.solicitarPertinenciaDocente.email : null",
+        "\t\t//map docenteEmail variable to expected task contract input",
+        "\t\tdocenteEmailInput: {",
+        "\t\t\temail: $data.docenteEmail.email !== undefined ? $data.docenteEmail.email : null",
         "\t\t}",
         "\t}",
         "}"
@@ -460,6 +590,13 @@
       ],
       "exposed" : false
     },
+    "docenteEmail" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.docenteEmail_ref.link}}"
+      ],
+      "exposed" : false
+    },
     "taskId" : {
       "type" : "urlparameter",
       "value" : [
@@ -467,16 +604,64 @@
       ],
       "exposed" : false
     },
-    "solicitarPertinenciaDocente" : {
+    "obtenerLista" : {
+      "type" : "expression",
+      "value" : [
+        "let va = $data.listaDocentes.value",
+        "",
+        "",
+        "// Suponiendo que tienes la cadena de texto en la variable 'response'",
+        "var valueString = va;",
+        "",
+        "// Extraer los objetos UserImpl de la cadena de texto utilizando expresiones regulares",
+        "var regex = /UserImpl\\{.*?\\}/g;",
+        "var matches = valueString.match(regex);",
+        "",
+        "// Crear una lista de objetos JavaScript a partir de los matches",
+        "var listaDocentes = [];",
+        "matches.forEach(function(match) {",
+        "  var docente = {};",
+        "",
+        "  // Extraer los atributos del objeto UserImpl",
+        "  var id = match.match(/id=(\\d+)/)[1];",
+        "  var firstName = match.match(/firstName='(.*?)'/)[1];",
+        "  var lastName = match.match(/lastName='(.*?)'/)[1];",
+        "  var email = match.match(/email='(.*?)'/)[1];",
+        "",
+        "  // Asignar los atributos al objeto docente",
+        "  docente.id = id;",
+        "  docente.email = email;",
+        "  docente.fullName = firstName + \" \" + lastName + \" - \" + email;",
+        "  ",
+        "",
+        "  // Agregar el objeto docente a la lista",
+        "  listaDocentes.push(docente);",
+        "});",
+        "",
+        "listaDocentes.foreach( d =>{",
+        "    console.log(`Id ${d.id} Email ${d.email} Nombres ${d.fullName}`)",
+        "})",
+        "",
+        "",
+        "return listaDocentes;"
+      ],
+      "exposed" : false
+    },
+    "listaDocentes" : {
       "type" : "url",
       "value" : [
-        "../{{context.solicitarPertinenciaDocente_ref.link}}"
+        "../API/bpm/caseVariable/{{task.caseId}}/listaDocentes"
       ],
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "d7cdd9ad-6da3-44b4-a1d4-3b513d927715",
+  "uuid" : "d57abe77-501b-4d5b-94d0-5b0d6570f5df",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

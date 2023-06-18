@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "newForm",
-  "name" : "newForm",
-  "lastUpdate" : 1687125646543,
+  "id" : "asignarPorcentajeForm",
+  "name" : "asignarPorcentajeForm",
+  "lastUpdate" : 1687119275554,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "45353a8d-6b01-4c73-96f5-9ef363a0eb1d",
+        "reference" : "56da2d03-a6f4-4373-a2c6-109a3a7e7df4",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "543d1025-6618-4d7a-a0ba-bbe72e5eb3ef",
+              "reference" : "1895dcda-b78a-42d7-b1d0-961d5e62720f",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "13b0b9ca-4321-41f4-8b70-57007cb6c3a2",
+              "reference" : "30f0886e-9ec7-468f-a0b6-4108014aeb41",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "8da93a62-1e19-44ff-9dab-d1a2b3d5a0dc",
+        "reference" : "9904a8bf-430c-4898-9a09-00037f5a2a83",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,10 +123,80 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "d04f9e31-5362-40a9-b345-860b5bc743d4",
+          "reference" : "b0125d05-0e9e-48c1-8446-62eab617cb72",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "2df586fd-db83-4b58-8a55-c347b4b8a323",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "Process document"
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "document" : {
+                          "type" : "variable",
+                          "value" : "context.docAvancesTIC_ref"
+                        },
+                        "showPreview" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "238eb07b-bd33-4d8f-a168-be5f80fbda31",
+                      "hasValidationError" : false,
+                      "id" : "pbFileViewer"
+                    }
+                  ]
+                ]
+              }
+            ],
             [
               {
                 "type" : "component",
@@ -137,132 +207,76 @@
                   "lg" : 12
                 },
                 "propertyValues" : {
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "level" : {
+                  "labelPosition" : {
                     "type" : "constant",
-                    "value" : "Level 4"
+                    "value" : "top"
                   },
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "text" : {
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 1
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
                     "type" : "interpolation",
-                    "value" : "Solicitar Pertinencia Docente"
+                    "value" : "Porcentaje"
                   },
-                  "alignment" : {
+                  "placeholder" : {
+                    "type" : "constant"
+                  },
+                  "type" : {
                     "type" : "constant",
-                    "value" : "left"
+                    "value" : "text"
                   },
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  }
-                },
-                "reference" : "eafd309e-3f19-4a54-a849-f8682ddea8f3",
-                "hasValidationError" : false,
-                "id" : "pbTitle",
-                "description" : ""
-              }
-            ],
-            [
-              {
-                "type" : "container",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable"
                   },
-                  "hidden" : {
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "formInput.porcentaje"
+                  },
+                  "required" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : true
                   },
-                  "cssClasses" : {
+                  "minLength" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "dimension" : {
+                  "maxLength" : {
                     "type" : "constant",
-                    "value" : 12
+                    "value" : ""
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
                   }
                 },
-                "reference" : "a9fc6c91-4fc4-4db7-a930-77e6a1a7ea09",
+                "reference" : "54123ae4-9b29-47f1-9948-ba246998ff24",
                 "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Email"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "solicitarPertinenciaDocente.email"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "c86984ad-01a8-4b1b-a1f3-b6f05005de21",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ]
-                ]
+                "id" : "pbInput",
+                "description" : ""
               }
             ],
             [
@@ -336,7 +350,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "9fed7cae-f900-4400-a729-808fbad10d0a",
+                "reference" : "06670da1-2e78-4abd-8472-89a081e71a18",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -388,7 +402,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "af91344f-98a0-471c-8e9b-7a695bec5a79",
+                "reference" : "803226dd-5532-49aa-aa75-f9a6cdcdd59d",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -401,16 +415,16 @@
   ],
   "assets" : [
     {
-      "id" : "b489b250-aa6e-4580-aa84-af6f333a590f",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "aa6b7458-cb93-418a-98c6-aded6bd3e3f3",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "db2acfec-a933-4e87-89c4-4c59ace7967e",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "0f25252a-e724-4c58-940e-9b3139b1249c",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -421,6 +435,15 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"porcentaje\" : \"\"\r",
+        "}"
       ],
       "exposed" : false
     },
@@ -442,13 +465,8 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.solicitarPertinenciaDocente ){",
-        "\treturn {",
-        "\t\t//map solicitarPertinenciaDocente variable to expected task contract input",
-        "\t\tsolicitarPertinenciaDocenteInput: {",
-        "\t\t\temail: $data.solicitarPertinenciaDocente.email !== undefined ? $data.solicitarPertinenciaDocente.email : null",
-        "\t\t}",
-        "\t}",
+        "return {",
+        "\tporcentaje: $data.formInput.porcentaje",
         "}"
       ],
       "exposed" : false
@@ -466,17 +484,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "solicitarPertinenciaDocente" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.solicitarPertinenciaDocente_ref.link}}"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "d7cdd9ad-6da3-44b4-a1d4-3b513d927715",
+  "uuid" : "8e65bd84-8267-4622-9aab-602e4189c09b",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

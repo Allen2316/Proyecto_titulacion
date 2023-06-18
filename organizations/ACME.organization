@@ -742,7 +742,7 @@
     </membership>
     <membership>
       <userName>anthony.nichols</userName>
-      <roleName>member</roleName>
+      <roleName>DocenteEspecialista</roleName>
       <groupName>north_america</groupName>
       <groupParentPath>/acme/sales</groupParentPath>
     </membership>

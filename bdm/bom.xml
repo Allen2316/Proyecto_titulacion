@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
     <businessObjects>
+        <businessObject qualifiedName="com.company.ejecucion.TicCompleto">
+            <fields>
+                <field type="BOOLEAN" length="255" name="completo" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.AdjuntarTIC">
             <fields>
                 <field type="LONG" length="255" name="solicitanteId" nullable="false" collection="false"/>
@@ -14,6 +22,14 @@
         <businessObject qualifiedName="com.company.model.Director">
             <fields>
                 <field type="BOOLEAN" length="255" name="valido" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Docente">
+            <fields>
+                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

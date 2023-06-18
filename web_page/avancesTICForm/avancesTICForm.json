@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "newForm",
-  "name" : "newForm",
-  "lastUpdate" : 1687125646543,
+  "id" : "avancesTICForm",
+  "name" : "avancesTICForm",
+  "lastUpdate" : 1687119214835,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "45353a8d-6b01-4c73-96f5-9ef363a0eb1d",
+        "reference" : "66a822d2-c28c-4531-84af-c48cce404ab9",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "543d1025-6618-4d7a-a0ba-bbe72e5eb3ef",
+              "reference" : "ce6023bd-a1c2-4ee8-aa3b-ea757509bd46",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "13b0b9ca-4321-41f4-8b70-57007cb6c3a2",
+              "reference" : "eda857e6-47b8-4d8f-a0e5-a57c3aa82531",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "8da93a62-1e19-44ff-9dab-d1a2b3d5a0dc",
+        "reference" : "bbc088e3-8a14-47ef-ada0-fd9f4ce6152e",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,51 +123,10 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "d04f9e31-5362-40a9-b345-860b5bc743d4",
+          "reference" : "6803d5e6-1090-4dc1-9326-f6dd49b7b87b",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 4"
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "Solicitar Pertinencia Docente"
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "eafd309e-3f19-4a54-a849-f8682ddea8f3",
-                "hasValidationError" : false,
-                "id" : "pbTitle",
-                "description" : ""
-              }
-            ],
             [
               {
                 "type" : "container",
@@ -194,7 +153,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a9fc6c91-4fc4-4db7-a930-77e6a1a7ea09",
+                "reference" : "9c6d1206-ff5e-483f-a7a5-cc69730b558d",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -226,22 +185,15 @@
                         },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
+                          "value" : 4
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Email"
+                          "value" : "Documento avances TIC"
                         },
                         "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "Browse to upload a new file..."
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -249,16 +201,24 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "solicitarPertinenciaDocente.email"
+                          "value" : "formInput.docAvancesTICDocumentInput"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : "../API/formFileUpload"
+                        },
+                        "errorContent" : {
+                          "type" : "variable",
+                          "value" : ""
                         }
                       },
-                      "reference" : "c86984ad-01a8-4b1b-a1f3-b6f05005de21",
+                      "reference" : "a15bdd46-2abc-49f3-bf56-fb31f49f41f0",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbUpload",
                       "description" : ""
                     }
                   ]
@@ -336,7 +296,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "9fed7cae-f900-4400-a729-808fbad10d0a",
+                "reference" : "2cc7d942-4994-4089-85e1-e64199513bab",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -388,7 +348,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "af91344f-98a0-471c-8e9b-7a695bec5a79",
+                "reference" : "60362309-d5af-42a4-a349-4b89ff0174d1",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -401,16 +361,16 @@
   ],
   "assets" : [
     {
-      "id" : "b489b250-aa6e-4580-aa84-af6f333a590f",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "8359ccc7-490e-41fa-abf4-c12a25dc1099",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "db2acfec-a933-4e87-89c4-4c59ace7967e",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "0db7f6af-fd71-4fcd-aaea-a83913ea4e99",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -421,6 +381,15 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"docAvancesTICDocumentInput\" : null\r",
+        "}"
       ],
       "exposed" : false
     },
@@ -442,13 +411,8 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.solicitarPertinenciaDocente ){",
-        "\treturn {",
-        "\t\t//map solicitarPertinenciaDocente variable to expected task contract input",
-        "\t\tsolicitarPertinenciaDocenteInput: {",
-        "\t\t\temail: $data.solicitarPertinenciaDocente.email !== undefined ? $data.solicitarPertinenciaDocente.email : null",
-        "\t\t}",
-        "\t}",
+        "return {",
+        "\tdocAvancesTICDocumentInput: $data.formInput.docAvancesTICDocumentInput",
         "}"
       ],
       "exposed" : false
@@ -466,17 +430,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "solicitarPertinenciaDocente" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.solicitarPertinenciaDocente_ref.link}}"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "d7cdd9ad-6da3-44b4-a1d4-3b513d927715",
+  "uuid" : "c3c4872d-42aa-48d2-9671-f9463b03c02a",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
