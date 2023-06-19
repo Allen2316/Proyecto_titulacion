@@ -135,6 +135,16 @@
       <artifactId>bonita-connector-cmis</artifactId>
       <version>3.0.5</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.xmlbeans</groupId>
+      <artifactId>xmlbeans</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bonitasoft.actorfilter</groupId>
+      <artifactId>bonita-actorfilter-single-user</artifactId>
+      <version>1.0.0</version>
+    </dependency>
   </dependencies>
   <build>
     <pluginManagement>

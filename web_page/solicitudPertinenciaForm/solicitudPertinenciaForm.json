@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "solicitudPertinenciaForm",
   "name" : "solicitudPertinenciaForm",
-  "lastUpdate" : 1687124184644,
+  "lastUpdate" : 1687140523844,
   "rows" : [
     [
       {
@@ -324,16 +324,68 @@
                         },
                         "returnedKey" : {
                           "type" : "expression",
-                          "value" : "\"email\""
+                          "value" : "\"userName\""
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "solicitarPertinenciaDocente.email"
+                          "value" : "formOutput.solicitarPertinenciaDocenteInput.email"
                         }
                       },
                       "reference" : "965719a6-1777-4f96-9a6b-5d3fac3d6a1c",
                       "hasValidationError" : false,
                       "id" : "pbSelect"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{listaDocentes}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "1011f957-4462-4cec-9be7-5d09774f7d0e",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
                     }
                   ],
                   [
@@ -384,6 +436,58 @@
                         }
                       },
                       "reference" : "79579e17-20ff-4e57-91b8-4417e01ef0c3",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{listaDocentes.value}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "caef1d9f-6f5e-4e5f-a316-d3d6aea33aba",
                       "hasValidationError" : false,
                       "id" : "pbText"
                     }
@@ -460,6 +564,29 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "f331a4f5-e36f-4f64-b2b2-669b9b76ec79",
@@ -605,48 +732,48 @@
       "value" : [
         "../API/bpm/caseVariable/{{task.caseId}}/listaDocentes"
       ],
-      "advancedOptions" : { },
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
       "exposed" : false
     },
     "obtenerLista" : {
       "type" : "expression",
       "value" : [
-        "let va = $data.listaDocentes.value",
-        "",
-        "",
-        "// Suponiendo que tienes la cadena de texto en la variable 'response'",
-        "var valueString = va;",
-        "",
-        "// Extraer los objetos UserImpl de la cadena de texto utilizando expresiones regulares",
-        "var regex = /UserImpl\\{.*?\\}/g;",
-        "var matches = valueString.match(regex);",
-        "",
-        "// Crear una lista de objetos JavaScript a partir de los matches",
-        "var listaDocentes = [];",
-        "matches.forEach(function(match) {",
-        "  var docente = {};",
-        "",
-        "  // Extraer los atributos del objeto UserImpl",
-        "  var id = match.match(/id=(\\d+)/)[1];",
-        "  var firstName = match.match(/firstName='(.*?)'/)[1];",
-        "  var lastName = match.match(/lastName='(.*?)'/)[1];",
-        "  var email = match.match(/email='(.*?)'/)[1];",
-        "",
-        "  // Asignar los atributos al objeto docente",
-        "  docente.id = id;",
-        "  docente.email = email;",
-        "  docente.fullName = firstName + \" \" + lastName + \" - \" + email;",
-        "  ",
-        "",
-        "  // Agregar el objeto docente a la lista",
-        "  listaDocentes.push(docente);",
-        "});",
-        "",
-        "listaDocentes.foreach( d =>{",
-        "    console.log(`Id ${d.id} Email ${d.email} Nombres ${d.fullName}`)",
-        "})",
-        "",
-        "",
+        "let va = $data.listaDocentes.value\r",
+        "\r",
+        "\r",
+        "// Suponiendo que tienes la cadena de texto en la variable 'response'\r",
+        "var valueString = va;\r",
+        "\r",
+        "// Extraer los objetos UserImpl de la cadena de texto utilizando expresiones regulares\r",
+        "var regex = /UserImpl\\{.*?\\}/g;\r",
+        "var matches = valueString.match(regex);\r",
+        "\r",
+        "// Crear una lista de objetos JavaScript a partir de los matches\r",
+        "var listaDocentes = [];\r",
+        "matches.forEach(function(match) {\r",
+        "  var docente = {};\r",
+        "\r",
+        "  // Extraer los atributos del objeto UserImpl\r",
+        "  var id = match.match(/id=(\\d+)/)[1];\r",
+        "  var firstName = match.match(/firstName='(.*?)'/)[1];\r",
+        "  var lastName = match.match(/lastName='(.*?)'/)[1];\r",
+        "  var userName = match.match(/userName='(.*?)'/)[1];\r",
+        "\r",
+        "  // Asignar los atributos al objeto docente\r",
+        "  docente.id = id;\r",
+        "  docente.fullName = firstName + \" \" + lastName;\r",
+        "  docente.userName = userName;\r",
+        "\r",
+        "  // Agregar el objeto docente a la lista\r",
+        "  listaDocentes.push(docente);\r",
+        "});\r",
+        "\r",
+        "console.log(listaDocentes);\r",
+        "\r",
         "return listaDocentes;"
       ],
       "exposed" : false
