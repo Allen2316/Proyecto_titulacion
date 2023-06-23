@@ -1,2 +1,5 @@
 h2_database/
-/target/
+/h2_database
+target/
+node/
+node_modules/

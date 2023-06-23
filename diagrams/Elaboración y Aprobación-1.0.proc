@@ -1452,10 +1452,18 @@
             <fragments xmi:type="configuration:Fragment" xmi:id="_a6Ftpg4uEe6tht2q2fpWLw" key="document-templating-impl -- 2.2.1" value="xercesImpl-2.9.1.jar" type="CONNECTOR"/>
           </children>
         </processDependencies>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JUv9GEe2h95mZurfxjQ" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JUv9GEe2h95mZurfxjQ" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_WgR4MBGxEe6f-r96ypeNew" key="com/mpt/constantes/CertificateFields.groovy" value="com/mpt/constantes/CertificateFields.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_WgR4MRGxEe6f-r96ypeNew" key="com/mpt/constantes/MPTConstants.groovy" value="com/mpt/constantes/MPTConstants.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_WgR4MhGxEe6f-r96ypeNew" key="com/mpt/payloads/Payload.groovy" value="com/mpt/payloads/Payload.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JU_9GEe2h95mZurfxjQ" id="ACTOR_FILTER"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JVP9GEe2h95mZurfxjQ" id="OTHER"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JVf9GEe2h95mZurfxjQ" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JVf9GEe2h95mZurfxjQ" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_WgR4MxGxEe6f-r96ypeNew" key="com/mpt/constantes/CertificateFields.groovy" value="com/mpt/constantes/CertificateFields.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_WgR4NBGxEe6f-r96ypeNew" key="com/mpt/constantes/MPTConstants.groovy" value="com/mpt/constantes/MPTConstants.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_WgR4NRGxEe6f-r96ypeNew" key="com/mpt/payloads/Payload.groovy" value="com/mpt/payloads/Payload.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JVv9GEe2h95mZurfxjQ" id="OTHER"/>
         <parameters xmi:type="parameter:Parameter" xmi:id="_g81nsAP9Ee65tNxoSYhk4A" name="alfrescoUsername" value="admin" typeClassname="java.lang.String" description="Usuario de Alfresco"/>
         <parameters xmi:type="parameter:Parameter" xmi:id="_m71VsAP9Ee65tNxoSYhk4A" name="alfrescoPassword" value="" typeClassname="java.lang.String" description="Contraseña de repositorio de Alfresco "/>
