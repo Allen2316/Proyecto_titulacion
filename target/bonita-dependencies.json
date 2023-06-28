@@ -10,7 +10,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-email",
       "version" : "1.3.0",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-email\\1.3.0\\bonita-connector-email-1.3.0.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-email\\1.3.0\\bonita-connector-email-1.3.0.jar"
     },
     "jarEntry" : "email.impl"
   }, {
@@ -24,7 +24,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-groovy",
       "version" : "1.1.4",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-groovy\\1.1.4\\bonita-connector-groovy-1.1.4.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-groovy\\1.1.4\\bonita-connector-groovy-1.1.4.jar"
     },
     "jarEntry" : "scripting-groovy-script.impl"
   }, {
@@ -38,7 +38,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-document-converter",
       "version" : "2.2.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-document-converter\\2.2.1\\bonita-connector-document-converter-2.2.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-document-converter\\2.2.1\\bonita-connector-document-converter-2.2.1.jar"
     },
     "jarEntry" : "document-converter.impl"
   }, {
@@ -52,7 +52,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-document-templating",
       "version" : "2.2.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-document-templating\\2.2.1\\bonita-connector-document-templating-2.2.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-document-templating\\2.2.1\\bonita-connector-document-templating-2.2.1.jar"
     },
     "jarEntry" : "document-templating.impl"
   }, {
@@ -66,7 +66,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-post.impl"
   }, {
@@ -80,7 +80,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-file-put.impl"
   }, {
@@ -94,7 +94,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-put.impl"
   }, {
@@ -108,7 +108,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-get.impl"
   }, {
@@ -122,7 +122,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-delete.impl"
   }, {
@@ -136,7 +136,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-head.impl"
   }, {
@@ -150,7 +150,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-file-post.impl"
   }, {
@@ -164,7 +164,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-uploadnewdocuments.impl"
   }, {
@@ -178,7 +178,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-listdocuments.impl"
   }, {
@@ -192,7 +192,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-downloaddocument.impl"
   }, {
@@ -206,7 +206,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-deletedocument.impl"
   }, {
@@ -220,7 +220,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-uploadnewdocument.impl"
   }, {
@@ -234,7 +234,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-createfolder.impl"
   }, {
@@ -248,7 +248,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-uploadnewversionofdocument.impl"
   }, {
@@ -262,7 +262,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-deleteversionofdocument.impl"
   }, {
@@ -276,7 +276,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-deletefolder.impl"
   } ],
@@ -291,7 +291,7 @@
       "groupId" : "org.bonitasoft.actorfilter",
       "artifactId" : "bonita-actorfilter-initiator-manager",
       "version" : "1.0.0",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator-manager\\1.0.0\\bonita-actorfilter-initiator-manager-1.0.0.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator-manager\\1.0.0\\bonita-actorfilter-initiator-manager-1.0.0.jar"
     },
     "jarEntry" : "bonita-actorfilter-initiator-manager.impl"
   }, {
@@ -305,7 +305,7 @@
       "groupId" : "org.bonitasoft.actorfilter",
       "artifactId" : "bonita-actorfilter-single-user",
       "version" : "1.0.0",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-single-user\\1.0.0\\bonita-actorfilter-single-user-1.0.0.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-single-user\\1.0.0\\bonita-actorfilter-single-user-1.0.0.jar"
     },
     "jarEntry" : "bonita-actorfilter-single-user.impl"
   }, {
@@ -319,7 +319,7 @@
       "groupId" : "org.bonitasoft.actorfilter",
       "artifactId" : "bonita-actorfilter-initiator",
       "version" : "1.0.0",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator\\1.0.0\\bonita-actorfilter-initiator-1.0.0.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator\\1.0.0\\bonita-actorfilter-initiator-1.0.0.jar"
     },
     "jarEntry" : "bonita-actorfilter-initiator.impl"
   } ],
@@ -330,7 +330,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-email",
       "version" : "1.3.0",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-email\\1.3.0\\bonita-connector-email-1.3.0.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-email\\1.3.0\\bonita-connector-email-1.3.0.jar"
     },
     "jarEntry" : "email.def"
   }, {
@@ -340,7 +340,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-groovy",
       "version" : "1.1.4",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-groovy\\1.1.4\\bonita-connector-groovy-1.1.4.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-groovy\\1.1.4\\bonita-connector-groovy-1.1.4.jar"
     },
     "jarEntry" : "scripting-groovy-script.def"
   }, {
@@ -350,7 +350,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-document-converter",
       "version" : "2.2.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-document-converter\\2.2.1\\bonita-connector-document-converter-2.2.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-document-converter\\2.2.1\\bonita-connector-document-converter-2.2.1.jar"
     },
     "jarEntry" : "document-converter.def"
   }, {
@@ -360,7 +360,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-document-templating",
       "version" : "2.2.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-document-templating\\2.2.1\\bonita-connector-document-templating-2.2.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-document-templating\\2.2.1\\bonita-connector-document-templating-2.2.1.jar"
     },
     "jarEntry" : "document-templating.def"
   }, {
@@ -370,7 +370,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-file-put.def"
   }, {
@@ -380,7 +380,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-get.def"
   }, {
@@ -390,7 +390,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-head.def"
   }, {
@@ -400,7 +400,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-delete.def"
   }, {
@@ -410,7 +410,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-put.def"
   }, {
@@ -420,7 +420,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-post.def"
   }, {
@@ -430,7 +430,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-rest",
       "version" : "1.3.1",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-rest\\1.3.1\\bonita-connector-rest-1.3.1.jar"
     },
     "jarEntry" : "rest-file-post.def"
   }, {
@@ -440,7 +440,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-uploadnewversionofdocument.def"
   }, {
@@ -450,7 +450,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-uploadnewdocuments.def"
   }, {
@@ -460,7 +460,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-deletefolder.def"
   }, {
@@ -470,7 +470,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-deleteversionofdocument.def"
   }, {
@@ -480,7 +480,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-listdocuments.def"
   }, {
@@ -490,7 +490,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-uploadnewdocument.def"
   }, {
@@ -500,7 +500,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-deletedocument.def"
   }, {
@@ -510,7 +510,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-createfolder.def"
   }, {
@@ -520,7 +520,7 @@
       "groupId" : "org.bonitasoft.connectors",
       "artifactId" : "bonita-connector-cmis",
       "version" : "3.0.5",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\connectors\\bonita-connector-cmis\\3.0.5\\bonita-connector-cmis-3.0.5.jar"
     },
     "jarEntry" : "cmis-downloaddocument.def"
   } ],
@@ -531,7 +531,7 @@
       "groupId" : "org.bonitasoft.actorfilter",
       "artifactId" : "bonita-actorfilter-initiator-manager",
       "version" : "1.0.0",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator-manager\\1.0.0\\bonita-actorfilter-initiator-manager-1.0.0.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator-manager\\1.0.0\\bonita-actorfilter-initiator-manager-1.0.0.jar"
     },
     "jarEntry" : "bonita-actorfilter-initiator-manager.def"
   }, {
@@ -541,7 +541,7 @@
       "groupId" : "org.bonitasoft.actorfilter",
       "artifactId" : "bonita-actorfilter-single-user",
       "version" : "1.0.0",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-single-user\\1.0.0\\bonita-actorfilter-single-user-1.0.0.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-single-user\\1.0.0\\bonita-actorfilter-single-user-1.0.0.jar"
     },
     "jarEntry" : "bonita-actorfilter-single-user.def"
   }, {
@@ -551,7 +551,7 @@
       "groupId" : "org.bonitasoft.actorfilter",
       "artifactId" : "bonita-actorfilter-initiator",
       "version" : "1.0.0",
-      "file" : "C:\\Users\\Allen\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator\\1.0.0\\bonita-actorfilter-initiator-1.0.0.jar"
+      "file" : "C:\\Users\\USUARIO 2022\\.m2\\repository\\org\\bonitasoft\\actorfilter\\bonita-actorfilter-initiator\\1.0.0\\bonita-actorfilter-initiator-1.0.0.jar"
     },
     "jarEntry" : "bonita-actorfilter-initiator.def"
   } ],

@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "informePertinenciaForm",
   "name" : "informePertinenciaForm",
-  "lastUpdate" : 1685657595923,
+  "lastUpdate" : 1687965111752,
   "rows" : [
     [
       {
@@ -218,7 +218,7 @@
                         },
                         "document" : {
                           "type" : "variable",
-                          "value" : "context.docSolicitudPertinencia_ref"
+                          "value" : "context.pdfFirmado_ref"
                         },
                         "showPreview" : {
                           "type" : "constant",
