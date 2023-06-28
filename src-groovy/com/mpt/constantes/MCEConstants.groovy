@@ -1,14 +1,14 @@
-/**
- * 
- */
 package com.mpt.constantes
 
 /**
- * @author Allen
- *
+ * Constantes generales utilizadas por el backend del MCE y FirmaEC
+ * 
+ * @author ajcm
+ * @version 1.0
  */
-class MPTConstants {
-static final String BASE_DOCUMENT_NAME= "certificado"
+class MCEConstants {
+
+	static final String BASE_DOCUMENT_NAME= "certificado"
 	static final String DOCX_EXTENSION = ".docx"
 	static final String PDF_EXTENSION = ".pdf"
 	static final String REPLACEMENT_PDF_EXTENSION = "-signed.pdf"

@@ -1,11 +1,10 @@
-/**
- * 
- */
 package com.mpt.constantes
 
 /**
- * @author Allen
- *
+ * Nombres de los campos de las plantillas de todos los certificados, actualmente son 38 campos en total
+ * 
+ * @author ajcm
+ * @version 1.0
  */
 class CertificateFields {
 

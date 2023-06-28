@@ -1,0 +1,1267 @@
+{
+  "modelVersion" : "2.2",
+  "id" : "firmarPDFForm",
+  "name" : "firmarPDFForm",
+  "lastUpdate" : 1687906169551,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "508ebc70-9302-4f45-886d-eaf0b055967c",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "d96c28fe-b180-462a-8bec-04093e0c98f7",
+              "hasValidationError" : false,
+              "id" : "pbTitle",
+              "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "allowHtml" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "label" : {
+                  "type" : "interpolation"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayDescription }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "12a24b2a-cfd0-4231-b7c2-eb3db79327a9",
+              "hasValidationError" : false,
+              "id" : "pbText",
+              "description" : ""
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "tabsContainer",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "vertical" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "tabs"
+          }
+        },
+        "reference" : "f3a74473-1e3e-48c7-8316-11cf4c001623",
+        "hasValidationError" : false,
+        "id" : "pbTabsContainer",
+        "tabList" : [
+          {
+            "type" : "tabContainer",
+            "dimension" : {
+              "xs" : 12,
+              "sm" : 12,
+              "md" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "title" : {
+                "type" : "interpolation",
+                "value" : "1. Firmar Documento"
+              },
+              "active" : {
+                "type" : "variable",
+                "value" : ""
+              }
+            },
+            "reference" : "771137cf-e753-433a-98f9-3e1f159c968b",
+            "hasValidationError" : false,
+            "id" : "pbTabContainer",
+            "container" : {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : { },
+              "reference" : "d443168f-648e-4e54-9d33-63a4c7efcdd6",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "dimension" : {
+                        "type" : "constant",
+                        "value" : 12
+                      }
+                    },
+                    "reference" : "cf9078f7-0314-4242-98f6-0b0c581b90a2",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Default label"
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "<br>Al firmar el documento y obtener un resultado de exito en FirmaEC siga la siguiente pestaña<br>"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "center"
+                            }
+                          },
+                          "reference" : "c2537b09-8d64-4937-92ac-17351bf8a832",
+                          "hasValidationError" : false,
+                          "id" : "pbText"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Firmar Solicitud"
+                            },
+                            "targetUrl" : {
+                              "type" : "expression",
+                              "value" : "urlParaIniciarFirmaEC"
+                            },
+                            "target" : {
+                              "type" : "constant"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "center"
+                            },
+                            "buttonStyle" : {
+                              "type" : "constant",
+                              "value" : "primary"
+                            },
+                            "displayIcon" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "iconClass" : {
+                              "type" : "interpolation",
+                              "value" : "edit"
+                            },
+                            "customStyle" : {
+                              "type" : "interpolation",
+                              "value" : "{ }"
+                            },
+                            "tooltipText" : {
+                              "type" : "interpolation",
+                              "value" : "Presione para Firmar el documento"
+                            }
+                          },
+                          "reference" : "ee21d7a3-0832-4036-ac21-073613fcb30b",
+                          "hasValidationError" : false,
+                          "id" : "customWidgetLinkFirma"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "type" : "tabContainer",
+            "dimension" : {
+              "xs" : 12,
+              "sm" : 12,
+              "md" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "title" : {
+                "type" : "interpolation",
+                "value" : "2. Enviar Documento"
+              },
+              "active" : {
+                "type" : "variable",
+                "value" : ""
+              }
+            },
+            "reference" : "29eafdfc-3e1e-48b2-95c2-7dd778e86b47",
+            "hasValidationError" : false,
+            "id" : "pbTabContainer",
+            "container" : {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : { },
+              "reference" : "c3bcda27-acca-46bc-9996-b1ce4ed27e92",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Process document"
+                      },
+                      "url" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "document" : {
+                        "type" : "variable",
+                        "value" : "context.pdfFirmado_ref"
+                      },
+                      "showPreview" : {
+                        "type" : "constant",
+                        "value" : true
+                      }
+                    },
+                    "reference" : "4272a0f3-6ac9-4f20-881e-5ee467f7f670",
+                    "hasValidationError" : false,
+                    "id" : "pbFileViewer"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<br>Recuerde primeramente haber firmado el documento para poder enviarlo<br>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      }
+                    },
+                    "reference" : "381854fa-a002-4d72-b5f8-f4a3e3a1b2b4",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Enviar documento"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      },
+                      "url" : {
+                        "type" : "interpolation",
+                        "value" : "{{urlDirPDFAVerificar}}"
+                      },
+                      "responseStatusCode" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "dataToSend" : {
+                        "type" : "constant"
+                      },
+                      "dataFromSuccess" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation"
+                      },
+                      "action" : {
+                        "type" : "constant",
+                        "value" : "GET"
+                      },
+                      "dataFromError" : {
+                        "type" : "variable",
+                        "value" : "firmarData.respuestaFallida"
+                      },
+                      "mensajeParaElModal" : {
+                        "type" : "variable",
+                        "value" : "firmarData.mensaje.infoModal"
+                      }
+                    },
+                    "reference" : "06a6b93d-9f03-4e3d-b3b4-867c3b2a81b9",
+                    "hasValidationError" : false,
+                    "id" : "customButtonPdf"
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "e7605753-02c5-4888-82b7-917ee24e8883",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "b506e217-87e0-4953-a5c5-6f4721f39dd8",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "allowHtml" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "!formOutput._submitError.message"
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "alert alert-danger col-lg-6 col-lg-offset-3"
+                  },
+                  "label" : {
+                    "type" : "interpolation"
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "<strong>Debug message</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "6c06bc8f-fee7-446d-9a73-1c7dcb7c99f6",
+                "hasValidationError" : false,
+                "id" : "pbText",
+                "description" : ""
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "type" : "modalContainer",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : "modalEstaPdfFirmado"
+          },
+          "size" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "animation" : {
+            "type" : "constant",
+            "value" : true
+          }
+        },
+        "reference" : "5cfc17f2-39f7-4f11-be2b-4939c86d6ea6",
+        "hasValidationError" : false,
+        "id" : "pbModalContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "e0ac32d4-3431-44aa-a327-87c9c194800a",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "¿Desea continuar con el proceso?"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 4"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  }
+                },
+                "reference" : "df3c5ac9-1a8d-41dc-99db-fe01e703377c",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "<span class=\"glyphicon glyphicon-ok\"></span> Continuar"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Submit task"
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataToSend" : {
+                    "type" : "expression",
+                    "value" : "firmarCtrl.getFirmarPayload(urlExternaDelDocFirmado)"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "dataFromError" : {
+                    "type" : "variable",
+                    "value" : "firmarData.respuestaFallida"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
+                    "type" : "constant"
+                  },
+                  "removeItem" : {
+                    "type" : "variable"
+                  }
+                },
+                "reference" : "097f6b8d-dcf6-44f5-9dd7-4b53f22e25b8",
+                "hasValidationError" : false,
+                "id" : "pbButton"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Cancelar"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "danger"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Close modal"
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataToSend" : {
+                    "type" : "constant"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "dataFromError" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
+                    "type" : "constant"
+                  },
+                  "removeItem" : {
+                    "type" : "variable"
+                  }
+                },
+                "reference" : "f9c0ecfb-1925-40b0-a334-adbcc339937f",
+                "hasValidationError" : false,
+                "id" : "pbButton"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "ab7081ff-4359-45bc-81a9-1fbe2680fe2b",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "e420338e-07ec-4fbb-9431-565d189b1399",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "task" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    },
+    "constants" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "  URL_MANUAL_ESTUDIANTE: \"https://computacion.unl.edu.ec/firmaec/static/Manual_de_usuario_(Estudiante).pdf\",",
+        "  CONTEXT_RECEIVE_DOCUMENT: '/recepcion/receiveDocument/checkSignedFileExists?location=',",
+        "  // Ruta de los documentos firmados para Desarrollo y Producción",
+        "  RUTA_ABSOLUTA_DOCUMENTOS: '/opt/wildfly-static/',",
+        "  SYSTEM_NAME: 'mce',",
+        "  FIRMAEC_PROTOCOL: 'firmaec://',",
+        "  PARAM_CERTIFICATE_TYPE: '&tipo_certificado=',",
+        "  PARAM_POSITION_ON_PAGE_LOWER_LEFT_X: '&llx=',",
+        "  PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y: '&lly=',",
+        "  PARAM_TYPE_STAMPING: '&estampado=',",
+        "  PARAM_URL: '&url=',",
+        "  PARAM_REASON: \"&razon=\",",
+        "  API_CONTEXT_FIRMAEC: '/api',",
+        "  // 2: archivo",
+        "  VALUE_CERTIFICATE_TYPE_FILE: '2',",
+        "  VALUE_TYPE_STAMPING_QR: 'QR',",
+        "  BONITA_PORTAL_CONTEXT: \"/bonita/portal/\",",
+        "  CONTENT_TYPE_APPLICATION_PDF: \"application/pdf\",",
+        "  PDF_EXTENSION: \".pdf\",",
+        "  REPLACEMENT_PDF_EXTENSION: \"-signed.pdf\",",
+        "  PARAM_ID_URL_SERVER_FIRMAEC: 14,",
+        "  PARAM_ID_URL_SERVER_FIRMAEC_PRE: 15",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "documentoPDFCorrespondiente" : {
+      "type" : "expression",
+      "value" : [
+        "/**",
+        " * Retorna el documento pdf generado",
+        " * ",
+        " * @return {document} ",
+        " */",
+        "if ($data.context) {",
+        "    return $data.context.docSolicitudPertinencia_ref     ",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "firmarCtrl" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "    /**",
+        "     * ",
+        "     * @param {Boolean} Valor booleano",
+        "     * @return {String} texto",
+        "     */ ",
+        "    changeBoolToString(valorBooleano) {",
+        "        if (valorBooleano === true) {",
+        "            return \"Si\"",
+        "        } else if (valorBooleano === false) {",
+        "            return \"No\"",
+        "        }",
+        "    },",
+        "    ",
+        "    /**",
+        "     * Recibe la url externa del documento firmado y la retorna dentro del contrato a enviar.",
+        "     * ",
+        "     * @param {string} Ruta absoluta del documento firmado.",
+        "     * @return {json} Contrato con la ruta absoluta del documento firmado y el varlor de contratoReobtenerToken siempre será false.",
+        "     */",
+        "    getFirmarPayload: function (urlExternaDelDocFirmado) {",
+        "        console.log(\"aqui se va a retornar todo y la URL es \", urlExternaDelDocFirmado);",
+        "        return {",
+        "            contratoUrlPdfFirmado: urlExternaDelDocFirmado,",
+        "            contratoPdfSolFirmadaEx: null,",
+        "            contratoReobtenerToken: false,",
+        "            contratoFirmaElectronicamente: true",
+        "        }",
+        "    },",
+        "    ",
+        "   /**",
+        "     * Permmite reobtener el token de firma digital enviando true en el contrato.",
+        "     * ",
+        "     * @return {json} Contrato con la ruta nulo y el varlor de contratoReobtenerToken siempre será true.",
+        "     */",
+        "    getReobtenerTokenPayload: function () {",
+        "        return {",
+        "            contratoUrlPdfFirmado: null,",
+        "            contratoReobtenerToken: true,",
+        "            contratoPdfSolFirmadaEx: null,",
+        "            contratoFirmaElectronicamente: true",
+        "        }",
+        "    },",
+        "    ",
+        "   /**",
+        "     * Recibe el documento firmado externamente y la retorna dentro del contrato a enviar.",
+        "     * ",
+        "     * @param {string} Documento firmado.",
+        "     * @return {json} Contrato con el documento firmado y el varlor de contratoReobtenerToken siempre será false.",
+        "     */",
+        "    getFirmarExPayload: function (docFirmado) {",
+        "        return {",
+        "            contratoUrlPdfFirmado: null,",
+        "            contratoPdfSolFirmadaEx: docFirmado,",
+        "            contratoReobtenerToken: false,",
+        "            contratoFirmaElectronicamente: false",
+        "        }",
+        "    },",
+        "    ",
+        "   /**",
+        "     * Retorna la url del pdf generado (solicitud)",
+        "     * ",
+        "     * @return {String} url",
+        "     */",
+        "    urlSolPDFGenerado: function () {",
+        "        if ($data.context) {",
+        "            return $data.constants.BONITA_PORTAL_CONTEXT + $data.context.pdfGenerado_ref.url",
+        "        }",
+        "    },",
+        "",
+        "    /**",
+        "     * - Esta expresión devuelve true si se cumple una de las siguientes condiciones:",
+        "     * - Si no se ha seleccionado ningun archivo (objeto JSON vacío: {}). Lo hacemos porque no queremos ",
+        "     * mostrar un mensaje de advertencia (alert) si el usuario no ha seleccionado ningún archivo.",
+        "     * - Si el archivo seleccionado y subido (la subida se activa inmediatamente después de la selección del archivo)",
+        "     * es un archivo PDF",
+        "     * ",
+        "     * @return {Boolean}",
+        "     */ ",
+        "    esUnArchivoValido: function () {",
+        "        if ($data.firmarData.contratoPdfSolFirmadaEx) {",
+        "           return angular.equals(null, $data.firmarData.contratoPdfSolFirmadaEx)",
+        "            || $data.firmarData.contratoPdfSolFirmadaEx.contentType == $data.constants.CONTENT_TYPE_APPLICATION_PDF",
+        "        }",
+        "        return true",
+        "    },",
+        "    ",
+        "   /**",
+        "     * @return {Boolean}",
+        "     */ ",
+        "    exceedTheMaximumFileSize: function () {",
+        "        if ($data.firmarData.contratoPdfSolFirmadaEx) {",
+        "        ",
+        "        }",
+        "        return true",
+        "    },",
+        "    ",
+        "    /**",
+        "     * Obtiene el futuro nombre del pdf que va a ser firmado posteriormente,",
+        "     * es decir, dicho pdf aun no ha sido firmado y por eso se le agrega al",
+        "     * nombre de dicho documento la terminacion -signed.pdf",
+        "     * ",
+        "     * @param {String}",
+        "     * @return {String}",
+        "     */",
+        "    getFuturoNombreDelPDF: function(nombreActualDelPDF) {",
+        "      const futuroNombreDelPDF = nombreActualDelPDF.replace($data.constants.PDF_EXTENSION, $data.constants.REPLACEMENT_PDF_EXTENSION);",
+        "      return futuroNombreDelPDF;",
+        "    },",
+        "    ",
+        "    /**",
+        "     * Se espera un valor similar al siguiente: $data.constants.PARAM_ID_URL_SERVER_FIRMAEC",
+        "     */ ",
+        "    getUrlServerFirmaEc: function(paramId) {",
+        "        if ($data.paramsListByCertainIds) {",
+        "            var searchObject = $data.paramsListByCertainIds.find((param) => param.id == paramId);",
+        "            if (searchObject) {",
+        "                console.log(\"Url server firmaEC: \", searchObject.valor);",
+        "                return searchObject.valor",
+        "            }",
+        "        }",
+        "    },",
+        "    ",
+        "    /**",
+        "     * Valores de la respuesta cuando la llamada falla.",
+        "     * ",
+        "     * @param {string} Valores de la respuesta fallida.",
+        "     * @return {string}",
+        "     */ ",
+        "    submit_errors_list: function (respuestaFallida) {",
+        "        if (respuestaFallida && respuestaFallida.explanations) {",
+        "            const liElements = respuestaFallida.explanations",
+        "                .filter((cause) => cause !== null)",
+        "                .map((cause) => '<li>' + cause + '</li>')",
+        "                .join('')",
+        "            if (liElements) {",
+        "                return '<ul>' + liElements + '</ul>'",
+        "            }",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "firmarData" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "    contratoPdfSolFirmadaEx: null,",
+        "    contratoFirmaElectronicamente: null,",
+        "    mensaje: {",
+        "        aviso: \"En caso de optar por la <b>OPCIÓN DE FIRMA 1</b> debe tener instalado FirmaEC (versión <b>3.0</b> o superior) en su computador. Si no lo tiene instalado descárguelo <a href='https://www.firmadigital.gob.ec/descargar-firmaec/' target='_blank'><span class='label label-primary'>AQUÍ</span></a> e instálelo.\",",
+        "        infoModal: \"\",",
+        "        archivoValido: \"<h6><span class='glyphicon glyphicon-exclamation-sign'></span> Sólo se aceptan archivos PDF en este campo</h6>\",",
+        "        maxFileSize: \"<h6><span class='glyphicon glyphicon-exclamation-sign'></span> Sólo se aceptan archivos PDF de máximo 1MB</h6>\",",
+        "        formatoDeDocumento: \"<h6><span class='glyphicon glyphicon-exclamation-sign'></span> Cargar archivo en formato PDF</h6>\",",
+        "    },",
+        "    respuestaFallida: undefined,",
+        "    respuestaFallidaEnviar: undefined,",
+        "    respuestFallidaEx: undefined,",
+        "    errorCargaArchivo: undefined",
+        "};",
+        " "
+      ],
+      "exposed" : false
+    },
+    "paramsListByCertainIds" : {
+      "type" : "url",
+      "value" : [
+        "../API/bdm/businessData/com.unl.model.BOParametros?q=findByCertainIds&p=0&c=20&f=idsList={{constants.PARAM_ID_URL_SERVER_FIRMAEC}},{{constants.PARAM_ID_URL_SERVER_FIRMAEC_PRE}}"
+      ],
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
+      "exposed" : false
+    },
+    "rutaExternaDelDocFirmado" : {
+      "type" : "expression",
+      "value" : [
+        "/**",
+        " * Esta ruta parcial es generada para el futuro pdf que va a ser firmado posteriormente.",
+        " * ",
+        " * @return {string}",
+        " */",
+        "if (typeof $data.documentoPDFCorrespondiente !== 'undefined') {",
+        "    var nuevoNombreDePdf = $data.firmarCtrl.getFuturoNombreDelPDF($data.documentoPDFCorrespondiente.fileName);",
+        "    ",
+        "    // retorna una ruta completa del nuevo pdf, similar a esta: /opt/wildfly-static/certificado-signed.pdf",
+        "    return $data.constants.RUTA_ABSOLUTA_DOCUMENTOS + nuevoNombreDePdf;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "urlDirPDFAVerificar" : {
+      "type" : "expression",
+      "value" : [
+        "/**",
+        " * Retorna la url del servidor anexado a la ruta del pdf adecuada",
+        " * según sea el ambiente de Producción o Pre-preoducción.",
+        " * ",
+        " * @return {string}",
+        " */",
+        "",
+        "    if ($data.paramsListByCertainIds) {",
+        "        ",
+        "        var urlDocAVerificar = ''",
+        "        ",
+        "            urlDocAVerificar = $data.firmarCtrl.getUrlServerFirmaEc($data.constants.PARAM_ID_URL_SERVER_FIRMAEC) +",
+        "                $data.constants.CONTEXT_RECEIVE_DOCUMENT + $data.rutaExternaDelDocFirmado",
+        "        ",
+        "        console.log('---> urlDocAVerificar: ', urlDocAVerificar)",
+        "        //Ejemplo url retornada:  http://host:port/recepcion/receiveDocument/checkSignedFileExists?location=/opt/wildfly-static/cert-signed.pdf",
+        "        return urlDocAVerificar",
+        "    }"
+      ],
+      "exposed" : false
+    },
+    "urlExternaDelDocFirmado" : {
+      "type" : "expression",
+      "value" : [
+        "/**",
+        " * Esta URL es generada para el futuro pdf que va a ser firmado posteriomente.",
+        " * ",
+        " * @return {string} ",
+        " */",
+        "if (typeof $data.documentoPDFCorrespondiente !== 'undefined') {",
+        "    if ($data.paramsListByCertainIds) {",
+        "        var nuevoNombreDePDF = $data.firmarCtrl.getFuturoNombreDelPDF($data.documentoPDFCorrespondiente.fileName);",
+        "        ",
+        "        var urlCompletaDeNuevoPDF = ''",
+        "        ",
+        "        urlCompletaDeNuevoPDF = $data.firmarCtrl.getUrlServerFirmaEc($data.constants.PARAM_ID_URL_SERVER_FIRMAEC) + '/static/' + nuevoNombreDePDF;",
+        "      ",
+        "        ",
+        "        // Ejemplo de url retornada: http://localhost:7776/static/certificado-signed.pdf",
+        "        console.log(\"--->  urlExternaDelDocFirmado: \", urlCompletaDeNuevoPDF)",
+        "        return urlCompletaDeNuevoPDF",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "urlParaIniciarFirmaEC" : {
+      "type" : "expression",
+      "value" : [
+        "/**",
+        " * Función para generar el link que permite abrir la aplicación de FirmaEC",
+        " * instalada en el computador del responsable de firmar.",
+        " *",
+        " * @return {string}",
+        " */",
+        "if ($data.valorVpTokenAEnviar) {",
+        "  var miToken = $data.valorVpTokenAEnviar.value;",
+        "  var linkGenerado = \"\";",
+        "  ",
+        "  ",
+        "  ",
+        "  const urlApiProd = $data.constants.PARAM_URL +",
+        "      $data.firmarCtrl.getUrlServerFirmaEc($data.constants.PARAM_ID_URL_SERVER_FIRMAEC) +",
+        "      $data.constants.API_CONTEXT_FIRMAEC;",
+        "      ",
+        "    linkGenerado = $data.constants.FIRMAEC_PROTOCOL +",
+        "      $data.constants.SYSTEM_NAME +",
+        "      \"/firmar?token=\" + miToken +",
+        "      $data.constants.PARAM_CERTIFICATE_TYPE + $data.constants.VALUE_CERTIFICATE_TYPE_FILE +",
+        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '176' +",
+        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '156' +",
+        "      $data.constants.PARAM_TYPE_STAMPING + $data.constants.VALUE_TYPE_STAMPING_QR +",
+        "      urlApiProd;",
+        "   ",
+        "",
+        "  console.log(\"linkGenerado: \", linkGenerado);",
+        "  //Ejemplo link generado: firmaec://mce/firmar?token=XXXXXXXX&tipo_certificado=2&url=http://...&razon=...",
+        "  return linkGenerado;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "valorVpTokenAEnviar" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/vpTokenAEnviar"
+      ],
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "acfde532-7fdb-4cb1-a36e-9b6286d487e9",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}
