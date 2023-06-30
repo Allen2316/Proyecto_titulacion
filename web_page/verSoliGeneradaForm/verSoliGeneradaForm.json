@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "verSoliGeneradaForm",
   "name" : "verSoliGeneradaForm",
-  "lastUpdate" : 1687838589931,
+  "lastUpdate" : 1688099840101,
   "rows" : [
     [
       {
@@ -213,7 +213,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita"
+                    "value" : "/bonita/apps/userAppBonita/task-list"
                   },
                   "action" : {
                     "type" : "constant",
@@ -236,6 +236,29 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "c36f4004-f1f3-4d64-8ade-99d2f5d5b80b",

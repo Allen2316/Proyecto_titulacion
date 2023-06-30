@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "VerFirmadoForm",
   "name" : "VerFirmadoForm",
-  "lastUpdate" : 1687836582311,
+  "lastUpdate" : 1688099820400,
   "rows" : [
     [
       {
@@ -213,7 +213,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita"
+                    "value" : "/bonita/apps/userAppBonita/task-list"
                   },
                   "action" : {
                     "type" : "constant",
@@ -236,6 +236,29 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "e1e6029b-1708-4ac2-b57f-e01429362ef2",

@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1687906169551,
+  "lastUpdate" : 1688099804671,
   "rows" : [
     [
       {
@@ -763,7 +763,8 @@
                     "value" : "firmarData.respuestaFallida"
                   },
                   "targetUrlOnSuccess" : {
-                    "type" : "interpolation"
+                    "type" : "interpolation",
+                    "value" : "/bonita/apps/userAppBonita/task-list"
                   },
                   "collectionToModify" : {
                     "type" : "variable"
@@ -1234,8 +1235,8 @@
         "      $data.constants.SYSTEM_NAME +",
         "      \"/firmar?token=\" + miToken +",
         "      $data.constants.PARAM_CERTIFICATE_TYPE + $data.constants.VALUE_CERTIFICATE_TYPE_FILE +",
-        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '176' +",
-        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '156' +",
+        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
+        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '300' +",
         "      $data.constants.PARAM_TYPE_STAMPING + $data.constants.VALUE_TYPE_STAMPING_QR +",
         "      urlApiProd;",
         "   ",

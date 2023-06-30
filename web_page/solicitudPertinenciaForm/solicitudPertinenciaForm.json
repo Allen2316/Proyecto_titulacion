@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "solicitudPertinenciaForm",
   "name" : "solicitudPertinenciaForm",
-  "lastUpdate" : 1687140523844,
+  "lastUpdate" : 1688099831115,
   "rows" : [
     [
       {
@@ -541,7 +541,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita"
+                    "value" : "/bonita/apps/userAppBonita/task-list"
                   },
                   "action" : {
                     "type" : "constant",
