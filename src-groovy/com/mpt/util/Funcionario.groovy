@@ -49,6 +49,28 @@ class Funcionario {
 
 		return fullName.trim()
 	}
+	
+	/**
+	 * Obtiene los nombres completos del funcionario del grupo enviado como parámetro.
+	 *
+	 * @param userName
+	 * @param identityAPI
+	 * @return Nombres completos del funcionario
+	 */
+	static String getFullNameWithUserName(String userName, IdentityAPI identityAPI) {
+		
+			
+		String fullName = ""
+		try{			
+			User user = identityAPI.getUserByUserName(userName)			
+			fullName = user.getFirstName() + " " + user.getLastName()
+			
+		}catch(UserNotFoundException e){
+			logger.severe("Usuario no encontrado: " + e.getMessage())
+		}
+
+		return fullName
+	}
 
 	/**
 	 * Obtiene los nombres completos del funcionario utilizando el processInstanceId.

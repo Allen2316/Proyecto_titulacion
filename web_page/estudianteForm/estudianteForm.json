@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "estudianteForm",
   "name" : "estudianteForm",
-  "lastUpdate" : 1686604239895,
+  "lastUpdate" : 1688608242749,
   "rows" : [
     [
       {
@@ -214,7 +214,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "adjuntarTIC.tituloTIC"
+                          "value" : "formInput.adjuntarTICInput.tituloTIC"
                         },
                         "required" : {
                           "type" : "constant",
@@ -684,6 +684,9 @@
       "type" : "json",
       "value" : [
         "{\r",
+        "  \"adjuntarTICInput\" : {\r",
+        "    \"tituloTIC\" : \"\"\r",
+        "  },\r",
         "  \"docTICDocumentInput\" : null,\r",
         "  \"docSolicitudTICDocumentInput\" : null\r",
         "}"
@@ -710,12 +713,9 @@
       "value" : [
         "if( $data.adjuntarTIC ){",
         "\treturn {",
+        "\t    adjuntarTICInput: $data.formInput.adjuntarTICInput,",
         "\t\tdocTICDocumentInput: $data.formInput.docTICDocumentInput,",
-        "\t\tdocSolicitudTICDocumentInput: $data.formInput.docSolicitudTICDocumentInput,",
-        "\t\t//map adjuntarTIC variable to expected task contract input",
-        "\t\tadjuntarTICInput: {",
-        "\t\t\ttituloTIC: $data.adjuntarTIC.tituloTIC !== undefined ? $data.adjuntarTIC.tituloTIC : null",
-        "\t\t}",
+        "\t\tdocSolicitudTICDocumentInput: $data.formInput.docSolicitudTICDocumentInput",
         "\t}",
         "}"
       ],

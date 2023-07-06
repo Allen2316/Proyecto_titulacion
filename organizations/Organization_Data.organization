@@ -282,7 +282,7 @@
     </membership>
     <membership>
       <userName>daniela.pena@unl.edu.ec</userName>
-      <roleName>estudiante</roleName>
+      <roleName>docente_esp</roleName>
       <groupName>estudiante</groupName>
       <groupParentPath>/unl</groupParentPath>
       <assignedDate>0</assignedDate>
