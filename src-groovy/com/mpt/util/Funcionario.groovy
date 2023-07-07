@@ -10,11 +10,12 @@ import org.bonitasoft.engine.identity.User
 import org.bonitasoft.engine.identity.UserNotFoundException
 import org.bonitasoft.engine.identity.UserSearchDescriptor
 import org.bonitasoft.engine.search.SearchOptionsBuilder
+import com.mpt.constantes.MPTConstants
 
 /**
  * Permite obtener los nombres completos o nombre de usuario de un funcionario
  * 
- * @author alexjcm
+ * @author Allen
  * @version 1.0
  */
 class Funcionario {
@@ -62,14 +63,15 @@ class Funcionario {
 			
 		String fullName = ""
 		try{			
-			User user = identityAPI.getUserByUserName(userName)			
-			fullName = user.getFirstName() + " " + user.getLastName()
+			Long id = identityAPI.getUserByUserName(userName).getId()
+						
+			fullName = identityAPI.getUser(id).getFirstName() + " " + identityAPI.getUser(id).getLastName()
 			
 		}catch(UserNotFoundException e){
 			logger.severe("Usuario no encontrado: " + e.getMessage())
 		}
 
-		return fullName
+		return fullName.trim()
 	}
 
 	/**
@@ -93,6 +95,98 @@ class Funcionario {
 			logger.severe("Usuario no encontrado en la organización: " + e.getMessage())
 		}
 
-		return userName
+		return userName.trim()
 	}
+	
+	/**
+	 * Obtiene la cédula del funcionario de acuerdo al username solicitante
+	 *
+	 * @param groupName 
+	 * @param identityAPI 
+	 * @return String
+	 */
+	static String getCedulaDocent(String groupName, IdentityAPI identityAPI) {
+		if (!groupName) {
+			throw new Exception("Se debe enviar el nombre del grupo del funcionario")
+		}
+		
+		String cedula = ""
+		try {
+			def builderGoup = new SearchOptionsBuilder(0, 1)
+			builderGoup.filter(GroupSearchDescriptor.NAME, groupName)
+			Long groupId = identityAPI.searchGroups(builderGoup.done()).getResult().get(0).getId()
+
+			def builderUser = new SearchOptionsBuilder(0, 1);
+			builderUser.filter(UserSearchDescriptor.GROUP_ID, groupId);
+			User user = identityAPI.searchUsers(builderUser.done()).getResult().get(0)
+			
+			
+			cedula = identityAPI.getCustomUserInfo(user.getId(), 0, 1)
+			.find { MPTConstants.IDENTIFICATION_DOCUMENT_TYPE == it.getDefinition().getName() }
+			?.getValue();
+			
+			
+		} catch (SearchException e) {
+			logger.severe("Ha ocurrido una excepción durante la búsqueda del usuario en la organización: " + e.getMessage())
+		}
+
+		logger.info("=======================cedula================= : "+ cedula)
+		return cedula.trim()
+	}
+	
+	/**
+	 * Obtiene el ID del funcionario de acuerdo al nombre del grupo solicitante
+	 *
+	 * @param groupName
+	 * @param identityAPI
+	 * @return Long
+	 */
+	static Long getId(String groupName, IdentityAPI identityAPI) {
+		if (!groupName) {
+			throw new Exception("Se debe enviar el nombre del grupo del funcionario")
+		}
+		
+		Long userId = 0
+		//Long userId = ""
+		try {
+			def builderGoup = new SearchOptionsBuilder(0, 1)
+			builderGoup.filter(GroupSearchDescriptor.NAME, groupName)
+			Long groupId = identityAPI.searchGroups(builderGoup.done()).getResult().get(0).getId()
+
+			def builderUser = new SearchOptionsBuilder(0, 1);
+			builderUser.filter(UserSearchDescriptor.GROUP_ID, groupId);
+			User user = identityAPI.searchUsers(builderUser.done()).getResult().get(0)
+			
+			
+			userId = user.getId()
+			
+			
+		} catch (SearchException e) {
+			logger.severe("Ha ocurrido una excepción durante la búsqueda del usuario en la organización: " + e.getMessage())
+		}
+
+		return userId
+	}
+	
+	/**
+	 * Obtiene los nombres completos del funcionario del grupo enviado como parámetro.
+	 *
+	 * @param userName
+	 * @param identityAPI
+	 * @return Nombres completos del funcionario
+	 */
+	static Long getIdByUserName(String userName, IdentityAPI identityAPI) {
+		
+			
+		Long userId = 0
+		try{
+			userId = identityAPI.getUserByUserName(userName).getId()									
+			
+		}catch(UserNotFoundException e){
+			logger.severe("Usuario no encontrado: " + e.getMessage())
+		}
+
+		return userId
+	}
+
 }

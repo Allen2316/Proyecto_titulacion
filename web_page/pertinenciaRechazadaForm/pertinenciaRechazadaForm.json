@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "pertinenciaRechazadaForm",
   "name" : "pertinenciaRechazadaForm",
-  "lastUpdate" : 1685991393489,
+  "lastUpdate" : 1688712172160,
   "rows" : [
     [
       {
@@ -218,7 +218,7 @@
                         },
                         "document" : {
                           "type" : "variable",
-                          "value" : "context.docInformePertinencia_ref"
+                          "value" : "context.pdfFirmado_ref"
                         },
                         "showPreview" : {
                           "type" : "constant",

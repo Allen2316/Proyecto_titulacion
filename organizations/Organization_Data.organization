@@ -7,7 +7,7 @@
     </customUserInfoDefinition>
   </customUserInfoDefinitions>
   <users>
-    <user userName="luissar14@gmail.com">
+    <user userName="april.sa">
       <firstName>April</firstName>
       <lastName>Sanchez</lastName>
       <title>Sr</title>
@@ -31,11 +31,11 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>Cédula</name>
-          <value>1106078272</value>
+          <value>1106078270</value>
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
-    <user userName="pfordonez@unl.edu.ec">
+    <user userName="p.ord">
       <firstName>Pablo F</firstName>
       <lastName>Ordoñez</lastName>
       <title>Ing</title>
@@ -58,11 +58,11 @@
       </professionalData>
       <metaDatas/>
       <enabled>true</enabled>
-      <password encrypted="false">bpm1</password>
+      <password encrypted="false">bpm</password>
       <customUserInfoValues>
         <customUserInfoValue>
           <name>Cédula</name>
-          <value>1900463702</value>
+          <value>1106078270</value>
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
@@ -96,7 +96,7 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
-    <user userName="pruebas.tt.mce@gmail.com">
+    <user userName="elisa.or">
       <firstName>Elisa</firstName>
       <lastName>Orellana</lastName>
       <title>Lic</title>
@@ -119,7 +119,7 @@
       </professionalData>
       <metaDatas/>
       <enabled>true</enabled>
-      <password encrypted="false">bpm1</password>
+      <password encrypted="false">bpm</password>
       <customUserInfoValues>
         <customUserInfoValue>
           <name>Cédula</name>
@@ -127,7 +127,7 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
-    <user userName="luis.a.sarmiento@unl.edu.ec">
+    <user userName="luis.a">
       <firstName>Luis</firstName>
       <lastName>Sarmiento</lastName>
       <title>Sr</title>
@@ -174,7 +174,7 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>Cédula</name>
-          <value>1106078271</value>
+          <value>1106078270</value>
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
@@ -260,21 +260,21 @@
   </groups>
   <memberships>
     <membership>
-      <userName>luissar14@gmail.com</userName>
+      <userName>april.sa</userName>
       <roleName>docente_esp</roleName>
-      <groupName>estudiante</groupName>
+      <groupName>Docentes</groupName>
       <groupParentPath>/unl</groupParentPath>
       <assignedDate>0</assignedDate>
     </membership>
     <membership>
-      <userName>pruebas.tt.mce@gmail.com</userName>
+      <userName>elisa.or</userName>
       <roleName>secretaria</roleName>
       <groupName>secretaria</groupName>
       <groupParentPath>/unl/facultad/cis</groupParentPath>
       <assignedDate>0</assignedDate>
     </membership>
     <membership>
-      <userName>luis.a.sarmiento@unl.edu.ec</userName>
+      <userName>luis.a</userName>
       <roleName>estudiante</roleName>
       <groupName>estudiante</groupName>
       <groupParentPath>/unl</groupParentPath>
@@ -283,12 +283,12 @@
     <membership>
       <userName>daniela.pena@unl.edu.ec</userName>
       <roleName>docente_esp</roleName>
-      <groupName>estudiante</groupName>
+      <groupName>Docentes</groupName>
       <groupParentPath>/unl</groupParentPath>
       <assignedDate>0</assignedDate>
     </membership>
     <membership>
-      <userName>pfordonez@unl.edu.ec</userName>
+      <userName>p.ord</userName>
       <roleName>gestor</roleName>
       <groupName>coordinacion</groupName>
       <groupParentPath>/unl/facultad/cis</groupParentPath>

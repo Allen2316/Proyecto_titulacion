@@ -6,7 +6,7 @@ package com.mpt.constantes
  * @author ajcm
  * @version 1.0
  */
-class MCEConstants {
+class MPTConstants {
 
 	static final String BASE_DOCUMENT_NAME= "certificado"
 	static final String DOCX_EXTENSION = ".docx"
@@ -84,6 +84,7 @@ class MCEConstants {
 	 * Datos de Alfresco server para almacenamiento de certificados académicos firmados
 	 */
 	static final String ALFRESCO_REPOSITORY_NAME = "Main Repository"
+	static final String ALFRESCO_PARENT_FOLDER = "/bonita"
 	static final String ALFRESCO_PARENT_FOLDER_PATH_CERTIFICATES = "/CertificadosAcademicos"
 	static final String ALFRESCO_PARENT_FOLDER_PATH_CERTIFICATES_PRE = "/CertificadosAcademicosTEST"
 	/**

@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Logger
 
-import com.mpt.constantes.MCEConstants;
+import com.mpt.constantes.MPTConstants;
 
 /**
  * Formatea la fecha actual o la fecha enviada enviada como parámetro
@@ -23,7 +23,7 @@ class FormatearFecha {
 	 * @return Fecha formateada en formato String
 	 */
 	static String obtenerFechaActualFormateada() {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(MCEConstants.DATE_PATTERN, new Locale(MCEConstants.LANGUAGE_CODE, MCEConstants.COUNTRY_CODE));
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(MPTConstants.DATE_PATTERN, new Locale(MPTConstants.LANGUAGE_CODE, MPTConstants.COUNTRY_CODE));
 		return LocalDate.now().format(formatter);
 	}
 
@@ -34,7 +34,7 @@ class FormatearFecha {
 	 * @return Fecha formateada en formato String
 	 */
 	static String obtenerFechaActualFormateada(String pattern) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, new Locale(MCEConstants.LANGUAGE_CODE, MCEConstants.COUNTRY_CODE));
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, new Locale(MPTConstants.LANGUAGE_CODE, MPTConstants.COUNTRY_CODE));
 		return LocalDate.now().format(formatter);
 	}
 
@@ -58,7 +58,7 @@ class FormatearFecha {
 			throw new Exception("Se debe enviar una fecha")
 		}
 
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(MCEConstants.DATE_PATTERN, new Locale(MCEConstants.LANGUAGE_CODE, MCEConstants.COUNTRY_CODE));
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(MPTConstants.DATE_PATTERN, new Locale(MPTConstants.LANGUAGE_CODE, MPTConstants.COUNTRY_CODE));
 		return date.format(formatter);
 	}
 

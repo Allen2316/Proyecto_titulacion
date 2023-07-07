@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarPertinenciaForm",
   "name" : "validarPertinenciaForm",
-  "lastUpdate" : 1685991429297,
+  "lastUpdate" : 1688681359131,
   "rows" : [
     [
       {
@@ -227,7 +227,7 @@
                         },
                         "document" : {
                           "type" : "variable",
-                          "value" : "context.docInformePertinencia_ref"
+                          "value" : "context.pdfFirmado_ref"
                         },
                         "showPreview" : {
                           "type" : "constant",

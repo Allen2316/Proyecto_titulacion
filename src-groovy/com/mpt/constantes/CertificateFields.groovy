@@ -121,6 +121,15 @@ class CertificateFields {
 	static final String COORDINATION_GROUP_NAME = "coordinacion"
 	static final String DECAN_GROUP_NAME = "decanato"
 
+	static final String COMISION_GROUP_NAME = "Comision"
+	static final String DOCENTE_GROUP_NAME = "Docentes"
+	static final String UNL_GROUP_NAME = "unl"	
+	static final String FACULTAD_GROUP_NAME = "facultad"	
+	static final String CIS_GROUP_NAME = "cis"
+	static final String DIRECCION_GROUP_NAME = "Dirección de Carrera"	
+	static final String SSPM_GROUP_NAME = "SSPM"
+
+
 	static final String FIRST_EXTENSION = "primera prórroga"
 	static final String SECOND_EXTENSION = "segunda prórroga"
 

@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "VerFirmadoForm",
   "name" : "VerFirmadoForm",
-  "lastUpdate" : 1688099820400,
+  "lastUpdate" : 1688708229664,
   "rows" : [
     [
       {
@@ -194,7 +194,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Enviar documento"
                   },
                   "dataToSend" : {
                     "type" : "expression",

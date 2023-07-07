@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1688099804671,
+  "lastUpdate" : 1688711689105,
   "rows" : [
     [
       {
@@ -372,46 +372,6 @@
               "hasValidationError" : false,
               "id" : "pbContainer",
               "rows" : [
-                [
-                  {
-                    "type" : "component",
-                    "dimension" : {
-                      "xs" : 12,
-                      "sm" : 12,
-                      "md" : 12,
-                      "lg" : 12
-                    },
-                    "propertyValues" : {
-                      "cssClasses" : {
-                        "type" : "constant",
-                        "value" : ""
-                      },
-                      "hidden" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "type" : {
-                        "type" : "constant",
-                        "value" : "Process document"
-                      },
-                      "url" : {
-                        "type" : "constant",
-                        "value" : ""
-                      },
-                      "document" : {
-                        "type" : "variable",
-                        "value" : "context.pdfFirmado_ref"
-                      },
-                      "showPreview" : {
-                        "type" : "constant",
-                        "value" : true
-                      }
-                    },
-                    "reference" : "4272a0f3-6ac9-4f20-881e-5ee467f7f670",
-                    "hasValidationError" : false,
-                    "id" : "pbFileViewer"
-                  }
-                ],
                 [
                   {
                     "type" : "component",
@@ -945,8 +905,8 @@
         "  CONTENT_TYPE_APPLICATION_PDF: \"application/pdf\",",
         "  PDF_EXTENSION: \".pdf\",",
         "  REPLACEMENT_PDF_EXTENSION: \"-signed.pdf\",",
-        "  PARAM_ID_URL_SERVER_FIRMAEC: 14,",
-        "  PARAM_ID_URL_SERVER_FIRMAEC_PRE: 15",
+        "  PARAM_ID_URL_SERVER_FIRMAEC: \"https://computacion.unl.edu.ec/firmaec\",",
+        "  PARAM_ID_URL_SERVER_FIRMAEC_PRE: \"https://computacion.unl.edu.ec/firmaec\"",
         "};"
       ],
       "exposed" : false
@@ -960,7 +920,27 @@
         " * @return {document} ",
         " */",
         "if ($data.context) {",
-        "    return $data.context.docSolicitudPertinencia_ref     ",
+        "    ",
+        "    var entidad = $data.valorVpEntidadFirmar.value;",
+        "    let documento= \"\";",
+        "    ",
+        "    console.log(\"entidad \", entidad);",
+        "    ",
+        "    switch (entidad) {",
+        "        case \"coordinacion\":",
+        "            documento = $data.context.docSolicitudPertinencia_ref",
+        "            break;",
+        "        case \"Docentes\":",
+        "            documento = $data.context.docInformePertinencia_ref",
+        "            break;",
+        "        default:",
+        "            location.reload();",
+        "    }",
+        "    ",
+        "    console.log(\"Documento \", documento);",
+        "    ",
+        "    return documento;",
+        "         ",
         "}"
       ],
       "exposed" : false
@@ -1082,13 +1062,14 @@
         "     * Se espera un valor similar al siguiente: $data.constants.PARAM_ID_URL_SERVER_FIRMAEC",
         "     */ ",
         "    getUrlServerFirmaEc: function(paramId) {",
-        "        if ($data.paramsListByCertainIds) {",
+        "        /*if ($data.paramsListByCertainIds) {",
         "            var searchObject = $data.paramsListByCertainIds.find((param) => param.id == paramId);",
         "            if (searchObject) {",
         "                console.log(\"Url server firmaEC: \", searchObject.valor);",
         "                return searchObject.valor",
         "            }",
-        "        }",
+        "        }*/",
+        "        return paramId",
         "    },",
         "    ",
         "    /**",
@@ -1180,7 +1161,7 @@
         "            urlDocAVerificar = $data.firmarCtrl.getUrlServerFirmaEc($data.constants.PARAM_ID_URL_SERVER_FIRMAEC) +",
         "                $data.constants.CONTEXT_RECEIVE_DOCUMENT + $data.rutaExternaDelDocFirmado",
         "        ",
-        "        console.log('---> urlDocAVerificar: ', urlDocAVerificar)",
+        "        //console.log('---> urlDocAVerificar: ', urlDocAVerificar)",
         "        //Ejemplo url retornada:  http://host:port/recepcion/receiveDocument/checkSignedFileExists?location=/opt/wildfly-static/cert-signed.pdf",
         "        return urlDocAVerificar",
         "    }"
@@ -1205,7 +1186,7 @@
         "      ",
         "        ",
         "        // Ejemplo de url retornada: http://localhost:7776/static/certificado-signed.pdf",
-        "        console.log(\"--->  urlExternaDelDocFirmado: \", urlCompletaDeNuevoPDF)",
+        "        //console.log(\"--->  urlExternaDelDocFirmado: \", urlCompletaDeNuevoPDF)",
         "        return urlCompletaDeNuevoPDF",
         "    }",
         "}"
@@ -1236,12 +1217,12 @@
         "      \"/firmar?token=\" + miToken +",
         "      $data.constants.PARAM_CERTIFICATE_TYPE + $data.constants.VALUE_CERTIFICATE_TYPE_FILE +",
         "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
-        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '300' +",
+        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '330' +",
         "      $data.constants.PARAM_TYPE_STAMPING + $data.constants.VALUE_TYPE_STAMPING_QR +",
         "      urlApiProd;",
         "   ",
         "",
-        "  console.log(\"linkGenerado: \", linkGenerado);",
+        "  //console.log(\"linkGenerado: \", linkGenerado);",
         "  //Ejemplo link generado: firmaec://mce/firmar?token=XXXXXXXX&tipo_certificado=2&url=http://...&razon=...",
         "  return linkGenerado;",
         "}"
@@ -1258,6 +1239,14 @@
         "statusCode" : "",
         "failedResponseValue" : ""
       },
+      "exposed" : false
+    },
+    "valorVpEntidadFirmar" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/vpEntidadFirmar"
+      ],
+      "advancedOptions" : { },
       "exposed" : false
     }
   },

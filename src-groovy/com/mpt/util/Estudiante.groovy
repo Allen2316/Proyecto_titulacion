@@ -5,7 +5,7 @@ import java.util.logging.Logger
 import org.bonitasoft.engine.api.IdentityAPI
 import org.bonitasoft.engine.identity.UserNotFoundException
 
-import com.mpt.constantes.MCEConstants
+import com.mpt.constantes.MPTConstants
 
 /**
  * Obtiene ciertos datos de un estudiante
@@ -56,7 +56,7 @@ class Estudiante {
 		String cedulaEstudiante = ""
 		try{
 			cedulaEstudiante = identityAPI.getCustomUserInfo(idSolicitanteBonitaBPM, 0, 1)
-					.find { MCEConstants.IDENTIFICATION_DOCUMENT_TYPE == it.getDefinition().getName() }
+					.find { MPTConstants.IDENTIFICATION_DOCUMENT_TYPE == it.getDefinition().getName() }
 					?.getValue();
 		}catch(UserNotFoundException e){
 			logger.severe("Usuario no encontrado en la organización: " + e.getMessage())

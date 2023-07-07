@@ -8,14 +8,14 @@ import org.bonitasoft.engine.bpm.document.Document
 import org.bonitasoft.engine.identity.User
 
 import com.mpt.constantes.CertificateFields
-import com.mpt.constantes.MCEConstants
+import com.mpt.constantes.MPTConstants
 
 import groovy.json.JsonBuilder
 
 /**
  * Permite obtener y construir el payload a enviar al servicio web de firma digital.
  * 
- * @author alexjcm
+ * @author Allen
  * @version 1.0
  */
 class Payload {
@@ -51,7 +51,7 @@ class Payload {
 
 		long userId = possibleUser[0].getId()
 		String cedula = identityAPI.getCustomUserInfo(userId, 0, 1)
-				.find { MCEConstants.IDENTIFICATION_DOCUMENT_TYPE == it.getDefinition().getName() }
+				.find { MPTConstants.IDENTIFICATION_DOCUMENT_TYPE == it.getDefinition().getName() }
 				?.getValue()
 
 		if (cedula.isEmpty()) {
@@ -74,7 +74,7 @@ class Payload {
 		}
 
 		String cedulaEstudiante = identityAPI.getCustomUserInfo(idSolicitanteBonitaBPM, 0, 1)
-				.find { MCEConstants.IDENTIFICATION_DOCUMENT_TYPE == it.getDefinition().getName() }
+				.find { MPTConstants.IDENTIFICATION_DOCUMENT_TYPE == it.getDefinition().getName() }
 				?.getValue();
 
 		if (cedulaEstudiante.isEmpty()) {
@@ -119,7 +119,7 @@ class Payload {
 				// Si la secretaria va a firmar siempre se utiliza el pdfGenerado
 				futurePDFName = getFutureFilenamePDF(pdfGenerado.getContentFileName());
 				pdfEncoded = generarBase64(processAPI, pdfGenerado)
-				cedula = obtenerCedula(processAPI, identityAPI, processDefinitionId, MCEConstants.TASK_NAME_SIGN_CERTIFICATE_SECRETARY)
+				cedula = obtenerCedula(processAPI, identityAPI, processDefinitionId, MPTConstants.TASK_NAME_SIGN_CERTIFICATE_SECRETARY)
 			}
 
 			if (groupName.equals(CertificateFields.COORDINATION_GROUP_NAME)) {
@@ -131,18 +131,18 @@ class Payload {
 					pdfEncoded = generarBase64(processAPI, pdfFirmado)
 				}
 
-				cedula = obtenerCedula(processAPI, identityAPI, processDefinitionId, MCEConstants.TASK_NAME_SIGN_CERTIFICATE_GESTOR)
+				cedula = obtenerCedula(processAPI, identityAPI, processDefinitionId, MPTConstants.TASK_NAME_SIGN_CERTIFICATE_GESTOR)
 			}
 
 			if (groupName.equals(CertificateFields.DECAN_GROUP_NAME)) {
 				// El decano siempre recibe un pdfFirmado
 				futurePDFName = getFutureFilenamePDF(pdfFirmado.getContentFileName());
 				pdfEncoded = generarBase64(processAPI, pdfFirmado)
-				cedula = obtenerCedula(processAPI, identityAPI, processDefinitionId, MCEConstants.TASK_NAME_SIGN_CERTIFICATE_DEAN)
+				cedula = obtenerCedula(processAPI, identityAPI, processDefinitionId, MPTConstants.TASK_NAME_SIGN_CERTIFICATE_DEAN)
 			}
 
 			jsonBuilder(cedula: "${cedula}",
-			sistema: MCEConstants.SYSTEM_NAME,
+			sistema: MPTConstants.SYSTEM_NAME,
 			documentos: [[nombre: "${futurePDFName}", documento: "${pdfEncoded}"]])
 
 			return jsonBuilder.toString()
@@ -176,6 +176,6 @@ class Payload {
 	 * @return
 	 */
 	private static String getFutureFilenamePDF(String currentFilename) {
-		return currentFilename.replaceAll(MCEConstants.PDF_EXTENSION, MCEConstants.REPLACEMENT_PDF_EXTENSION)
+		return currentFilename.replaceAll(MPTConstants.PDF_EXTENSION, MPTConstants.REPLACEMENT_PDF_EXTENSION)
 	}
 }

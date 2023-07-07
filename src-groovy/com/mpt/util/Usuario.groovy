@@ -24,7 +24,7 @@ import org.bonitasoft.engine.search.impl.SearchResultImpl
 
 import org.bonitasoft.engine.profile.ProfileCriterion
 
-import com.mpt.constantes.MCEConstants
+import com.mpt.constantes.MPTConstants
 
 /**
  * Permite crear o actualizar usuarios
@@ -210,7 +210,7 @@ class Usuario {
 		userCreator.setProfessionalContactData(proContactDataCreator)
 
 		long definitionId = apiAccessor.identityAPI.getCustomUserInfoDefinitions(0, 1)
-				.find { it.name == MCEConstants.IDENTIFICATION_DOCUMENT_TYPE }?.id
+				.find { it.name == MPTConstants.IDENTIFICATION_DOCUMENT_TYPE }?.id
 
 		User user = null
 

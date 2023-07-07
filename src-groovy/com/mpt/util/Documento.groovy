@@ -9,7 +9,7 @@ import org.bonitasoft.engine.bpm.document.Document
 import org.bonitasoft.engine.bpm.document.DocumentValue
 
 import com.mpt.constantes.CertificateFields;
-import com.mpt.constantes.MCEConstants;
+import com.mpt.constantes.MPTConstants;
 import com.mpt.constantes.RequestFields
 import com.mpt.payloads.Payload
 import com.unl.model.ObjetoCertOtros
@@ -43,7 +43,7 @@ class Documento {
 		}
 
 		if (addCareerInitials) {
-			return processInstanceId + "-" + LocalDate.now().getYear() + "-" + MCEConstants.CAREER_INITIALS
+			return processInstanceId + "-" + LocalDate.now().getYear() + "-" + MPTConstants.CAREER_INITIALS
 		}
 
 		return processInstanceId + "-" + LocalDate.now().getYear()
@@ -105,11 +105,11 @@ class Documento {
 				certificateName = CertificateFields.FILENAME_CERT_MUST_NOT_APPROVE
 			}
 
-			certificateName = MCEConstants.BASE_DOCUMENT_NAME + certificateName
+			certificateName = MPTConstants.BASE_DOCUMENT_NAME + certificateName
 			documentCode = generarCertificateCode(processInstanceId, false)
 		}
 
-		return certificateName + auxIdentifiers + timeInMs + documentCode + MCEConstants.DOCX_EXTENSION;
+		return certificateName + auxIdentifiers + timeInMs + documentCode + MPTConstants.DOCX_EXTENSION;
 	}
 
 	/**
@@ -153,9 +153,9 @@ class Documento {
 
 		if (isRequest) {
 			if (esProduccion) {
-				urlDocumentTemplateAlfresco = MCEConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES + RequestFields.ALFRESCO_REQUEST_TEMPLATES_FOLDER
+				urlDocumentTemplateAlfresco = MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES + RequestFields.ALFRESCO_REQUEST_TEMPLATES_FOLDER
 			} else {
-				urlDocumentTemplateAlfresco = MCEConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES + RequestFields.ALFRESCO_REQUEST_TEMPLATES_FOLDER_PRE
+				urlDocumentTemplateAlfresco = MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES + RequestFields.ALFRESCO_REQUEST_TEMPLATES_FOLDER_PRE
 			}
 			
 			if (idSelectedCertificate == CertificateFields.CERTIFICATE_ID_1) {
@@ -176,9 +176,9 @@ class Documento {
 			}
 		} else {
 			if (esProduccion) {
-				urlDocumentTemplateAlfresco = MCEConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES + CertificateFields.ALFRESCO_CERTIFICATE_TEMPLATES_FOLDER
+				urlDocumentTemplateAlfresco = MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES + CertificateFields.ALFRESCO_CERTIFICATE_TEMPLATES_FOLDER
 			} else {
-				urlDocumentTemplateAlfresco = MCEConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES + CertificateFields.ALFRESCO_CERTIFICATE_TEMPLATES_FOLDER_PRE
+				urlDocumentTemplateAlfresco = MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES + CertificateFields.ALFRESCO_CERTIFICATE_TEMPLATES_FOLDER_PRE
 			}
 			
 			if (idSelectedCertificate == CertificateFields.CERTIFICATE_ID_1) {
@@ -541,7 +541,7 @@ class Documento {
 					futurePDFName = Payload.getFutureFilenamePDF(pdfGenerado.getContentFileName())
 					logger.info("----> El estudiante firma la solicitud electrónicamente")
 
-					return new DocumentValue(contentMyPDF, MCEConstants.MYME_TYPE_PDF, futurePDFName)
+					return new DocumentValue(contentMyPDF, MPTConstants.MYME_TYPE_PDF, futurePDFName)
 
 				} else if (contratoReobtenerToken == Boolean.FALSE && contratoFirmaElectronicamente == Boolean.FALSE) {
 					logger.info("----> El estudiante firma la solicitud externamente")
@@ -563,7 +563,7 @@ class Documento {
 					// Si la secretaria va a firmar siempre se utiliza el pdfGenerado
 					futurePDFName = Payload.getFutureFilenamePDF(pdfGenerado.getContentFileName())
 
-					return new DocumentValue(contentMyPDF, MCEConstants.MYME_TYPE_PDF, futurePDFName)
+					return new DocumentValue(contentMyPDF, MPTConstants.MYME_TYPE_PDF, futurePDFName)
 
 				} else if (contratoReobtenerToken == true) {
 					// No importa retornar un valor nulo para actualizar pdfFirmado por que la Secretaria siempre usa el pdfGenerado
@@ -579,7 +579,7 @@ class Documento {
 					// Obtenemos el futuro nombre del pdf generado o firmado segun sea el caso
 					futurePDFName = pdfFirmado == null ? Payload.getFutureFilenamePDF(pdfGenerado.getContentFileName()) : Payload.getFutureFilenamePDF(pdfFirmado.getContentFileName())
 
-					return new DocumentValue(contentMyPDF, MCEConstants.MYME_TYPE_PDF, futurePDFName)
+					return new DocumentValue(contentMyPDF, MPTConstants.MYME_TYPE_PDF, futurePDFName)
 
 				} else if (contratoReobtenerToken == true) {
 					if (pdfFirmado == null) {
@@ -600,7 +600,7 @@ class Documento {
 					// El Decano siempre recibe el pdf Firmado
 					futurePDFName = Payload.getFutureFilenamePDF(pdfFirmado.getContentFileName())
 
-					return new DocumentValue(contentMyPDF, MCEConstants.MYME_TYPE_PDF, futurePDFName)
+					return new DocumentValue(contentMyPDF, MPTConstants.MYME_TYPE_PDF, futurePDFName)
 
 				} else if (contratoReobtenerToken == true) {
 					// Siempre se debe retornar el mismo pdfFirmado intacto para ser utilizado por esta misma tarea luego de reobtener el token
