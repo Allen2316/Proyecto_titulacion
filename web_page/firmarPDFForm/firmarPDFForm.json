@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1688711689105,
+  "lastUpdate" : 1689021475504,
   "rows" : [
     [
       {
@@ -299,7 +299,7 @@
                             },
                             "buttonStyle" : {
                               "type" : "constant",
-                              "value" : "primary"
+                              "value" : "success"
                             },
                             "displayIcon" : {
                               "type" : "constant",

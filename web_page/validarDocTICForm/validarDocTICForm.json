@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarDocTICForm",
   "name" : "validarDocTICForm",
-  "lastUpdate" : 1685997111326,
+  "lastUpdate" : 1689030823779,
   "rows" : [
     [
       {
@@ -160,7 +160,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Adjuntar T I C"
+                    "value" : "{{vpTituloTIC.value}}"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -227,8 +227,8 @@
                           "value" : false
                         },
                         "hidden" : {
-                          "type" : "expression",
-                          "value" : "!adjuntarTIC.solicitanteId"
+                          "type" : "constant",
+                          "value" : false
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -240,7 +240,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{solicitante.firstname}} {{solicitante.lastname}}"
+                          "value" : "{{vpNombreEstudiante.value}}\n<br>\n{{vpNombreEstudiante.}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -264,67 +264,6 @@
                         }
                       },
                       "reference" : "8bac3d17-3dad-4616-ae0f-eedd037af118",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!adjuntarTIC.tituloTIC"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Titulo T I C"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{adjuntarTIC.tituloTIC}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "c34912a3-871d-4f8c-86e4-5d04b4de7435",
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
@@ -632,7 +571,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "No"
+                          "value" : "<span class=\"glyphicon glyphicon-ok\"></span> Si"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -640,7 +579,7 @@
                         },
                         "buttonStyle" : {
                           "type" : "constant",
-                          "value" : "danger"
+                          "value" : "success"
                         },
                         "action" : {
                           "type" : "constant",
@@ -659,97 +598,7 @@
                         },
                         "dataToSend" : {
                           "type" : "constant",
-                          "value" : "{\"adjuntarTICInput\":{\"valido\":false}}"
-                        },
-                        "dataFromSuccess" : {
-                          "type" : "variable",
-                          "value" : ""
-                        },
-                        "closeOnSuccess" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "dataFromError" : {
-                          "type" : "variable",
-                          "value" : "formOutput._submitError"
-                        },
-                        "targetUrlOnSuccess" : {
-                          "type" : "interpolation",
-                          "value" : "/bonita"
-                        },
-                        "collectionToModify" : {
-                          "type" : "variable"
-                        },
-                        "modalId" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "collectionPosition" : {
-                          "type" : "constant",
-                          "value" : "Last"
-                        },
-                        "valueToAdd" : {
-                          "type" : "constant"
-                        },
-                        "removeItem" : {
-                          "type" : "variable"
-                        }
-                      },
-                      "reference" : "7d9d2dd8-d571-4b55-98ce-7eca3423c662",
-                      "hasValidationError" : false,
-                      "id" : "pbButton"
-                    },
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 6,
-                        "sm" : 6,
-                        "md" : 6,
-                        "lg" : 6
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Si"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "buttonStyle" : {
-                          "type" : "constant",
-                          "value" : "primary"
-                        },
-                        "action" : {
-                          "type" : "constant",
-                          "value" : "Submit task"
-                        },
-                        "assign" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "url" : {
-                          "type" : "interpolation"
-                        },
-                        "responseStatusCode" : {
-                          "type" : "variable",
-                          "value" : ""
-                        },
-                        "dataToSend" : {
-                          "type" : "constant",
-                          "value" : "{\"adjuntarTICInput\":{\"valido\":true}}"
+                          "value" : "{\"valido\":true}"
                         },
                         "dataFromSuccess" : {
                           "type" : "variable",
@@ -786,6 +635,96 @@
                         }
                       },
                       "reference" : "da6f847c-475e-4229-8626-6959819e538c",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "<span class=\"glyphicon glyphicon-remove\"></span> No"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "danger"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Submit task"
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "dataToSend" : {
+                          "type" : "constant",
+                          "value" : "{\"valido\":false}"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "formOutput._submitError"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation",
+                          "value" : "/bonita"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "7d9d2dd8-d571-4b55-98ce-7eca3423c662",
                       "hasValidationError" : false,
                       "id" : "pbButton"
                     }
@@ -895,10 +834,8 @@
       "value" : [
         "if( $data.adjuntarTIC ){",
         "\treturn {",
-        "\t\t//map adjuntarTIC variable to expected task contract input",
-        "\t\tadjuntarTICInput: {",
-        "\t\t\tvalido: $data.adjuntarTIC.valido !== undefined ? $data.adjuntarTIC.valido : null",
-        "\t\t}",
+        "\t    valido: $data.formInput.valido",
+        "\t\t",
         "\t}",
         "}"
       ],
@@ -911,13 +848,6 @@
       ],
       "exposed" : false
     },
-    "adjuntarTIC" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.adjuntarTIC_ref.link}}"
-      ],
-      "exposed" : false
-    },
     "taskId" : {
       "type" : "urlparameter",
       "value" : [
@@ -925,16 +855,20 @@
       ],
       "exposed" : false
     },
-    "solicitante" : {
+    "vpTituloTIC" : {
       "type" : "url",
       "value" : [
-        "../API/identity/user/{{adjuntarTIC.solicitanteId}}"
+        "./API/bpm/caseVariable/{{task.caseId}}/vpTituloTIC"
       ],
-      "advancedOptions" : {
-        "headers" : "",
-        "statusCode" : "",
-        "failedResponseValue" : ""
-      },
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "vpNombreEstudiante" : {
+      "type" : "url",
+      "value" : [
+        "./API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudiante"
+      ],
+      "advancedOptions" : { },
       "exposed" : false
     }
   },

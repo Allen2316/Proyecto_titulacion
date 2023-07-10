@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "solicitudPertinenciaForm",
   "name" : "solicitudPertinenciaForm",
-  "lastUpdate" : 1688706251373,
+  "lastUpdate" : 1689028643006,
   "rows" : [
     [
       {
@@ -127,6 +127,42 @@
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Solicitud adjuntada por el/los estudiantes: <br><strong>{{solicitante.firstname}} {{solicitante.lastname}}</strong>"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 4"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "ec1a5d30-b5b6-407c-9be8-bf0c5d09d1fb",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
             [
               {
                 "type" : "container",
@@ -329,7 +365,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formOutput.solicitarPertinenciaDocenteInput.email"
+                          "value" : "formOutput.userName"
                         }
                       },
                       "reference" : "965719a6-1777-4f96-9a6b-5d3fac3d6a1c",
@@ -415,11 +451,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "primary"
+                    "value" : "success"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Continuar"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -592,13 +628,8 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.solicitarPertinenciaDocente ){",
-        "\treturn {",
-        "\t\t//map solicitarPertinenciaDocente variable to expected task contract input",
-        "\t\tsolicitarPertinenciaDocenteInput: {",
-        "\t\t\temail: $data.solicitarPertinenciaDocente.email !== undefined ? $data.solicitarPertinenciaDocente.email : null",
-        "\t\t}",
-        "\t}",
+        "return {",
+        "\tuserName: $data.formInput.userName",
         "}"
       ],
       "exposed" : false
@@ -614,13 +645,6 @@
       "type" : "urlparameter",
       "value" : [
         "id"
-      ],
-      "exposed" : false
-    },
-    "solicitarPertinenciaDocente" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.solicitarPertinenciaDocente_ref.link}}"
       ],
       "exposed" : false
     },
@@ -673,6 +697,22 @@
         "\r",
         "return listaDocentes;"
       ],
+      "exposed" : false
+    },
+    "solicitud" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/solicitud"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "solicitante" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/{{solicitud.idSolicitanteBonitaBPM}}"
+      ],
+      "advancedOptions" : { },
       "exposed" : false
     }
   },
