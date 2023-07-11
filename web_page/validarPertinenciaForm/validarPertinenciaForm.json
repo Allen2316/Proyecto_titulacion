@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarPertinenciaForm",
   "name" : "validarPertinenciaForm",
-  "lastUpdate" : 1688681359131,
+  "lastUpdate" : 1689039939557,
   "rows" : [
     [
       {
@@ -365,7 +365,7 @@
                         },
                         "dataToSend" : {
                           "type" : "constant",
-                          "value" : "{\"validarPertinenciaInput\":{\"pertinente\":false}}"
+                          "value" : "{\"pertinente\":false}"
                         },
                         "dataFromSuccess" : {
                           "type" : "variable",
@@ -455,7 +455,7 @@
                         },
                         "dataToSend" : {
                           "type" : "constant",
-                          "value" : "{\"validarPertinenciaInput\":{\"pertinente\":true}}"
+                          "value" : "{\"pertinente\":true}"
                         },
                         "dataFromSuccess" : {
                           "type" : "variable",

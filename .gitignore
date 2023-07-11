@@ -10,3 +10,4 @@ h2_database/bonita_journal.db.lock.db
 h2_database/bonita_journal.db.mv.db
 h2_database/business_data.db.lock.db
 h2_database/business_data.db.mv.db
+/target/
