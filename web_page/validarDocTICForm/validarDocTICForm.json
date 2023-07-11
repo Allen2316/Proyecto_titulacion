@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarDocTICForm",
   "name" : "validarDocTICForm",
-  "lastUpdate" : 1689030823779,
+  "lastUpdate" : 1689036923632,
   "rows" : [
     [
       {
@@ -39,7 +39,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayName }} Validar documentacion"
+                  "value" : "{{ task.displayName }}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -240,7 +240,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{vpNombreEstudiante.value}}\n<br>\n{{vpNombreEstudiante.}}"
+                          "value" : "<strong>{{vpNombreEstudiante.value}}</strong>"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -858,7 +858,7 @@
     "vpTituloTIC" : {
       "type" : "url",
       "value" : [
-        "./API/bpm/caseVariable/{{task.caseId}}/vpTituloTIC"
+        "../API/bpm/caseVariable/{{task.caseId}}/vpTituloTIC"
       ],
       "advancedOptions" : { },
       "exposed" : false
@@ -866,9 +866,18 @@
     "vpNombreEstudiante" : {
       "type" : "url",
       "value" : [
-        "./API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudiante"
+        "../API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudiante"
       ],
       "advancedOptions" : { },
+      "exposed" : false
+    },
+    "ver" : {
+      "type" : "expression",
+      "value" : [
+        "console.log(\"titulo \",$data.vpTituloTIC);",
+        "console.log(\"est \" ,$data.$data.vpNombreEstudiante);",
+        "console.log(\"value \",$data.$data.vpNombreEstudiante.value);"
+      ],
       "exposed" : false
     }
   },

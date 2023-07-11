@@ -146,7 +146,7 @@ class Funcionario {
 			throw new Exception("Se debe enviar el nombre del grupo del funcionario")
 		}
 		
-		Long userId = 0
+		Long userId = -1L;
 		//Long userId = ""
 		try {
 			def builderGoup = new SearchOptionsBuilder(0, 1)
@@ -178,7 +178,7 @@ class Funcionario {
 	static Long getIdByUserName(String userName, IdentityAPI identityAPI) {
 		
 			
-		Long userId = 0
+		Long userId = -1L;
 		try{
 			userId = identityAPI.getUserByUserName(userName).getId()									
 			
@@ -187,6 +187,17 @@ class Funcionario {
 		}
 
 		return userId
+	}
+	
+	static String getEmailById(Long userId, IdentityAPI identityAPI) {
+		String email = "";
+		try{			
+			email = identityAPI.getUserContactData(userId,false).getEmail();
+		}catch(UserNotFoundException e){
+			logger.severe("Usuario no encontrado: " + e.getMessage())
+		}
+
+		return email;
 	}
 
 }

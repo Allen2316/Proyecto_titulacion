@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "solicitudPertinenciaForm",
   "name" : "solicitudPertinenciaForm",
-  "lastUpdate" : 1689028643006,
+  "lastUpdate" : 1689034290299,
   "rows" : [
     [
       {
@@ -113,7 +113,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "5fb1097a-2a4b-4ef7-93cd-e4355275f19c",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -147,7 +156,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Solicitud adjuntada por el/los estudiantes: <br><strong>{{solicitante.firstname}} {{solicitante.lastname}}</strong>"
+                    "value" : "Solicitud adjuntada por el/los estudiantes: <br><strong>{{vpNombreEstudiante.value}}</strong>"
                   },
                   "level" : {
                     "type" : "constant",
@@ -235,47 +244,6 @@
             ],
             [
               {
-                "type" : "component",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 4"
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "Solicitar Pertinencia Docente"
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "59dd14d4-7910-4365-aee6-c0a348173a88",
-                "hasValidationError" : false,
-                "id" : "pbTitle",
-                "description" : ""
-              }
-            ],
-            [
-              {
                 "type" : "container",
                 "dimension" : {
                   "md" : 12,
@@ -337,7 +305,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Designar docente como Director"
+                          "value" : "Designar docente como revisor"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -699,18 +667,10 @@
       ],
       "exposed" : false
     },
-    "solicitud" : {
+    "vpNombreEstudiante" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/solicitud"
-      ],
-      "advancedOptions" : { },
-      "exposed" : false
-    },
-    "solicitante" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user/{{solicitud.idSolicitanteBonitaBPM}}"
+        "../API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudiante"
       ],
       "advancedOptions" : { },
       "exposed" : false
