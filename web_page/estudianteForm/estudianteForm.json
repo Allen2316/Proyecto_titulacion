@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "estudianteForm",
   "name" : "estudianteForm",
-  "lastUpdate" : 1689031320821,
+  "lastUpdate" : 1689033250571,
   "rows" : [
     [
       {
@@ -459,7 +459,7 @@
                         },
                         "hidden" : {
                           "type" : "expression",
-                          "value" : "!isValidFileWidgetValue"
+                          "value" : "isValidFileWidgetValue"
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -709,12 +709,10 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.adjuntarTIC ){",
-        "\treturn {",
-        "\t    titulo: $data.formInput.titulo,",
-        "\t\tdocTICDocumentInput: $data.formInput.docTICDocumentInput,",
-        "\t\tdocSolicitudTICDocumentInput: $data.formInput.docSolicitudTICDocumentInput",
-        "\t}",
+        "return {",
+        "    titulo: $data.formInput.titulo,",
+        "\tdocTICDocumentInput: $data.formInput.docTICDocumentInput,",
+        "\tdocSolicitudTICDocumentInput: $data.formInput.docSolicitudTICDocumentInput",
         "}"
       ],
       "exposed" : false
@@ -723,13 +721,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}/context"
-      ],
-      "exposed" : false
-    },
-    "adjuntarTIC" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.adjuntarTIC_ref.link}}"
       ],
       "exposed" : false
     },

@@ -29,7 +29,7 @@ import com.mpt.constantes.MPTConstants
 /**
  * Permite crear o actualizar usuarios
  * 
- * @author ajcm
+ * @author Allen
  * @version 1.0
  */
 class Usuario {

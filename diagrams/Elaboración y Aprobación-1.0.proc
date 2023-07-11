@@ -49,7 +49,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_uX_q_vtaEe2jXvmcOqjeoQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_uX_q__taEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_uX_rAPtaEe2jXvmcOqjeoQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_F4YtMB94Ee650dsVztc4GA" name="estudianteForm" content="bb0b051c-2577-4edc-8841-5b6b532e7576" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_JkcLYB98Ee650dsVztc4GA" name="estudianteForm" content="bb0b051c-2577-4edc-8841-5b6b532e7576" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_uX_rAvtaEe2jXvmcOqjeoQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_CE_-8P9qEe2xwsGwY7DpDA" name="docTICDocumentInput" type="FILE" dataReference="docTIC"/>
@@ -118,7 +118,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_I31tsAPpEe6tcJLr2fkR9w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_I31tsgPpEe6tcJLr2fkR9w" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_KEUu8APpEe6tcJLr2fkR9w" name="Revisar Asignación de Director" outgoing="_I34xAAPpEe6tcJLr2fkR9w" incoming="_FF4fAAPpEe6tcJLr2fkR9w _DjYQwAmXEe6trv2l625ITA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_KEUu8APpEe6tcJLr2fkR9w" name="Revisar Asignación de Director" outgoing="_I34xAAPpEe6tcJLr2fkR9w" incoming="_FF4fAAPpEe6tcJLr2fkR9w" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_FFv8IQPpEe6tcJLr2fkR9w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_FFv8IAPpEe6tcJLr2fkR9w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_FFv8IgPpEe6tcJLr2fkR9w" name="" content="" returnTypeFixed="true"/>
@@ -755,7 +755,6 @@
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_kfdtVvtfEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_kfdtWPtfEe2jXvmcOqjeoQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_kfdtV_tfEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <BoundaryIntermediateEvents xmi:type="process:IntermediateErrorCatchEvent" xmi:id="_Bvuh0AmXEe6trv2l625ITA" name="Error1" outgoing="_DjYQwAmXEe6trv2l625ITA"/>
         </elements>
         <elements xmi:type="process:ServiceTask" xmi:id="_2jVEgADHEe6094WqgPbbKQ" name="Notificar resultante de pertinencia Rechazada" outgoing="_DxgkgAPSEe6FdZd89rKvMQ" incoming="_MkvxMAPREe6FdZd89rKvMQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_2jVEgQDHEe6094WqgPbbKQ" name="" content="" returnTypeFixed="true"/>
@@ -954,7 +953,9 @@
                 <expression xmi:type="expression:Expression" xmi:id="_v5BsvByHEe6MO795Ws8ABQ" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_v5BsvRyHEe6MO795Ws8ABQ" key="cc">
-                <expression xmi:type="expression:Expression" xmi:id="_v5BsvhyHEe6MO795Ws8ABQ" content="" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_v5BsvhyHEe6MO795Ws8ABQ" name="cc()" content="import com.mpt.util.Funcionario&#xD;&#xA;import com.mpt.constantes.CertificateFields&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Long userId = Funcionario.getId(CertificateFields.SECRETARY_GROUP_NAME, apiAccessor.getIdentityAPI());&#xD;&#xA;return Funcionario.getEmailById(userId, apiAccessor.getIdentityAPI())" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_xu0gcB-DEe650dsVztc4GA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_v5BsvxyHEe6MO795Ws8ABQ" key="subject">
                 <expression xmi:type="expression:Expression" xmi:id="_v5BswByHEe6MO795Ws8ABQ" name="subject()" content="import com.mpt.constantes.Mensaje&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return Mensaje.SUBJECT_START_NOMENCLATURE + processInstanceId.toString() + Mensaje.SUBJECT_END_NOMENCLATURE + Mensaje.SUBJECT_NOTIFICATION_DOCENT&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
@@ -965,10 +966,11 @@
                 <expression xmi:type="expression:Expression" xmi:id="_v5BswxyHEe6MO795Ws8ABQ" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_v5BsxByHEe6MO795Ws8ABQ" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_v5BsxRyHEe6MO795Ws8ABQ" name="newScript()" content="import com.mpt.constantes.Mensaje&#xD;&#xA;import com.mpt.constantes.MPTConstants&#xD;&#xA;import com.mpt.util.Funcionario&#xD;&#xA;import com.mpt.util.Estudiante&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;String cuerpoDelMensaje = &quot;&quot;&quot;${Mensaje.buildMsgHeader(Mensaje.MESSAGE_HEADER_DOCENTE, Funcionario.getFullNameWithUserName(solicitarPertinenciaDocente.email, apiAccessor.getIdentityAPI()))}&#xD;&#xA;&lt;p> Se le ha asigando como docente especialista encargado de revisar el PIC de tema: &lt;strong>${vpTituloTIC}&lt;/strong> &#xD;&#xA;del estudiante: &lt;strong>${Estudiante.getFullName(apiAccessor.getIdentityAPI(), solicitud.idSolicitanteBonitaBPM)}&lt;/strong> &#xD;&#xA;para la obtención de pertiencia&lt;/p> &#xD;&#xA;&lt;br> ${Mensaje.buildButtonApp('#', 'Revisar')}&quot;&quot;&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return Mensaje.LOGO_HEADER + Mensaje.buildMessageBody(cuerpoDelMensaje) + Mensaje.buildMainFooter(&quot;#&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_sGMwQB9xEe650dsVztc4GA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_sGMwQR9xEe650dsVztc4GA" name="solicitud" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.unl.model.ObjetoSolicitud"/>
-                  <referencedElements xmi:type="process:Data" xmi:id="_sGMwQh9xEe650dsVztc4GA" name="vpTituloTIC" dataType="_uX_rIftaEe2jXvmcOqjeoQ"/>
+                <expression xmi:type="expression:Expression" xmi:id="_v5BsxRyHEe6MO795Ws8ABQ" name="newScript()" content="import com.mpt.constantes.Mensaje&#xD;&#xA;import com.mpt.constantes.MPTConstants&#xD;&#xA;import com.mpt.util.Funcionario&#xD;&#xA;import com.mpt.util.Estudiante&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;String cuerpoDelMensaje = &quot;&quot;&quot;${Mensaje.buildMsgHeader(Mensaje.MESSAGE_HEADER_DOCENTE, Funcionario.getFullNameWithUserName(vpUserNameDocente, apiAccessor.getIdentityAPI()))}&#xD;&#xA;&lt;p> Se le ha asigando como docente especialista encargado de revisar el PIC de tema: &lt;strong>${vpTituloTIC}&lt;/strong> &#xD;&#xA;del estudiante: &lt;strong>${Estudiante.getFullName(apiAccessor.getIdentityAPI(), solicitud.idSolicitanteBonitaBPM)}&lt;/strong> &#xD;&#xA;para la obtención de pertiencia&lt;/p> &#xD;&#xA;&lt;br> ${Mensaje.buildButtonApp('#', 'Revisar')}&quot;&quot;&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return Mensaje.LOGO_HEADER + Mensaje.buildMessageBody(cuerpoDelMensaje) + Mensaje.buildMainFooter(&quot;#&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_KUcIIB-AEe650dsVztc4GA" name="vpTituloTIC" dataType="_uX_rIftaEe2jXvmcOqjeoQ"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_KUcIIR-AEe650dsVztc4GA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_KUcIIh-AEe650dsVztc4GA" name="vpUserNameDocente" dataType="_uX_rIftaEe2jXvmcOqjeoQ"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_KUcIIx-AEe650dsVztc4GA" name="solicitud" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.unl.model.ObjetoSolicitud"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_v5BsyhyHEe6MO795Ws8ABQ" key="headers">
@@ -981,7 +983,11 @@
                 <expression xmi:type="expression:Expression" xmi:id="_v5BszxyHEe6MO795Ws8ABQ" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_v5Bs0ByHEe6MO795Ws8ABQ" key="attachments">
-                <expression xmi:type="expression:ListExpression" xmi:id="_v5Bs0RyHEe6MO795Ws8ABQ"/>
+                <expression xmi:type="expression:ListExpression" xmi:id="_v5Bs0RyHEe6MO795Ws8ABQ">
+                  <expressions xmi:type="expression:Expression" xmi:id="_xu1HgB-DEe650dsVztc4GA" name="pdfFirmado" content="pdfFirmado" type="DOCUMENT_REF_TYPE">
+                    <referencedElements xmi:type="process:Document" xmi:id="_xu1HgR-DEe650dsVztc4GA" name="pdfFirmado"/>
+                  </expressions>
+                </expression>
               </parameters>
             </configuration>
           </connectors>
@@ -1093,7 +1099,7 @@
                     </expressions>
                   </expressions>
                   <expressions xmi:type="expression:ListExpression" xmi:id="_xAK-IBblEe61u4-R-tPQmA">
-                    <expressions xmi:type="expression:Expression" xmi:id="_xAK-IRblEe61u4-R-tPQmA" name="estudiante_uno" content="estudiante_uno" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_xAK-IRblEe61u4-R-tPQmA" name="estudiante" content="estudiante" returnTypeFixed="true"/>
                     <expressions xmi:type="expression:Expression" xmi:id="_xAK-IhblEe61u4-R-tPQmA" name="newScript()" content="import com.mpt.util.Estudiante&#xD;&#xA;&#xD;&#xA;return Estudiante.getFullName(apiAccessor.getIdentityAPI(), solicitud.getIdSolicitanteBonitaBPM())" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
                       <referencedElements xmi:type="expression:Expression" xmi:id="_fNUZUx9xEe650dsVztc4GA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
                       <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fNUZVB9xEe650dsVztc4GA" name="solicitud" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.unl.model.ObjetoSolicitud"/>
@@ -1604,7 +1610,9 @@
                 <expression xmi:type="expression:Expression" xmi:id="_3iKoXByHEe6MO795Ws8ABQ" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_3iKoXRyHEe6MO795Ws8ABQ" key="cc">
-                <expression xmi:type="expression:Expression" xmi:id="_3iKoXhyHEe6MO795Ws8ABQ" content="" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_3iKoXhyHEe6MO795Ws8ABQ" name="cc()" content="import com.mpt.util.Funcionario&#xD;&#xA;import com.mpt.constantes.CertificateFields&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Long userId = Funcionario.getId(CertificateFields.SECRETARY_GROUP_NAME, apiAccessor.getIdentityAPI());&#xD;&#xA;return Funcionario.getEmailById(userId, apiAccessor.getIdentityAPI())" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_rc5vEB-GEe650dsVztc4GA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_3iKoXxyHEe6MO795Ws8ABQ" key="subject">
                 <expression xmi:type="expression:Expression" xmi:id="_3iKoYByHEe6MO795Ws8ABQ" name="subject()" content="import com.mpt.constantes.Mensaje&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return Mensaje.SUBJECT_START_NOMENCLATURE + processInstanceId.toString() + Mensaje.SUBJECT_END_NOMENCLATURE + Mensaje.SUBJECT_NOTIFICATION_DOCENT&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
@@ -1615,10 +1623,11 @@
                 <expression xmi:type="expression:Expression" xmi:id="_3iKoYxyHEe6MO795Ws8ABQ" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_3iKoZByHEe6MO795Ws8ABQ" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_3iKoZRyHEe6MO795Ws8ABQ" name="newScript()" content="import com.mpt.constantes.Mensaje&#xD;&#xA;import com.mpt.constantes.MPTConstants&#xD;&#xA;import com.mpt.util.Funcionario&#xD;&#xA;import com.mpt.util.Estudiante&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;String cuerpoDelMensaje = &quot;&quot;&quot;${Mensaje.buildMsgHeader(Mensaje.MESSAGE_HEADER_DOCENTE, Funcionario.getFullNameWithUserName(solicitarPertinenciaDocente.email, apiAccessor.getIdentityAPI()))}&#xD;&#xA;&lt;p> Se le ha asigando como docente especialista encargado de revisar el PIC de tema: &lt;strong>${vpTituloTIC}&lt;/strong> &#xD;&#xA;del estudiante: &lt;strong>${Estudiante.getFullName(apiAccessor.getIdentityAPI(), solicitud.idSolicitanteBonitaBPM)}&lt;/strong> &#xD;&#xA;para la obtención de pertiencia&lt;/p> &#xD;&#xA;&lt;br> ${Mensaje.buildButtonApp('#', 'Revisar')}&quot;&quot;&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return Mensaje.LOGO_HEADER + Mensaje.buildMessageBody(cuerpoDelMensaje) + Mensaje.buildMainFooter(&quot;#&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_Dn9U8h9zEe650dsVztc4GA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dn9U8x9zEe650dsVztc4GA" name="solicitud" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.unl.model.ObjetoSolicitud"/>
-                  <referencedElements xmi:type="process:Data" xmi:id="_Dn9U9B9zEe650dsVztc4GA" name="vpTituloTIC" dataType="_uX_rIftaEe2jXvmcOqjeoQ"/>
+                <expression xmi:type="expression:Expression" xmi:id="_3iKoZRyHEe6MO795Ws8ABQ" name="newScript()" content="import com.mpt.constantes.Mensaje&#xD;&#xA;import com.mpt.constantes.MPTConstants&#xD;&#xA;import com.mpt.util.Funcionario&#xD;&#xA;import com.mpt.util.Estudiante&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;String cuerpoDelMensaje = &quot;&quot;&quot;${Mensaje.buildMsgHeader(Mensaje.MESSAGE_HEADER_DOCENTE, Funcionario.getFullNameWithUserName(vpUserNameDocente, apiAccessor.getIdentityAPI()))}&#xD;&#xA;&lt;p> Se le ha asigando como docente especialista encargado de revisar el PIC de tema: &lt;strong>${vpTituloTIC}&lt;/strong> &#xD;&#xA;del estudiante: &lt;strong>${Estudiante.getFullName(apiAccessor.getIdentityAPI(), solicitud.idSolicitanteBonitaBPM)}&lt;/strong> &#xD;&#xA;para la obtención de pertiencia&lt;/p> &#xD;&#xA;&lt;br> ${Mensaje.buildButtonApp('#', 'Revisar')}&quot;&quot;&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return Mensaje.LOGO_HEADER + Mensaje.buildMessageBody(cuerpoDelMensaje) + Mensaje.buildMainFooter(&quot;#&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_gmx6EB-GEe650dsVztc4GA" name="vpTituloTIC" dataType="_uX_rIftaEe2jXvmcOqjeoQ"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_gmx6ER-GEe650dsVztc4GA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_gmx6Eh-GEe650dsVztc4GA" name="vpUserNameDocente" dataType="_uX_rIftaEe2jXvmcOqjeoQ"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gmx6Ex-GEe650dsVztc4GA" name="solicitud" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.unl.model.ObjetoSolicitud"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_3iKoahyHEe6MO795Ws8ABQ" key="headers">
@@ -2019,7 +2028,7 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_uX_rBPtaEe2jXvmcOqjeoQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_1nvwQB93Ee650dsVztc4GA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_YN2VsB-FEe650dsVztc4GA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_uX_rBvtaEe2jXvmcOqjeoQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_uX_rB_taEe2jXvmcOqjeoQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -2125,10 +2134,6 @@
       <connections xmi:type="process:SequenceFlow" xmi:id="_miwPoAmVEe6trv2l625ITA" target="_kfdtUPtfEe2jXvmcOqjeoQ" source="_iFQJkAmVEe6trv2l625ITA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_miwPoQmVEe6trv2l625ITA"/>
         <condition xmi:type="expression:Expression" xmi:id="_miwPogmVEe6trv2l625ITA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-      </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_DjYQwAmXEe6trv2l625ITA" target="_KEUu8APpEe6tcJLr2fkR9w" source="_Bvuh0AmXEe6trv2l625ITA">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_DjZe4AmXEe6trv2l625ITA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_DjZe4QmXEe6trv2l625ITA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_wvHIbBXFEe6lKu6tGiWxsQ" target="_wvHIQBXFEe6lKu6tGiWxsQ" source="_wvF6ExXFEe6lKu6tGiWxsQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_wvHIbRXFEe6lKu6tGiWxsQ"/>
@@ -2576,12 +2581,6 @@
             </children>
             <children xmi:type="notation:Shape" xmi:id="_kfeUYPtfEe2jXvmcOqjeoQ" type="3027" element="_kfdtUPtfEe2jXvmcOqjeoQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_kfeUYvtfEe2jXvmcOqjeoQ" type="5017"/>
-              <children xmi:type="notation:Shape" xmi:id="_Bv_nkAmXEe6trv2l625ITA" type="3032" element="_Bvuh0AmXEe6trv2l625ITA" fontName="Segoe UI">
-                <children xmi:type="notation:DecorationNode" xmi:id="_BwA1sAmXEe6trv2l625ITA" type="5062">
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_BwBcwAmXEe6trv2l625ITA" y="5"/>
-                </children>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bv_nkQmXEe6trv2l625ITA"/>
-              </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kfeUYftfEe2jXvmcOqjeoQ" x="1828" y="117" width="120" height="60"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_2jVrkADHEe6094WqgPbbKQ" type="3027" element="_2jVEgADHEe6094WqgPbbKQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
@@ -2876,15 +2875,6 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_miw2sgmVEe6trv2l625ITA" points="[0, 3, -108, 0]$[99, 2, -9, -1]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_miyr4AmVEe6trv2l625ITA" id="(1.0,0.4583333333333333)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_miyr4QmVEe6trv2l625ITA" id="(0.1,0.48333333333333334)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_DjeXYAmXEe6trv2l625ITA" type="4001" element="_DjYQwAmXEe6trv2l625ITA" source="_Bv_nkAmXEe6trv2l625ITA" target="_KEV9EAPpEe6tcJLr2fkR9w" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_Dje-cgmXEe6trv2l625ITA" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_Dje-cwmXEe6trv2l625ITA" y="-10"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_Dje-cAmXEe6trv2l625ITA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Dje-cQmXEe6trv2l625ITA" points="[-25, -13, 11, 778]$[-65, -13, -29, 778]$[-65, -804, -29, -13]$[-46, -804, -10, -13]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DjgMkAmXEe6trv2l625ITA" id="(1.0,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DjgzoAmXEe6trv2l625ITA" id="(0.07936507936507936,0.6984126984126984)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_wvHIbxXFEe6lKu6tGiWxsQ" type="4001" element="_wvHIbBXFEe6lKu6tGiWxsQ" source="_wvF6ZhXFEe6lKu6tGiWxsQ" target="_wvHIYRXFEe6lKu6tGiWxsQ" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_wvHIcBXFEe6lKu6tGiWxsQ" type="6001" element="_wvHIbBXFEe6lKu6tGiWxsQ">
