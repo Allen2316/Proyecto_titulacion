@@ -5,4 +5,8 @@ node/
 node_modules/
 /database_connectors_properties
 *.db
+h2_database/bonita_journal.db.mv.db
+h2_database/bonita_journal.db.lock.db
+h2_database/bonita_journal.db.mv.db
 h2_database/business_data.db.lock.db
+h2_database/business_data.db.mv.db
