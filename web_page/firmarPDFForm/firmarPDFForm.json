@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1689050900440,
+  "lastUpdate" : 1689067332157,
   "rows" : [
     [
       {
@@ -1220,7 +1220,7 @@
         "      \"/firmar?token=\" + miToken +",
         "      $data.constants.PARAM_CERTIFICATE_TYPE + $data.constants.VALUE_CERTIFICATE_TYPE_FILE +",
         "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
-        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '330' +",
+        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290' +",
         "      $data.constants.PARAM_TYPE_STAMPING + $data.constants.VALUE_TYPE_STAMPING_QR +",
         "      urlApiProd;",
         "   ",
