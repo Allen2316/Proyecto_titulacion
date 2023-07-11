@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarDocDirectorForm",
   "name" : "validarDocDirectorForm",
-  "lastUpdate" : 1689029397551,
+  "lastUpdate" : 1689047926318,
   "rows" : [
     [
       {
@@ -329,7 +329,7 @@
                         },
                         "dataToSend" : {
                           "type" : "constant",
-                          "value" : "{\"asignarDirectorInput\":{\"valido\":true}}"
+                          "value" : "{\"valido\":true}"
                         },
                         "dataFromSuccess" : {
                           "type" : "variable",
@@ -419,7 +419,7 @@
                         },
                         "dataToSend" : {
                           "type" : "constant",
-                          "value" : "{\"asignarDirectorInput\":{\"valido\":false}}"
+                          "value" : "{\"valido\":false}"
                         },
                         "dataFromSuccess" : {
                           "type" : "variable",

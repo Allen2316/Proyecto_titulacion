@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1689021475504,
+  "lastUpdate" : 1689050900440,
   "rows" : [
     [
       {
@@ -662,7 +662,7 @@
                 "type" : "component",
                 "dimension" : {
                   "xs" : 12,
-                  "sm" : 12,
+                  "sm" : 6,
                   "md" : 6,
                   "lg" : 6
                 },
@@ -752,7 +752,7 @@
                 "type" : "component",
                 "dimension" : {
                   "xs" : 12,
-                  "sm" : 12,
+                  "sm" : 6,
                   "md" : 6,
                   "lg" : 6
                 },
@@ -932,6 +932,9 @@
         "            break;",
         "        case \"Docentes\":",
         "            documento = $data.context.docInformePertinencia_ref",
+        "            break;",
+        "        case \"coordinacion-director\":",
+        "            documento = $data.context.docAsignacionDirector_ref",
         "            break;",
         "        default:",
         "            location.reload();",

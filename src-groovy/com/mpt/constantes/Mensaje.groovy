@@ -13,10 +13,14 @@ class Mensaje {
 	static final String FOOTER_ADICIONAL = "<h4>NOTA: Imprima este documento, solamente si es necesario. El cuidado del ambiente es Tu responsabilidad.</h4>";
 	static final String SUBJECT_START_NOMENCLATURE = "[MPT #";
 	static final String SUBJECT_END_NOMENCLATURE = "] ";	
-	static final String SUBJECT_NOTIFICATION_DOCENT = "Notificación de asignación para realizar informe de pertinencia"
+	static final String SUBJECT_NOTIFICATION_DOCENT_PERTINENCIA = "Notificación de asignación para realizar informe de pertinencia"
+	static final String SUBJECT_NOTIFICATION_DOCENT_DIRECTOR = "Notificación de asignación como Director de TIC"
 	static final String SUBJECT_NOTIFICATION_STUDENT = "La documentación adjuntada es incorrecta"
+	static final String	SUBJECT_NOTIFICATION_STUDENT_DIRECTOR = "Asignación de Director de TIC"
 	static final String SUBJECT_NOTIFICATION_STUDENT_REJECTION = "Lo sentimos, su solicitud de obtención de pertinencia fue rechazada"
 	static final String	SUBJECT_NOTIFICATION_ACCEPTANCE_STUDENT = "Su solicitud de obtención de pertinencia fue aceptada"
+	static final String	SUBJECT_NOTIFICATION_DIRECTOR_PERTINENCIA = "Informe de pertinencia listo para revisión"
+	static final String	SUBJECT_NOTIFICATION_DIRECTOR_INCUMPLIMIENTO = "Notificación de incumplimiento de Informe de Pertinencia"
 	static final String SUBJECT_DIRECTOR_REMINDER = "Recordatorio de documento pendiente de firmar"
 	static final String	SUBJECT_CERTIFICATE_SENT = "Su certificado solicitado ha sido enviado"
 	static final String MESSAGE_HEADER_SECRETARY = "Estimada(o) Secretaria(o)"

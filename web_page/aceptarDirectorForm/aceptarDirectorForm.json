@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "aceptarDirectorForm",
   "name" : "aceptarDirectorForm",
-  "lastUpdate" : 1686001323930,
+  "lastUpdate" : 1689053168218,
   "rows" : [
     [
       {
@@ -113,7 +113,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "31686ac3-91ad-4844-98e7-a2e56a5c42eb",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -204,6 +213,46 @@
                       "reference" : "ddbc2056-7840-4fe8-ba4f-75e818313e21",
                       "hasValidationError" : false,
                       "id" : "pbText"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "Process document"
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "document" : {
+                          "type" : "variable",
+                          "value" : "context.pdfFirmado_ref"
+                        },
+                        "showPreview" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "2ba3a0ad-92ca-467c-ab7c-08352b155644",
+                      "hasValidationError" : false,
+                      "id" : "pbFileViewer"
                     }
                   ]
                 ]
