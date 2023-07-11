@@ -1,4 +1,5 @@
 
+
 h2_database/
 /h2_database
 node/
@@ -11,3 +12,23 @@ h2_database/bonita_journal.db.mv.db
 h2_database/business_data.db.lock.db
 h2_database/business_data.db.mv.db
 /target/
+
+
+bin
+.classpath
+/src-providedGroovy
+/template
+/process_configurations
+/META-INF
+.settings
+target/
+/build.properties
+/web_widgets/pb*/
+/web_widgets/.metadata
+/web_fragments/.metadata
+/web_page/.metadata
+/web_page/*/js
+/web_fragments/*/*.js
+/web_widgets/*/*.js
+!/web_widgets/*/*.ctrl.js
+/lib/bdm-client-pojo.jar
