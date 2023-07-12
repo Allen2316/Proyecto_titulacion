@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1689021475504,
+  "lastUpdate" : 1689067332157,
   "rows" : [
     [
       {
@@ -662,7 +662,7 @@
                 "type" : "component",
                 "dimension" : {
                   "xs" : 12,
-                  "sm" : 12,
+                  "sm" : 6,
                   "md" : 6,
                   "lg" : 6
                 },
@@ -752,7 +752,7 @@
                 "type" : "component",
                 "dimension" : {
                   "xs" : 12,
-                  "sm" : 12,
+                  "sm" : 6,
                   "md" : 6,
                   "lg" : 6
                 },
@@ -932,6 +932,9 @@
         "            break;",
         "        case \"Docentes\":",
         "            documento = $data.context.docInformePertinencia_ref",
+        "            break;",
+        "        case \"coordinacion-director\":",
+        "            documento = $data.context.docAsignacionDirector_ref",
         "            break;",
         "        default:",
         "            location.reload();",
@@ -1217,7 +1220,7 @@
         "      \"/firmar?token=\" + miToken +",
         "      $data.constants.PARAM_CERTIFICATE_TYPE + $data.constants.VALUE_CERTIFICATE_TYPE_FILE +",
         "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
-        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '330' +",
+        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290' +",
         "      $data.constants.PARAM_TYPE_STAMPING + $data.constants.VALUE_TYPE_STAMPING_QR +",
         "      urlApiProd;",
         "   ",

@@ -189,6 +189,13 @@ class Funcionario {
 		return userId
 	}
 	
+	/**
+	 * Retorna el Email del usurio con el ID pasado por parametro
+	 * @param userId
+	 * @param identityAPI
+	 * @return El Email en String
+	 */
+	
 	static String getEmailById(Long userId, IdentityAPI identityAPI) {
 		String email = "";
 		try{			

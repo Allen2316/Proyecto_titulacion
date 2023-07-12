@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "asignarDirectorForm",
   "name" : "asignarDirectorForm",
-  "lastUpdate" : 1685999808769,
+  "lastUpdate" : 1689050223703,
   "rows" : [
     [
       {
@@ -129,42 +129,6 @@
           "rows" : [
             [
               {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "Solicitud de asignación de Director"
-                  },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 4"
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
-                  }
-                },
-                "reference" : "355a35d6-2c0c-4874-b2d5-1dda440bd409",
-                "hasValidationError" : false,
-                "id" : "pbTitle"
-              }
-            ],
-            [
-              {
                 "type" : "container",
                 "dimension" : {
                   "md" : 12,
@@ -194,6 +158,42 @@
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Solicitud de asignación de Director"
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 4"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "355a35d6-2c0c-4874-b2d5-1dda440bd409",
+                      "hasValidationError" : false,
+                      "id" : "pbTitle"
+                    }
+                  ],
                   [
                     {
                       "type" : "component",
@@ -244,59 +244,62 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : ""
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
+                        "readOnly" : {
                           "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Documento de asignacion de Director"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Elegir archivo..."
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.docAsignacionDirectorDocumentInput"
+                          "value" : false
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
                         },
-                        "url" : {
+                        "labelHidden" : {
                           "type" : "constant",
-                          "value" : "../API/formFileUpload"
+                          "value" : false
                         },
-                        "errorContent" : {
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Fecha de Finalización"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "value" : {
                           "type" : "variable",
-                          "value" : ""
+                          "value" : "formInput.fechaFin"
+                        },
+                        "dateFormat" : {
+                          "type" : "constant",
+                          "value" : "dd/MM/yyyy"
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "dd/mm/yyyy"
+                        },
+                        "showToday" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "todayLabel" : {
+                          "type" : "interpolation",
+                          "value" : "Today"
                         }
                       },
-                      "reference" : "bd7fc428-2ffb-4f40-bed2-1ffb9de44967",
+                      "reference" : "aafa3f28-7287-4272-8f12-d6ace8431bba",
                       "hasValidationError" : false,
-                      "id" : "pbUpload",
-                      "description" : ""
+                      "id" : "pbDatePicker"
                     }
                   ]
                 ]
@@ -325,11 +328,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "primary"
+                    "value" : "success"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Enviar"
+                    "value" : "Continuar"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -348,7 +351,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita"
+                    "value" : "/bonita/apps/userAppBonita/task-list"
                   },
                   "action" : {
                     "type" : "constant",
@@ -361,8 +364,8 @@
                     "type" : "expression"
                   },
                   "disabled" : {
-                    "type" : "constant",
-                    "value" : false
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -488,7 +491,7 @@
       "type" : "json",
       "value" : [
         "{\r",
-        "  \"docAsignacionDirectorDocumentInput\" : null\r",
+        "  \"fechaFin\" : null\r",
         "}"
       ],
       "exposed" : false
@@ -512,7 +515,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tdocAsignacionDirectorDocumentInput: $data.formInput.docAsignacionDirectorDocumentInput",
+        "\tfechaFin: $data.formInput.fechaFin",
         "}"
       ],
       "exposed" : false
