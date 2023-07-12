@@ -1,0 +1,107 @@
+{
+  "modelVersion" : "2.2",
+  "properties" : [
+    {
+      "label" : "Text",
+      "name" : "text",
+      "type" : "text",
+      "defaultValue" : "Link",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "URL",
+      "name" : "targetUrl",
+      "type" : "text",
+      "defaultValue" : "http://",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Alignment",
+      "name" : "alignment",
+      "type" : "choice",
+      "defaultValue" : "left",
+      "choiceValues" : [
+        "left",
+        "center",
+        "right"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Style",
+      "name" : "buttonStyle",
+      "type" : "choice",
+      "defaultValue" : "link",
+      "choiceValues" : [
+        "link",
+        "default",
+        "primary",
+        "success",
+        "info",
+        "warning",
+        "danger"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Display Icon",
+      "name" : "displayIcon",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "constant"
+    },
+    {
+      "label" : "Icon class",
+      "name" : "iconClass",
+      "type" : "text",
+      "defaultValue" : "ok",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Customize style",
+      "name" : "customStyle",
+      "type" : "text",
+      "defaultValue" : "{ }",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Tooltip",
+      "name" : "tooltipText",
+      "type" : "text",
+      "defaultValue" : "Este es un tooltip",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Frame",
+      "name" : "target",
+      "help" : "Specifies where to open the linked document",
+      "type" : "choice",
+      "choiceValues" : [
+        "[object Object]",
+        "[object Object]",
+        "[object Object]",
+        "[object Object]"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "id" : "customWidgetLinkFirma",
+  "name" : "widgetLinkFirma",
+  "lastUpdate" : 1687835059718,
+  "template" : "@customWidgetLinkFirma.tpl.html",
+  "controller" : "@customWidgetLinkFirma.ctrl.js",
+  "description" : "Permite registrar el protocolo firmaec para pode iniciar la aplicacion de FirmaEC instalada en el computador del usuario.",
+  "custom" : true,
+  "assets" : [
+    {
+      "id" : "f3478d40-b464-4dd7-b89d-44313a0c031a",
+      "name" : "compile-provider-ahref.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}
