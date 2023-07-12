@@ -21,7 +21,7 @@ bin
 /process_configurations
 /META-INF
 .settings
-target/
+/target
 /build.properties
 /web_widgets/pb*/
 /web_widgets/.metadata
