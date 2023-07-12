@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarDocDirectorForm",
   "name" : "validarDocDirectorForm",
-  "lastUpdate" : 1689047926318,
+  "lastUpdate" : 1689152977345,
   "rows" : [
     [
       {
@@ -191,7 +191,7 @@
                         },
                         "document" : {
                           "type" : "variable",
-                          "value" : "context.docSolicitudDirector_ref"
+                          "value" : "context.docGenerado_ref"
                         },
                         "showPreview" : {
                           "type" : "constant",

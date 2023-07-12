@@ -17,9 +17,14 @@ class CertificateFields {
 	static final String FECHA_FIN = "fechaFin"
 	static final String SECRETARY_NAME = "secretaria"
 	static final String GESTOR_NAME = "gestor"
+	static final String DOCENTE_NAME = "docente"
 	static final String DEAN_NAME = "decano"
 	static final String CERTIFICATE_CODE = "certificateCode"
 	static final String CAREER_NAME = "carrera"	
+	static final String PERTINENCIA = "pertinencia"
+	static final String VALIDO = "valido"
+	static final String MEMO = "memo"
+	static final String MEMO_PASADO = "memos"
 
 	//
 	static final Integer SOLICITUD_PERTINENCIA_ID_1 = 1

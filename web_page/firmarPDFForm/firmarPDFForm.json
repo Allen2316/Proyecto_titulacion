@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1689067332157,
+  "lastUpdate" : 1689152542652,
   "rows" : [
     [
       {
@@ -921,28 +921,9 @@
         " */",
         "if ($data.context) {",
         "    ",
-        "    var entidad = $data.valorVpEntidadFirmar.value;",
-        "    let documento= \"\";",
+        "    console.log(\"Documento \", $data.context.docGenerado_ref);",
         "    ",
-        "    console.log(\"entidad \", entidad);",
-        "    ",
-        "    switch (entidad) {",
-        "        case \"coordinacion\":",
-        "            documento = $data.context.docSolicitudPertinencia_ref",
-        "            break;",
-        "        case \"Docentes\":",
-        "            documento = $data.context.docInformePertinencia_ref",
-        "            break;",
-        "        case \"coordinacion-director\":",
-        "            documento = $data.context.docAsignacionDirector_ref",
-        "            break;",
-        "        default:",
-        "            location.reload();",
-        "    }",
-        "    ",
-        "    console.log(\"Documento \", documento);",
-        "    ",
-        "    return documento;",
+        "    return $data.context.docGenerado_ref;",
         "         ",
         "}"
       ],
@@ -1242,14 +1223,6 @@
         "statusCode" : "",
         "failedResponseValue" : ""
       },
-      "exposed" : false
-    },
-    "valorVpEntidadFirmar" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/vpEntidadFirmar"
-      ],
-      "advancedOptions" : { },
       "exposed" : false
     }
   },

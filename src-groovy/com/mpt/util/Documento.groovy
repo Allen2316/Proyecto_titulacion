@@ -9,6 +9,8 @@ import org.bonitasoft.engine.bpm.document.Document
 import org.bonitasoft.engine.bpm.document.DocumentValue
 
 import com.mpt.constantes.CertificateFields;
+import com.mpt.util.Funcionario;
+import com.mpt.util.Estudiante;
 import com.mpt.constantes.MPTConstants;
 import com.mpt.payloads.Payload
 import com.unl.model.ObjetoCertOtros
@@ -21,7 +23,7 @@ import com.unl.model.ObjetoProrrogasFinal
 /**
  * Métodos para procesar documentos
  * 
- * @author ajcm
+ * @author Allen
  * @version 1.0
  */
 class Documento {
@@ -42,10 +44,10 @@ class Documento {
 		}
 
 		if (addCareerInitials) {
-			return processInstanceId + "_" + LocalDate.now().getYear() + "_" + MPTConstants.CAREER_INITIALS+ "_M_"
+			return processInstanceId + "_" + LocalDate.now().getYear() + "_" + MPTConstants.CAREER_INITIALS+ "_M"
 		}
 
-		return processInstanceId + "_" + LocalDate.now().getYear() + "_M_"
+		return processInstanceId + "_" + LocalDate.now().getYear() + "_M"
 	}
 
 
@@ -60,13 +62,13 @@ class Documento {
 	 * @return filename Nombre del archivo de salida
 	 */
 	static String generateOutputFilename(Integer idCert, Long idSolicitanteBonitaBPM, Long processInstanceId) {		
-		String certificateName = ""
+		String certificateName = "_"
 		String documentCode = ""
 		String auxIdentifiers = idCert.toString() + idSolicitanteBonitaBPM;
-		String timeInMs = System.currentTimeMillis().toString().substring(8) + "-"
+		String timeInMs = System.currentTimeMillis().toString().substring(8) + "_"
 		String tipoName = ""
 		
-			if (idCert == CertificateFields.SOLICITUD_PERTINENCIA_ID_1) {
+			if (idCert == CertificateFields.SOLICITUD_PERTINENCIA_ID_1 || idCert == CertificateFields.INFORME_PERTINENCIA_ID_2) {
 				//_pertinencia
 				tipoName = CertificateFields.FILENAME_PERTINENCIA
 			}else if(idCert == CertificateFields.INFORME_DIRECTOR_ID_3){
@@ -78,8 +80,24 @@ class Documento {
 			documentCode = generarDocumentCode(processInstanceId, false)		
 
 			//UNL_FEIRNNR_CISC_PO_025_2022_M.,
-			//certificado-practicas-1321000-12345-2023.docx
-		return certificateName + auxIdentifiers + timeInMs + documentCode + tipoName + MPTConstants.DOCX_EXTENSION;
+			//return certificateName + auxIdentifiers + timeInMs + documentCode + tipoName + MPTConstants.DOCX_EXTENSION;
+			return certificateName + auxIdentifiers + timeInMs + documentCode + tipoName + MPTConstants.DOCX_EXTENSION;
+	}
+	
+	/**
+	 * Obtener el nombre del MEMO par la plantilla .docx, elimina el resto de cadena despues del último "_" presente en la misma
+	 * ejm. UNL_FEIRNNR_CISC_PO1511343-3001_2023_M_pertinencia -> UNL_FEIRNNR_CISC_PO1511343-3001_2023_M
+	 * @param fileName
+	 * @return El nombre del MEMO para plantilla .docx
+	 */
+
+	static String generateOutputMemoName(String fileName){
+		int indiceUltimoGuionBajo = fileName.lastIndexOf("_");
+		if (indiceUltimoGuionBajo >= 0) {
+			return fileName.substring(0, indiceUltimoGuionBajo);
+		} else {
+			return fileName;
+		}
 	}
 
 	
@@ -95,7 +113,7 @@ class Documento {
 		String urlDocumentTemplateAlfresco = ""		
 
 		
-			urlDocumentTemplateAlfresco = MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES
+			urlDocumentTemplateAlfresco = MPTConstants.ALFRESCO_PARENT_FOLDER + MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES
 			
 			if (idTipoInforme == CertificateFields.SOLICITUD_PERTINENCIA_ID_1) {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_PERTINENCIA			
@@ -118,46 +136,96 @@ class Documento {
 	 * 
 	 * @param identityAPI
 	 * @param idSolicitanteBonitaBPM
-	 * @param processInstanceId
-	 * @param vpNombreCarrera
-	 * @param certificadoSeleccionado
-	 * @param eventoSeleccionado
-	 * @param prorroga
-	 * @param prorrogasFinal
-	 * @param practicas
-	 * @param otros
+	 * @param idTipoDocumento
+	 * @param vpUserNameDocente
+	 * @param vpTitulo
+	 * @param vpMemo
+	 * @param pertinencia
+	 * @param fecha_fin
 	 * @return Lista de reemplazos para la plantilla del certificado
+	 * 
 	 */
-	static List getCertificateTemplateReplacements(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM, Long processInstanceId, String vpNombreCarrera) {
+	static List getCertificateTemplateReplacements(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM,
+													Integer idTipoDocumento, 
+													String vpUserNameDocente, String vpTitulo, 
+													String vpMemoPasado, String vpMemo,
+													Boolean pertinencia, String fecha_fin) {
 		List replacementsList = []
 		try {
 			String fullNameStudent = Estudiante.getFullName(identityAPI, idSolicitanteBonitaBPM)
+			String fullNameGestor = Funcionario.getFullName(CertificateFields.COORDINATION_GROUP_NAME, identityAPI)
+			String fullNameDocente = Funcionario.getFullNameWithUserName(vpUserNameDocente, identityAPI)
 
 			// Datos generales del certificado
 			replacementsList.add([
-				CertificateFields.CERTIFICATE_CODE,
-				generarCertificateCode(processInstanceId, true)
+				CertificateFields.MEMO,
+				vpMemo
+			])					
+			
+			replacementsList.add([
+				CertificateFields.FECHA,
+				FormatearFecha.obtenerFechaActualFormateada()
 			])
+			replacementsList.add([
+				CertificateFields.GESTOR_NAME,
+				fullNameGestor
+			])
+			
+			replacementsList.add([
+				CertificateFields.DOCENTE_NAME,
+				fullNameDocente
+			])
+			
+			replacementsList.add([
+				CertificateFields.TITULO,
+				vpTitulo
+			])
+			
+			/*replacementsList.add([
+				CertificateFields.STUDENT_ID_CARD,
+				Estudiante.getCedulaStudent(identityAPI, idSolicitanteBonitaBPM)
+			])*/
+			
 			replacementsList.add([
 				CertificateFields.STUDENT_NAME,
 				fullNameStudent
 			])
-			replacementsList.add([
-				CertificateFields.STUDENT_ID_CARD,
-				Estudiante.getCedulaStudent(identityAPI, idSolicitanteBonitaBPM)
-			])
-			replacementsList.add([
-				CertificateFields.ISSUE_DATE,
-				FormatearFecha.obtenerFechaActualFormateada()
-			])
-			replacementsList.add([
-				CertificateFields.CAREER_NAME,
-				vpNombreCarrera.toUpperCase()
-			])
-			replacementsList.add([
-				CertificateFields.CAREER_NAME_AUX,
-				vpNombreCarrera
-			])			
+			
+			/*replacementsList.add([
+				CertificateFields.STUDENT_NAME_SECOND,
+				fullNameStudent
+			])*/
+			
+			// Datos adicionales de acuerdo a la solicitud
+			if (idTipoDocumento == CertificateFields.INFORME_PERTINENCIA_ID_2) {
+				String perti = ""
+				String valido = ""
+				perti = (pertinencia) ?  "PERTINENTE" : "NO PERTINENTE"
+				valido = (pertinencia) ?  "" : "NO"
+				
+				replacementsList.add([
+					CertificateFields.MEMO_PASADO,
+					vpMemoPasado
+				])
+				
+				replacementsList.add([
+					CertificateFields.PERTINENCIA,
+					perti
+				])
+				
+				replacementsList.add([
+					CertificateFields.VALIDO,
+					valido
+				])
+			}else if (idTipoDocumento == CertificateFields.INFORME_DIRECTOR_ID_3) {
+								
+				replacementsList.add([
+					CertificateFields.FECHA_FIN,
+					fecha_fin
+				])
+								
+			}
+			
 
 			return replacementsList
 

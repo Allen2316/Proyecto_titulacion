@@ -100,7 +100,7 @@ class MPTConstants {
 	 * Datos Alfresco server para almacenamiento de plantillas DOCX de certificados y solicitudes
 	 * para todos los ambientes
 	 */
-	static final String ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES = "/Plantillas"
+	static final String ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES = "/Plantillas/"
 
 	/**
 	 * PARAMETROS
