@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_BcuEUBUeEe69lP54lEEmQQ" name="Inicializar Parametros" author="Allen" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
+    <elements xmi:type="process:Pool" xmi:id="_BcuEURUeEe69lP54lEEmQQ" name="Inicializar Parametros">
+      <elements xmi:type="process:Lane" xmi:id="_BcuEUhUeEe69lP54lEEmQQ" name="Empleado (lane) " actor="_BcuEaxUeEe69lP54lEEmQQ">
+        <elements xmi:type="process:StartEvent" xmi:id="_BcuEUxUeEe69lP54lEEmQQ" name="Inicio1" outgoing="_GczTABUeEe69lP54lEEmQQ">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_BcuEVBUeEe69lP54lEEmQQ" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_BcuEVRUeEe69lP54lEEmQQ" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_BcuEVhUeEe69lP54lEEmQQ" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:EndTerminatedEvent" xmi:id="_Gcw2wBUeEe69lP54lEEmQQ" name="Fin1" incoming="_GczTABUeEe69lP54lEEmQQ">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_Gcw2whUeEe69lP54lEEmQQ" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_Gcw2wRUeEe69lP54lEEmQQ" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_Gcw2wxUeEe69lP54lEEmQQ" name="" content="" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_VvJv0BUrEe69lP54lEEmQQ" name="parametros" multiple="true" dataType="_BcuEhBUeEe69lP54lEEmQQ" className="com.unl.model.BOParametros">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_VvJv0RUrEe69lP54lEEmQQ" name="init_parametros()" content="import com.unl.model.BOParametros&#xD;&#xA;import com.mpt.util.Funcionario&#xD;&#xA;import com.mpt.security.CodeAndDecode&#xD;&#xA;import java.util.logging.Logger&#xD;&#xA;&#xD;&#xA;java.time.LocalDateTime fechaActual = com.mpt.util.FormatearFecha.obtenerFechaYHoraActual()&#xD;&#xA;String usuarioFuncionario = Funcionario.getUsername(apiAccessor.getProcessAPI(), processInstanceId, apiAccessor.getIdentityAPI())&#xD;&#xA;String valorUsuarioCorreo = ''&#xD;&#xA;String valorPasswordCorreoEncrypted = ''&#xD;&#xA;String valorUserAlfresco = 'admin'&#xD;&#xA;//valores para localhost nada de Carrera&#xD;&#xA;//Original -> String valorPasswordAlfrescoEncrypted = 'YWRtaW4='&#xD;&#xA;String valorPasswordAlfrescoEncrypted = 'admin'&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#x9;valorUsuarioCorreo = 'luis.a.sarmiento@unl.edu.ec'&#xD;&#xA;&#x9;//Original -> valorPasswordCorreoEncrypted = &quot;vflaudgkoykskiwj&quot;&#xD;&#xA;&#x9;valorPasswordCorreoEncrypted = &quot;vflaudgkoykskiwj&quot;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#xD;&#xA;def listParams = [&#xD;&#xA;&#x9;new BOParametros(id: 1,&#xD;&#xA;&#x9;&#x9;nombre: 'Usuario SMTP de Gmail',&#xD;&#xA;&#x9;&#x9;valor: valorUsuarioCorreo,&#xD;&#xA;&#x9;&#x9;descripcion: 'Es el correo electrónico de Gmail. Este correo electrónico es utilizado como correo remitente para enviar notificaciones y recordatorios desde el MCE',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;new BOParametros(id: 2,&#xD;&#xA;&#x9;&#x9;nombre: 'Contraseña del usuario SMTP de Gmail',&#xD;&#xA;&#x9;&#x9;valor: valorPasswordCorreoEncrypted,&#xD;&#xA;&#x9;&#x9;descripcion: 'Es la contraseña del usuario (correo electrónico) SMTP de Gmail',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;new BOParametros(id: 3,&#xD;&#xA;&#x9;&#x9;nombre: 'Nombre del usuario administrador de Alfresco',&#xD;&#xA;&#x9;&#x9;valor: valorUserAlfresco,&#xD;&#xA;&#x9;&#x9;descripcion: 'Es el nombre del usuario administrador de Alfresco. Es utilizado para acceder y respaldar certificados firmados en Alfresco',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;new BOParametros(id: 4,&#xD;&#xA;&#x9;&#x9;nombre: 'Contraseña del usuario administrador de Alfresco',&#xD;&#xA;&#x9;&#x9;valor: valorPasswordAlfrescoEncrypted,&#xD;&#xA;&#x9;&#x9;descripcion: 'Este parámetro es la contraseña del usuario administrador de Alfresco',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;new BOParametros(id: 5,&#xD;&#xA;&#x9;&#x9;nombre: 'Nombre de la carrera',&#xD;&#xA;&#x9;&#x9;valor: 'Carrera de Ingeniería en Sistemas/Computación',&#xD;&#xA;&#x9;&#x9;descripcion: 'Corresponde al nombre de la carrera. Este parámetro será insertado en las plantillas de los certificados y solicitudes, y en el nombre del remitente de las notificaciones y recordatorios',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#xD;&#xA;&#x9;new BOParametros(id: 6,&#xD;&#xA;&#x9;&#x9;nombre: 'Tiempo para recordatorios',&#xD;&#xA;&#x9;&#x9;valor: '48',&#xD;&#xA;&#x9;&#x9;descripcion: 'Tiempo en horas para el envío de recordatorios',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;new BOParametros(id: 7,&#xD;&#xA;&#x9;&#x9;nombre: 'Tiempo para recordatorios (AMBIENTE DE PRUEBAS)',&#xD;&#xA;&#x9;&#x9;valor: '1',&#xD;&#xA;&#x9;&#x9;descripcion: 'Tiempo en horas para el envío de recordatorios (AMBIENTE DE PRUEBAS)',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;new BOParametros(id: 8,&#xD;&#xA;&#x9;&#x9;nombre: 'Url aplicación de lista de tareas de Bonita',&#xD;&#xA;&#x9;&#x9;valor: 'https://computacion.unl.edu.ec/bonita/apps/userAppBonita/task-list',&#xD;&#xA;&#x9;&#x9;descripcion: 'Url de aplicación de la lista de tareas de Bonita que será agregada a la mayoría de mensajes y notificaciones enviados por correo electrónico',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;new BOParametros(id: 9,&#xD;&#xA;&#x9;&#x9;nombre: 'Url aplicación de lista de tareas de Bonita (AMBIENTE DE PRUEBAS)',&#xD;&#xA;&#x9;&#x9;valor: 'https://pruebasmce.info/bonita/apps/userAppBonita/task-list',&#xD;&#xA;&#x9;&#x9;descripcion: 'Url de lista de tareas de Bonita que será agregada a la mayoría de mensajes y notificaciones enviados por correo electrónico (AMBIENTE DE PRUEBAS)',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;new BOParametros(id: 10,&#xD;&#xA;&#x9;&#x9;nombre: 'Url del servicio web de firma',&#xD;&#xA;&#x9;&#x9;valor: 'http://localhost:7776/servicio/documentos',&#xD;&#xA;&#x9;&#x9;descripcion: 'Url del servicio web de documentos (firmadigital-servicio) utilizado en el backend del proceso del MCE',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;new BOParametros(id: 11,&#xD;&#xA;&#x9;&#x9;nombre: 'Url del servicio web de firma (AMBIENTE DE PRUEBAS)',&#xD;&#xA;&#x9;&#x9;valor: 'https://computacion.unl.edu.ec/firmaec/servicio/documentos',&#xD;&#xA;&#x9;&#x9;descripcion: 'Url del servicio web de firma (firmadigital-servicio), es utilizada en el backend de Bonita (AMBIENTE DE PRUEBAS)',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;new BOParametros(id: 12,&#xD;&#xA;&#x9;&#x9;nombre: 'Api key del servicio web de firma',&#xD;&#xA;&#x9;&#x9;valor: 'mce2023',&#xD;&#xA;&#x9;&#x9;descripcion: 'Valor del api key para poder utilizar el servicio web de firma',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;new BOParametros(id: 13,&#xD;&#xA;&#x9;&#x9;nombre: 'Url del servicio atompub de Alfresco',&#xD;&#xA;&#x9;&#x9;//valor: 'https://computacion.unl.edu.ec/alfresco/api/-default-/public/cmis/versions/1.1/atom',&#xD;&#xA;&#x9;&#x9;valor: 'http://127.0.0.1:9090/alfresco/api/-default-/public/cmis/versions/1.0/atom',&#xD;&#xA;&#x9;&#x9;descripcion: 'Url del servicio atompub de Alfresco',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#xD;&#xA;&#x9;new BOParametros(id: 14,&#xD;&#xA;&#x9;&#x9;nombre: 'Url del servidor de firma',&#xD;&#xA;&#x9;&#x9;valor: 'https://computacion.unl.edu.ec/firmaec',&#xD;&#xA;&#x9;&#x9;descripcion: 'Url del servidor de firma',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario),&#xD;&#xA;&#x9;  &#xD;&#xA;&#x9;new BOParametros(id: 15,&#xD;&#xA;&#x9;&#x9;nombre: 'Url del servidor de firma (AMBIENTE DE PRUEBAS)',&#xD;&#xA;&#x9;&#x9;valor: 'https://pruebasmce.info/firmaec',&#xD;&#xA;&#x9;&#x9;descripcion: 'Url del servidor de firma (AMBIENTE DE PRUEBAS)',&#xD;&#xA;&#x9;&#x9;fechaDeCreacion: fechaActual,&#xD;&#xA;&#x9;&#x9;usuarioCreacion: usuarioFuncionario)&#xD;&#xA;]&#xD;&#xA;&#xD;&#xA;return listParams&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_fJupMBuUEe6RgNfyQwQNDw" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_fJupMRuUEe6RgNfyQwQNDw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        </defaultValue>
+      </data>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_BcuEZBUeEe69lP54lEEmQQ">
+        <targetForm xmi:type="expression:Expression" xmi:id="_w-vVMBuPEe6RgNfyQwQNDw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_BcuEZhUeEe69lP54lEEmQQ">
+        <targetForm xmi:type="expression:Expression" xmi:id="_BcuEZxUeEe69lP54lEEmQQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_GczTABUeEe69lP54lEEmQQ" target="_Gcw2wBUeEe69lP54lEEmQQ" source="_BcuEUxUeEe69lP54lEEmQQ">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Gcz6EBUeEe69lP54lEEmQQ"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Gcz6ERUeEe69lP54lEEmQQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_BcuEaxUeEe69lP54lEEmQQ" documentation="Este es un ejemplo de actor que está mapeado a cualquier usuario de la organización ACME" name="Employee actor" initiator="true"/>
+      <contract xmi:type="process:Contract" xmi:id="_BcuEbBUeEe69lP54lEEmQQ"/>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_BcuEbRUeEe69lP54lEEmQQ">
+        <name xmi:type="expression:Expression" xmi:id="_BcuEbhUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_BcuEbxUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_BcuEcBUeEe69lP54lEEmQQ">
+        <name xmi:type="expression:Expression" xmi:id="_BcuEcRUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_BcuEchUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_BcuEcxUeEe69lP54lEEmQQ">
+        <name xmi:type="expression:Expression" xmi:id="_BcuEdBUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_BcuEdRUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_BcuEdhUeEe69lP54lEEmQQ">
+        <name xmi:type="expression:Expression" xmi:id="_BcuEdxUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_BcuEeBUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_BcuEeRUeEe69lP54lEEmQQ">
+        <name xmi:type="expression:Expression" xmi:id="_BcuEehUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_BcuEexUeEe69lP54lEEmQQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <datatypes xmi:type="process:BooleanType" xmi:id="_BcuEfBUeEe69lP54lEEmQQ" name="Boolean"/>
+    <datatypes xmi:type="process:DateType" xmi:id="_BcuEfRUeEe69lP54lEEmQQ" name="Date"/>
+    <datatypes xmi:type="process:IntegerType" xmi:id="_BcuEfhUeEe69lP54lEEmQQ" name="Integer"/>
+    <datatypes xmi:type="process:LongType" xmi:id="_BcuEfxUeEe69lP54lEEmQQ" name="Long"/>
+    <datatypes xmi:type="process:DoubleType" xmi:id="_BcuEgBUeEe69lP54lEEmQQ" name="Double"/>
+    <datatypes xmi:type="process:StringType" xmi:id="_BcuEgRUeEe69lP54lEEmQQ" name="Text"/>
+    <datatypes xmi:type="process:JavaType" xmi:id="_BcuEghUeEe69lP54lEEmQQ" name="Java_object"/>
+    <datatypes xmi:type="process:XMLType" xmi:id="_BcuEgxUeEe69lP54lEEmQQ" name="XML"/>
+    <datatypes xmi:type="process:BusinessObjectType" xmi:id="_BcuEhBUeEe69lP54lEEmQQ" name="Business_Object"/>
+  </process:MainProcess>
+  <notation:Diagram xmi:id="_BcuEhRUeEe69lP54lEEmQQ" type="Process" element="_BcuEUBUeEe69lP54lEEmQQ" name="MiDiagrama" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_BcuEhhUeEe69lP54lEEmQQ" type="2007" element="_BcuEURUeEe69lP54lEEmQQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_BcuEhxUeEe69lP54lEEmQQ" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_BcuEiBUeEe69lP54lEEmQQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_BcuEiRUeEe69lP54lEEmQQ" type="3007" element="_BcuEUhUeEe69lP54lEEmQQ">
+          <children xmi:type="notation:DecorationNode" xmi:id="_BcuEihUeEe69lP54lEEmQQ" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_BcuEixUeEe69lP54lEEmQQ" type="7002">
+            <children xmi:type="notation:Shape" xmi:id="_BcuEjxUeEe69lP54lEEmQQ" type="3002" element="_BcuEUxUeEe69lP54lEEmQQ" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BcuEkBUeEe69lP54lEEmQQ" type="5024">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_BcuEkRUeEe69lP54lEEmQQ" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BcuEkhUeEe69lP54lEEmQQ" x="60" y="68"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_Gcw2xBUeEe69lP54lEEmQQ" type="3062" element="_Gcw2wBUeEe69lP54lEEmQQ" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_Gcw2xhUeEe69lP54lEEmQQ" type="5090">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Gcw2xxUeEe69lP54lEEmQQ" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gcw2xRUeEe69lP54lEEmQQ" x="206" y="69"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_BcuEkxUeEe69lP54lEEmQQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_BcuElBUeEe69lP54lEEmQQ" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_BcuElRUeEe69lP54lEEmQQ"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_BcuElhUeEe69lP54lEEmQQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BcuElxUeEe69lP54lEEmQQ"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_BcuEmBUeEe69lP54lEEmQQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_BcuEmRUeEe69lP54lEEmQQ" fontName="Segoe UI"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_BcuEmhUeEe69lP54lEEmQQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_BcuEmxUeEe69lP54lEEmQQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BcuEnBUeEe69lP54lEEmQQ" width="1000" height="250"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_BcuEnRUeEe69lP54lEEmQQ"/>
+    <edges xmi:type="notation:Connector" xmi:id="_Gcz6EhUeEe69lP54lEEmQQ" type="4001" element="_GczTABUeEe69lP54lEEmQQ" source="_BcuEjxUeEe69lP54lEEmQQ" target="_Gcw2xBUeEe69lP54lEEmQQ" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Gcz6FRUeEe69lP54lEEmQQ" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Gcz6FhUeEe69lP54lEEmQQ" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Gcz6ExUeEe69lP54lEEmQQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Gcz6FBUeEe69lP54lEEmQQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
