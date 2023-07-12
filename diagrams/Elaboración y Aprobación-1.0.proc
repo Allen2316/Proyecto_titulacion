@@ -2887,7 +2887,7 @@
         <url xmi:type="expression:Expression" xmi:id="_B4fQ4gnGEe6qKpdaRuqTfw" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_B4fQ4wnGEe6qKpdaRuqTfw" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
       </documents>
-      <documents xmi:type="process:Document" xmi:id="_WGn2AA4XEe66NI25NzQjaw" name="docTemplateSolicitudPertinencia" defaultValueIdOfDocumentStore="UNL_FEIRNNR_CISC_095_2022_M_pertinencia.docx" documentType="INTERNAL">
+      <documents xmi:type="process:Document" xmi:id="_WGn2AA4XEe66NI25NzQjaw" name="docTemplateSolicitudPertinencia" defaultValueIdOfDocumentStore="Solicitud_Pertinencia.docx" documentType="INTERNAL">
         <mimeType xmi:type="expression:Expression" xmi:id="_WGn2AQ4XEe66NI25NzQjaw" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_WGn2Ag4XEe66NI25NzQjaw" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_WGn2Aw4XEe66NI25NzQjaw" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
@@ -2897,12 +2897,12 @@
         <url xmi:type="expression:Expression" xmi:id="_-6GAghbTEe61u4-R-tPQmA" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_-6GAgxbTEe61u4-R-tPQmA" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
       </documents>
-      <documents xmi:type="process:Document" xmi:id="_EaXREBw4Ee6O1vw0E0hZjA" name="docTemplateInformePertinencia" defaultValueIdOfDocumentStore="UNL_FEIRNNR_CISC_PO_002_2022_M_pertinencia.docx" documentType="INTERNAL">
+      <documents xmi:type="process:Document" xmi:id="_EaXREBw4Ee6O1vw0E0hZjA" name="docTemplateInformePertinencia" defaultValueIdOfDocumentStore="Informe_Pertinencia.docx" documentType="INTERNAL">
         <mimeType xmi:type="expression:Expression" xmi:id="_EaXRERw4Ee6O1vw0E0hZjA" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_EaXREhw4Ee6O1vw0E0hZjA" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_EaXRExw4Ee6O1vw0E0hZjA" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
       </documents>
-      <documents xmi:type="process:Document" xmi:id="_ea8E4B-XEe6aG8nMFvDQCQ" name="docTemplateDirector" defaultValueIdOfDocumentStore="UNL_FEIRNNR_CISC_161_2022_M_director.docx" documentType="INTERNAL">
+      <documents xmi:type="process:Document" xmi:id="_ea8E4B-XEe6aG8nMFvDQCQ" name="docTemplateDirector" defaultValueIdOfDocumentStore="Asignacion_Director.docx" documentType="INTERNAL">
         <mimeType xmi:type="expression:Expression" xmi:id="_ea8E4R-XEe6aG8nMFvDQCQ" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_ea8E4h-XEe6aG8nMFvDQCQ" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_ea8E4x-XEe6aG8nMFvDQCQ" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
