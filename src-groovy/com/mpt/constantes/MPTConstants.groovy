@@ -8,7 +8,7 @@ package com.mpt.constantes
  */
 class MPTConstants {
 
-	static final String BASE_DOCUMENT_NAME= "certificado"
+	static final String BASE_DOCUMENT_NAME= "UNL_FEIRNNR_CISC_PO"
 	static final String DOCX_EXTENSION = ".docx"
 	static final String PDF_EXTENSION = ".pdf"
 	static final String REPLACEMENT_PDF_EXTENSION = "-signed.pdf"
@@ -74,19 +74,18 @@ class MPTConstants {
 	
 	/**
 	 * Nombre de opciones disponibles para el proceso de Crear o editar
-	 */
-	static final String OPTION_CREATE_OR_EDIT_PREREQUISITE = "PRERREQUISITO"
+	 */	
 	static final String OPTION_CREATE_OR_EDIT_PARAM = "PARAMETRO"
-	static final String OPTION_CREATE_OR_EDIT_ACADEMIC_EVENT = "EVENTO_ACADEMICO"
-	static final String OPTION_CREATE_OR_EDIT_ACADEMIC_CERT = "CERTIFICADO_ACADEMICO"
+	
 
 	/**
 	 * Datos de Alfresco server para almacenamiento de certificados académicos firmados
 	 */
 	static final String ALFRESCO_REPOSITORY_NAME = "Main Repository"
-	static final String ALFRESCO_PARENT_FOLDER = "/bonita"
-	static final String ALFRESCO_PARENT_FOLDER_PATH_CERTIFICATES = "/CertificadosAcademicos"
-	static final String ALFRESCO_PARENT_FOLDER_PATH_CERTIFICATES_PRE = "/CertificadosAcademicosTEST"
+	static final String ALFRESCO_PARENT_FOLDER = "/UNL"
+	static final String ALFRESCO_PARENT_FOLDER_PATH_INFORMES = "/Informes"
+	static final String ALFRESCO_PARENT_FOLDER_PATH_SOLICITUDES = "/Solicitudes"
+
 	/**
 	 * Dirección web de Alfresco donde se almacenan los certificados firmados. Se debe anexar con el id retornado del
 	 * documento guardado en Alfresco. Ejm:
@@ -101,7 +100,7 @@ class MPTConstants {
 	 * Datos Alfresco server para almacenamiento de plantillas DOCX de certificados y solicitudes
 	 * para todos los ambientes
 	 */
-	static final String ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES = "/Plantillas"
+	static final String ALFRESCO_PARENT_FOLDER_PATH_TEMPLATES = "/Plantillas/"
 
 	/**
 	 * PARAMETROS

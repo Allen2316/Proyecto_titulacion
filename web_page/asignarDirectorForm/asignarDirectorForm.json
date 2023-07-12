@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "asignarDirectorForm",
   "name" : "asignarDirectorForm",
-  "lastUpdate" : 1689050223703,
+  "lastUpdate" : 1689153100341,
   "rows" : [
     [
       {
@@ -222,7 +222,7 @@
                         },
                         "document" : {
                           "type" : "variable",
-                          "value" : "context.docSolicitudDirector_ref"
+                          "value" : "context.docGenerado_ref"
                         },
                         "showPreview" : {
                           "type" : "constant",
