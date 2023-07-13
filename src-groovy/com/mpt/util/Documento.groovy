@@ -221,7 +221,7 @@ class Documento {
 								
 				replacementsList.add([
 					CertificateFields.FECHA_FIN,
-					fecha_fin
+					FormatearFecha.formatearFecha(fecha_fin)
 				])
 								
 			}
