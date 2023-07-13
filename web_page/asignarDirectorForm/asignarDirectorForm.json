@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "asignarDirectorForm",
   "name" : "asignarDirectorForm",
-  "lastUpdate" : 1689153100341,
+  "lastUpdate" : 1689234549908,
   "rows" : [
     [
       {
@@ -301,6 +301,58 @@
                       "hasValidationError" : false,
                       "id" : "pbDatePicker"
                     }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : "text-danger"
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "fechaValida"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "<b>*La fecha de finalización debe ser mayor a la fecha actual</b>"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "898fe76b-b662-4fab-9fca-4c0ae167c133",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
                   ]
                 ]
               }
@@ -365,7 +417,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid"
+                    "value" : "$form.$invalid || !fechaValida"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -531,6 +583,24 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "fechaValida" : {
+      "type" : "expression",
+      "value" : [
+        "if(angular.equals(null, $data.formInput.fechaFin)){\r",
+        "    return true\r",
+        "}else{\r",
+        "var fechaFin = new Date($data.formInput.fechaFin); \r",
+        "console.log(\"fechaFin \",fechaFin);\r",
+        "console.log(\"out \",$data.formOutput.fechaFin);\r",
+        "  \r",
+        "var fechaHoy = new Date(); // Obtiene la fecha actual\r",
+        "  \r",
+        "return angular.isDefined($data.formOutput)                  \r",
+        "        && fechaFin > fechaHoy     \r",
+        "}\r"
       ],
       "exposed" : false
     }

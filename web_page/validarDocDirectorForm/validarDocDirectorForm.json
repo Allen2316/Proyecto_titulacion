@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarDocDirectorForm",
   "name" : "validarDocDirectorForm",
-  "lastUpdate" : 1689152977345,
+  "lastUpdate" : 1689232120315,
   "rows" : [
     [
       {
@@ -310,7 +310,7 @@
                         },
                         "buttonStyle" : {
                           "type" : "constant",
-                          "value" : "primary"
+                          "value" : "success"
                         },
                         "action" : {
                           "type" : "constant",

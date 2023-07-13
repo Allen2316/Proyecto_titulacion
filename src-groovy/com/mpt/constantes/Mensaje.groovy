@@ -69,9 +69,13 @@ class Mensaje {
 	 * @return
 	 */
 	public static String buildButtonApp(String urlApp, String buttonName) {
-		return "<a href=${urlApp} target='_blank' style='color: white; text-decoration: none;'> \
+		/*return "<a href=${urlApp} target='_blank' style='color: white; text-decoration: none;'> \
 					<center style='background-color: #dd0033; padding: 5px; border-radius:10px;'><h2>${buttonName}</h2></center> \
-				</a>"
+				</a>"*/
+		String url = "http://localhost:8080/bonita/apps/userAppBonita/task-list/"
+		return "<a href=${url} target='_blank' style='color: white; text-decoration: none;'> \
+			<center style='background-color: #dd0033; padding: 5px; border-radius:10px;'><h2>${buttonName}</h2></center> \
+		</a>"
 	}
 
 	

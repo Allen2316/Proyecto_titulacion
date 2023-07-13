@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "informePertinenciaForm",
   "name" : "informePertinenciaForm",
-  "lastUpdate" : 1688680097803,
+  "lastUpdate" : 1689231997764,
   "rows" : [
     [
       {
@@ -403,7 +403,7 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "primary"
+                    "value" : "success"
                   },
                   "label" : {
                     "type" : "interpolation",

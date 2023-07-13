@@ -2957,18 +2957,8 @@
           <fragments xmi:type="configuration:Fragment" xmi:id="_7XFegRuOEe6RgNfyQwQNDw" key="com/mpt/payloads/Payload.groovy" value="com/mpt/payloads/Payload.groovy" type="GROOVY_SCRIPT"/>
           <fragments xmi:type="configuration:Fragment" xmi:id="_70YaMh-OEe6aG8nMFvDQCQ" key="com/mpt/constantes/MPTConstants.groovy" value="com/mpt/constantes/MPTConstants.groovy" type="GROOVY_SCRIPT"/>
         </applicationDependencies>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JVv9GEe2h95mZurfxjQ" id="OTHER"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_g81nsAP9Ee65tNxoSYhk4A" name="alfrescoUsername" value="admin" typeClassname="java.lang.String" description="Usuario de Alfresco"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_m71VsAP9Ee65tNxoSYhk4A" name="alfrescoPassword" value="" typeClassname="java.lang.String" description="Contraseña de repositorio de Alfresco "/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_qLo5kAP9Ee65tNxoSYhk4A" name="alfrescoRepositoryName" value="" typeClassname="java.lang.String" description="nombre del repositorio de alfresco"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_uGflkAP9Ee65tNxoSYhk4A" name="alfrescoCmisURL" value="" typeClassname="java.lang.String" description="Url para conexion de alfresco"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_Rft88AP-Ee65tNxoSYhk4A" name="parentFolder" value="/" typeClassname="java.lang.String" description="la carpeta padre donde se almacenaran los documentos"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JVv9GEe2h95mZurfxjQ" id="OTHER"/>                                 
       </configurations>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_g8aw8AP9Ee65tNxoSYhk4A" name="alfrescoUsername" typeClassname="java.lang.String" description="Usuario de Alfresco"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_m7c7MAP9Ee65tNxoSYhk4A" name="alfrescoPassword" typeClassname="java.lang.String" description="Contraseña de repositorio de Alfresco "/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_qLQfEAP9Ee65tNxoSYhk4A" name="alfrescoRepositoryName" typeClassname="java.lang.String" description="nombre del repositorio de alfresco"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_uGHLEAP9Ee65tNxoSYhk4A" name="alfrescoCmisURL" typeClassname="java.lang.String" description="Url para conexion de alfresco"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_RfU7YAP-Ee65tNxoSYhk4A" name="parentFolder" typeClassname="java.lang.String" description="la carpeta padre donde se almacenaran los documentos"/>
       <contract xmi:type="process:Contract" xmi:id="_uX_rDPtaEe2jXvmcOqjeoQ"/>
       <documents xmi:type="process:Document" xmi:id="_-oW48P9pEe2xwsGwY7DpDA" name="docTIC">
         <mimeType xmi:type="expression:Expression" xmi:id="_-oW48f9pEe2xwsGwY7DpDA" name="" content="" returnTypeFixed="true"/>

@@ -14,7 +14,7 @@ class CertificateFields {
 	static final String STUDENT_ID_CARD = "cedulaDelEstudiante"
 	static final String TITULO = "titulo"
 	static final String FECHA = "fecha"
-	static final String FECHA_FIN = "fechaFin"
+	static final String FECHA_FIN = "fechas"
 	static final String SECRETARY_NAME = "secretaria"
 	static final String GESTOR_NAME = "gestor"
 	static final String DOCENTE_NAME = "docente"
