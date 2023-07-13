@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1689152542652,
+  "lastUpdate" : 1689231860118,
   "rows" : [
     [
       {
@@ -448,7 +448,7 @@
                       },
                       "label" : {
                         "type" : "interpolation",
-                        "value" : "Enviar documento"
+                        "value" : "Continuar"
                       },
                       "alignment" : {
                         "type" : "constant",

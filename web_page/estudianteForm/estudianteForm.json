@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "estudianteForm",
   "name" : "estudianteForm",
-  "lastUpdate" : 1689033250571,
+  "lastUpdate" : 1689231921824,
   "rows" : [
     [
       {
@@ -521,7 +521,7 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "primary"
+                    "value" : "success"
                   },
                   "label" : {
                     "type" : "interpolation",
