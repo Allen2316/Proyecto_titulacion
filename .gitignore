@@ -12,9 +12,7 @@ bin
 .classpath
 /src-providedGroovy
 /template
-/process_configurations
 /META-INF
-
 target/
 node/
 node_modules/
