@@ -61,6 +61,20 @@ class FormatearFecha {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(MPTConstants.DATE_PATTERN, new Locale(MPTConstants.LANGUAGE_CODE, MPTConstants.COUNTRY_CODE));
 		return date.format(formatter);
 	}
+	
+	/**
+	 * Formatea la fecha String recibida.
+	 * @param fechaString ejem, "2023-07-14"
+	 * @return La fecha formateada en formato String
+	 */
+	static String formatearFecha(String fechaString) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+		LocalDate fecha = LocalDate.parse(fechaString, formatter)
+		
+		DateTimeFormatter nuevoFormatter = DateTimeFormatter.ofPattern(MPTConstants.DATE_PATTERN, new Locale(MPTConstants.LANGUAGE_CODE, MPTConstants.COUNTRY_CODE));			   
+		
+		return fecha.format(nuevoFormatter)
+	}
 
 	/**
 	 * Convierte una cadena que contiene la cantidad de horas a milisegundos. Es utilizado
