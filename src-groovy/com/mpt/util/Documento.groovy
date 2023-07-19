@@ -13,12 +13,7 @@ import com.mpt.util.Funcionario;
 import com.mpt.util.Estudiante;
 import com.mpt.constantes.MPTConstants;
 import com.mpt.payloads.Payload
-import com.unl.model.ObjetoCertOtros
-import com.unl.model.ObjetoCertificado
-import com.unl.model.ObjetoEvento
-import com.unl.model.ObjetoPracticas
-import com.unl.model.ObjetoProrroga
-import com.unl.model.ObjetoProrrogasFinal
+
 
 /**
  * Métodos para procesar documentos

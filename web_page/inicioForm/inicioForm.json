@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "inicioForm",
   "name" : "inicioForm",
-  "lastUpdate" : 1685647383769,
+  "lastUpdate" : 1689741541518,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "95fe81f9-a3b2-4ab3-8a23-67807b7ac715",
+        "reference" : "e36588fe-41e5-4a8d-b5c9-f8d6ef277377",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -20,7 +20,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "7c5576b2-1f9e-4afd-9d68-9aa7b2b5a086",
+          "reference" : "e45e4d0e-58c1-4e32-afac-82491ca52ee7",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -28,156 +28,36 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
                   "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 1"
-                  },
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Inicio de proceso"
+                    "value" : "Iniciar proceso de Trabajo de Titulación TIC"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "center"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
                   }
                 },
-                "reference" : "fe975561-854f-4c64-aa8e-878d27400bb5",
+                "reference" : "ffd39d6c-6b22-46e0-97fa-dd8b77f225fa",
                 "hasValidationError" : false,
-                "id" : "pbTitle",
-                "description" : ""
-              }
-            ],
-            [
-              {
-                "type" : "container",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable"
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "c75ccdc4-2a58-45dd-854a-8fde91486891",
-                "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Titulo del TIC"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.adjuntarTICInput.tituloTIC"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
-                        }
-                      },
-                      "reference" : "6cb4baf2-4410-41c5-af3a-ec28be64dc3c",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ]
-                ]
+                "id" : "pbTitle"
               }
             ],
             [
@@ -203,11 +83,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "primary"
+                    "value" : "success"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Iniciar"
+                    "value" : "Empezar"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -274,7 +154,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "32598609-7438-4245-b13a-e45b29f9b36f",
+                "reference" : "6cc4cd0c-ed9a-4dd4-8b29-368833007d0a",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -326,7 +206,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "b3fd1ddc-38ce-4e8f-a695-de839055baf7",
+                "reference" : "0e96adb8-4953-45ee-9157-852a1bbc3746",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -339,16 +219,16 @@
   ],
   "assets" : [
     {
-      "id" : "39f02bc5-054d-4a6d-9153-3a77c2de5b9a",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "96041cea-a42e-4f40-b419-91e32d0efb23",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "92d84cfa-81d3-4a99-b9d3-a70c0edaf64c",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "e3c78067-f9ad-4c2f-aa08-053c3128f5d4",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
@@ -358,11 +238,7 @@
     "formInput" : {
       "type" : "json",
       "value" : [
-        "{\r",
-        "  \"adjuntarTICInput\" : {\r",
-        "    \"tituloTIC\" : \"\"\r",
-        "  }\r",
-        "}"
+        "{ }"
       ],
       "exposed" : false
     },
@@ -385,14 +261,14 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tadjuntarTICInput: $data.formInput.adjuntarTICInput",
+        "",
         "}"
       ],
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "37513a38-8e4c-4737-97d1-78bc4daf4309",
+  "uuid" : "d2be5582-8b9b-442a-931a-19d65afdf897",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

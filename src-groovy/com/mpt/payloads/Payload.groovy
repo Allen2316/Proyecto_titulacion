@@ -144,7 +144,8 @@ class Payload {
 			jsonBuilder(cedula: "${cedula}",
 			sistema: MPTConstants.SYSTEM_NAME,
 			documentos: [[nombre: "${futurePDFName}", documento: "${pdfEncoded}"]])
-
+			
+			logger.info("-----> PYALOAD "+jsonBuilder.toString())
 			return jsonBuilder.toString()
 
 		} catch (Exception e) {

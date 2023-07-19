@@ -28,7 +28,7 @@ class Estudiante {
 	 */
 	static String getFullName(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM) {
 		if (!idSolicitanteBonitaBPM) {
-			throw new Exception("Se debe enviar el idSolicitanteBonitaBPM del estudiante solicitante")
+			throw new Exception("Se debe enviar el idSolicitanteBonitaBPM del estudiante solicitante getFullName")
 		}
 
 		String fullNameStudent = ""
@@ -36,11 +36,42 @@ class Estudiante {
 			fullNameStudent = identityAPI.getUser(idSolicitanteBonitaBPM).firstName +
 					" " + identityAPI.getUser(idSolicitanteBonitaBPM).lastName;
 		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado en la organización: " + e.getMessage())
+			logger.severe("Usuario no encontrado en la organización getFullName: " + e.getMessage())
 		}
 
 		return fullNameStudent.trim()
 	}
+	
+	
+	static String getFirstName(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM) {
+		if (!idSolicitanteBonitaBPM) {
+			throw new Exception("Se debe enviar el idSolicitanteBonitaBPM del estudiante solicitante getFirstName")
+		}
+
+		String firstNameStudent = ""
+		try{
+			firstNameStudent = identityAPI.getUser(idSolicitanteBonitaBPM).firstName					
+		}catch(UserNotFoundException e){
+			logger.severe("Usuario no encontrado en la organización getFirstName: " + e.getMessage())
+		}
+
+		return firstNameStudent.trim()
+	}
+	
+	static String getLastName(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM) {
+		if (!idSolicitanteBonitaBPM) {
+			throw new Exception("Se debe enviar el idSolicitanteBonitaBPM del estudiante solicitante getLastName")
+		}
+
+		String lastNameStudent = ""
+		try{
+			lastNameStudent = identityAPI.getUser(idSolicitanteBonitaBPM).lastName
+		}catch(UserNotFoundException e){
+			logger.severe("Usuario no encontrado en la organización getLastName: " + e.getMessage())
+		}
+		return lastNameStudent.trim()
+	}
+	
 
 	/**
 	 * Obtiene la cédula del estudiante solicitante
@@ -51,7 +82,7 @@ class Estudiante {
 	 */
 	static String getCedulaStudent(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM) {
 		if (!idSolicitanteBonitaBPM) {
-			throw new Exception("Se debe enviar el idSolicitanteBonitaBPM del estudiante solicitante")
+			throw new Exception("Se debe enviar el idSolicitanteBonitaBPM del estudiante solicitante getCedulaStudent")
 		}
 
 		String cedulaEstudiante = ""
@@ -60,7 +91,7 @@ class Estudiante {
 					.find { MPTConstants.IDENTIFICATION_DOCUMENT_TYPE == it.getDefinition().getName() }
 					?.getValue();
 		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado en la organización: " + e.getMessage())
+			logger.severe("Usuario no encontrado en la organización: getCedulaStudent " + e.getMessage())
 		}
 
 		return cedulaEstudiante.trim()
@@ -78,7 +109,7 @@ class Estudiante {
 					.getProcessInstance(processInstanceId)
 					.getStartedBy()).getId()							
 		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado: " + e.getMessage())
+			logger.severe("Usuario no encontrado: getId " + e.getMessage())
 		}
 		return userId;
 	}

@@ -11,7 +11,8 @@ class CertificateFields {
 	// Campos comunes para la mayoría de certificados:
 	static final String STUDENT_NAME = "estudiante"
 	static final String STUDENT_NAME_SECOND = "estudiantes"
-	static final String STUDENT_ID_CARD = "cedulaDelEstudiante"
+	static final String STUDENT_ID_CARD = "cedula"
+	static final String STUDENT_ID_CARD_SECOND = "cedulas"
 	static final String TITULO = "titulo"
 	static final String FECHA = "fecha"
 	static final String FECHA_FIN = "fechas"
@@ -25,6 +26,9 @@ class CertificateFields {
 	static final String VALIDO = "valido"
 	static final String MEMO = "memo"
 	static final String MEMO_PASADO = "memos"
+	static final String itinerario = "itinerario"
+	static final String email = "email"
+	
 
 	//
 	static final Integer SOLICITUD_PERTINENCIA_ID_1 = 1
@@ -33,10 +37,14 @@ class CertificateFields {
 	static final String INFORME_PERTINENCIA_NAME_2 = "informePertinencia"
 	static final Integer INFORME_DIRECTOR_ID_3 = 3
 	static final String INFORME_DIRECTOR_NAME_3 = "informeDirector"
+	static final Integer SOLICITUD_PERTINENCIA_ESTUDIANTE_4 = 4
+	static final String SOLICITUD_PERTINENCIA_ESTUDIANTE_NAME_4 = "solocitudPertinenciaEstudiante"
+	
 
 	/**
 	 * Directorios de Alfresco que contienen las plantillas DOCX de los certificados académicos
-	 */	
+	 */
+	static final String TEMPLATE_SOLICITUD_ESTUDIANTE_PERTINENCIA = "Solicitud_Estudiante_Pertinencia.docx"
 	static final String TEMPLATE_SOLICITUD_PERTINENCIA = "Solicitud_Pertinencia.docx"
 	static final String TEMPLATE_INFORME_PERTINENCIA = "Informe_Pertinencia.docx"
 	static final String TEMPLATE_ASIGNACION_DIRECTOR = "Asignacion_Director.docx"	

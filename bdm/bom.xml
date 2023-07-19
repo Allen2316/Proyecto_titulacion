@@ -9,136 +9,6 @@
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.ptott.model.AvanceTT">
-            <fields>
-                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
-                <field type="INTEGER" length="255" name="progreso" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaAvance" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="avanceArchivo" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="descripcion" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="observaciones" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.ptott.model.Historial">
-            <fields>
-                <field type="TEXT" length="255" name="solicitudPtt" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaSolicitudPtt" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="ptt" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="solicitudInformePertinencia" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaSolicitudInformePert" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="informePertinencia" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaInformePertinencia" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaRespuestaPert" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="solicitudDirector" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaSolicitudDirector" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="designacionDirector" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaDesignacionDirector" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="informeDesarrolloTT" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaInformeDesarrolloTT" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="tt" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="aptitudLegal" nullable="true" collection="true"/>
-                <field type="TEXT" length="255" name="certificadoBiblioteca" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="actaSustPrivada" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaActaSustPrivada" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="actaGrado" nullable="true" collection="true"/>
-                <field type="LOCALDATETIME" length="255" name="fechaActaGrado" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.ptott.model.Prorroga">
-            <fields>
-                <field type="TEXT" length="255" name="tipo" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="solicitudProrroga" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaSolicitudPro" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="solicitudInformePro" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaSolicitudInformePro" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="informeProrroga" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaInformePro" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="respuestaProrroga" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaRespuestaPro" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.ptott.model.Sustentacion">
-            <fields>
-                <field type="STRING" length="255" name="tipo" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fecha" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="lugar" nullable="true" collection="false"/>
-                <field type="DOUBLE" length="255" name="califPresidente" nullable="true" collection="true"/>
-                <field type="DOUBLE" length="255" name="califPrimerVocal" nullable="true" collection="true"/>
-                <field type="DOUBLE" length="255" name="califSegundoVocal" nullable="true" collection="true"/>
-                <field type="DOUBLE" length="255" name="promedioCalificacion" nullable="true" collection="true"/>
-                <field type="TEXT" length="255" name="archivoDesignacion" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaArchivoDesignacion" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Tribunal" fetchType="LAZY" name="tribunal" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="solicitudSustentacion" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaSolicitudSustentacion" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.ptott.model.TrabajoTitulacion">
-            <fields>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Usuario" fetchType="LAZY" name="autor" nullable="true" collection="true"/>
-                <field type="STRING" length="255" name="titulo" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Usuario" fetchType="LAZY" name="director" nullable="true" collection="false"/>
-                <field type="INTEGER" length="255" name="progreso" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudPtt" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudInformePert" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="informePertinencia" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudDirector" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="designacionDirector" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="informeDesarrolloTT" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudSustPrivada" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="designacionSustPrivada" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudSustPublica" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="designacionSustPublica" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="actaSustPrivada" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="actaGrado" nullable="true" collection="true"/>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Historial" fetchType="LAZY" name="historial" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.ptott.model.AvanceTT" fetchType="LAZY" name="avanceTT" nullable="true" collection="true"/>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Sustentacion" fetchType="LAZY" name="sustentacion" nullable="true" collection="true"/>
-                <field type="DOUBLE" length="255" name="calificacionRecordA" nullable="true" collection="true"/>
-                <field type="DOUBLE" length="255" name="calificacionFinal" nullable="true" collection="true"/>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Prorroga" fetchType="LAZY" name="prorroga" nullable="true" collection="true"/>
-                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="true"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.ptott.model.Tribunal">
-            <fields>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Usuario" fetchType="LAZY" name="presidente" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Usuario" fetchType="LAZY" name="primerVocal" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.ptott.model.Usuario" fetchType="LAZY" name="segundoVocal" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.ptott.model.Usuario">
-            <fields>
-                <field type="STRING" length="255" name="nombres" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="apellidos" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="correo" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="telefono" nullable="true" collection="false"/>
-                <field type="LONG" length="255" name="idOrganizacion" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
         <businessObject qualifiedName="com.sspm.model.Alternative">
             <fields>
                 <field type="STRING" length="255" name="description" nullable="false" collection="false"/>
@@ -291,6 +161,122 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.tic.model.AvanceTT">
+            <fields>
+                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="progreso" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaAvance" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="avanceArchivo" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="descripcion" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="observaciones" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.tic.model.Historial">
+            <fields>
+                <field type="TEXT" length="255" name="solicitudPIC" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaSolicitudPIC" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="pic" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="solicitudInformePertinencia" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaSolicitudInformePert" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="informePertinencia" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaInformePertinencia" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaRespuestaPert" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="solicitudDirector" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaSolicitudDirector" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="designacionDirector" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaDesignacionDirector" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="informeDesarrolloTIC" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaInformeDesarrolloTIC" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="tic" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="aptitudLegal" nullable="true" collection="true"/>
+                <field type="TEXT" length="255" name="certificadoBiblioteca" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="actaSustPrivada" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaActaSustPrivada" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="actaGrado" nullable="true" collection="true"/>
+                <field type="LOCALDATETIME" length="255" name="fechaActaGrado" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.tic.model.Sustentacion">
+            <fields>
+                <field type="STRING" length="255" name="tipo" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fecha" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="lugar" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="califPresidente" nullable="true" collection="true"/>
+                <field type="DOUBLE" length="255" name="califPrimerVocal" nullable="true" collection="true"/>
+                <field type="DOUBLE" length="255" name="califSegundoVocal" nullable="true" collection="true"/>
+                <field type="DOUBLE" length="255" name="promedioCalificacion" nullable="true" collection="true"/>
+                <field type="TEXT" length="255" name="archivoDesignacion" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaArchivoDesignacion" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.Tribunal" fetchType="LAZY" name="tribunal" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="solicitudSustentacion" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaSolicitudSustentacion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.tic.model.TrabajoTitulacion">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="autor" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="titulo" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="revisor" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="solicitudPIC" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="solicitudInformePert" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="informePertinencia" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="solicitudDirector" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="designacionDirector" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="director" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="progreso" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="informeDesarrolloTT" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="solicitudSustPrivada" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="designacionSustPrivada" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="solicitudSustPublica" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="designacionSustPublica" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="actaSustPrivada" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="actaGrado" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.Historial" fetchType="LAZY" name="historial" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.AvanceTT" fetchType="LAZY" name="avanceTT" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.Sustentacion" fetchType="LAZY" name="sustentacion" nullable="true" collection="true"/>
+                <field type="DOUBLE" length="255" name="calificacionRecordA" nullable="true" collection="true"/>
+                <field type="DOUBLE" length="255" name="calificacionFinal" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.tic.model.Tribunal">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="presidente" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="primerVocal" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="segundoVocal" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.tic.model.Usuario">
+            <fields>
+                <field type="LONG" length="255" name="idSolicitanteBonitaBPM" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="idRol" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombres" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="apellidos" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="correo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="telefono" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombreGrupo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="userName" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.unl.model.BOParametros">
             <fields>
                 <field type="INTEGER" length="255" name="id" nullable="false" collection="false"/>
@@ -323,191 +309,6 @@
                     </queryParameters>
                 </query>
             </queries>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.BOPrerrequisito">
-            <description>Prerrequsitos de certificados</description>
-            <fields>
-                <field type="INTEGER" length="255" name="id" nullable="false" collection="false"/>
-                <field type="STRING" length="128" name="nombre" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="descripcion" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="requerido" nullable="false" collection="false"/>
-                <field type="STRING" length="32" name="tipo" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="estado" nullable="false" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaDeCreacion" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaDeActualizacion" nullable="true" collection="false"/>
-                <field type="STRING" length="128" name="usuarioCreacion" nullable="true" collection="false"/>
-                <field type="STRING" length="128" name="usuarioActualizacion" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints>
-                <uniqueConstraint name="RESTRICCION_ID">
-                    <fieldNames>
-                        <fieldName>id</fieldName>
-                    </fieldNames>
-                </uniqueConstraint>
-                <uniqueConstraint name="RESTRICCION_NOMB">
-                    <fieldNames>
-                        <fieldName>nombre</fieldName>
-                    </fieldNames>
-                </uniqueConstraint>
-            </uniqueConstraints>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.BOTipoCertEvento">
-            <description>Indica el tipo de certificado de evento, puede ser por: PARTICIPACION, o por PARTICIPACION  y  APROBACION</description>
-            <fields>
-                <field type="INTEGER" length="255" name="id" nullable="false" collection="false"/>
-                <field type="STRING" length="64" name="nombre" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="descripcion" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints>
-                <uniqueConstraint name="uniqueConstraintId">
-                    <fieldNames>
-                        <fieldName>id</fieldName>
-                        <fieldName>nombre</fieldName>
-                    </fieldNames>
-                </uniqueConstraint>
-            </uniqueConstraints>
-            <queries>
-                <query name="findByCustomId" content="SELECT b &#10;FROM BOTipoCertEvento b &#10;WHERE b.id = :id" returnType="com.unl.model.BOTipoCertEvento">
-                    <queryParameters>
-                        <queryParameter name="id" className="java.lang.Integer"/>
-                    </queryParameters>
-                </query>
-            </queries>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.ObjetoCertOtros">
-            <description>Objeto de negocio para almacenar los datos ingresados para el certificado Otros.</description>
-            <fields>
-                <field type="TEXT" length="255" name="cabecera" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="cuerpo" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.ObjetoCertificado">
-            <description>Objeto de negocio para almacenar todos los certificados disponibles.</description>
-            <fields>
-                <field type="INTEGER" length="255" name="idCert" nullable="false" collection="false"/>
-                <field type="STRING" length="128" name="nombre" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="descripcion" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="tieneRequisito" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="firmaSecretaria" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="firmaGestor" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="firmaDecano" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.unl.model.BOPrerrequisito" fetchType="LAZY" name="prerrequisitos" nullable="true" collection="true"/>
-                <field type="BOOLEAN" length="255" name="requiereGenerarDocSolicitud" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="requiereSolicitudFirmaElectronica" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="estado" nullable="false" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaDeCreacion" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaDeActualizacion" nullable="true" collection="false"/>
-                <field type="STRING" length="128" name="usuarioCreacion" nullable="true" collection="false"/>
-                <field type="STRING" length="128" name="usuarioActualizacion" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints>
-                <uniqueConstraint name="RESTRICCION_IDCERT">
-                    <description>El nombre e id del certificado deben ser unicos</description>
-                    <fieldNames>
-                        <fieldName>idCert</fieldName>
-                    </fieldNames>
-                </uniqueConstraint>
-                <uniqueConstraint name="RESTRICCION_NOMBRE">
-                    <fieldNames>
-                        <fieldName>nombre</fieldName>
-                    </fieldNames>
-                </uniqueConstraint>
-            </uniqueConstraints>
-            <queries>
-                <query name="findById" content="SELECT o &#10;FROM ObjetoCertificado o &#10;WHERE o.persistenceId = :id" returnType="com.unl.model.ObjetoCertificado">
-                    <queryParameters>
-                        <queryParameter name="id" className="java.lang.Long"/>
-                    </queryParameters>
-                </query>
-                <query name="findByCustomIdCert" content="SELECT o &#10;FROM ObjetoCertificado o &#10;WHERE o.idCert = :idCert" returnType="com.unl.model.ObjetoCertificado">
-                    <queryParameters>
-                        <queryParameter name="idCert" className="java.lang.Integer"/>
-                    </queryParameters>
-                </query>
-            </queries>
-            <indexes>
-                <index name="ID_INDEX">
-                    <fieldNames>
-                        <fieldName>idCert</fieldName>
-                    </fieldNames>
-                </index>
-            </indexes>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.ObjetoEvento">
-            <description>Objeto de negocio para almacenar eventos académicos, los cuales son utilizados por los certificados de eventos.</description>
-            <fields>
-                <field type="STRING" length="255" name="nombre" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="tematica" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="lugar" nullable="false" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeInicio" nullable="false" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeFinalizacion" nullable="false" collection="false"/>
-                <field type="INTEGER" length="255" name="horas" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.unl.model.BOTipoCertEvento" fetchType="LAZY" name="tipoCertEvento" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="estado" nullable="false" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaDeCreacion" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaDeActualizacion" nullable="true" collection="false"/>
-                <field type="STRING" length="128" name="usuarioCreacion" nullable="true" collection="false"/>
-                <field type="STRING" length="128" name="usuarioActualizacion" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries>
-                <query name="findById" content="SELECT o &#10;FROM ObjetoEvento o &#10;WHERE o.persistenceId = :id" returnType="com.unl.model.ObjetoEvento">
-                    <queryParameters>
-                        <queryParameter name="id" className="java.lang.Long"/>
-                    </queryParameters>
-                </query>
-            </queries>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.ObjetoPracticas">
-            <description>Objeto para almacenar los datos de practicas pre-profesionales.</description>
-            <fields>
-                <field type="STRING" length="255" name="nombreDeEmpresaMantenimiento" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeInicioMantenimiento" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeFinMantenimiento" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="nombreDeEmpresaRedes" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeInicioRedes" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeFinRedes" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="nombreDeEmpresaSW" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeInicioSW" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeFinSW" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.ObjetoProrroga">
-            <description>Objeto para almacenar datos sobre primeras o segundas prorrogas</description>
-            <fields>
-                <field type="LOCALDATE" length="255" name="fechaInicioDeEstudios" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaFinDeEstudios" nullable="true" collection="false"/>
-                <field type="STRING" length="64" name="numeroDeProrroga" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaInicioProrroga" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaFinProrroga" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.ObjetoProrrogasFinal">
-            <description>Objeto para almacenar datos sobre la  prorroga final para pagos.</description>
-            <fields>
-                <field type="LOCALDATE" length="255" name="fechaInicioDeEstudios" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaFinDeEstudios" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaInicioPrimeraProrroga" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaFinPrimeraProrroga" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaInicioSegundaProrroga" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaFinSegundaProrroga" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
             <indexes/>
         </businessObject>
         <businessObject qualifiedName="com.unl.model.ObjetoSolicitud">
