@@ -137,6 +137,8 @@ class Documento {
 	 * @param vpMemo
 	 * @param pertinencia
 	 * @param fecha_fin
+	 * @param itinerario
+	 * @param idEstudianteSec
 	 * @return Lista de reemplazos para la plantilla del certificado
 	 * 
 	 */
@@ -144,12 +146,24 @@ class Documento {
 													Integer idTipoDocumento, 
 													String vpUserNameDocente, String vpTitulo, 
 													String vpMemoPasado, String vpMemo,
-													Boolean pertinencia, String fecha_fin) {
+													Boolean pertinencia, String fecha_fin,
+													String itinerario, Long idEstudianteSec) {
 		List replacementsList = []
 		try {
 			String fullNameStudent = Estudiante.getFullName(identityAPI, idSolicitanteBonitaBPM)
+			String emailStudent = Funcionario.getEmailById(identityAPI, idSolicitanteBonitaBPM)
+			String cedulaStudent = Estudiante.getCedulaStudent(identityAPI, idSolicitanteBonitaBPM)
 			String fullNameGestor = Funcionario.getFullName(CertificateFields.COORDINATION_GROUP_NAME, identityAPI)
 			String fullNameDocente = Funcionario.getFullNameWithUserName(vpUserNameDocente, identityAPI)
+			String fullNameStudentSecond = ""
+			String emailStudentSecond = ""
+			String cedulaStudentSecond = ""
+			if(idEstudianteSec!= null) {
+				fullNameStudentSecond = Estudiante.getFullName(identityAPI, idEstudianteSec)
+				emailStudentSecond = Funcionario.getEmailById(identityAPI, idEstudianteSec)
+				cedulaStudentSecond = Estudiante.getCedulaStudent(identityAPI, idEstudianteSec)
+			}
+			
 
 			// Datos generales del certificado
 			replacementsList.add([
@@ -186,10 +200,10 @@ class Documento {
 				fullNameStudent
 			])
 			
-			/*replacementsList.add([
+			replacementsList.add([
 				CertificateFields.STUDENT_NAME_SECOND,
-				fullNameStudent
-			])*/
+				fullNameStudentSecond
+			])
 			
 			// Datos adicionales de acuerdo a la solicitud
 			if (idTipoDocumento == CertificateFields.INFORME_PERTINENCIA_ID_2) {
@@ -217,6 +231,32 @@ class Documento {
 				replacementsList.add([
 					CertificateFields.FECHA_FIN,
 					FormatearFecha.formatearFecha(fecha_fin)
+				])
+								
+			}else if (idTipoDocumento == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4) {								
+				replacementsList.add([
+					CertificateFields.ITINERARIO,
+					itinerario
+				])
+				
+				replacementsList.add([
+					CertificateFields.EMAIL,
+					emailStudent
+				])
+				
+				replacementsList.add([
+					CertificateFields.EMAIL_SECOND,
+					emailStudentSecond
+				])
+				
+				replacementsList.add([
+					CertificateFields.STUDENT_ID_CARD,
+					cedulaStudent
+				])
+				
+				replacementsList.add([
+					CertificateFields.STUDENT_ID_CARD_SECOND,
+					cedulaStudentSecond
 				])
 								
 			}

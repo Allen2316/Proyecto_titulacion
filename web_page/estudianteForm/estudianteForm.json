@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "estudianteForm",
   "name" : "estudianteForm",
-  "lastUpdate" : 1689764229504,
+  "lastUpdate" : 1689784252803,
   "rows" : [
     [
       {
@@ -308,6 +308,84 @@
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Itinerario"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "Sistemas Inteligentes, Ingeniería de software, Computación Aplicada"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "tic.itinerario"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        }
+                      },
+                      "reference" : "81ffd6ae-82fe-4748-af68-63e83a1f521b",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
                     }
                   ]
                 ]
@@ -655,16 +733,14 @@
                       "reference" : "cd511f89-d112-4dc3-b8e1-6b9971e2e5e6",
                       "hasValidationError" : false,
                       "id" : "pbText"
-                    }
-                  ],
-                  [
+                    },
                     {
                       "type" : "component",
                       "dimension" : {
                         "xs" : 12,
                         "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
+                        "md" : 6,
+                        "lg" : 6
                       },
                       "propertyValues" : {
                         "cssClasses" : {
@@ -835,7 +911,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "autorSecundario.userName"
+                                "value" : "autorSecundario.userName[$index]"
                               }
                             },
                             "reference" : "33c8fa3d-b479-47ea-85c9-12d40f25bea0",
@@ -1147,7 +1223,7 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.autorSecundario && $data.tic){",
+        "",
         "    return {",
         "\t\tdocTICDocumentInput: $data.formInput.docTICDocumentInput,",
         "\t\t//map autorSecundario variable to expected task contract input",
@@ -1156,10 +1232,10 @@
         "\t\t},",
         "\t\t//map tic variable to expected task contract input",
         "\t\tticInput: {",
-        "\t\t\ttitulo: $data.tic.titulo !== undefined ? $data.tic.titulo : null",
+        "\t\t\ttitulo: $data.tic.titulo !== undefined ? $data.tic.titulo : null,",
+        "\t\t\titinerario: $data.tic.itinerario !== undefined ? $data.tic.itinerario : null",
         "\t\t}",
-        "\t}",
-        "}"
+        "\t}"
       ],
       "exposed" : false
     },

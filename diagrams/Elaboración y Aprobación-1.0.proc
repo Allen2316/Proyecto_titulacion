@@ -43,14 +43,25 @@
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_15No4iYIEe6R7bWkN3Fn7Q">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_15No4yYIEe6R7bWkN3Fn7Q" name="tic" content="tic" type="TYPE_VARIABLE" returnType="com.tic.model.TrabajoTitulacion">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_15No5CYIEe6R7bWkN3Fn7Q" name="tic" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.tic.model.TrabajoTitulacion"/>
+          <operations xmi:type="expression:Operation" xmi:id="_BMu40yY7Ee6GSIiXAMRdCA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_BMu41CY7Ee6GSIiXAMRdCA" name="tic" content="tic" type="TYPE_VARIABLE" returnType="com.tic.model.TrabajoTitulacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_BMu41SY7Ee6GSIiXAMRdCA" name="tic" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.tic.model.TrabajoTitulacion"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_15No5SYIEe6R7bWkN3Fn7Q" name="ticInput.titulo" content="ticInput?.titulo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_15No5iYIEe6R7bWkN3Fn7Q" name="ticInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_BMu41iY7Ee6GSIiXAMRdCA" name="ticInput.titulo" content="ticInput?.titulo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_BMu41yY7Ee6GSIiXAMRdCA" name="ticInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_15No5yYIEe6R7bWkN3Fn7Q" type="JAVA_METHOD" expression="setTitulo">
+            <operator xmi:type="expression:Operator" xmi:id="_BMu42CY7Ee6GSIiXAMRdCA" type="JAVA_METHOD" expression="setTitulo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_BMu42SY7Ee6GSIiXAMRdCA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_BMu42iY7Ee6GSIiXAMRdCA" name="tic" content="tic" type="TYPE_VARIABLE" returnType="com.tic.model.TrabajoTitulacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_BMu42yY7Ee6GSIiXAMRdCA" name="tic" dataType="_uX_rJPtaEe2jXvmcOqjeoQ" className="com.tic.model.TrabajoTitulacion"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_BMu43CY7Ee6GSIiXAMRdCA" name="ticInput.itinerario" content="ticInput?.itinerario" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_BMu43SY7Ee6GSIiXAMRdCA" name="ticInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_BMu43iY7Ee6GSIiXAMRdCA" type="JAVA_METHOD" expression="setItinerario">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
@@ -67,8 +78,9 @@
             <inputs xmi:type="process:ContractInput" xmi:id="_iShFMCX_Ee6R7bWkN3Fn7Q" name="autorSecundarioInput" type="COMPLEX" dataReference="autorSecundario" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_iShFMSX_Ee6R7bWkN3Fn7Q" name="userName" createMode="false"/>
             </inputs>
-            <inputs xmi:type="process:ContractInput" xmi:id="_15No4CYIEe6R7bWkN3Fn7Q" name="ticInput" type="COMPLEX" dataReference="tic" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_15No4SYIEe6R7bWkN3Fn7Q" name="titulo" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_BMu40CY7Ee6GSIiXAMRdCA" name="ticInput" type="COMPLEX" dataReference="tic" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_BMu40SY7Ee6GSIiXAMRdCA" name="titulo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_BMu40iY7Ee6GSIiXAMRdCA" name="itinerario" createMode="false"/>
             </inputs>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_uX_rA_taEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -174,7 +186,7 @@
                 <expression xmi:type="expression:Expression" xmi:id="_q8nfgiW7Ee6Z5s6lbICM4A" name="atompub" content="atompub" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_q8nfgyW7Ee6Z5s6lbICM4A" key="remote_document_path">
-                <expression xmi:type="expression:Expression" xmi:id="_q8nfhCW7Ee6Z5s6lbICM4A" name="remote_document_path()" content="import com.mpt.constantes.CertificateFields&#xD;&#xA;import com.mpt.util.Documento&#xD;&#xA;&#xD;&#xA;return Documento.getDocumentTemplatePathAlfresco(CertificateFields.SOLICITUD_PERTINENCIA_ID_1)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_q8nfhCW7Ee6Z5s6lbICM4A" name="remote_document_path()" content="import com.mpt.constantes.CertificateFields&#xD;&#xA;import com.mpt.util.Documento&#xD;&#xA;&#xD;&#xA;return Documento.getDocumentTemplatePathAlfresco(CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_q8nfhSW7Ee6Z5s6lbICM4A" key="wsObjectServiceUrl">
                 <expression xmi:type="expression:Expression" xmi:id="_q8nfhiW7Ee6Z5s6lbICM4A" name="" content="" returnTypeFixed="true"/>
@@ -2915,14 +2927,6 @@
       <actors xmi:type="process:Actor" xmi:id="_idnOEAC0Ee6sb6sijDVsJQ" name="DocenteEspecialista"/>
       <configurations xmi:type="configuration:Configuration" xmi:id="_TA_JUP9GEe2h95mZurfxjQ" name="Qualification" version="7.12.0-004" username="walter.bates" password="bpm">
         <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_TA_JV_9GEe2h95mZurfxjQ">
-          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_TA_JWP9GEe2h95mZurfxjQ" name="Employee actor">
-            <groups xmi:type="actormapping:Groups" xmi:id="_TA_JWf9GEe2h95mZurfxjQ"/>
-            <memberships xmi:type="actormapping:Membership" xmi:id="_TA_JWv9GEe2h95mZurfxjQ"/>
-            <roles xmi:type="actormapping:Roles" xmi:id="_TA_JW_9GEe2h95mZurfxjQ">
-              <role>member</role>
-            </roles>
-            <users xmi:type="actormapping:Users" xmi:id="_TA_JXP9GEe2h95mZurfxjQ"/>
-          </actorMapping>
           <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_TA_JXf9GEe2h95mZurfxjQ" name="Estudiante">
             <groups xmi:type="actormapping:Groups" xmi:id="_TA_JXv9GEe2h95mZurfxjQ"/>
             <memberships xmi:type="actormapping:Membership" xmi:id="_TA_JX_9GEe2h95mZurfxjQ"/>
@@ -2955,7 +2959,6 @@
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_a578kA4uEe6tht2q2fpWLw" type="CONNECTOR" definitionId="document-converter" definitionVersion="1.0.2" implementationId="document-converter-impl" implementationVersion="2.2.1"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_a6A1Jg4uEe6tht2q2fpWLw" type="CONNECTOR" definitionId="document-templating" definitionVersion="1.0.1" implementationId="document-templating-impl" implementationVersion="2.2.1"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_7W-w0BuOEe6RgNfyQwQNDw" type="CONNECTOR" definitionId="rest-post" definitionVersion="1.3.0" implementationId="rest-post-impl" implementationVersion="1.3.1"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_70S6oB-OEe6aG8nMFvDQCQ" type="ACTOR_FILTER" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0" implementationId="bonita-actorfilter-initiator-impl" implementationVersion="1.0.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_70Uv0R-OEe6aG8nMFvDQCQ" type="ACTOR_FILTER" definitionId="bonita-actorfilter-custom-user-info" definitionVersion="1.0.0" implementationId="bonita-actorfilter-custom-user-info-impl" implementationVersion="1.0.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_70WlAR-OEe6aG8nMFvDQCQ" type="ACTOR_FILTER" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0" implementationId="bonita-actorfilter-single-user-impl" implementationVersion="1.0.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_8sZVUCU2Ee6jwPrAR4p7Rg" type="CONNECTOR" definitionId="cmis-downloaddocument" definitionVersion="2.0.1" implementationId="cmis-downloaddocument-impl" implementationVersion="3.0.5"/>
@@ -3090,9 +3093,6 @@
           <fragments xmi:type="configuration:Fragment" xmi:id="_70YaMR-OEe6aG8nMFvDQCQ" key="com/mpt/constantes/MPTConstants.groovy" value="com/mpt/constantes/MPTConstants.groovy" type="GROOVY_SCRIPT"/>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_TA_JU_9GEe2h95mZurfxjQ" id="ACTOR_FILTER">
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_70UIwB-OEe6aG8nMFvDQCQ" id="bonita-actorfilter-initiator-impl-1.0.0">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_70Uv0B-OEe6aG8nMFvDQCQ" key="bonita-actorfilter-initiator-impl -- 1.0.0" value="bonita-actorfilter-initiator-1.0.0.jar" type="ACTOR_FILTER"/>
-          </children>
           <children xmi:type="configuration:FragmentContainer" xmi:id="_70V98B-OEe6aG8nMFvDQCQ" id="bonita-actorfilter-custom-user-info-impl-1.0.0">
             <fragments xmi:type="configuration:Fragment" xmi:id="_70WlAB-OEe6aG8nMFvDQCQ" key="bonita-actorfilter-custom-user-info-impl -- 1.0.0" value="bonita-actorfilter-custom-user-info-1.0.0.jar" type="ACTOR_FILTER"/>
           </children>

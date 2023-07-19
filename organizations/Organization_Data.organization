@@ -128,8 +128,8 @@
       </customUserInfoValues>
     </user>
     <user userName="luis.a">
-      <firstName>Luis</firstName>
-      <lastName>Sarmiento</lastName>
+      <firstName>Luis Alberto</firstName>
+      <lastName>Sarmiento Cuenca</lastName>
       <title>Sr</title>
       <jobTitle>Estudiante de la CIS</jobTitle>
       <manager></manager>
@@ -175,6 +175,23 @@
         <customUserInfoValue>
           <name>Cédula</name>
           <value>1106078270</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="c.or">
+      <firstName>Carlos Junior</firstName>
+      <lastName>Ordoñez Tandazo</lastName>
+      <title>Sr</title>
+      <jobTitle>Estudiante de CIC</jobTitle>
+      <personalData/>
+      <professionalData>
+        <email>luis.a.sarmiento@unl.edu.ec</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>7465847639</value>
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
@@ -301,6 +318,12 @@
       <groupParentPath>/unl/facultad</groupParentPath>
       <assignedBy>pfordonez@unl.edu.ec</assignedBy>
       <assignedDate>1645631035162</assignedDate>
+    </membership>
+    <membership>
+      <userName>c.or</userName>
+      <roleName>estudiante</roleName>
+      <groupName>estudiante</groupName>
+      <groupParentPath>/unl</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>

@@ -26,8 +26,9 @@ class CertificateFields {
 	static final String VALIDO = "valido"
 	static final String MEMO = "memo"
 	static final String MEMO_PASADO = "memos"
-	static final String itinerario = "itinerario"
-	static final String email = "email"
+	static final String ITINERARIO = "itinerario"
+	static final String EMAIL = "correo"
+	static final String EMAIL_SECOND = "correos"
 	
 
 	//

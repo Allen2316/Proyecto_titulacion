@@ -247,6 +247,7 @@
                 <field type="DOUBLE" length="255" name="calificacionRecordA" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="calificacionFinal" nullable="true" collection="true"/>
                 <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="itinerario" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
