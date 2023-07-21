@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "estudianteForm",
   "name" : "estudianteForm",
-  "lastUpdate" : 1689784252803,
+  "lastUpdate" : 1689921871593,
   "rows" : [
     [
       {
@@ -279,7 +279,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "tic.titulo"
+                          "value" : "formOutput.ticInput.titulo"
                         },
                         "required" : {
                           "type" : "constant",
@@ -366,7 +366,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "tic.itinerario"
+                          "value" : "formOutput.ticInput.itinerario"
                         },
                         "type" : {
                           "type" : "constant",
@@ -661,7 +661,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "autor.value"
+                          "value" : "autor[0].value"
                         },
                         "type" : {
                           "type" : "constant",
@@ -802,7 +802,7 @@
                         },
                         "collectionToModify" : {
                           "type" : "variable",
-                          "value" : "obtenerLista"
+                          "value" : "aux"
                         },
                         "modalId" : {
                           "type" : "constant",
@@ -813,7 +813,8 @@
                           "value" : "Last"
                         },
                         "valueToAdd" : {
-                          "type" : "constant"
+                          "type" : "constant",
+                          "value" : "null"
                         },
                         "removeItem" : {
                           "type" : "variable"
@@ -844,7 +845,7 @@
                         },
                         "repeatedCollection" : {
                           "type" : "variable",
-                          "value" : "obtenerLista"
+                          "value" : "aux"
                         }
                       },
                       "reference" : "1804e7cd-8df1-4c1e-875e-f9b6585325a0",
@@ -855,10 +856,10 @@
                           {
                             "type" : "component",
                             "dimension" : {
-                              "xs" : 12,
+                              "xs" : 8,
                               "sm" : 9,
-                              "md" : 6,
-                              "lg" : 6
+                              "md" : 9,
+                              "lg" : 9
                             },
                             "propertyValues" : {
                               "cssClasses" : {
@@ -911,7 +912,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "autorSecundario.userName[$index]"
+                                "value" : "aux[$index]"
                               }
                             },
                             "reference" : "33c8fa3d-b479-47ea-85c9-12d40f25bea0",
@@ -921,10 +922,10 @@
                           {
                             "type" : "component",
                             "dimension" : {
-                              "xs" : 12,
+                              "xs" : 4,
                               "sm" : 3,
-                              "md" : 6,
-                              "lg" : 6
+                              "md" : 3,
+                              "lg" : 3
                             },
                             "propertyValues" : {
                               "cssClasses" : {
@@ -994,7 +995,7 @@
                               },
                               "collectionPosition" : {
                                 "type" : "constant",
-                                "value" : "Item"
+                                "value" : "Last"
                               },
                               "valueToAdd" : {
                                 "type" : "constant"
@@ -1223,19 +1224,25 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "",
-        "    return {",
-        "\t\tdocTICDocumentInput: $data.formInput.docTICDocumentInput,",
-        "\t\t//map autorSecundario variable to expected task contract input",
-        "\t\tautorSecundarioInput: {",
-        "\t\t\tuserName: $data.autorSecundario.userName !== undefined ? $data.autorSecundario.userName : null",
-        "\t\t},",
-        "\t\t//map tic variable to expected task contract input",
-        "\t\tticInput: {",
-        "\t\t\ttitulo: $data.tic.titulo !== undefined ? $data.tic.titulo : null,",
-        "\t\t\titinerario: $data.tic.itinerario !== undefined ? $data.tic.itinerario : null",
-        "\t\t}",
-        "\t}"
+        "if(angular.isUndefined($data.formOutput) && angular.isDefined($data.context)) {",
+        "\t    return {",
+        "            docTICDocumentInput: null,",
+        "            autorSecundarioInput: {",
+        "\t\t        userName: \"\"",
+        "            },",
+        "            ticInput: {",
+        "    \t\t\ttitulo: \"\",",
+        "    \t\t\titinerario: \"\"",
+        "    \t\t},",
+        "        };",
+        "}else{",
+        "    ",
+        "    $data.formOutput.autorSecundarioInput.userName = $data.aux;",
+        "    console.log(\"output \"+ $data.formOutput.autorSecundarioInput.userName);",
+        "    console.log($data.formOutput);",
+        "    return $data.formOutput;",
+        "}",
+        "\t"
       ],
       "exposed" : false
     },
@@ -1357,6 +1364,19 @@
         "{\r",
         "  \"docTICDocumentInput\" : null\r",
         "}"
+      ],
+      "exposed" : false
+    },
+    "aux" : {
+      "type" : "expression",
+      "value" : [
+        "var arr = []",
+        "if(arr[0].length < 1){",
+        "    return \"null\";    ",
+        "}",
+        "",
+        "console.log(arr);",
+        "return arr[0].toString()"
       ],
       "exposed" : false
     }

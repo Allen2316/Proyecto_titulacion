@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarDocTICForm",
   "name" : "validarDocTICForm",
-  "lastUpdate" : 1689036923632,
+  "lastUpdate" : 1689921177376,
   "rows" : [
     [
       {
@@ -360,7 +360,7 @@
                               },
                               "document" : {
                                 "type" : "variable",
-                                "value" : "context.docSolicitudTIC_ref"
+                                "value" : "context.docGenerado_ref"
                               },
                               "showPreview" : {
                                 "type" : "constant",

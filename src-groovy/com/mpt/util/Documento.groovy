@@ -13,6 +13,7 @@ import com.mpt.util.Funcionario;
 import com.mpt.util.Estudiante;
 import com.mpt.constantes.MPTConstants;
 import com.mpt.payloads.Payload
+import com.tic.model.Usuario;
 
 
 /**
@@ -63,7 +64,8 @@ class Documento {
 		String timeInMs = System.currentTimeMillis().toString().substring(8) + "_"
 		String tipoName = ""
 		
-			if (idCert == CertificateFields.SOLICITUD_PERTINENCIA_ID_1 || idCert == CertificateFields.INFORME_PERTINENCIA_ID_2) {
+			if (idCert == CertificateFields.SOLICITUD_PERTINENCIA_ID_1 || idCert == CertificateFields.INFORME_PERTINENCIA_ID_2
+				|| idCert == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4) {
 				//_pertinencia
 				tipoName = CertificateFields.FILENAME_PERTINENCIA
 			}else if(idCert == CertificateFields.INFORME_DIRECTOR_ID_3){
@@ -116,6 +118,8 @@ class Documento {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_INFORME_PERTINENCIA
 			}else if (idTipoInforme == CertificateFields.INFORME_DIRECTOR_ID_3) {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_ASIGNACION_DIRECTOR
+			}else if (idTipoInforme == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4) {
+				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_ESTUDIANTE_PERTINENCIA
 			}else {
 				logger.severe("No existe la plantilla docx con el ID solicitado")
 				urlDocumentTemplateAlfresco = ""
@@ -138,7 +142,7 @@ class Documento {
 	 * @param pertinencia
 	 * @param fecha_fin
 	 * @param itinerario
-	 * @param idEstudianteSec
+	 * @param AutorSec
 	 * @return Lista de reemplazos para la plantilla del certificado
 	 * 
 	 */
@@ -147,21 +151,20 @@ class Documento {
 													String vpUserNameDocente, String vpTitulo, 
 													String vpMemoPasado, String vpMemo,
 													Boolean pertinencia, String fecha_fin,
-													String itinerario, Long idEstudianteSec) {
+													String itinerario, Usuario AutorSec) {
 		List replacementsList = []
 		try {
 			String fullNameStudent = Estudiante.getFullName(identityAPI, idSolicitanteBonitaBPM)
-			String emailStudent = Funcionario.getEmailById(identityAPI, idSolicitanteBonitaBPM)
+			String emailStudent = Funcionario.getEmailById(idSolicitanteBonitaBPM, identityAPI, )
 			String cedulaStudent = Estudiante.getCedulaStudent(identityAPI, idSolicitanteBonitaBPM)
 			String fullNameGestor = Funcionario.getFullName(CertificateFields.COORDINATION_GROUP_NAME, identityAPI)
 			String fullNameDocente = Funcionario.getFullNameWithUserName(vpUserNameDocente, identityAPI)
-			String fullNameStudentSecond = ""
-			String emailStudentSecond = ""
-			String cedulaStudentSecond = ""
-			if(idEstudianteSec!= null) {
-				fullNameStudentSecond = Estudiante.getFullName(identityAPI, idEstudianteSec)
-				emailStudentSecond = Funcionario.getEmailById(identityAPI, idEstudianteSec)
-				cedulaStudentSecond = Estudiante.getCedulaStudent(identityAPI, idEstudianteSec)
+			
+			if(AutorSec != null) {
+				replacementsList.add([
+					CertificateFields.STUDENT_NAME_SECOND,
+					Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
+				])				
 			}
 			
 
@@ -189,21 +192,14 @@ class Documento {
 				CertificateFields.TITULO,
 				vpTitulo
 			])
-			
-			/*replacementsList.add([
-				CertificateFields.STUDENT_ID_CARD,
-				Estudiante.getCedulaStudent(identityAPI, idSolicitanteBonitaBPM)
-			])*/
+						
 			
 			replacementsList.add([
 				CertificateFields.STUDENT_NAME,
 				fullNameStudent
 			])
 			
-			replacementsList.add([
-				CertificateFields.STUDENT_NAME_SECOND,
-				fullNameStudentSecond
-			])
+			
 			
 			// Datos adicionales de acuerdo a la solicitud
 			if (idTipoDocumento == CertificateFields.INFORME_PERTINENCIA_ID_2) {
@@ -246,7 +242,7 @@ class Documento {
 				
 				replacementsList.add([
 					CertificateFields.EMAIL_SECOND,
-					emailStudentSecond
+					AutorSec.correo
 				])
 				
 				replacementsList.add([
@@ -256,7 +252,7 @@ class Documento {
 				
 				replacementsList.add([
 					CertificateFields.STUDENT_ID_CARD_SECOND,
-					cedulaStudentSecond
+					AutorSec.cedula
 				])
 								
 			}

@@ -45,7 +45,7 @@ class Funcionario {
 			User user = identityAPI.searchUsers(builderUser.done()).getResult().get(0)
 			fullName = user.firstName + " " + user.lastName
 		} catch (SearchException e) {
-			logger.severe("Ha ocurrido una excepción durante la búsqueda del usuario en la organización: " + e.getMessage())
+			logger.severe("Ha ocurrido una excepción durante la búsqueda del usuario en la organización: getFullName" + e.getMessage())
 		}
 
 		return fullName.trim()
@@ -68,7 +68,7 @@ class Funcionario {
 			fullName = identityAPI.getUser(id).getFirstName() + " " + identityAPI.getUser(id).getLastName()
 			
 		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado: " + e.getMessage())
+			logger.severe("Usuario no encontrado: getFullNameWithUserName" + e.getMessage())
 		}
 
 		return fullName.trim()
@@ -92,7 +92,29 @@ class Funcionario {
 			long userId = processAPI.getProcessInstance(processInstanceId).getStartedBy()
 			userName = identityAPI.getUser(userId).getUserName()
 		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado en la organización: " + e.getMessage())
+			logger.severe("Usuario no encontrado en la organización: getUsername" + e.getMessage())
+		}
+
+		return userName.trim()
+	}
+	
+	/**
+	 * Obtiene el User Name del funcionario utilizando el id.
+	 *
+	 * @param identityAPI
+	 * @param id
+	 * @return
+	 */
+	static String getUsername(IdentityAPI identityAPI, Long userId) {
+		if (!userId) {
+			throw new Exception("Se debe enviar el userId del funcionario getUsername")
+		}
+
+		String userName = ""
+		try{			
+			userName = identityAPI.getUser(userId).getUserName()
+		}catch(UserNotFoundException e){
+			logger.severe("Usuario no encontrado en la organización: getUsername" + e.getMessage())
 		}
 
 		return userName.trim()
@@ -107,7 +129,7 @@ class Funcionario {
 	 */
 	static String getCedulaDocent(String groupName, IdentityAPI identityAPI) {
 		if (!groupName) {
-			throw new Exception("Se debe enviar el nombre del grupo del funcionario")
+			throw new Exception("Se debe enviar el nombre del grupo del funcionario getCedulaDocent")
 		}
 		
 		String cedula = ""
@@ -127,7 +149,7 @@ class Funcionario {
 			
 			
 		} catch (SearchException e) {
-			logger.severe("Ha ocurrido una excepción durante la búsqueda del usuario en la organización: " + e.getMessage())
+			logger.severe("Ha ocurrido una excepción durante la búsqueda del usuario en la organización: getCedulaDocent" + e.getMessage())
 		}
 
 		logger.info("=======================cedula================= : "+ cedula)
@@ -183,7 +205,7 @@ class Funcionario {
 			userId = identityAPI.getUserByUserName(userName).getId()									
 			
 		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado: " + e.getMessage())
+			logger.severe("Usuario no encontrado getIdByUserName: " + e.getMessage())
 		}
 
 		return userId
@@ -201,7 +223,7 @@ class Funcionario {
 		try{			
 			email = identityAPI.getUserContactData(userId,false).getEmail();
 		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado: " + e.getMessage())
+			logger.severe("Usuario no encontrado: getEmailById" + e.getMessage())
 		}
 
 		return email;

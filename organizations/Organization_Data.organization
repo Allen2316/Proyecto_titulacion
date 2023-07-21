@@ -195,6 +195,21 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
+    <user userName="el.b">
+      <firstName>Elvis</firstName>
+      <lastName>Burgos</lastName>
+      <personalData/>
+      <professionalData>
+        <email>luissar14@gamil.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>1234567836</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
   </users>
   <roles>
     <role name="member">
@@ -321,6 +336,12 @@
     </membership>
     <membership>
       <userName>c.or</userName>
+      <roleName>estudiante</roleName>
+      <groupName>estudiante</groupName>
+      <groupParentPath>/unl</groupParentPath>
+    </membership>
+    <membership>
+      <userName>el.b</userName>
       <roleName>estudiante</roleName>
       <groupName>estudiante</groupName>
       <groupParentPath>/unl</groupParentPath>

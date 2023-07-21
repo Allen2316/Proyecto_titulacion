@@ -41,36 +41,7 @@ class Estudiante {
 
 		return fullNameStudent.trim()
 	}
-	
-	
-	static String getFirstName(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM) {
-		if (!idSolicitanteBonitaBPM) {
-			throw new Exception("Se debe enviar el idSolicitanteBonitaBPM del estudiante solicitante getFirstName")
-		}
-
-		String firstNameStudent = ""
-		try{
-			firstNameStudent = identityAPI.getUser(idSolicitanteBonitaBPM).firstName					
-		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado en la organización getFirstName: " + e.getMessage())
-		}
-
-		return firstNameStudent.trim()
-	}
-	
-	static String getLastName(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM) {
-		if (!idSolicitanteBonitaBPM) {
-			throw new Exception("Se debe enviar el idSolicitanteBonitaBPM del estudiante solicitante getLastName")
-		}
-
-		String lastNameStudent = ""
-		try{
-			lastNameStudent = identityAPI.getUser(idSolicitanteBonitaBPM).lastName
-		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado en la organización getLastName: " + e.getMessage())
-		}
-		return lastNameStudent.trim()
-	}
+			
 	
 
 	/**
@@ -99,18 +70,16 @@ class Estudiante {
 	/**
 	 * Obtiene el ID del estudiante que inició el proceso, ideal cuando no se tiene acceso a la variable de negocio solicitud
 	 * @param apiAccessor 
-	 * @param processInstanceId
-	 * @return El ID del estudiante
+	 * @param userId
+	 * @return El ID del usuario
 	 */
-	static Long getId(APIAccessor apiAccessor, Long processInstanceId) {
-		Long userId = 0;
+	static Long getId(APIAccessor apiAccessor, Long userId) {
+		Long userIdS = -1L;
 		try{
-			 userId = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()
-					.getProcessInstance(processInstanceId)
-					.getStartedBy()).getId()							
+			 userIdS = apiAccessor.getIdentityAPI().getUser(userId).getId()							
 		}catch(UserNotFoundException e){
 			logger.severe("Usuario no encontrado: getId " + e.getMessage())
 		}
-		return userId;
+		return userIdS;
 	}
 }
