@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "estudianteForm",
   "name" : "estudianteForm",
-  "lastUpdate" : 1689921871593,
+  "lastUpdate" : 1690259925884,
   "rows" : [
     [
       {
@@ -179,58 +179,6 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Default label"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{TIC.autor[0].apellidos}}\n{{TIC.autor}\n{{TIC.autor[0]}}\n{{autor}}\n{{autor.value}}\n{{obtenerLista}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        }
-                      },
-                      "reference" : "cde14ef6-04a1-4f68-aa15-f8b32337748e",
-                      "hasValidationError" : false,
-                      "id" : "pbText"
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
                         "md" : 12,
                         "sm" : 12,
                         "xs" : 12,
@@ -283,7 +231,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "minLength" : {
                           "type" : "constant",
@@ -330,7 +278,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "minLength" : {
                           "type" : "constant",
@@ -657,11 +605,11 @@
                         },
                         "placeholder" : {
                           "type" : "interpolation",
-                          "value" : "Autor solicitante"
+                          "value" : ""
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "autor[0].value"
+                          "value" : "fullNameAutor"
                         },
                         "type" : {
                           "type" : "constant",
@@ -723,22 +671,22 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "¿Agregar segundo integrante?"
+                          "value" : "¿Agregar Autor?"
                         },
                         "alignment" : {
                           "type" : "constant",
                           "value" : "left"
                         }
                       },
-                      "reference" : "cd511f89-d112-4dc3-b8e1-6b9971e2e5e6",
+                      "reference" : "a62b3762-6e18-4f23-b3f0-576e641e3c8d",
                       "hasValidationError" : false,
                       "id" : "pbText"
                     },
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
+                        "xs" : 6,
+                        "sm" : 6,
                         "md" : 6,
                         "lg" : 6
                       },
@@ -761,7 +709,7 @@
                         },
                         "alignment" : {
                           "type" : "constant",
-                          "value" : "right"
+                          "value" : "center"
                         },
                         "buttonStyle" : {
                           "type" : "constant",
@@ -802,7 +750,7 @@
                         },
                         "collectionToModify" : {
                           "type" : "variable",
-                          "value" : "aux"
+                          "value" : "formOutput.autorSecundarioInput.userName"
                         },
                         "modalId" : {
                           "type" : "constant",
@@ -820,7 +768,7 @@
                           "type" : "variable"
                         }
                       },
-                      "reference" : "a25c59b2-55a4-4010-b514-dd961e049d72",
+                      "reference" : "278fc02a-6e0b-46c9-9120-30567d0d48b1",
                       "hasValidationError" : false,
                       "id" : "pbButton"
                     }
@@ -845,10 +793,10 @@
                         },
                         "repeatedCollection" : {
                           "type" : "variable",
-                          "value" : "aux"
+                          "value" : "formOutput.autorSecundarioInput.userName"
                         }
                       },
-                      "reference" : "1804e7cd-8df1-4c1e-875e-f9b6585325a0",
+                      "reference" : "fafe0bf8-dd38-48b9-8a48-6fa26cf92371",
                       "hasValidationError" : false,
                       "id" : "pbContainer",
                       "rows" : [
@@ -856,7 +804,7 @@
                           {
                             "type" : "component",
                             "dimension" : {
-                              "xs" : 8,
+                              "xs" : 12,
                               "sm" : 9,
                               "md" : 9,
                               "lg" : 9
@@ -880,15 +828,15 @@
                               },
                               "labelHidden" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : true
                               },
                               "label" : {
                                 "type" : "interpolation",
-                                "value" : "Segundo Autor"
+                                "value" : ""
                               },
                               "labelPosition" : {
                                 "type" : "constant",
-                                "value" : "left"
+                                "value" : "top"
                               },
                               "labelWidth" : {
                                 "type" : "constant",
@@ -896,7 +844,7 @@
                               },
                               "placeholder" : {
                                 "type" : "interpolation",
-                                "value" : "Ingrese nombre"
+                                "value" : "Nombre del Estudiante"
                               },
                               "availableValues" : {
                                 "type" : "expression",
@@ -912,17 +860,17 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "aux[$index]"
+                                "value" : "formOutput.autorSecundarioInput.userName[$index]"
                               }
                             },
-                            "reference" : "33c8fa3d-b479-47ea-85c9-12d40f25bea0",
+                            "reference" : "919d9ca1-7d58-4683-b105-c0a092f807e2",
                             "hasValidationError" : false,
                             "id" : "pbAutocomplete"
                           },
                           {
                             "type" : "component",
                             "dimension" : {
-                              "xs" : 4,
+                              "xs" : 12,
                               "sm" : 3,
                               "md" : 3,
                               "lg" : 3
@@ -1001,11 +949,10 @@
                                 "type" : "constant"
                               },
                               "removeItem" : {
-                                "type" : "variable",
-                                "value" : "$item"
+                                "type" : "variable"
                               }
                             },
-                            "reference" : "31dff64a-6d2f-4980-b1ea-17ac8a345a3a",
+                            "reference" : "1dcfe1d8-f65e-4b9d-82a4-f4545934bbf8",
                             "hasValidationError" : false,
                             "id" : "pbButton"
                           }
@@ -1228,7 +1175,7 @@
         "\t    return {",
         "            docTICDocumentInput: null,",
         "            autorSecundarioInput: {",
-        "\t\t        userName: \"\"",
+        "                userName: []",
         "            },",
         "            ticInput: {",
         "    \t\t\ttitulo: \"\",",
@@ -1237,8 +1184,8 @@
         "        };",
         "}else{",
         "    ",
-        "    $data.formOutput.autorSecundarioInput.userName = $data.aux;",
-        "    console.log(\"output \"+ $data.formOutput.autorSecundarioInput.userName);",
+        "    //$data.formOutput.autorSecundarioInput.userName = $data.aux;",
+        "    //console.log(\"output \"+ $data.formOutput.autorSecundarioInput.userName);",
         "    console.log($data.formOutput);",
         "    return $data.formOutput;",
         "}",
@@ -1322,22 +1269,10 @@
       ],
       "exposed" : false
     },
-    "TIC" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/tic"
-      ],
-      "advancedOptions" : {
-        "headers" : "",
-        "statusCode" : "",
-        "failedResponseValue" : ""
-      },
-      "exposed" : false
-    },
     "autor" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/autor"
+        "../{{context.autor_ref.link}}"
       ],
       "advancedOptions" : { },
       "exposed" : false
@@ -1367,16 +1302,11 @@
       ],
       "exposed" : false
     },
-    "aux" : {
+    "fullNameAutor" : {
       "type" : "expression",
       "value" : [
-        "var arr = []",
-        "if(arr[0].length < 1){",
-        "    return \"null\";    ",
-        "}",
-        "",
-        "console.log(arr);",
-        "return arr[0].toString()"
+        "console.log($data.autor.nombres + \" \" + $data.autor.apellidos)",
+        "return $data.autor.nombres + \" \" + $data.autor.apellidos;"
       ],
       "exposed" : false
     }

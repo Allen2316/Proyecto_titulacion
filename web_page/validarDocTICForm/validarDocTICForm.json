@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarDocTICForm",
   "name" : "validarDocTICForm",
-  "lastUpdate" : 1689921177376,
+  "lastUpdate" : 1690260222306,
   "rows" : [
     [
       {
@@ -236,11 +236,11 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Solicitante"
+                          "value" : "Solicitante/s"
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "<strong>{{vpNombreEstudiante.value}}</strong>"
+                          "value" : "<strong>{{vpNombreEstudiante.value}}\n<br>\n{{vpNombreEstudianteSegundo.value}}</strong>"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -878,6 +878,14 @@
         "console.log(\"est \" ,$data.$data.vpNombreEstudiante);",
         "console.log(\"value \",$data.$data.vpNombreEstudiante.value);"
       ],
+      "exposed" : false
+    },
+    "vpNombreEstudianteSegundo" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudianteSegundo"
+      ],
+      "advancedOptions" : { },
       "exposed" : false
     }
   },

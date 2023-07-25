@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "solicitudDirectorForm",
   "name" : "solicitudDirectorForm",
-  "lastUpdate" : 1689232108812,
+  "lastUpdate" : 1690242691939,
   "rows" : [
     [
       {
@@ -176,6 +176,42 @@
                           "type" : "constant",
                           "value" : false
                         },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Pertinencia"
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 4"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "eeb029c9-bd13-4cf9-80c5-632e3cd0dee8",
+                      "hasValidationError" : false,
+                      "id" : "pbTitle"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
                         "type" : {
                           "type" : "constant",
                           "value" : "Process document"
@@ -196,71 +232,6 @@
                       "reference" : "50a0c224-0bc6-4a62-9546-6c83fd4b8186",
                       "hasValidationError" : false,
                       "id" : "pbFileViewer"
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Documento de solicitud de Director"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Elegir archivo"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.docSolicitudDirectorDocumentInput"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "url" : {
-                          "type" : "constant",
-                          "value" : "../API/formFileUpload"
-                        },
-                        "errorContent" : {
-                          "type" : "variable",
-                          "value" : ""
-                        }
-                      },
-                      "reference" : "9d7cb94d-e355-4fb5-810f-2c6d00cb81a0",
-                      "hasValidationError" : false,
-                      "id" : "pbUpload",
-                      "description" : ""
                     }
                   ]
                 ]
@@ -293,7 +264,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Enviar"
+                    "value" : "Solicitar Director"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -448,15 +419,6 @@
       ],
       "exposed" : false
     },
-    "formInput" : {
-      "type" : "json",
-      "value" : [
-        "{\r",
-        "  \"docSolicitudDirectorDocumentInput\" : null\r",
-        "}"
-      ],
-      "exposed" : false
-    },
     "submit_errors_list" : {
       "type" : "expression",
       "value" : [
@@ -476,7 +438,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tdocSolicitudDirectorDocumentInput: $data.formInput.docSolicitudDirectorDocumentInput",
+        "",
         "}"
       ],
       "exposed" : false

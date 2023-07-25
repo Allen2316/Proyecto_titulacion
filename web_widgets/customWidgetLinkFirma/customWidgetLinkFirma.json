@@ -87,7 +87,7 @@
   ],
   "id" : "customWidgetLinkFirma",
   "name" : "widgetLinkFirma",
-  "lastUpdate" : 1687835059718,
+  "lastUpdate" : 1690233055523,
   "template" : "@customWidgetLinkFirma.tpl.html",
   "controller" : "@customWidgetLinkFirma.ctrl.js",
   "description" : "Permite registrar el protocolo firmaec para pode iniciar la aplicacion de FirmaEC instalada en el computador del usuario.",

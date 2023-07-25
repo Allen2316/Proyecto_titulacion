@@ -67,19 +67,5 @@ class Estudiante {
 
 		return cedulaEstudiante.trim()
 	}
-	/**
-	 * Obtiene el ID del estudiante que inició el proceso, ideal cuando no se tiene acceso a la variable de negocio solicitud
-	 * @param apiAccessor 
-	 * @param userId
-	 * @return El ID del usuario
-	 */
-	static Long getId(APIAccessor apiAccessor, Long userId) {
-		Long userIdS = -1L;
-		try{
-			 userIdS = apiAccessor.getIdentityAPI().getUser(userId).getId()							
-		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado: getId " + e.getMessage())
-		}
-		return userIdS;
-	}
+	
 }

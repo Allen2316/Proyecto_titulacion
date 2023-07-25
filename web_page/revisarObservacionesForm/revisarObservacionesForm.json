@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "solicitudPertinenciaForm",
-  "name" : "solicitudPertinenciaForm",
-  "lastUpdate" : 1690260343758,
+  "id" : "revisarObservacionesForm",
+  "name" : "revisarObservacionesForm",
+  "lastUpdate" : 1690254850448,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "f6cb43a6-9609-4823-8fec-e3f4c0ba8420",
+        "reference" : "5da03bc0-ccc3-4bb9-b863-f8513f27f7ba",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "c35ab163-7785-417a-b7b4-0cea34c1c83b",
+              "reference" : "b39fd959-e9f9-4693-80c1-33e7fc14342a",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "64d8db26-4c50-4f41-8036-a29d7c4c7dee",
+              "reference" : "c8852311-7669-42f1-ba5d-9d1f0a39b6f8",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -113,17 +113,8 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "5fb1097a-2a4b-4ef7-93cd-e4355275f19c",
+        "propertyValues" : { },
+        "reference" : "a1bb252a-7df6-48fb-85a5-e21671e6e66c",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -132,48 +123,12 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "4fa6d988-bc64-43b4-b95f-4a5c7690e7e8",
+          "reference" : "6cad40d1-0275-4245-985d-10c2daaa096b",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
             [
               {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "Solicitud adjuntada por el/los estudiantes: <br><strong>{{vpNombreEstudiante.value}}<br>{{vpNombreEstudianteSegundo.value}}</strong>"
-                  },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 4"
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
-                  }
-                },
-                "reference" : "ec1a5d30-b5b6-407c-9be8-bf0c5d09d1fb",
-                "hasValidationError" : false,
-                "id" : "pbTitle"
-              }
-            ],
-            [
-              {
                 "type" : "container",
                 "dimension" : {
                   "xs" : 12,
@@ -195,7 +150,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "45db607a-4a58-4743-b2da-113106c99b87",
+                "reference" : "77473d3f-11a6-45b2-94b7-5b33ab7ee1d7",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -216,88 +171,6 @@
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "Process document"
-                        },
-                        "url" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "document" : {
-                          "type" : "variable",
-                          "value" : "context.docSolicitudTIC_ref"
-                        },
-                        "showPreview" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "e0223ce9-fb0f-441c-abb2-8b890aad9bb7",
-                      "hasValidationError" : false,
-                      "id" : "pbFileViewer"
-                    }
-                  ]
-                ]
-              }
-            ],
-            [
-              {
-                "type" : "container",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "6f6cb572-53f2-4fb6-8dcc-c050457e5689",
-                "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -305,7 +178,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Designar docente como revisor"
+                          "value" : "Observaciones"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -313,32 +186,24 @@
                         },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 1
+                          "value" : 4
                         },
-                        "placeholder" : {
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
                           "type" : "interpolation",
-                          "value" : "Selecionar docente"
+                          "value" : "{{ avance.observaciones }}"
                         },
-                        "availableValues" : {
-                          "type" : "expression",
-                          "value" : "obtenerLista"
-                        },
-                        "displayedKey" : {
-                          "type" : "expression",
-                          "value" : "\"fullName\""
-                        },
-                        "returnedKey" : {
-                          "type" : "expression",
-                          "value" : "\"userName\""
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formOutput.userName"
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
                         }
                       },
-                      "reference" : "965719a6-1777-4f96-9a6b-5d3fac3d6a1c",
+                      "reference" : "697d3c22-ce45-4ffc-8e47-c4ebf8834cdb",
                       "hasValidationError" : false,
-                      "id" : "pbSelect"
+                      "id" : "pbText"
                     }
                   ],
                   [
@@ -356,41 +221,65 @@
                           "value" : ""
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Default label"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
+                          "type" : "expression",
+                          "value" : "!context.docAvancesTIC_ref"
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{obtenerLista}}"
+                          "value" : "Documento de correcciones"
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 4"
                         },
                         "alignment" : {
                           "type" : "constant",
                           "value" : "left"
                         }
                       },
-                      "reference" : "79579e17-20ff-4e57-91b8-4417e01ef0c3",
+                      "reference" : "e5f2e785-6e83-4928-af31-6f3aff8c63f6",
                       "hasValidationError" : false,
-                      "id" : "pbText"
+                      "id" : "pbTitle"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!context.docAvancesTIC_ref"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "Process document"
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "document" : {
+                          "type" : "variable",
+                          "value" : "context.docAvancesTIC_ref"
+                        },
+                        "showPreview" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "f52d6a65-8073-4dd6-93a4-746fb5d4a07d",
+                      "hasValidationError" : false,
+                      "id" : "pbFileViewer"
                     }
                   ]
                 ]
@@ -442,7 +331,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita/apps/userAppBonita/task-list"
+                    "value" : "/bonita"
                   },
                   "action" : {
                     "type" : "constant",
@@ -490,7 +379,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "f331a4f5-e36f-4f64-b2b2-669b9b76ec79",
+                "reference" : "805572f9-a538-4200-8583-11333e8e4e04",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -542,7 +431,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "5c0f3376-45c4-49e2-b62d-385df82cef6c",
+                "reference" : "1f968dda-0e65-4073-8f7e-9b5859ceaa56",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -555,16 +444,16 @@
   ],
   "assets" : [
     {
-      "id" : "a8f337f1-5afe-469e-8fc1-8ac38808aabc",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "412e2471-11b0-4c3b-be5c-113ec4d89f60",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "48f9f65d-fb2e-42a4-9c6d-a28d60da0836",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "063e0aae-c955-4136-858d-3d21ff29b204",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
@@ -597,7 +486,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tuserName: $data.formInput.userName",
+        "",
         "}"
       ],
       "exposed" : false
@@ -616,76 +505,17 @@
       ],
       "exposed" : false
     },
-    "listaDocentes" : {
+    "avance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/listaDocentes"
-      ],
-      "advancedOptions" : {
-        "headers" : "",
-        "statusCode" : "",
-        "failedResponseValue" : ""
-      },
-      "exposed" : false
-    },
-    "obtenerLista" : {
-      "type" : "expression",
-      "value" : [
-        "let va = $data.listaDocentes.value\r",
-        "\r",
-        "\r",
-        "// Suponiendo que tienes la cadena de texto en la variable 'response'\r",
-        "var valueString = va;\r",
-        "\r",
-        "// Extraer los objetos UserImpl de la cadena de texto utilizando expresiones regulares\r",
-        "var regex = /UserImpl\\{.*?\\}/g;\r",
-        "var matches = valueString.match(regex);\r",
-        "\r",
-        "// Crear una lista de objetos JavaScript a partir de los matches\r",
-        "var listaDocentes = [];\r",
-        "matches.forEach(function(match) {\r",
-        "  var docente = {};\r",
-        "\r",
-        "  // Extraer los atributos del objeto UserImpl\r",
-        "  var id = match.match(/id=(\\d+)/)[1];\r",
-        "  var firstName = match.match(/firstName='(.*?)'/)[1];\r",
-        "  var lastName = match.match(/lastName='(.*?)'/)[1];\r",
-        "  var userName = match.match(/userName='(.*?)'/)[1];\r",
-        "\r",
-        "  // Asignar los atributos al objeto docente\r",
-        "  docente.id = id;\r",
-        "  docente.fullName = firstName + \" \" + lastName;\r",
-        "  docente.userName = userName;\r",
-        "\r",
-        "  // Agregar el objeto docente a la lista\r",
-        "  listaDocentes.push(docente);\r",
-        "});\r",
-        "\r",
-        "console.log(listaDocentes);\r",
-        "\r",
-        "return listaDocentes;"
-      ],
-      "exposed" : false
-    },
-    "vpNombreEstudiante" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudiante"
-      ],
-      "advancedOptions" : { },
-      "exposed" : false
-    },
-    "vpNombreEstudianteSegundo" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudianteSegundo"
+        "../{{context.avance_ref.link}}"
       ],
       "advancedOptions" : { },
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "53dbc610-ae16-4f36-b87e-7ad39d1d3885",
+  "uuid" : "2d763668-2ab2-4970-8880-397ea05f654a",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

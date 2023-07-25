@@ -40,6 +40,8 @@ class CertificateFields {
 	static final String INFORME_DIRECTOR_NAME_3 = "informeDirector"
 	static final Integer SOLICITUD_PERTINENCIA_ESTUDIANTE_4 = 4
 	static final String SOLICITUD_PERTINENCIA_ESTUDIANTE_NAME_4 = "solocitudPertinenciaEstudiante"
+	static final Integer SOLICITUD_DIRECTOR_ESTUDIANTE_5 = 5
+	static final String SOLICITUD_DIRECTOR_ESTUDIANTE_NAME_5 = "solocitudDirectorEstudiante"
 	
 
 	/**
@@ -48,7 +50,8 @@ class CertificateFields {
 	static final String TEMPLATE_SOLICITUD_ESTUDIANTE_PERTINENCIA = "Solicitud_Estudiante_Pertinencia.docx"
 	static final String TEMPLATE_SOLICITUD_PERTINENCIA = "Solicitud_Pertinencia.docx"
 	static final String TEMPLATE_INFORME_PERTINENCIA = "Informe_Pertinencia.docx"
-	static final String TEMPLATE_ASIGNACION_DIRECTOR = "Asignacion_Director.docx"	
+	static final String TEMPLATE_ASIGNACION_DIRECTOR = "Asignacion_Director.docx"
+	static final String TEMPLATE_SOLICITUD_ESTUDIANTE_DIRECTOR = "Solicitud_Estudiante_Director.docx"
 
 	/**
 	 * Nombres de los grupos de los funcionarios y estudiantes

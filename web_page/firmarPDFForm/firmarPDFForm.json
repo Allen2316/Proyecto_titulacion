@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1689231860118,
+  "lastUpdate" : 1690233123657,
   "rows" : [
     [
       {
@@ -102,6 +102,76 @@
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "d715fcd5-cda8-4b85-ae88-480053d60717",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "Process document"
+                },
+                "url" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "document" : {
+                  "type" : "variable",
+                  "value" : "context.docGenerado_ref"
+                },
+                "showPreview" : {
+                  "type" : "constant",
+                  "value" : true
+                }
+              },
+              "reference" : "55ac2e92-667e-48af-83c1-e715a5606326",
+              "hasValidationError" : false,
+              "id" : "pbFileViewer"
             }
           ]
         ]
@@ -290,9 +360,6 @@
                               "type" : "expression",
                               "value" : "urlParaIniciarFirmaEC"
                             },
-                            "target" : {
-                              "type" : "constant"
-                            },
                             "alignment" : {
                               "type" : "constant",
                               "value" : "center"
@@ -316,9 +383,12 @@
                             "tooltipText" : {
                               "type" : "interpolation",
                               "value" : "Presione para Firmar el documento"
+                            },
+                            "target" : {
+                              "type" : "constant"
                             }
                           },
-                          "reference" : "ee21d7a3-0832-4036-ac21-073613fcb30b",
+                          "reference" : "23b26219-48f0-4023-b594-b3273ea5a65c",
                           "hasValidationError" : false,
                           "id" : "customWidgetLinkFirma"
                         }
@@ -1187,26 +1257,28 @@
         " * @return {string}",
         " */",
         "if ($data.valorVpTokenAEnviar) {",
-        "  var miToken = $data.valorVpTokenAEnviar.value;",
-        "  var linkGenerado = \"\";",
-        "  ",
-        "  ",
-        "  ",
-        "  const urlApiProd = $data.constants.PARAM_URL +",
-        "      $data.firmarCtrl.getUrlServerFirmaEc($data.constants.PARAM_ID_URL_SERVER_FIRMAEC) +",
-        "      $data.constants.API_CONTEXT_FIRMAEC;",
+        "    var miToken = $data.valorVpTokenAEnviar.value;",
+        "    ",
+        "    console.log(\"token : \", miToken);",
+        "    var linkGenerado = \"\";",
         "      ",
+        "      ",
+        "      ",
+        "    const urlApiProd = $data.constants.PARAM_URL +",
+        "            $data.firmarCtrl.getUrlServerFirmaEc($data.constants.PARAM_ID_URL_SERVER_FIRMAEC) +",
+        "            $data.constants.API_CONTEXT_FIRMAEC;",
+        "          ",
         "    linkGenerado = $data.constants.FIRMAEC_PROTOCOL +",
-        "      $data.constants.SYSTEM_NAME +",
-        "      \"/firmar?token=\" + miToken +",
-        "      $data.constants.PARAM_CERTIFICATE_TYPE + $data.constants.VALUE_CERTIFICATE_TYPE_FILE +",
-        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
-        "      $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290' +",
-        "      $data.constants.PARAM_TYPE_STAMPING + $data.constants.VALUE_TYPE_STAMPING_QR +",
-        "      urlApiProd;",
+        "                    $data.constants.SYSTEM_NAME +",
+        "                    \"/firmar?token=\" + miToken +",
+        "                    $data.constants.PARAM_CERTIFICATE_TYPE + $data.constants.VALUE_CERTIFICATE_TYPE_FILE +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290' +",
+        "                    $data.constants.PARAM_TYPE_STAMPING + $data.constants.VALUE_TYPE_STAMPING_QR +",
+        "                    urlApiProd;",
         "   ",
         "",
-        "  //console.log(\"linkGenerado: \", linkGenerado);",
+        "  console.log(\"linkGenerado: \", linkGenerado);",
         "  //Ejemplo link generado: firmaec://mce/firmar?token=XXXXXXXX&tipo_certificado=2&url=http://...&razon=...",
         "  return linkGenerado;",
         "}"

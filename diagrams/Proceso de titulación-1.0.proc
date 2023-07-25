@@ -131,6 +131,31 @@
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_CBrigCU4Ee6jwPrAR4p7Rg" name="Estudiante" initiator="true"/>
       <contract xmi:type="process:Contract" xmi:id="_8d1kXPtaEe2jXvmcOqjeoQ"/>
+      <documents xmi:type="process:Document" xmi:id="_tiPUICpsEe68ldxTGHbs6w" name="docTIC">
+        <mimeType xmi:type="expression:Expression" xmi:id="_tiPUISpsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_tiPUIipsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_tiPUIypsEe68ldxTGHbs6w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_uJ_3sCpsEe68ldxTGHbs6w" name="docGenerado">
+        <mimeType xmi:type="expression:Expression" xmi:id="_uJ_3sSpsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_uJ_3sipsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_uJ_3sypsEe68ldxTGHbs6w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_vE9rICpsEe68ldxTGHbs6w" name="pdfFirmado">
+        <mimeType xmi:type="expression:Expression" xmi:id="_vE9rISpsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_vE9rIipsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_vE9rIypsEe68ldxTGHbs6w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_v_FKACpsEe68ldxTGHbs6w" name="docTemplate">
+        <mimeType xmi:type="expression:Expression" xmi:id="_v_FKASpsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_v_FKAipsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_v_FKAypsEe68ldxTGHbs6w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_zuR_oCpsEe68ldxTGHbs6w" name="docSolicitudTIC">
+        <mimeType xmi:type="expression:Expression" xmi:id="_zuR_oSpsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_zuR_oipsEe68ldxTGHbs6w" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_zuR_oypsEe68ldxTGHbs6w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_8d1kXftaEe2jXvmcOqjeoQ">
         <name xmi:type="expression:Expression" xmi:id="_8d1kXvtaEe2jXvmcOqjeoQ" content="" returnTypeFixed="true"/>
         <value xmi:type="expression:Expression" xmi:id="_8d1kX_taEe2jXvmcOqjeoQ" content="" returnTypeFixed="true"/>

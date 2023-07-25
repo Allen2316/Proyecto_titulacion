@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "avancesTICForm",
   "name" : "avancesTICForm",
-  "lastUpdate" : 1687119214835,
+  "lastUpdate" : 1690249138883,
   "rows" : [
     [
       {
@@ -138,7 +138,8 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -248,11 +249,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "primary"
+                    "value" : "success"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Enviar"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -294,6 +295,29 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "2cc7d942-4994-4089-85e1-e64199513bab",
@@ -325,8 +349,8 @@
                     "value" : true
                   },
                   "hidden" : {
-                    "type" : "expression",
-                    "value" : "!formOutput._submitError.message"
+                    "type" : "constant",
+                    "value" : false
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -337,7 +361,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "<strong>Debug message</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                    "value" : "formOutput: {{ formOutput | json }}"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -346,6 +370,14 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "60362309-d5af-42a4-a349-4b89ff0174d1",

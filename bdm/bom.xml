@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
     <businessObjects>
-        <businessObject qualifiedName="com.company.ejecucion.TicCompleto">
-            <fields>
-                <field type="BOOLEAN" length="255" name="completo" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
         <businessObject qualifiedName="com.sspm.model.Alternative">
             <fields>
                 <field type="STRING" length="255" name="description" nullable="false" collection="false"/>
@@ -161,7 +153,7 @@
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.tic.model.AvanceTT">
+        <businessObject qualifiedName="com.tic.model.AvanceTIC">
             <fields>
                 <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="progreso" nullable="true" collection="false"/>
@@ -242,7 +234,7 @@
                 <field type="BOOLEAN" length="255" name="actaSustPrivada" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="actaGrado" nullable="true" collection="true"/>
                 <relationField type="AGGREGATION" reference="com.tic.model.Historial" fetchType="LAZY" name="historial" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.tic.model.AvanceTT" fetchType="LAZY" name="avanceTT" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.tic.model.AvanceTIC" fetchType="LAZY" name="avanceTT" nullable="true" collection="true"/>
                 <relationField type="AGGREGATION" reference="com.tic.model.Sustentacion" fetchType="LAZY" name="sustentacion" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="calificacionRecordA" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="calificacionFinal" nullable="true" collection="true"/>

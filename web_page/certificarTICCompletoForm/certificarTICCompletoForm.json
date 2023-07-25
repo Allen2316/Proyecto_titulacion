@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "certificarTICCompletoForm",
   "name" : "certificarTICCompletoForm",
-  "lastUpdate" : 1687119363916,
+  "lastUpdate" : 1690254769988,
   "rows" : [
     [
       {
@@ -172,6 +172,42 @@
                           "type" : "constant",
                           "value" : false
                         },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Documento TIC avances"
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 4"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "e44a7916-0928-4ca3-aef5-dc1f98d41870",
+                      "hasValidationError" : false,
+                      "id" : "pbTitle"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
                         "type" : {
                           "type" : "constant",
                           "value" : "Process document"
@@ -221,7 +257,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Tic Completo"
+                    "value" : "TIC Completo"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -249,7 +285,8 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -304,7 +341,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "ticCompleto.completo"
+                          "value" : "avance.aprobado"
                         },
                         "required" : {
                           "type" : "constant",
@@ -315,6 +352,204 @@
                       "hasValidationError" : false,
                       "id" : "pbCheckbox",
                       "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Comentarios"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "avance.observaciones"
+                        }
+                      },
+                      "reference" : "c59d7c60-4853-4d58-bcfd-ab610c74489f",
+                      "hasValidationError" : false,
+                      "id" : "pbTextarea"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Progeso %"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "50"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "avance.progreso"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "number"
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        }
+                      },
+                      "reference" : "5708f39b-02e1-4fe2-86bd-9ae82f493496",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Documento con observaciones"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "Seleccionar archivo"
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : "../API/formFileUpload"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.docAvancesTICDocumentInput"
+                        },
+                        "errorContent" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "4756c6c6-3c13-4caf-93a5-f847494c1130",
+                      "hasValidationError" : false,
+                      "id" : "pbUpload"
                     }
                   ]
                 ]
@@ -343,11 +578,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "primary"
+                    "value" : "success"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Enviar"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -389,6 +624,29 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "1dcd412a-04f3-4150-8ee6-7e8ef1932037",
@@ -420,8 +678,8 @@
                     "value" : true
                   },
                   "hidden" : {
-                    "type" : "expression",
-                    "value" : "!formOutput._submitError.message"
+                    "type" : "constant",
+                    "value" : false
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -432,7 +690,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "<strong>Debug message</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                    "value" : "formOutput: {{ formOutput | json }}"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -441,6 +699,14 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "704fd29d-e683-4b3d-bda2-cf0418e9c4b5",
@@ -497,12 +763,15 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.ticCompleto ){",
+        "if( $data.avance ){",
         "\treturn {",
-        "\t\t//map ticCompleto variable to expected task contract input",
-        "\t\tticCompletoInput: {",
-        "\t\t\tcompleto: $data.ticCompleto.completo !== undefined ? $data.ticCompleto.completo : null",
-        "\t\t}",
+        "\t\t//map avance variable to expected task contract input",
+        "\t\tavanceInput: {",
+        "\t\t\taprobado: $data.avance.aprobado !== undefined ? $data.avance.aprobado : null,",
+        "\t\t\tobservaciones: $data.avance.observaciones !== undefined ? $data.avance.observaciones : null,",
+        "\t\t\tprogreso: $data.avance.progreso !== undefined ? $data.avance.progreso : null",
+        "\t\t},",
+        "\t\tdocAvancesTICDocumentInput: $data.formInput.docAvancesTICDocumentInput",
         "\t}",
         "}"
       ],
@@ -526,6 +795,27 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "avance" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.avance_ref.link}}"
+      ],
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"docAvancesTICDocumentInput\" : null\r",
+        "}"
       ],
       "exposed" : false
     }

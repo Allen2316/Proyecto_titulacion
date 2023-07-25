@@ -6,3 +6,73 @@
 </dependency>
 
 Otra dependencia aqui
+
+
+import com.mpt.util.Estudiante
+import com.mpt.util.Funcionario
+import com.tic.model.Usuario
+import com.mpt.util.Usuario as UsuarioMPT
+import com.mpt.constantes.CertificateFields
+import org.bonitasoft.engine.identity.User
+import java.util.logging.Logger
+
+
+Logger logger = Logger.getLogger(User.class.toString())
+
+
+logger.info("-------------------->UserName fueraaaaaaa "+      autorSecundarioInput.userName[0]);
+
+
+if(      autorSecundarioInput.userName[0] != "null"){
+		  autorSecundarioInput.userName =       autorSecundarioInput.userName[0]
+	return       autorSecundarioInput.userName
+}else{
+	return null
+}
+
+=========
+
+import com.mpt.util.Estudiante
+import com.mpt.util.Funcionario
+import com.tic.model.Usuario
+import com.mpt.util.Usuario as UsuarioMPT
+import com.mpt.constantes.CertificateFields
+import java.util.logging.Logger
+import org.bonitasoft.engine.identity.User
+
+Logger logger = Logger.getLogger(User.class.toString())
+
+
+logger.info("-------------------->crear segundo autor "+ autorSecundario.userName);
+
+
+Long userId = Funcionario.getIdByUserName(autorSecundario.userName, apiAccessor.getIdentityAPI())
+Long idRol = UsuarioMPT.getRoleId(apiAccessor.getIdentityAPI(), "estudiante")
+def user = apiAccessor.getIdentityAPI().getUser(userId)
+def personalContactData = apiAccessor.getIdentityAPI().getUserContactData(userId, false)
+
+autorSecundario.idSolicitanteBonitaBPM = userId
+autorSecundario.nombres = user.firstName
+autorSecundario.apellidos = user.lastName
+autorSecundario.cedula = Estudiante.getCedulaStudent(apiAccessor.getIdentityAPI(), userId)
+autorSecundario.correo = personalContactData.email
+autorSecundario.nombreGrupo = CertificateFields.STUDENT_GROUP_NAME
+autorSecundario.idRol = idRol
+autorSecundario.userName = Funcionario.getUsername(apiAccessor.getIdentityAPI(), userId)
+
+logger.info("-------------------->segundo autor "+ autorSecundario.nombres+ " "+autorSecundario.cedula + " "+autorSecundario.correo);
+
+return autorSecundario;
+
+=====
+Agregar el autor secundario en las operaciones del contrao
+
+import com.tic.model.Usuario
+
+if(autorSecundario != null){
+	//List<Usuario> autores = tic.autor
+	//autores.add(autorSecundario)
+	tic.autor.add(autorSecundario)
+}
+
+return tic;

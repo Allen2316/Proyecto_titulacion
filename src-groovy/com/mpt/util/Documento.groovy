@@ -120,6 +120,8 @@ class Documento {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_ASIGNACION_DIRECTOR
 			}else if (idTipoInforme == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4) {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_ESTUDIANTE_PERTINENCIA
+			}else if (idTipoInforme == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_5) {
+				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_ESTUDIANTE_DIRECTOR
 			}else {
 				logger.severe("No existe la plantilla docx con el ID solicitado")
 				urlDocumentTemplateAlfresco = ""
@@ -159,14 +161,18 @@ class Documento {
 			String cedulaStudent = Estudiante.getCedulaStudent(identityAPI, idSolicitanteBonitaBPM)
 			String fullNameGestor = Funcionario.getFullName(CertificateFields.COORDINATION_GROUP_NAME, identityAPI)
 			String fullNameDocente = Funcionario.getFullNameWithUserName(vpUserNameDocente, identityAPI)
-			
+					
 			if(AutorSec != null) {
 				replacementsList.add([
 					CertificateFields.STUDENT_NAME_SECOND,
 					Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
-				])				
+				])
+			}else {
+				replacementsList.add([
+					CertificateFields.STUDENT_NAME_SECOND,
+					""
+				])
 			}
-			
 
 			// Datos generales del certificado
 			replacementsList.add([
@@ -229,20 +235,10 @@ class Documento {
 					FormatearFecha.formatearFecha(fecha_fin)
 				])
 								
-			}else if (idTipoDocumento == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4) {								
+			}else if (idTipoDocumento == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4 || idTipoDocumento == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_5) {								
 				replacementsList.add([
 					CertificateFields.ITINERARIO,
 					itinerario
-				])
-				
-				replacementsList.add([
-					CertificateFields.EMAIL,
-					emailStudent
-				])
-				
-				replacementsList.add([
-					CertificateFields.EMAIL_SECOND,
-					AutorSec.correo
 				])
 				
 				replacementsList.add([
@@ -251,10 +247,42 @@ class Documento {
 				])
 				
 				replacementsList.add([
-					CertificateFields.STUDENT_ID_CARD_SECOND,
-					AutorSec.cedula
+					CertificateFields.EMAIL,
+					emailStudent
 				])
-								
+				
+				if(AutorSec != null) {
+					replacementsList.add([
+						CertificateFields.STUDENT_NAME_SECOND,
+						"f: " + Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
+					])
+					
+					replacementsList.add([
+						CertificateFields.EMAIL_SECOND,
+						"Correo: " + AutorSec.correo						
+					])
+													
+					replacementsList.add([
+						CertificateFields.STUDENT_ID_CARD_SECOND,
+						"CI: " +AutorSec.cedula
+					])
+				}else {
+					replacementsList.add([
+						CertificateFields.STUDENT_NAME_SECOND,
+						""
+					])
+					
+					replacementsList.add([
+						CertificateFields.EMAIL_SECOND,
+						""
+					])
+													
+					replacementsList.add([
+						CertificateFields.STUDENT_ID_CARD_SECOND,
+						""
+					])
+				}
+														
 			}
 			
 
