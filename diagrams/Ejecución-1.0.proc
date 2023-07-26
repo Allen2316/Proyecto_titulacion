@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_WqpjYA4HEe65uPoR93Vj-w" name="Ejecución" author="Allen" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_Wq0igA4HEe65uPoR93Vj-w" name="Ejecución">
       <elements xmi:type="process:Lane" xmi:id="_Wq3l0A4HEe65uPoR93Vj-w" name="Estudiante" actor="_qcO3gA4HEe65uPoR93Vj-w">
@@ -58,13 +58,6 @@
           <contract xmi:type="process:Contract" xmi:id="_S7p3VyqREe62C7vTchQtag"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_S7p3WSqREe62C7vTchQtag" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <filters xmi:type="process:ActorFilter" xmi:id="_fMMUcCqUEe62C7vTchQtag" name="asignarTareasEstudiante" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_fMMUcSqUEe62C7vTchQtag" definitionId="bonita-actorfilter-initiator" version="1.0">
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fMMUciqUEe62C7vTchQtag" key="autoAssign">
-              <expression xmi:type="expression:Expression" xmi:id="_fMMUcyqUEe62C7vTchQtag" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-            </parameters>
-          </configuration>
-        </filters>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_WrOLIA4HEe65uPoR93Vj-w" name="Docente especialista" actor="_uTs4UA4HEe65uPoR93Vj-w">
         <elements xmi:type="process:Task" xmi:id="_WrJ5sA4HEe65uPoR93Vj-w" name="Comprobar TIC completo y certificar" outgoing="_FQvmYA4JEe65uPoR93Vj-w" incoming="_exUCQA7oEe63HMoeTIyo2A" overrideActorsOfTheLane="false">
@@ -171,22 +164,19 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_ZVyqISqGEe6pcohIpbS7FQ" name="init_avance()" content="import com.tic.model.AvanceTIC&#xD;&#xA;&#xD;&#xA;return new AvanceTIC();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.AvanceTIC"/>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_dbetICqGEe6pcohIpbS7FQ" name="tic" dataType="_WqqKeg4HEe65uPoR93Vj-w" className="com.tic.model.TrabajoTitulacion">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_dbetISqGEe6pcohIpbS7FQ" name="init_tic()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;import com.mpt.constantes.EstadosSolicitud&#xD;&#xA;import com.mpt.util.FormatearFecha&#xD;&#xA;import com.mpt.util.Usuario as UsuarioMPT&#xD;&#xA;import com.tic.model.TrabajoTitulacion&#xD;&#xA;import com.tic.model.Usuario&#xD;&#xA;import java.util.logging.Logger&#xD;&#xA;&#xD;&#xA;def trabajoTitulacionVar = new TrabajoTitulacion()&#xD;&#xA;Long startedByUserId = apiAccessor.getProcessAPI().getProcessInstance(processInstanceId).getStartedBy()&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;List&lt;Usuario> listaAutores = new ArrayList&lt;Usuario>()&#xD;&#xA;def user = apiAccessor.getIdentityAPI().getUser(startedByUserId)&#xD;&#xA;def userContact = apiAccessor.getIdentityAPI().getUserContactData(startedByUserId, false)&#xD;&#xA;&#xD;&#xA;def usuario = new Usuario()&#xD;&#xA;usuario.idSolicitanteBonitaBPM = startedByUserId&#xD;&#xA;usuario.idRol = UsuarioMPT.getRoleId(apiAccessor.getIdentityAPI(),&quot;estudiante&quot;)//apiAccessor.getIdentityAPI().getRoleByName(&quot;estudiante&quot;).getId()&#xD;&#xA;usuario.nombres = user.getFirstName()&#xD;&#xA;usuario.apellidos = user.getLastName()&#xD;&#xA;usuario.correo = userContact.getEmail()&#xD;&#xA;usuario.telefono = userContact.getPhoneNumber() ? userContact.getPhoneNumber(): userContact.getMobileNumber()&#xD;&#xA;&#xD;&#xA;listaAutores.add(usuario)&#xD;&#xA;&#xD;&#xA;trabajoTitulacionVar.autor = listaAutores&#xD;&#xA;Logger logger = Logger.getLogger(TrabajoTitulacion.class.toString())&#xD;&#xA;logger.info(&quot;-------------------->TrabajoTitulacion &quot;+trabajoTitulacionVar.autor[0].apellidos);&#xD;&#xA;&#xD;&#xA;return trabajoTitulacionVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.TrabajoTitulacion">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_m35kQCqGEe6pcohIpbS7FQ" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_m35kQSqGEe6pcohIpbS7FQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-        </defaultValue>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_dbetISqGEe6pcohIpbS7FQ" name="" content="" interpreter="GROOVY"/>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_e4Z-ICqGEe6pcohIpbS7FQ" name="autor" dataType="_WqqKeg4HEe65uPoR93Vj-w" className="com.tic.model.Usuario">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_e4Z-ISqGEe6pcohIpbS7FQ" name="init_autor()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;import com.mpt.constantes.EstadosSolicitud&#xD;&#xA;import com.mpt.util.FormatearFecha&#xD;&#xA;import com.mpt.util.Usuario as UsuarioMPT&#xD;&#xA;import com.tic.model.TrabajoTitulacion&#xD;&#xA;import com.tic.model.Usuario&#xD;&#xA;import com.mpt.util.Estudiante&#xD;&#xA;import com.mpt.util.Funcionario&#xD;&#xA;import com.mpt.constantes.CertificateFields&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Long startedByUserId = apiAccessor.getProcessAPI().getProcessInstance(processInstanceId).getStartedBy()&#xD;&#xA;def user = apiAccessor.getIdentityAPI().getUser(startedByUserId)&#xD;&#xA;def userContact = apiAccessor.getIdentityAPI().getUserContactData(startedByUserId, false)&#xD;&#xA;&#xD;&#xA;def usuario = new Usuario()&#xD;&#xA;&#xD;&#xA;usuario.idSolicitanteBonitaBPM = startedByUserId&#xD;&#xA;usuario.idRol = UsuarioMPT.getRoleId(apiAccessor.getIdentityAPI(),&quot;estudiante&quot;)//apiAccessor.getIdentityAPI().getRoleByName(&quot;estudiante&quot;).getId()&#xD;&#xA;usuario.nombres = user.getFirstName()&#xD;&#xA;usuario.apellidos = user.getLastName()&#xD;&#xA;usuario.correo = userContact.getEmail()&#xD;&#xA;usuario.cedula = Estudiante.getCedulaStudent(apiAccessor.getIdentityAPI(), startedByUserId)&#xD;&#xA;usuario.nombreGrupo = CertificateFields.STUDENT_GROUP_NAME&#xD;&#xA;usuario.userName = Funcionario.getUsername(apiAccessor.getIdentityAPI(), startedByUserId)&#xD;&#xA;//usuario.telefono = userContact.getPhoneNumber() ? userContact.getPhoneNumber(): userContact.getMobileNumber()&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return usuario&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Usuario">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_iHiMkCqGEe6pcohIpbS7FQ" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_iHiMkSqGEe6pcohIpbS7FQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-        </defaultValue>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_e4Z-ISqGEe6pcohIpbS7FQ" name="" content="" interpreter="GROOVY"/>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_pK9MACqGEe6pcohIpbS7FQ" name="historial" dataType="_WqqKeg4HEe65uPoR93Vj-w" className="com.tic.model.Historial">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_pK9MASqGEe6pcohIpbS7FQ" name="init_historial()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;import com.mpt.constantes.EstadosSolicitud&#xD;&#xA;import com.mpt.util.FormatearFecha&#xD;&#xA;import com.mpt.util.Usuario as UsuarioMPT&#xD;&#xA;import com.tic.model.TrabajoTitulacion&#xD;&#xA;import com.tic.model.Usuario&#xD;&#xA;import com.tic.model.Historial&#xD;&#xA;&#xD;&#xA;def historial = new Historial()&#xD;&#xA;&#xD;&#xA;return historial&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Historial"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_pK9MASqGEe6pcohIpbS7FQ" name="" content="" interpreter="GROOVY"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_taHGQCtFEe6kQLqtJMuneg" name="auxiliar" dataType="_WqqKeg4HEe65uPoR93Vj-w" className="com.tic.model.ObjAuxiliar">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_taHGQStFEe6kQLqtJMuneg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_Wq0ikA4HEe65uPoR93Vj-w">
-        <targetForm xmi:type="expression:Expression" xmi:id="_tQYgkCqXEe62C7vTchQtag" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_ufqgcCtCEe6kQLqtJMuneg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_Wq0ikg4HEe65uPoR93Vj-w">
         <targetForm xmi:type="expression:Expression" xmi:id="_Wq0ikw4HEe65uPoR93Vj-w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -221,7 +211,7 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_UWQNACqREe62C7vTchQtag"/>
         <condition xmi:type="expression:Expression" xmi:id="_UWQNASqREe62C7vTchQtag" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <actors xmi:type="process:Actor" xmi:id="_qcO3gA4HEe65uPoR93Vj-w" name="Estudiante" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_qcO3gA4HEe65uPoR93Vj-w" name="Estudiante"/>
       <actors xmi:type="process:Actor" xmi:id="_uTs4UA4HEe65uPoR93Vj-w" name="DocenteEspecialista"/>
       <contract xmi:type="process:Contract" xmi:id="_Wq0ilA4HEe65uPoR93Vj-w"/>
       <documents xmi:type="process:Document" xmi:id="_EPVCIA4IEe65uPoR93Vj-w" name="docAvancesTIC">

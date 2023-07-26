@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1690233123657,
+  "lastUpdate" : 1690312771996,
   "rows" : [
     [
       {
@@ -1002,6 +1002,10 @@
     "firmarCtrl" : {
       "type" : "expression",
       "value" : [
+        "//var miToken = $data.valorVpTokenAEnviar.value;",
+        "var miToken = $data.auxiliar.token;",
+        "    ",
+        "    console.log(\"token: \", miToken);",
         "return {",
         "    /**",
         "     * ",
@@ -1256,8 +1260,8 @@
         " *",
         " * @return {string}",
         " */",
-        "if ($data.valorVpTokenAEnviar) {",
-        "    var miToken = $data.valorVpTokenAEnviar.value;",
+        "if ($data.auxiliar.token) {",
+        "    var miToken = $data.auxiliar.token;",
         "    ",
         "    console.log(\"token : \", miToken);",
         "    var linkGenerado = \"\";",
@@ -1295,6 +1299,14 @@
         "statusCode" : "",
         "failedResponseValue" : ""
       },
+      "exposed" : false
+    },
+    "auxiliar" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.auxiliar_ref.link}}"
+      ],
+      "advancedOptions" : { },
       "exposed" : false
     }
   },

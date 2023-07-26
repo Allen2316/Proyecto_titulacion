@@ -42,8 +42,17 @@
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4K_uACX3Ee6R7bWkN3Fn7Q" name="tic" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.TrabajoTitulacion"/>
             </processSource>
           </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_FI1XcCscEe6kQLqtJMuneg" subprocessTarget="auxiliar" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_FI1XcSscEe6kQLqtJMuneg" name="auxiliar" content="auxiliar" type="TYPE_VARIABLE" returnType="com.tic.model.ObjAuxiliar">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Fv9B0CscEe6kQLqtJMuneg" name="auxiliar" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.ObjAuxiliar"/>
+            </processSource>
+          </inputMappings>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_OfwRcCtGEe6kQLqtJMuneg" subprocessSource="autor" processTarget="_viXzsCXpEe6n39ND1jy1eg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_Sb26oCtGEe6kQLqtJMuneg" subprocessSource="auxiliar" processTarget="_4ITgYCsbEe6kQLqtJMuneg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_TcR10CtGEe6kQLqtJMuneg" subprocessSource="historial" processTarget="_BPpnYCXiEe6n39ND1jy1eg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_UsuxECtGEe6kQLqtJMuneg" subprocessSource="tic" processTarget="_3N3-cCX3Ee6R7bWkN3Fn7Q"/>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_I9PrQ_tbEe2jXvmcOqjeoQ" name="Elaboración y Aprobación" content="Elaboración y Aprobación" returnTypeFixed="true"/>
-          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_I9QSUPtbEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
+          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_I9QSUPtbEe2jXvmcOqjeoQ" name="2.0" content="2.0" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:CallActivity" xmi:id="_PPDnkPtbEe2jXvmcOqjeoQ" name="Ejecución" outgoing="_S73QgPtbEe2jXvmcOqjeoQ" incoming="_OrIbIPtbEe2jXvmcOqjeoQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_OrBGYvtbEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
@@ -54,6 +63,31 @@
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_OrBGZvtbEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_OrBGaPtbEe2jXvmcOqjeoQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_OrBGZ_tbEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_WrmRgCtGEe6kQLqtJMuneg" subprocessTarget="autor" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_WrmRgStGEe6kQLqtJMuneg" name="autor" content="autor" type="TYPE_VARIABLE" returnType="com.tic.model.Usuario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_XWoykCtGEe6kQLqtJMuneg" name="autor" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Usuario"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_XvFHwCtGEe6kQLqtJMuneg" subprocessTarget="auxiliar" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_XvFHwStGEe6kQLqtJMuneg" name="auxiliar" content="auxiliar" type="TYPE_VARIABLE" returnType="com.tic.model.ObjAuxiliar">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_YKf4cCtGEe6kQLqtJMuneg" name="auxiliar" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.ObjAuxiliar"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_YktIMCtGEe6kQLqtJMuneg" subprocessTarget="avance" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_YktIMStGEe6kQLqtJMuneg" name="avance" content="avance" type="TYPE_VARIABLE" returnType="com.tic.model.AvanceTIC">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ZK6zoCtGEe6kQLqtJMuneg" name="avance" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.AvanceTIC"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_Zx8-cCtGEe6kQLqtJMuneg" subprocessTarget="historial" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_Zx8-cStGEe6kQLqtJMuneg" name="historial" content="historial" type="TYPE_VARIABLE" returnType="com.tic.model.Historial">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_atmuYCtGEe6kQLqtJMuneg" name="historial" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Historial"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_bGuZACtGEe6kQLqtJMuneg" subprocessTarget="tic" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_bGuZAStGEe6kQLqtJMuneg" name="tic" content="tic" type="TYPE_VARIABLE" returnType="com.tic.model.TrabajoTitulacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_b1_SwCtGEe6kQLqtJMuneg" name="tic" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.TrabajoTitulacion"/>
+            </processSource>
+          </inputMappings>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_PPEOo_tbEe2jXvmcOqjeoQ" name="Ejecución" content="Ejecución" returnTypeFixed="true"/>
           <calledActivityVersion xmi:type="expression:Expression" xmi:id="_PPEOpPtbEe2jXvmcOqjeoQ" name="1.0" content="1.0" returnTypeFixed="true"/>
         </elements>
@@ -106,6 +140,12 @@
           <referencedElements xmi:type="expression:Expression" xmi:id="_rdSckCYIEe6R7bWkN3Fn7Q" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
           <referencedElements xmi:type="expression:Expression" xmi:id="_rdSckSYIEe6R7bWkN3Fn7Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_4ITgYCsbEe6kQLqtJMuneg" name="auxiliar" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.ObjAuxiliar">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_4ITgYSsbEe6kQLqtJMuneg" name="init_auxiliar()" content="import com.tic.model.ObjAuxiliar&#xD;&#xA;&#xD;&#xA;return new ObjAuxiliar()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.ObjAuxiliar"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_oJ_3gCtFEe6kQLqtJMuneg" name="avance" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.AvanceTIC">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_oJ_3gStFEe6kQLqtJMuneg" name="init_avance()" content="import com.tic.model.AvanceTIC&#xD;&#xA;return new AvanceTIC()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.AvanceTIC"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_8d1kVPtaEe2jXvmcOqjeoQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_0b5KkCXtEe6q9KmmmRIkJw" name="inicioForm" content="d2be5582-8b9b-442a-931a-19d65afdf897" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -206,7 +246,7 @@
             </children>
             <children xmi:type="notation:Shape" xmi:id="_PPEOqvtbEe2jXvmcOqjeoQ" type="3063" element="_PPDnkPtbEe2jXvmcOqjeoQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_PPEOrPtbEe2jXvmcOqjeoQ" type="5093"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PPEOq_tbEe2jXvmcOqjeoQ" x="384" y="64" width="100" height="50"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PPEOq_tbEe2jXvmcOqjeoQ" x="346" y="58" width="100" height="50"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_UgQbe_tbEe2jXvmcOqjeoQ" type="3063" element="_UgQbcPtbEe2jXvmcOqjeoQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_UgRCgPtbEe2jXvmcOqjeoQ" type="5093"/>

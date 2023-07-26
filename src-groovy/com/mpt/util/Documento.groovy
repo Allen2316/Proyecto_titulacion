@@ -7,7 +7,7 @@ import org.bonitasoft.engine.api.IdentityAPI
 import org.bonitasoft.engine.bpm.contract.FileInputValue
 import org.bonitasoft.engine.bpm.document.Document
 import org.bonitasoft.engine.bpm.document.DocumentValue
-
+import java.util.UUID;
 import com.mpt.constantes.CertificateFields;
 import com.mpt.util.Funcionario;
 import com.mpt.util.Estudiante;
@@ -139,7 +139,7 @@ class Documento {
 	 * @param idSolicitanteBonitaBPM
 	 * @param idTipoDocumento
 	 * @param vpUserNameDocente
-	 * @param vpTitulo
+	 * @param ticTitulo
 	 * @param vpMemo
 	 * @param pertinencia
 	 * @param fecha_fin
@@ -150,7 +150,7 @@ class Documento {
 	 */
 	static List getCertificateTemplateReplacements(IdentityAPI identityAPI, Long idSolicitanteBonitaBPM,
 													Integer idTipoDocumento, 
-													String vpUserNameDocente, String vpTitulo, 
+													String vpUserNameDocente, String ticTitulo, 
 													String vpMemoPasado, String vpMemo,
 													Boolean pertinencia, String fecha_fin,
 													String itinerario, Usuario AutorSec) {
@@ -196,7 +196,7 @@ class Documento {
 			
 			replacementsList.add([
 				CertificateFields.TITULO,
-				vpTitulo
+				ticTitulo
 			])
 						
 			
@@ -320,7 +320,10 @@ class Documento {
 					byte[] contentMyPDF = contratoUrlPdfFirmado.toURL().getBytes()
 					futurePDFName = Payload.getFutureFilenamePDF(pdfGenerado.getContentFileName())
 					logger.info("----> El estudiante firma la solicitud electrónicamente")
-
+					
+					/*DocumentValue doc = new DocumentValue(contentMyPDF, MPTConstants.MYME_TYPE_PDF, futurePDFName)
+					doc.setDocumentId(generateDocumentId())
+					return doc*/
 					return new DocumentValue(contentMyPDF, MPTConstants.MYME_TYPE_PDF, futurePDFName)
 
 				} else if (contratoReobtenerToken == Boolean.FALSE && contratoFirmaElectronicamente == Boolean.FALSE) {
@@ -395,6 +398,16 @@ class Documento {
 			logger.severe("Ha ocurrido un error: "  + iae)
 			throw new IllegalArgumentException("Error: " + iae)
 		}
+	}
+	
+	
+	/**
+	 * Genera un ID para el documento firmado
+	 * @return el UUID en Long
+	 */
+	static Long generateDocumentId() {
+		UUID uuid = UUID.randomUUID()		
+		return uuid.getMostSignificantBits() < 0 ? uuid.getMostSignificantBits() * -1 :uuid.getMostSignificantBits()
 	}
 	
 	/**

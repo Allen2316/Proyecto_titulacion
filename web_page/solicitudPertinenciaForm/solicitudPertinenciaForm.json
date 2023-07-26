@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "solicitudPertinenciaForm",
   "name" : "solicitudPertinenciaForm",
-  "lastUpdate" : 1690260343758,
+  "lastUpdate" : 1690313206118,
   "rows" : [
     [
       {
@@ -156,7 +156,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Solicitud adjuntada por el/los estudiantes: <br><strong>{{vpNombreEstudiante.value}}<br>{{vpNombreEstudianteSegundo.value}}</strong>"
+                    "value" : "Solicitud adjuntada por el/los estudiantes: <br><strong>{{auxiliar.autor}} <br> {{auxiliar.autorS}}</strong>"
                   },
                   "level" : {
                     "type" : "constant",
@@ -217,6 +217,42 @@
                           "type" : "constant",
                           "value" : false
                         },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Solicitud de aprobación"
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 4"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "6ffeb4f0-facb-4dba-8298-5ace8c79a3bb",
+                      "hasValidationError" : false,
+                      "id" : "pbTitle"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
                         "type" : {
                           "type" : "constant",
                           "value" : "Process document"
@@ -227,7 +263,7 @@
                         },
                         "document" : {
                           "type" : "variable",
-                          "value" : "context.docSolicitudTIC_ref"
+                          "value" : "context.docGenerado_ref"
                         },
                         "showPreview" : {
                           "type" : "constant",
@@ -240,6 +276,82 @@
                     }
                   ]
                 ]
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Documento PIC"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 4"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "7ec783cb-baf4-40a4-b96d-b4e98263afa4",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "Process document"
+                  },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "document" : {
+                    "type" : "variable",
+                    "value" : "context.docTIC_ref"
+                  },
+                  "showPreview" : {
+                    "type" : "constant",
+                    "value" : true
+                  }
+                },
+                "reference" : "edaf9ff6-5111-4eaa-9911-6e33fe6daa0e",
+                "hasValidationError" : false,
+                "id" : "pbFileViewer"
               }
             ],
             [
@@ -679,6 +791,14 @@
       "type" : "url",
       "value" : [
         "../API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudianteSegundo"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "auxiliar" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.auxiliar_ref.link}}"
       ],
       "advancedOptions" : { },
       "exposed" : false

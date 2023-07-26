@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "validarDocTICForm",
   "name" : "validarDocTICForm",
-  "lastUpdate" : 1690260222306,
+  "lastUpdate" : 1690312142426,
   "rows" : [
     [
       {
@@ -160,11 +160,11 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "{{vpTituloTIC.value}}"
+                    "value" : "\"{{tic.titulo}}\""
                   },
                   "alignment" : {
                     "type" : "constant",
-                    "value" : "left"
+                    "value" : "center"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -240,7 +240,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "<strong>{{vpNombreEstudiante.value}}\n<br>\n{{vpNombreEstudianteSegundo.value}}</strong>"
+                          "value" : "<strong>{{auxiliar.autor}}\n<br>\n{{auxiliar.autorS}}\n</strong>"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -776,6 +776,14 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "5a4e47e2-736b-4660-88fa-4be793ae01ae",
@@ -855,35 +863,18 @@
       ],
       "exposed" : false
     },
-    "vpTituloTIC" : {
+    "auxiliar" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/vpTituloTIC"
+        "../{{context.auxiliar_ref.link}}"
       ],
       "advancedOptions" : { },
       "exposed" : false
     },
-    "vpNombreEstudiante" : {
+    "tic" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudiante"
-      ],
-      "advancedOptions" : { },
-      "exposed" : false
-    },
-    "ver" : {
-      "type" : "expression",
-      "value" : [
-        "console.log(\"titulo \",$data.vpTituloTIC);",
-        "console.log(\"est \" ,$data.$data.vpNombreEstudiante);",
-        "console.log(\"value \",$data.$data.vpNombreEstudiante.value);"
-      ],
-      "exposed" : false
-    },
-    "vpNombreEstudianteSegundo" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/vpNombreEstudianteSegundo"
+        "../{{context.tic_ref.link}}"
       ],
       "advancedOptions" : { },
       "exposed" : false
