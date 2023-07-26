@@ -1,4 +1,5 @@
 
+
 /h2_database
 /target/
 *.db
@@ -27,3 +28,7 @@ node_modules/
 !/web_widgets/*/*.ctrl.js
 /lib/bdm-client-pojo.jar
 /database_connectors_properties
+
+
+/process_configurations
+.settings

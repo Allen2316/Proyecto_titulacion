@@ -65,7 +65,7 @@ class Documento {
 		String tipoName = ""
 		
 			if (idCert == CertificateFields.SOLICITUD_PERTINENCIA_ID_1 || idCert == CertificateFields.INFORME_PERTINENCIA_ID_2
-				|| idCert == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4) {
+				|| idCert == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_ID_4) {
 				//_pertinencia
 				tipoName = CertificateFields.FILENAME_PERTINENCIA
 			}else if(idCert == CertificateFields.INFORME_DIRECTOR_ID_3){
@@ -118,9 +118,9 @@ class Documento {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_INFORME_PERTINENCIA
 			}else if (idTipoInforme == CertificateFields.INFORME_DIRECTOR_ID_3) {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_ASIGNACION_DIRECTOR
-			}else if (idTipoInforme == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4) {
+			}else if (idTipoInforme == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_ID_4) {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_ESTUDIANTE_PERTINENCIA
-			}else if (idTipoInforme == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_5) {
+			}else if (idTipoInforme == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_ID_5) {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_ESTUDIANTE_DIRECTOR
 			}else {
 				logger.severe("No existe la plantilla docx con el ID solicitado")
@@ -235,7 +235,7 @@ class Documento {
 					FormatearFecha.formatearFecha(fecha_fin)
 				])
 								
-			}else if (idTipoDocumento == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_4 || idTipoDocumento == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_5) {								
+			}else if (idTipoDocumento == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_ID_4 || idTipoDocumento == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_ID_5) {								
 				replacementsList.add([
 					CertificateFields.ITINERARIO,
 					itinerario

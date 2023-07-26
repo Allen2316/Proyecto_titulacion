@@ -29,6 +29,8 @@ class CertificateFields {
 	static final String ITINERARIO = "itinerario"
 	static final String EMAIL = "correo"
 	static final String EMAIL_SECOND = "correos"
+	static final String PORCENTAJE = "porcentaje"
+	
 	
 
 	//
@@ -38,10 +40,12 @@ class CertificateFields {
 	static final String INFORME_PERTINENCIA_NAME_2 = "informePertinencia"
 	static final Integer INFORME_DIRECTOR_ID_3 = 3
 	static final String INFORME_DIRECTOR_NAME_3 = "informeDirector"
-	static final Integer SOLICITUD_PERTINENCIA_ESTUDIANTE_4 = 4
+	static final Integer SOLICITUD_PERTINENCIA_ESTUDIANTE_ID_4 = 4
 	static final String SOLICITUD_PERTINENCIA_ESTUDIANTE_NAME_4 = "solocitudPertinenciaEstudiante"
-	static final Integer SOLICITUD_DIRECTOR_ESTUDIANTE_5 = 5
+	static final Integer SOLICITUD_DIRECTOR_ESTUDIANTE_ID_5 = 5
 	static final String SOLICITUD_DIRECTOR_ESTUDIANTE_NAME_5 = "solocitudDirectorEstudiante"
+	static final Integer CERTIFICACION_TIC_COMPLETO_ID_6 = 6
+	static final String CERTIFICACION_TIC_COMPLETO_NAME = "certificadoTICCompleto"
 	
 
 	/**
