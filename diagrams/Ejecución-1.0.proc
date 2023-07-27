@@ -549,7 +549,7 @@
               <operator xmi:type="expression:Operator" xmi:id="_Lh4Thyv8Ee6Wa4rdbfDf3w" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
-          <connectors xmi:type="process:Connector" xmi:id="_Lh4Tjyv8Ee6Wa4rdbfDf3w" documentation="Se procede a enviar la notificacion al docente que se lo designo para asignar o no pertinencia" name="enviarCorreoNotificacionPertinencia" definitionId="email" event="ON_ENTER" definitionVersion="1.2.0">
+          <connectors xmi:type="process:Connector" xmi:id="_Lh4Tjyv8Ee6Wa4rdbfDf3w" documentation="Se procede a enviar la notificacion a los estudiante sobre el certificado de culmunación del TIC" name="enviarCorreoNotificacionCertificado" definitionId="email" event="ON_ENTER" definitionVersion="1.2.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Lh4TkCv8Ee6Wa4rdbfDf3w" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Lh4TkSv8Ee6Wa4rdbfDf3w" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_Lh4Tkiv8Ee6Wa4rdbfDf3w" name="smtpHost()" content="import com.mpt.constantes.MPTConstants&#xD;&#xA;&#xD;&#xA;return MPTConstants.SMTP_SERVER" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>

@@ -171,8 +171,13 @@ class Documento {
 			if(AutorSec != null) {
 				if(idTipoDocumento == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6) {
 					replacementsList.add([
+						CertificateFields.AUXILIAR,
+						"y el señor/la señorita estudiante "
+					])
+					
+					replacementsList.add([
 						CertificateFields.STUDENT_NAME_SECOND,
-						"y el señor/la señorita estudiante "+Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
+						Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
 					])
 				}else {
 					replacementsList.add([

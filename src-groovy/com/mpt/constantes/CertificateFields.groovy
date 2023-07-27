@@ -30,6 +30,7 @@ class CertificateFields {
 	static final String EMAIL = "correo"
 	static final String EMAIL_SECOND = "correos"
 	static final String PORCENTAJE = "porcentaje"
+	static final String AUXILIAR = "auxiliar"
 	
 	
 
