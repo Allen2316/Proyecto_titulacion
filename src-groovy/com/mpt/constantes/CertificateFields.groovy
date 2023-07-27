@@ -56,6 +56,7 @@ class CertificateFields {
 	static final String TEMPLATE_INFORME_PERTINENCIA = "Informe_Pertinencia.docx"
 	static final String TEMPLATE_ASIGNACION_DIRECTOR = "Asignacion_Director.docx"
 	static final String TEMPLATE_SOLICITUD_ESTUDIANTE_DIRECTOR = "Solicitud_Estudiante_Director.docx"
+	static final String TEMPLATE_CERTIFICADO_TIC_COMPLETO = "Certificacion_TIC_Completo.docx"
 
 	/**
 	 * Nombres de los grupos de los funcionarios y estudiantes
@@ -78,6 +79,7 @@ class CertificateFields {
 	 */
 	static final String FILENAME_PERTINENCIA = "_pertinencia"	
 	static final String FILENAME_DIRECTOR = "_director"
+	static final String FILENAME_CERTIFICADO = "_certificado"
 	//TODO Puede ser tambien del tribunal, revisar luego
 	//static final String FILENAME_TRIBUNAL = "_tribunal"
 

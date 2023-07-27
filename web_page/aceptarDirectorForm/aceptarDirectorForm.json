@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "aceptarDirectorForm",
   "name" : "aceptarDirectorForm",
-  "lastUpdate" : 1689053168218,
+  "lastUpdate" : 1690423123903,
   "rows" : [
     [
       {
@@ -203,7 +203,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{director}}"
+                          "value" : "{{tic.director.nombres}} {{tic.director.apellidos}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -476,6 +476,14 @@
       "value" : [
         "id"
       ],
+      "exposed" : false
+    },
+    "tic" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.tic_ref.link}}"
+      ],
+      "advancedOptions" : { },
       "exposed" : false
     }
   },

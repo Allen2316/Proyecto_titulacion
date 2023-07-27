@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "certificarTICCompletoForm",
   "name" : "certificarTICCompletoForm",
-  "lastUpdate" : 1690254769988,
+  "lastUpdate" : 1690423382011,
   "rows" : [
     [
       {
@@ -477,10 +477,12 @@
                           "value" : "number"
                         },
                         "min" : {
-                          "type" : "constant"
+                          "type" : "constant",
+                          "value" : 1
                         },
                         "max" : {
-                          "type" : "constant"
+                          "type" : "constant",
+                          "value" : 100
                         },
                         "step" : {
                           "type" : "constant",

@@ -72,6 +72,10 @@ class Documento {
 				//_director
 				tipoName = CertificateFields.FILENAME_DIRECTOR
 			}
+			else if(idCert == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6){
+				//_director
+				tipoName = CertificateFields.FILENAME_CERTIFICADO
+			}
 
 			certificateName = MPTConstants.BASE_DOCUMENT_NAME + certificateName
 			documentCode = generarDocumentCode(processInstanceId, false)		
@@ -122,6 +126,8 @@ class Documento {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_ESTUDIANTE_PERTINENCIA
 			}else if (idTipoInforme == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_ID_5) {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_ESTUDIANTE_DIRECTOR
+			}else if (idTipoInforme == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6) {
+				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_CERTIFICADO_TIC_COMPLETO			
 			}else {
 				logger.severe("No existe la plantilla docx con el ID solicitado")
 				urlDocumentTemplateAlfresco = ""
@@ -163,10 +169,18 @@ class Documento {
 			String fullNameDocente = Funcionario.getFullNameWithUserName(vpUserNameDocente, identityAPI)
 					
 			if(AutorSec != null) {
-				replacementsList.add([
-					CertificateFields.STUDENT_NAME_SECOND,
-					Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
-				])
+				if(idTipoDocumento == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6) {
+					replacementsList.add([
+						CertificateFields.STUDENT_NAME_SECOND,
+						"y el señor/la señorita estudiante "+Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
+					])
+				}else {
+					replacementsList.add([
+						CertificateFields.STUDENT_NAME_SECOND,
+						Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
+					])
+				}
+				
 			}else {
 				replacementsList.add([
 					CertificateFields.STUDENT_NAME_SECOND,
@@ -235,7 +249,9 @@ class Documento {
 					FormatearFecha.formatearFecha(fecha_fin)
 				])
 								
-			}else if (idTipoDocumento == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_ID_4 || idTipoDocumento == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_ID_5) {								
+			}else if (idTipoDocumento == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_ID_4 
+				|| idTipoDocumento == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_ID_5
+				|| idTipoDocumento == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6) {								
 				replacementsList.add([
 					CertificateFields.ITINERARIO,
 					itinerario
@@ -256,6 +272,12 @@ class Documento {
 						CertificateFields.STUDENT_NAME_SECOND,
 						"f: " + Estudiante.getFullName(identityAPI, AutorSec.idSolicitanteBonitaBPM)
 					])
+					if(idTipoDocumento == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6) {
+						replacementsList.add([
+							CertificateFields.STUDENT_ID_CARD_SECOND,
+							"con C.C. N° " + AutorSec.cedula
+						])
+					}
 					
 					replacementsList.add([
 						CertificateFields.EMAIL_SECOND,
