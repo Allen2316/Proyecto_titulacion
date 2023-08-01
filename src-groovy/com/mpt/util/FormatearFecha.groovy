@@ -4,6 +4,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Logger
+import java.time.ZoneId;
 
 import com.mpt.constantes.MPTConstants;
 
@@ -132,4 +133,30 @@ class FormatearFecha {
 
 		return resultTime
 	}
+	
+	
+	/**
+	 * Calcula la fecha de los 8 días antes de la fecha proporcionada.
+	 *
+	 * @param fecha La fecha a partir de la cual se calculará los 8 días antes.
+	 * @return La fecha de los 8 días antes de la fecha proporcionada.
+	 */
+	static Date fechaRecordatorio(LocalDate fecha) {
+		LocalDate fechaOchoDiasAntes = fecha.minusDays(8);
+		return Date.from(fechaOchoDiasAntes.atStartOfDay(ZoneId.systemDefault()).toInstant());
+	}	
+	
+	
+	/**
+	 * Comprueba si una tarea puede realizarse con respecto a su fecha de finalización.
+	 * La tarea puede realizarse si la fecha de finalización no es anterior a la fecha actual.
+	 *
+	 * @param fechaFinalizacion La fecha de finalización de la tarea en formato LocalDate.
+	 * @return {@code true} si la tarea puede realizarse, {@code false} si la fecha de finalización ya ha pasado.
+	 */
+	public static boolean fechaCulminacionDisponible(LocalDate fechaFinalizacion) {
+        LocalDate fechaActual = LocalDate.now();
+        return !fechaFinalizacion.isBefore(fechaActual);
+    }
+	
 }

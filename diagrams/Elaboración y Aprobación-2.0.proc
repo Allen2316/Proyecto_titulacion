@@ -894,7 +894,7 @@
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_y8VxXSsBEe6q77nRW_Or3A" key="folder_path">
-                <expression xmi:type="expression:Expression" xmi:id="_y8VxXisBEe6q77nRW_Or3A" name="folder_path()" content="return com.mpt.constantes.MPTConstants.ALFRESCO_PARENT_FOLDER" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_y8VxXisBEe6q77nRW_Or3A" name="folder_path()" content="import com.mpt.constantes.MPTConstants&#xD;&#xA;return MPTConstants.ALFRESCO_PARENT_FOLDER + MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_INFORMES" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_y8VxXysBEe6q77nRW_Or3A" key="destinationName">
                 <expression xmi:type="expression:Expression" xmi:id="_y8VxYCsBEe6q77nRW_Or3A" name="destinationName()" content="import com.mpt.util.FormatearFecha&#xD;&#xA;import java.time.format.DateTimeFormatter;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;&#xD;&#xA;DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&quot;dd-MM-yyyy HH-mm-ss&quot;);&#xD;&#xA;LocalDateTime now = LocalDateTime.now();&#xD;&#xA;&#xD;&#xA;return dtf.format(now) + docGenerado.getContentFileName().toString();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
@@ -1067,8 +1067,11 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_l0_DwStMEe6kQLqtJMuneg" name="historial" content="historial" type="TYPE_VARIABLE" returnType="com.tic.model.Historial">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_mu_N4CtMEe6kQLqtJMuneg" name="historial" dataType="_y8V4MysBEe6q77nRW_Or3A" className="com.tic.model.Historial"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_l0_DwitMEe6kQLqtJMuneg" name="newScript()" content="import java.time.LocalDateTime;&#xD;&#xA;historial.fechaDesignacionDirector = LocalDateTime.now();&#xD;&#xA;&#xD;&#xA;return historial;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Historial">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_xYKMACtMEe6kQLqtJMuneg" name="historial" dataType="_y8V4MysBEe6q77nRW_Or3A" className="com.tic.model.Historial"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_l0_DwitMEe6kQLqtJMuneg" name="newScript()" content="import java.time.LocalDateTime;&#xD;&#xA;historial.fechaDesignacionDirector = LocalDateTime.now();&#xD;&#xA;historial.fechaCulminacion = fechaFin&#xD;&#xA;return historial;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Historial">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_inQaUDBsEe6CPvC6c4_ShA" name="historial" dataType="_y8V4MysBEe6q77nRW_Or3A" className="com.tic.model.Historial"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_inRBYDBsEe6CPvC6c4_ShA" name="fechaFin" type="LOCALDATE">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_inRBYTBsEe6CPvC6c4_ShA"/>
+              </referencedElements>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_l0_DwytMEe6kQLqtJMuneg" type="ASSIGNMENT"/>
           </operations>
