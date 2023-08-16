@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "revisionEjemplarTICForm",
   "name" : "revisionEjemplarTICForm",
-  "lastUpdate" : 1691534119611,
+  "lastUpdate" : 1692168648211,
   "rows" : [
     [
       {
@@ -391,7 +391,7 @@
                         },
                         "document" : {
                           "type" : "variable",
-                          "value" : "context.docAptitudLegal_ref"
+                          "value" : "context.docAptitudLegal_ref[0]"
                         },
                         "showPreview" : {
                           "type" : "constant",
@@ -399,6 +399,46 @@
                         }
                       },
                       "reference" : "0028cc4e-77f2-45cd-a5c0-7f7d4708d1d9",
+                      "hasValidationError" : false,
+                      "id" : "pbFileViewer"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "Process document"
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "document" : {
+                          "type" : "variable",
+                          "value" : "context.docAptitudLegal_ref[1]"
+                        },
+                        "showPreview" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "45b4ddda-4e18-4b15-b5d0-b3b8119b66a1",
                       "hasValidationError" : false,
                       "id" : "pbFileViewer"
                     }
@@ -437,8 +477,8 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
+                        "xs" : 6,
+                        "sm" : 6,
                         "md" : 6,
                         "lg" : 6
                       },
@@ -527,8 +567,8 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
+                        "xs" : 6,
+                        "sm" : 6,
                         "md" : 6,
                         "lg" : 6
                       },

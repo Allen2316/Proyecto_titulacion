@@ -147,7 +147,7 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
-    <user userName="daniela.pena@unl.edu.ec">
+    <user userName="d.p">
       <firstName>Daniela</firstName>
       <lastName>Peña</lastName>
       <title>Srta</title>
@@ -155,7 +155,7 @@
       <manager></manager>
       <personalData/>
       <professionalData>
-        <email>daniela.pena@unl.edu.ec</email>
+        <email>luis.a.sarmiento@unl.edu.ec</email>
         <phoneNumber></phoneNumber>
         <mobileNumber></mobileNumber>
         <faxNumber></faxNumber>
@@ -358,7 +358,7 @@
       <assignedDate>0</assignedDate>
     </membership>
     <membership>
-      <userName>daniela.pena@unl.edu.ec</userName>
+      <userName>d.p</userName>
       <roleName>docente</roleName>
       <groupName>Docentes</groupName>
       <groupParentPath>/unl</groupParentPath>

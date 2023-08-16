@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_cWBFwAvNEe6gD5LuaT4vog" name="Presentación" author="Allen" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
-    <elements xmi:type="process:Pool" xmi:id="_cWJBkAvNEe6gD5LuaT4vog" name="Presentaciónx">
+    <elements xmi:type="process:Pool" xmi:id="_cWJBkAvNEe6gD5LuaT4vog" name="Presentación">
       <elements xmi:type="process:Lane" xmi:id="_cWME4AvNEe6gD5LuaT4vog" name="Estudiante" actor="_XELSUA42Ee6WPf9O36Rvyg">
         <elements xmi:type="process:StartEvent" xmi:id="_cWOhIAvNEe6gD5LuaT4vog" name="Inicio1" outgoing="_cXRC8AvNEe6gD5LuaT4vog">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_cWOhIgvNEe6gD5LuaT4vog" name="" content="" returnTypeFixed="true"/>
@@ -22,13 +22,13 @@
             <operator xmi:type="expression:Operator" xmi:id="_aH73BjYyEe6TgtOUgEPg3g" type="DOCUMENT_CREATE_UPDATE"/>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_fFtYkTYyEe6TgtOUgEPg3g">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_fFtYkjYyEe6TgtOUgEPg3g" name="docAptitudLegal" content="docAptitudLegal" type="DOCUMENT_REF_TYPE">
-              <referencedElements xmi:type="process:Document" xmi:id="_fFtYkzYyEe6TgtOUgEPg3g" name="docAptitudLegal"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_fFtYkjYyEe6TgtOUgEPg3g" name="docAptitudLegal" content="docAptitudLegal" type="DOCUMENT_REF_TYPE" returnType="java.util.List">
+              <referencedElements xmi:type="process:Document" xmi:id="_fFtYkzYyEe6TgtOUgEPg3g" name="docAptitudLegal" multiple="true"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_fFtYlDYyEe6TgtOUgEPg3g" name="docAptitudLegalDocumentInput" content="docAptitudLegalDocumentInput" type="TYPE_CONTRACT_INPUT" returnType="org.bonitasoft.engine.bpm.contract.FileInputValue">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_fFtYlTYyEe6TgtOUgEPg3g" name="docAptitudLegalDocumentInput" type="FILE"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_fFtYlDYyEe6TgtOUgEPg3g" name="newScript()" content="docAptitudLegalDocumentInput" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_xdsxwDv_Ee6cFp--g7Y1NQ" name="docAptitudLegalDocumentInput" type="FILE"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_fFtYljYyEe6TgtOUgEPg3g" type="DOCUMENT_CREATE_UPDATE"/>
+            <operator xmi:type="expression:Operator" xmi:id="_fFtYljYyEe6TgtOUgEPg3g" type="DOCUMENT_LIST_SET"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_cWQWVAvNEe6gD5LuaT4vog" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_cWQWVQvNEe6gD5LuaT4vog" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -259,16 +259,16 @@
                 <expression xmi:type="expression:Expression" xmi:id="_UFOIbizSEe6VDK7B4PD8Mw" name="" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_UFOIbyzSEe6VDK7B4PD8Mw" key="document">
-                <expression xmi:type="expression:Expression" xmi:id="_UFOIcCzSEe6VDK7B4PD8Mw" name="docGenerado" content="docGenerado" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Document" xmi:id="_UFOIcSzSEe6VDK7B4PD8Mw" name="docGenerado"/>
+                <expression xmi:type="expression:Expression" xmi:id="_UFOIcCzSEe6VDK7B4PD8Mw" name="document()" content="return docAptitudLegal.get(0).getContentFileName()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_DGVfkDwEEe6cFp--g7Y1NQ" name="docAptitudLegal" multiple="true"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_UFOIcizSEe6VDK7B4PD8Mw" key="folder_path">
                 <expression xmi:type="expression:Expression" xmi:id="_UFOIcyzSEe6VDK7B4PD8Mw" name="folder_path()" content="import com.mpt.constantes.MPTConstants&#xD;&#xA;return MPTConstants.ALFRESCO_PARENT_FOLDER + MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_SOLICITUDES" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_UFOIdCzSEe6VDK7B4PD8Mw" key="destinationName">
-                <expression xmi:type="expression:Expression" xmi:id="_UFOIdSzSEe6VDK7B4PD8Mw" name="vpFileName" content="vpFileName" type="TYPE_VARIABLE" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_UFOIdizSEe6VDK7B4PD8Mw" name="vpFileName" dataType="_cWBFyAvNEe6gD5LuaT4vog"/>
+                <expression xmi:type="expression:Expression" xmi:id="_UFOIdSzSEe6VDK7B4PD8Mw" name="destinationName()" content="docAptitudLegal.get(0).getContentFileName()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_CdFjsDwDEe6cFp--g7Y1NQ" name="docAptitudLegal" multiple="true"/>
                 </expression>
               </parameters>
             </configuration>
@@ -280,14 +280,72 @@
               <operator xmi:type="expression:Operator" xmi:id="_UFOIeyzSEe6VDK7B4PD8Mw" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_C-WdsDwDEe6cFp--g7Y1NQ" documentation="Se subira a Alfresco los documentos del TIC y solicitud" name="docSolicitudTribunal1" definitionId="cmis-uploadnewdocument" event="ON_FINISH" ignoreErrors="true" definitionVersion="2.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_C-WdsTwDEe6cFp--g7Y1NQ" definitionId="cmis-uploadnewdocument" version="2.0.1" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdsjwDEe6cFp--g7Y1NQ" key="username">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdszwDEe6cFp--g7Y1NQ" name="username()" content="return bOParametrosDAO.findById(com.mpt.constantes.MPTConstants.ALFRESCO_USERNAME_ID).getValor()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_C-WdtDwDEe6cFp--g7Y1NQ" name="bOParametrosDAO" content="bOParametrosDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.unl.model.BOParametrosDAO" returnTypeFixed="true"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdtTwDEe6cFp--g7Y1NQ" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdtjwDEe6cFp--g7Y1NQ" name="newScript()" content="return bOParametrosDAO.findById(com.mpt.constantes.MPTConstants.ALFRESCO_PASSWORD_ID).getValor()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_C-WdtzwDEe6cFp--g7Y1NQ" name="bOParametrosDAO" content="bOParametrosDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.unl.model.BOParametrosDAO" returnTypeFixed="true"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WduDwDEe6cFp--g7Y1NQ" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WduTwDEe6cFp--g7Y1NQ" name="url()" content="return bOParametrosDAO.findById(com.mpt.constantes.MPTConstants.PARAM_ID_URL_ATOMPUB_ALFRESO).getValor()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_C-WdujwDEe6cFp--g7Y1NQ" name="bOParametrosDAO" content="bOParametrosDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.unl.model.BOParametrosDAO" returnTypeFixed="true"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WduzwDEe6cFp--g7Y1NQ" key="repository">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdvDwDEe6cFp--g7Y1NQ" name="repository()" content="return com.mpt.constantes.MPTConstants.ALFRESCO_REPOSITORY_NAME" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdvTwDEe6cFp--g7Y1NQ" key="binding_type">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdvjwDEe6cFp--g7Y1NQ" name="atompub" content="atompub" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdvzwDEe6cFp--g7Y1NQ" key="wsObjectServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdwDwDEe6cFp--g7Y1NQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdwTwDEe6cFp--g7Y1NQ" key="wsObjectServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdwjwDEe6cFp--g7Y1NQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdwzwDEe6cFp--g7Y1NQ" key="wsRepositoryServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdxDwDEe6cFp--g7Y1NQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdxTwDEe6cFp--g7Y1NQ" key="wsRepositoryServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdxjwDEe6cFp--g7Y1NQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdxzwDEe6cFp--g7Y1NQ" key="document">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdyDwDEe6cFp--g7Y1NQ" name="document()" content="if(tic.autor.size() > 1){&#xD;&#xA;&#x9;return docAptitudLegal.get(1).getContentFileName()&#xD;&#xA;}&#xD;&#xA;return null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_Gv0HsDwEEe6cFp--g7Y1NQ" name="docAptitudLegal" multiple="true"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Gv0HsTwEEe6cFp--g7Y1NQ" name="tic" dataType="_cWBFywvNEe6gD5LuaT4vog" className="com.tic.model.TrabajoTitulacion"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdyjwDEe6cFp--g7Y1NQ" key="folder_path">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdyzwDEe6cFp--g7Y1NQ" name="folder_path()" content="import com.mpt.constantes.MPTConstants&#xD;&#xA;return MPTConstants.ALFRESCO_PARENT_FOLDER + MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_SOLICITUDES" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_C-WdzDwDEe6cFp--g7Y1NQ" key="destinationName">
+                <expression xmi:type="expression:Expression" xmi:id="_C-WdzTwDEe6cFp--g7Y1NQ" name="destinationName()" content="if(tic.autor.size() > 1){&#xD;&#xA;&#x9;return docAptitudLegal.get(1).getContentFileName()&#xD;&#xA;}&#xD;&#xA;return null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_G-5iADwDEe6cFp--g7Y1NQ" name="docAptitudLegal" multiple="true"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_G-5iATwDEe6cFp--g7Y1NQ" name="tic" dataType="_cWBFywvNEe6gD5LuaT4vog" className="com.tic.model.TrabajoTitulacion"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_C-WdzzwDEe6cFp--g7Y1NQ">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_C-Wd0DwDEe6cFp--g7Y1NQ" name="" content=""/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_C-Wd0TwDEe6cFp--g7Y1NQ" name="document_id" content="document_id" type="CONNECTOR_OUTPUT_TYPE">
+                <referencedElements xmi:type="definition:Output" xmi:id="_C-Wd0jwDEe6cFp--g7Y1NQ" name="document_id" type="java.lang.String"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_C-Wd0zwDEe6cFp--g7Y1NQ" type="ASSIGNMENT"/>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_UFOIfCzSEe6VDK7B4PD8Mw">
             <leftOperand xmi:type="expression:Expression" xmi:id="_UFOIfSzSEe6VDK7B4PD8Mw" name="historial" content="historial" type="TYPE_VARIABLE" returnType="com.tic.model.Historial">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_UFOIfizSEe6VDK7B4PD8Mw" name="historial" dataType="_cWBFywvNEe6gD5LuaT4vog" className="com.tic.model.Historial"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_UFOIfyzSEe6VDK7B4PD8Mw" name="newScript()" content="import com.mpt.util.FormatearFecha&#xD;&#xA;import java.time.format.DateTimeFormatter;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import com.mpt.constantes.MPTConstants&#xD;&#xA;&#xD;&#xA;DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&quot;dd-MM-yyyy HH-mm-ss&quot;);&#xD;&#xA;LocalDateTime now = LocalDateTime.now();&#xD;&#xA;historial.pic = MPTConstants.ALFRESCO_PARENT_FOLDER + MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_INFORMES + &quot;/&quot; + dtf.format(now) + docTIC.getContentFileName().toString();&#xD;&#xA;historial.solicitudPIC = MPTConstants.ALFRESCO_PARENT_FOLDER + MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_SOLICITUDES + &quot;/&quot; + docGenerado.getContentFileName()&#xD;&#xA;return historial&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Historial">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_UFOIgCzSEe6VDK7B4PD8Mw" name="historial" dataType="_cWBFywvNEe6gD5LuaT4vog" className="com.tic.model.Historial"/>
-              <referencedElements xmi:type="process:Document" xmi:id="_UFOIgSzSEe6VDK7B4PD8Mw" name="docTIC"/>
-              <referencedElements xmi:type="process:Document" xmi:id="_UFOIgizSEe6VDK7B4PD8Mw" name="docGenerado"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_UFOIfyzSEe6VDK7B4PD8Mw" name="newScript()" content="import com.mpt.util.FormatearFecha&#xD;&#xA;import java.time.format.DateTimeFormatter;&#xD;&#xA;import java.time.LocalDateTime;&#xD;&#xA;import com.mpt.constantes.MPTConstants&#xD;&#xA;&#xD;&#xA;DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&quot;dd-MM-yyyy HH-mm-ss&quot;);&#xD;&#xA;LocalDateTime now = LocalDateTime.now();&#xD;&#xA;historial.pic = MPTConstants.ALFRESCO_PARENT_FOLDER + MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_INFORMES + &quot;/&quot; + dtf.format(now) + docTIC.getContentFileName().toString();&#xD;&#xA;//REVISA --->>> historial.solicitudPIC = MPTConstants.ALFRESCO_PARENT_FOLDER + MPTConstants.ALFRESCO_PARENT_FOLDER_PATH_SOLICITUDES + &quot;/&quot; + docAptitudLegal.getContentFileName()&#xD;&#xA;return historial&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Historial">
+              <referencedElements xmi:type="process:Document" xmi:id="_CxbRcDwCEe6cFp--g7Y1NQ" name="docTIC"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_CxbRcTwCEe6cFp--g7Y1NQ" name="historial" dataType="_cWBFywvNEe6gD5LuaT4vog" className="com.tic.model.Historial"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_UFOIgyzSEe6VDK7B4PD8Mw" type="ASSIGNMENT"/>
           </operations>
@@ -314,6 +372,26 @@
             <operator xmi:type="expression:Operator" xmi:id="_Wm0iSyzSEe6VDK7B4PD8Mw" type="ASSIGNMENT" expression="setValido">
               <inputTypes>java.lang.Boolean</inputTypes>
             </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_yHZqgDwJEe6MHPZxFWvwjQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_yHZqgTwJEe6MHPZxFWvwjQ" name="docAptitudLegal1" content="docAptitudLegal1" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_6WEVEDwJEe6MHPZxFWvwjQ" name="docAptitudLegal1"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_yHZqgjwJEe6MHPZxFWvwjQ" name="newScript()" content="import org.bonitasoft.engine.bpm.document.Document;&#xD;&#xA;import org.bonitasoft.engine.bpm.document.DocumentValue;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Document documento = docAptitudLegal.get(0); // Obtener el primer documento de la lista&#xD;&#xA;&#xD;&#xA;// Crear un DocumentValue con el contenido del documento&#xD;&#xA;DocumentValue docValue = new DocumentValue(&#xD;&#xA;&#x9;apiAccessor.getProcessAPI().getDocumentContent(documento.getContentStorageId()),&#xD;&#xA;&#x9;documento.getContentMimeType(),&#xD;&#xA;&#x9;documento.getContentFileName()&#xD;&#xA;&#x9;);&#xD;&#xA;&#x9;&#xD;&#xA;return docValue" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+              <referencedElements xmi:type="process:Document" xmi:id="_9b_kMDwJEe6MHPZxFWvwjQ" name="docAptitudLegal" multiple="true"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_9b_kMTwJEe6MHPZxFWvwjQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_yHZqgzwJEe6MHPZxFWvwjQ" type="DOCUMENT_CREATE_UPDATE"/>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_6dDG0DwJEe6MHPZxFWvwjQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_6dDG0TwJEe6MHPZxFWvwjQ" name="docAptitudLegal2" content="docAptitudLegal2" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_6wAfEDwJEe6MHPZxFWvwjQ" name="docAptitudLegal2"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_6dDt4DwJEe6MHPZxFWvwjQ" name="newScript()" content="import org.bonitasoft.engine.bpm.document.Document;&#xD;&#xA;import org.bonitasoft.engine.bpm.document.DocumentValue;&#xD;&#xA;&#xD;&#xA;if(docAptitudLegal.size() > 1){&#xD;&#xA;Document documento = docAptitudLegal.get(1); // Obtener el primer documento de la lista&#xD;&#xA;&#xD;&#xA;// Crear un DocumentValue con el contenido del documento&#xD;&#xA;DocumentValue docValue = new DocumentValue(&#xD;&#xA;&#x9;apiAccessor.getProcessAPI().getDocumentContent(documento.getContentStorageId()),&#xD;&#xA;&#x9;documento.getContentMimeType(),&#xD;&#xA;&#x9;documento.getContentFileName()&#xD;&#xA;&#x9;);&#xD;&#xA;&#x9;&#xD;&#xA;return docValue&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+              <referencedElements xmi:type="process:Document" xmi:id="_-KbXgDwJEe6MHPZxFWvwjQ" name="docAptitudLegal" multiple="true"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_-KbXgTwJEe6MHPZxFWvwjQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_6dDt4TwJEe6MHPZxFWvwjQ" type="DOCUMENT_CREATE_UPDATE"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_Wm0iTCzSEe6VDK7B4PD8Mw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_Wm0iTSzSEe6VDK7B4PD8Mw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -3958,10 +4036,20 @@
         <url xmi:type="expression:Expression" xmi:id="_SZWsojYwEe6TgtOUgEPg3g" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_SZWsozYwEe6TgtOUgEPg3g" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
       </documents>
-      <documents xmi:type="process:Document" xmi:id="_djZRQDYyEe6TgtOUgEPg3g" name="docAptitudLegal">
+      <documents xmi:type="process:Document" xmi:id="_djZRQDYyEe6TgtOUgEPg3g" name="docAptitudLegal" multiple="true">
         <mimeType xmi:type="expression:Expression" xmi:id="_djZRQTYyEe6TgtOUgEPg3g" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_djZRQjYyEe6TgtOUgEPg3g" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_djZRQzYyEe6TgtOUgEPg3g" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_0MknQDwJEe6MHPZxFWvwjQ" name="docAptitudLegal1">
+        <mimeType xmi:type="expression:Expression" xmi:id="_0MknQTwJEe6MHPZxFWvwjQ" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_0MknQjwJEe6MHPZxFWvwjQ" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_0MknQzwJEe6MHPZxFWvwjQ" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_1YxUoDwJEe6MHPZxFWvwjQ" name="docAptitudLegal2">
+        <mimeType xmi:type="expression:Expression" xmi:id="_1YxUoTwJEe6MHPZxFWvwjQ" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_1YxUojwJEe6MHPZxFWvwjQ" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_1YxUozwJEe6MHPZxFWvwjQ" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
       </documents>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_cWJooAvNEe6gD5LuaT4vog">
         <name xmi:type="expression:Expression" xmi:id="_cWJooQvNEe6gD5LuaT4vog" content="" returnTypeFixed="true"/>
@@ -4434,7 +4522,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_jW47cSzSEe6VDK7B4PD8Mw" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_jW4UZCzSEe6VDK7B4PD8Mw" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jW4UZSzSEe6VDK7B4PD8Mw" points="[-60, -33, 328, 973]$[-60, -1002, 328, 4]$[-307, -1002, 81, 4]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jW4UZSzSEe6VDK7B4PD8Mw" points="[-60, -33, 328, 773]$[-60, -802, 328, 4]$[-307, -802, 81, 4]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jW6JkCzSEe6VDK7B4PD8Mw" id="(1.0,0.55)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_fH1gEyzdEe6VDK7B4PD8Mw" type="4001" element="_fH1gECzdEe6VDK7B4PD8Mw" source="_aywWRyzdEe6VDK7B4PD8Mw" target="_jP2QIDv4Ee6cFp--g7Y1NQ" roundedBendpointsRadius="10" routing="Rectilinear">

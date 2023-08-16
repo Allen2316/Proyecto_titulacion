@@ -1,6 +1,6 @@
 /**
  * Función que permite verificar si el existe el pdf firmado en un servidor web 
- * nediante su ruta absoluta o url y de acuerdo al código de respuesta recibido 
+ * mediante su ruta absoluta o url, y de acuerdo al código de respuesta recibido 
  * abrirá el modal correspondiente.
  * 
  * @param {*} $scope
@@ -12,9 +12,15 @@ function PbButtonPdfCtrl($scope, $http, $window, modalService) {
     'use strict'
 
     var vm = this
-
     this.action = function action() {
-        doRequest($scope.properties.action, $scope.properties.url)
+        var urlsToCheck = JSON.parse($scope.properties.url);
+        if (Array.isArray(urlsToCheck)) {
+            urlsToCheck.forEach(function(url) {
+                doRequest($scope.properties.action, url);
+            });
+        } else {
+            doRequest($scope.properties.action, urlsToCheck);
+        }
     }
 
     /**
@@ -58,19 +64,19 @@ function PbButtonPdfCtrl($scope, $http, $window, modalService) {
                 })
             })
             .finally(function () {
-                vm.busy = false
+                vm.busy = false;
 
-                var modalIden = ''
+                var modalIden = '';
                 if ($scope.properties.responseStatusCode == 200) {
-                    modalIden = 'modalEstaPdfFirmado'
+                    modalIden = 'modalEstaPdfFirmado';
                 } else if ($scope.properties.responseStatusCode == 404) {
-                    $scope.properties.mensajeParaElModal = 'El documento aún no ha sido firmado'
-                    modalIden = 'modalWarnings'
+                    $scope.properties.mensajeParaElModal = 'El documento aún no ha sido firmado';
+                    modalIden = 'modalWarnings';
                 } else {
-                    $scope.properties.mensajeParaElModal = 'No es posible conectarse con el servidor web'
-                    modalIden = 'modalWarnings'
+                    $scope.properties.mensajeParaElModal = 'No es posible conectarse con el servidor web';
+                    modalIden = 'modalWarnings';
                 }
-                openModal(modalIden)
+                openModal(modalIden);
             })
             
     }

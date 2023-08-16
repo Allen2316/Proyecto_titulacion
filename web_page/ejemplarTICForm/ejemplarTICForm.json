@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "ejemplarTICForm",
   "name" : "ejemplarTICForm",
-  "lastUpdate" : 1691530641787,
+  "lastUpdate" : 1692168345715,
   "rows" : [
     [
       {
@@ -113,7 +113,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "3e202a5f-bbcd-4540-b48a-2c9a0a47faec",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -127,156 +136,6 @@
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
-            [
-              {
-                "type" : "container",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable"
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "0b374c9d-09b9-43c9-aba5-4695be201d98",
-                "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Documento ejemplar del Trabajo de Integración Curricular"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Seleccionar archivo"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.docTICDocumentInput"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "url" : {
-                          "type" : "constant",
-                          "value" : "../API/formFileUpload"
-                        },
-                        "errorContent" : {
-                          "type" : "variable",
-                          "value" : ""
-                        }
-                      },
-                      "reference" : "8da41470-ea9c-429f-9f4a-5a278351d0b9",
-                      "hasValidationError" : false,
-                      "id" : "pbUpload",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : "text-danger"
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "isValidFileWidgetValue"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Default label"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "<b>*Solo se permite la carga de documentos PDF</b>"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        }
-                      },
-                      "reference" : "5b333ece-a658-43c0-b690-3a3a88d5dbc6",
-                      "hasValidationError" : false,
-                      "id" : "pbText"
-                    }
-                  ]
-                ]
-              }
-            ],
             [
               {
                 "type" : "container",
@@ -339,7 +198,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Documento de la Aptitud Legal"
+                          "value" : "Ejemplar del Trabajo de Integración Curricular"
                         },
                         "placeholder" : {
                           "type" : "constant",
@@ -351,7 +210,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.docAptitudLegalDocumentInput"
+                          "value" : "formInput.docTICDocumentInput"
                         },
                         "required" : {
                           "type" : "constant",
@@ -366,10 +225,338 @@
                           "value" : ""
                         }
                       },
-                      "reference" : "afe7adc5-fecc-4e0d-8bf2-ee3fe2983775",
+                      "reference" : "8da41470-ea9c-429f-9f4a-5a278351d0b9",
                       "hasValidationError" : false,
                       "id" : "pbUpload",
                       "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Documento de la Aptitud Legal"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Un documento por estudiante (si se trabaja en pareja agregar las aptitudes legales de cada estudiante)"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "3c5e82e0-9dd5-4906-b068-60fb94e3983a",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : "formInput.docAptitudLegalDocumentInput"
+                        }
+                      },
+                      "reference" : "aeda4af2-fefc-4289-b59e-2315858822f9",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "md" : 9,
+                              "sm" : 9,
+                              "xs" : 12,
+                              "lg" : 6
+                            },
+                            "propertyValues" : {
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : ""
+                              },
+                              "placeholder" : {
+                                "type" : "constant",
+                                "value" : "Seleccionar archivo"
+                              },
+                              "dimension" : {
+                                "type" : "constant",
+                                "value" : 12
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "$item"
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "url" : {
+                                "type" : "constant",
+                                "value" : "../API/formFileUpload"
+                              },
+                              "errorContent" : {
+                                "type" : "variable",
+                                "value" : ""
+                              }
+                            },
+                            "reference" : "afe7adc5-fecc-4e0d-8bf2-ee3fe2983775",
+                            "hasValidationError" : false,
+                            "id" : "pbUpload",
+                            "description" : ""
+                          },
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 6,
+                              "sm" : 3,
+                              "md" : 3,
+                              "lg" : 6
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "<span class=\"glyphicon glyphicon-remove\"></span> Eliminar"
+                              },
+                              "alignment" : {
+                                "type" : "constant",
+                                "value" : "left"
+                              },
+                              "buttonStyle" : {
+                                "type" : "constant",
+                                "value" : "danger"
+                              },
+                              "action" : {
+                                "type" : "constant",
+                                "value" : "Remove from collection"
+                              },
+                              "assign" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "url" : {
+                                "type" : "interpolation"
+                              },
+                              "responseStatusCode" : {
+                                "type" : "variable",
+                                "value" : ""
+                              },
+                              "dataToSend" : {
+                                "type" : "constant"
+                              },
+                              "dataFromSuccess" : {
+                                "type" : "variable",
+                                "value" : ""
+                              },
+                              "closeOnSuccess" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "dataFromError" : {
+                                "type" : "variable",
+                                "value" : ""
+                              },
+                              "targetUrlOnSuccess" : {
+                                "type" : "interpolation"
+                              },
+                              "collectionToModify" : {
+                                "type" : "variable",
+                                "value" : "$collection"
+                              },
+                              "modalId" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "collectionPosition" : {
+                                "type" : "constant",
+                                "value" : "Item"
+                              },
+                              "valueToAdd" : {
+                                "type" : "constant"
+                              },
+                              "removeItem" : {
+                                "type" : "variable",
+                                "value" : "$item"
+                              }
+                            },
+                            "reference" : "82fad82e-3fcc-49d8-9637-b7690f6995c1",
+                            "hasValidationError" : false,
+                            "id" : "pbButton"
+                          }
+                        ]
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Agregar"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "link"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Add to collection"
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "dataToSend" : {
+                          "type" : "constant"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable",
+                          "value" : "formInput.docAptitudLegalDocumentInput"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "2a602b46-4708-4ee3-b487-2cab3d6f0a69",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
                     }
                   ],
                   [
@@ -622,7 +809,7 @@
       "value" : [
         "{\r",
         "  \"docTICDocumentInput\" : null,\r",
-        "  \"docAptitudLegalDocumentInput\" : null\r",
+        "  \"docAptitudLegalDocumentInput\" : [ ]\r",
         "}"
       ],
       "exposed" : false
@@ -669,16 +856,22 @@
     "isValidFileWidgetValue" : {
       "type" : "expression",
       "value" : [
-        "// This expression return true if either one of the following conditions are met:",
-        "// - If no file widget has been set (empty JSON object: {}).",
-        "// We do that because we don't want to display warning message if user didn't select any file.",
-        "// - If selected and uploaded file (upload is triggered immediately after file selection) is a PDF file",
-        "",
-        "return angular.isDefined($data.formOutput) ",
-        "    && (angular.equals(null, $data.formOutput.docTICDocumentInput)",
-        "    || $data.formOutput.docTICDocumentInput.contentType == \"application/pdf\")",
-        "    && (angular.equals(null, $data.formOutput.docAptitudLegalDocumentInput)",
-        "    || $data.formOutput.docAptitudLegalDocumentInput.contentType == \"application/pdf\");"
+        "// Esta expresión devuelve true si se cumplen alguna de las siguientes condiciones:\r",
+        "// - Si no se ha configurado ningún widget de archivo (objeto JSON vacío: {}).\r",
+        "// Lo hacemos así para no mostrar un mensaje de advertencia si el usuario no seleccionó ningún archivo.\r",
+        "// - Si el archivo seleccionado y subido (la carga se activa inmediatamente después de la selección) es un archivo PDF\r",
+        "\r",
+        "var atLeastOnePdf = false;\r",
+        "if (angular.isDefined($data.formOutput)) {\r",
+        "    if (angular.isArray($data.formOutput.docAptitudLegalDocumentInput)) {\r",
+        "        atLeastOnePdf = $data.formOutput.docAptitudLegalDocumentInput.some(function(document) {\r",
+        "            return document.contentType == \"application/pdf\";\r",
+        "        });\r",
+        "    }\r",
+        "}\r",
+        "\r",
+        "return (angular.equals(null, $data.formOutput.docTICDocumentInput) || $data.formOutput.docTICDocumentInput.contentType == \"application/pdf\")\r",
+        "    && atLeastOnePdf;"
       ],
       "exposed" : false
     }

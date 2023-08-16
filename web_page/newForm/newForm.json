@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "levantarActaForm",
-  "name" : "levantarActaForm",
-  "lastUpdate" : 1692196914085,
+  "id" : "newForm",
+  "name" : "newForm",
+  "lastUpdate" : 1692196901718,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "2fe71944-6138-44ae-b9a6-e6596cda9f00",
+        "reference" : "2a002b36-0479-4a1e-bb08-f2dd904ab0ef",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "a0abebdb-8ab3-48cf-bf20-2c1ef9faaa8c",
+              "reference" : "d053238b-fa79-484d-8a05-880121d3a483",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "4f5f350e-ddc8-456f-9905-7c77c7b7c657",
+              "reference" : "24c1e3dd-60e7-4327-9949-8e213f9df86e",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "c112b9c3-6cff-42b4-85b3-05f40f360d29",
+        "reference" : "ace22fd9-255c-4fbe-8f64-e26e8d9096bd",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "d8524a68-91b0-49a0-a1b0-a7592062c988",
+          "reference" : "63c45318-0f65-4eaf-88e2-a096f75c967a",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -143,7 +143,7 @@
                   },
                   "dateFormat" : {
                     "type" : "constant",
-                    "value" : "dd/MM/yyyy"
+                    "value" : "MM/dd/yyyy"
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -159,7 +159,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Inicio Estudios"
+                    "value" : "Inicio Estudio"
                   },
                   "type" : {
                     "type" : "constant"
@@ -186,7 +186,7 @@
                   },
                   "placeholder" : {
                     "type" : "constant",
-                    "value" : "dd/mm/yyyy"
+                    "value" : "Enter a date (mm/dd/yyyy)"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -197,7 +197,7 @@
                     "value" : "formInput.inicioEstudio"
                   }
                 },
-                "reference" : "bddaf2e0-80ae-43a2-865d-a1d4329e051e",
+                "reference" : "ddff3a8e-f5b7-4cd0-9a30-70b3776f56d8",
                 "hasValidationError" : false,
                 "id" : "pbDatePicker",
                 "description" : ""
@@ -207,80 +207,64 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
                   "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
-                  "cssClasses" : {
+                  "labelHidden" : {
                     "type" : "constant",
-                    "value" : ""
+                    "value" : false
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "required" : {
+                  "labelPosition" : {
                     "type" : "constant",
-                    "value" : true
+                    "value" : "top"
                   },
-                  "minLength" : {
+                  "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "maxLength" : {
+                  "labelWidth" : {
                     "type" : "constant",
-                    "value" : ""
+                    "value" : 1
                   },
                   "readOnly" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Nota Record Académico"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
+                    "value" : "Nota Record"
                   },
                   "placeholder" : {
-                    "type" : "interpolation",
-                    "value" : "9,5"
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "formInput.notaRecord"
+                    "type" : "constant"
                   },
                   "type" : {
                     "type" : "constant",
                     "value" : "number"
                   },
-                  "min" : {
+                  "dimension" : {
                     "type" : "constant",
-                    "value" : 0
+                    "value" : 12
                   },
-                  "max" : {
-                    "type" : "constant",
-                    "value" : 10
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "formInput.notaRecord"
                   },
-                  "step" : {
+                  "required" : {
                     "type" : "constant",
-                    "value" : 0.1
+                    "value" : true
                   }
                 },
-                "reference" : "e7c13a53-436e-4014-b823-7dd67a676a20",
+                "reference" : "14f959b2-1133-40ab-95a3-a581c88d4b38",
                 "hasValidationError" : false,
-                "id" : "pbInput"
+                "id" : "pbInput",
+                "description" : ""
               }
             ],
             [
@@ -306,11 +290,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "success"
+                    "value" : "primary"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Generar Acta"
+                    "value" : "Submit"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -352,32 +336,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "9ab62e00-64dd-41e3-8bfd-a70ca44a71e4",
+                "reference" : "244b9ed0-4a6d-4ec8-a54d-4c4fd2309fd7",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -406,8 +367,8 @@
                     "value" : true
                   },
                   "hidden" : {
-                    "type" : "constant",
-                    "value" : false
+                    "type" : "expression",
+                    "value" : "!formOutput._submitError.message"
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -418,7 +379,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "formOutput: {{ formOutput | json }}"
+                    "value" : "<strong>Debug message</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -427,17 +388,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
                   }
                 },
-                "reference" : "f224029e-03f2-4d90-9436-d26a6e04f4f8",
+                "reference" : "5b961b50-9be4-4cb4-b3f1-adf2e1ead910",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -450,16 +403,16 @@
   ],
   "assets" : [
     {
-      "id" : "2ca4f27f-292e-4c5c-b1ac-1a97c135ac96",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "0dda8352-a172-4877-b9b8-2e22f9f66e2b",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "52ac9cde-6559-40d0-acd3-5cd5d70d09fd",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "80d6ca1d-5de7-453f-8bd4-5c978dcaf548",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -524,7 +477,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "c8a6ec01-ab42-426f-8a4c-b2a15946a2ab",
+  "uuid" : "c4b258d6-2f9c-4e4f-b661-f5ae7caae7a3",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

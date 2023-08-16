@@ -359,7 +359,7 @@ class Documento {
 			}else if (idTipoDocumento == CertificateFields.ACTA_SUSTENTACION_ID_8) {
 				replacementsList.add([
 					CertificateFields.FECHA,
-					fecha
+					FormatearFecha.formatearFecha(fecha)
 				])
 				
 				replacementsList.add([

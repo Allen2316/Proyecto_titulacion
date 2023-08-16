@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "asignarTribunalForm",
   "name" : "asignarTribunalForm",
-  "lastUpdate" : 1691487451910,
+  "lastUpdate" : 1692172782921,
   "rows" : [
     [
       {
@@ -226,7 +226,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Vocal_p"
+                    "value" : "Primer Vocal"
                   },
                   "labelPosition" : {
                     "type" : "constant",
@@ -293,7 +293,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Vocal_s"
+                    "value" : "Segundo Vocal"
                   },
                   "labelPosition" : {
                     "type" : "constant",
