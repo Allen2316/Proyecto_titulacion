@@ -200,6 +200,7 @@
                 <field type="STRING" length="255" name="autor" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="autorS" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="token" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nroSustentacion" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -209,8 +210,9 @@
             <fields>
                 <field type="STRING" length="255" name="tipo" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fecha" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="lugar" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fecha" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="hora" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="califPresidente" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="califPrimerVocal" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="califSegundoVocal" nullable="true" collection="true"/>
@@ -239,11 +241,8 @@
                 <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="director" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="progreso" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="informeDesarrolloTT" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudSustPrivada" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="designacionSustPrivada" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudSustPublica" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="designacionSustPublica" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="actaSustPrivada" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="solicitudSustentacion" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="designacionSustentacion" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="actaGrado" nullable="true" collection="true"/>
                 <relationField type="AGGREGATION" reference="com.tic.model.Historial" fetchType="LAZY" name="historial" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="tiempo_activo" nullable="true" collection="false"/>

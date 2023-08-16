@@ -2,6 +2,7 @@ package com.mpt.util
 
 import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Logger
 import java.time.ZoneId;
@@ -158,5 +159,27 @@ class FormatearFecha {
         LocalDate fechaActual = LocalDate.now();
         return !fechaFinalizacion.isBefore(fechaActual);
     }
+	
+	/**
+	 * Obtiene la fecha y hora actual en formato clave-valor.
+	 *
+	 * @return Un mapa con los campos "dia", "mes", "anio" y "hora" como claves y sus respectivos valores.
+	 */
+	public static Map<String, String> obtenerFechaYHoraSeparada() {
+		Map<String, String> fechaYHoraActual = new HashMap<>();
+		LocalDateTime fechaHoraActual = LocalDateTime.now();
+
+		// Obtener la fecha actual
+		LocalDate fechaActual = fechaHoraActual.toLocalDate();
+		fechaYHoraActual.put("dia", Integer.toString(fechaActual.getDayOfMonth()));
+		fechaYHoraActual.put("mes", Integer.toString(fechaActual.getMonthValue()));
+		fechaYHoraActual.put("anio", Integer.toString(fechaActual.getYear()));
+
+		// Obtener la hora pura sin minutos y segundos
+		LocalTime horaPura = fechaHoraActual.toLocalTime();
+		fechaYHoraActual.put("hora", horaPura.toString());
+
+		return fechaYHoraActual;
+	}
 	
 }

@@ -68,7 +68,7 @@ class Funcionario {
 			fullName = identityAPI.getUser(id).getFirstName() + " " + identityAPI.getUser(id).getLastName()
 			
 		}catch(UserNotFoundException e){
-			logger.severe("Usuario no encontrado: getFullNameWithUserName "+ userName + " " + e.getMessage())
+			logger.severe("Usuario no encontrado: getFullNameWithUserName EN FUNCIONARIO "+ userName + " " + e.getMessage())
 		}
 
 		return fullName.trim()

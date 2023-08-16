@@ -1,66 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_xCSYYC1qEe6HDomt5F7PqA" name="Calificar Sustentacion" author="USUARIO 2022" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_xCSYYS1qEe6HDomt5F7PqA" name="Calificar Sustentacion">
-      <elements xmi:type="process:Lane" xmi:id="_xCSYYi1qEe6HDomt5F7PqA" name="Empleado (lane) " actor="_xCSYey1qEe6HDomt5F7PqA">
+      <elements xmi:type="process:Lane" xmi:id="_xCSYYi1qEe6HDomt5F7PqA" name="Presidente" actor="_ic2oYDu1Ee6zgISda82lQw">
         <elements xmi:type="process:StartEvent" xmi:id="_xCSYYy1qEe6HDomt5F7PqA" name="Inicio1" outgoing="_xCSYeC1qEe6HDomt5F7PqA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_xCSYZC1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_xCSYZS1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_xCSYZi1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_xCSYZy1qEe6HDomt5F7PqA" name="Tarea1" outgoing="_zPa-XC1qEe6HDomt5F7PqA" incoming="_xCSYeC1qEe6HDomt5F7PqA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_xCSYZy1qEe6HDomt5F7PqA" name="Calificación Presidente de tribunal" outgoing="_zPa-XC1qEe6HDomt5F7PqA" incoming="_xCSYeC1qEe6HDomt5F7PqA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_xCSYaC1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_xCSYaS1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_xCSYai1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_G7Ylgju3Ee6zgISda82lQw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_G7Ylgzu3Ee6zgISda82lQw" name="sustentacion" content="sustentacion" type="TYPE_VARIABLE" returnType="com.tic.model.Sustentacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_G7YlhDu3Ee6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_G7YlhTu3Ee6zgISda82lQw" name="newScript()" content="sustentacion.califPresidente.add(califPresidente)&#xD;&#xA;return sustentacion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ftydQDu5Ee6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_ftzEUDu5Ee6zgISda82lQw" name="califPresidente" type="DECIMAL">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_ftzEUTu5Ee6zgISda82lQw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_G7Ylhzu3Ee6zgISda82lQw" type="JAVA_METHOD" expression="setCalifPresidente">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_xCSYay1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_xCSYbC1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_xCSYbS1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_xCSYbi1qEe6HDomt5F7PqA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_xCSYby1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_xCSYcC1qEe6HDomt5F7PqA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_xCSYcS1qEe6HDomt5F7PqA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_qY9b8Du4Ee6zgISda82lQw" name="calificacionPresidenteForm" content="e1995cd7-cf5f-45fd-be8f-9917f584051e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_xCSYci1qEe6HDomt5F7PqA"/>
+          <contract xmi:type="process:Contract" xmi:id="_xCSYci1qEe6HDomt5F7PqA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_ix5j8Du4Ee6zgISda82lQw" name="califPresidente" type="DECIMAL">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_ix5j8Tu4Ee6zgISda82lQw"/>
+            </inputs>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_xCSYcy1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_w8SGYDu1Ee6zgISda82lQw" name="designarCalificacionPresidente" definitionId="bonita-actorfilter-custom-user-info" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_w8SGYTu1Ee6zgISda82lQw" definitionId="bonita-actorfilter-custom-user-info" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_w8SGYju1Ee6zgISda82lQw" key="customUserInfoName">
+              <expression xmi:type="expression:Expression" xmi:id="_w8SGYzu1Ee6zgISda82lQw" name="customUserInfoName()" content="import com.mpt.constantes.MPTConstants&#xD;&#xA;&#xD;&#xA;return MPTConstants.IDENTIFICATION_DOCUMENT_TYPE.toString()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_w8SGZDu1Ee6zgISda82lQw" key="customUserInfoValue">
+              <expression xmi:type="expression:Expression" xmi:id="_w8SGZTu1Ee6zgISda82lQw" name="customUserInfoValue()" content="tribunal.presidente.cedula" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="__i9b4Du1Ee6zgISda82lQw" name="tribunal" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Tribunal"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_w8SGZju1Ee6zgISda82lQw" key="usePartialMatch">
+              <expression xmi:type="expression:Expression" xmi:id="_w8SGZzu1Ee6zgISda82lQw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_w8SGaDu1Ee6zgISda82lQw" key="autoAssign">
+              <expression xmi:type="expression:Expression" xmi:id="_w8SGaTu1Ee6zgISda82lQw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
-      <elements xmi:type="process:Lane" xmi:id="_x_zwkC1qEe6HDomt5F7PqA" name="Senda1">
-        <elements xmi:type="process:Task" xmi:id="_znFQYC1qEe6HDomt5F7PqA" name="Tarea2" outgoing="_0FK6nC1qEe6HDomt5F7PqA" incoming="_zPa-XC1qEe6HDomt5F7PqA" overrideActorsOfTheLane="false">
+      <elements xmi:type="process:Lane" xmi:id="_x_zwkC1qEe6HDomt5F7PqA" name="Vocal A" actor="_jvtXYDu1Ee6zgISda82lQw">
+        <elements xmi:type="process:Task" xmi:id="_znFQYC1qEe6HDomt5F7PqA" name="Calificación Primero vocal de tribunal" outgoing="_0FK6nC1qEe6HDomt5F7PqA" incoming="_zPa-XC1qEe6HDomt5F7PqA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_zPa-Ui1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_zPa-US1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_zPa-Uy1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_L9IoIDu3Ee6zgISda82lQw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_L9IoITu3Ee6zgISda82lQw" name="sustentacion" content="sustentacion" type="TYPE_VARIABLE" returnType="com.tic.model.Sustentacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_L9IoIju3Ee6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_L9IoIzu3Ee6zgISda82lQw" name="newScript()" content="sustentacion.califPrimerVocal.add(califPrimerVocal)&#xD;&#xA;return sustentacion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g-nL8Du5Ee6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g-nL8Tu5Ee6zgISda82lQw" name="califPrimerVocal" type="DECIMAL">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_g-nL8ju5Ee6zgISda82lQw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_L9IoJTu3Ee6zgISda82lQw" type="JAVA_METHOD" expression="setCalifPrimerVocal">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_zPa-VC1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_zPa-VS1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_zPa-Vi1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_zPa-WC1qEe6HDomt5F7PqA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_zPa-Vy1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_znFQai1qEe6HDomt5F7PqA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_znFQay1qEe6HDomt5F7PqA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_KW70cDu5Ee6zgISda82lQw" name="calificacionPrimerVocalForm" content="eb325fff-fb58-4da9-a1a5-bacbdbc05784" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_znFQaS1qEe6HDomt5F7PqA"/>
+          <contract xmi:type="process:Contract" xmi:id="_znFQaS1qEe6HDomt5F7PqA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_CqjXkDu5Ee6zgISda82lQw" name="califPrimerVocal" type="DECIMAL">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_Cqj-oDu5Ee6zgISda82lQw"/>
+            </inputs>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_znFQbC1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_E-IrIDu2Ee6zgISda82lQw" name="designarCalificacionVocalA" definitionId="bonita-actorfilter-custom-user-info" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_E-IrITu2Ee6zgISda82lQw" definitionId="bonita-actorfilter-custom-user-info" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_E-IrIju2Ee6zgISda82lQw" key="customUserInfoName">
+              <expression xmi:type="expression:Expression" xmi:id="_E-IrIzu2Ee6zgISda82lQw" name="customUserInfoName()" content="import com.mpt.constantes.MPTConstants&#xD;&#xA;&#xD;&#xA;return MPTConstants.IDENTIFICATION_DOCUMENT_TYPE.toString()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_E-IrJDu2Ee6zgISda82lQw" key="customUserInfoValue">
+              <expression xmi:type="expression:Expression" xmi:id="_E-IrJTu2Ee6zgISda82lQw" name="customUserInfoValue()" content="tribunal.primerVocal.cedula" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_E-IrJju2Ee6zgISda82lQw" name="tribunal" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Tribunal"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_E-IrJzu2Ee6zgISda82lQw" key="usePartialMatch">
+              <expression xmi:type="expression:Expression" xmi:id="_E-IrKDu2Ee6zgISda82lQw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_E-IrKTu2Ee6zgISda82lQw" key="autoAssign">
+              <expression xmi:type="expression:Expression" xmi:id="_E-IrKju2Ee6zgISda82lQw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
-      <elements xmi:type="process:Lane" xmi:id="_yUBtEC1qEe6HDomt5F7PqA" name="Senda2">
-        <elements xmi:type="process:Task" xmi:id="_0SuOYC1qEe6HDomt5F7PqA" name="Tarea3" outgoing="_95UVPC1qEe6HDomt5F7PqA" incoming="_0FK6nC1qEe6HDomt5F7PqA" overrideActorsOfTheLane="false">
+      <elements xmi:type="process:Lane" xmi:id="_yUBtEC1qEe6HDomt5F7PqA" name="Vocal B" actor="_kkV5UDu1Ee6zgISda82lQw">
+        <elements xmi:type="process:Task" xmi:id="_0SuOYC1qEe6HDomt5F7PqA" name="Calificación Segundo vocal de tribunal" outgoing="_95UVPC1qEe6HDomt5F7PqA" incoming="_0FK6nC1qEe6HDomt5F7PqA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_0FK6ki1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_0FK6kS1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_0FK6ky1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_OGx1Mju3Ee6zgISda82lQw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_OGx1Mzu3Ee6zgISda82lQw" name="sustentacion" content="sustentacion" type="TYPE_VARIABLE" returnType="com.tic.model.Sustentacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_OGx1NDu3Ee6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_OGx1NTu3Ee6zgISda82lQw" name="newScript()" content="sustentacion.califSegundoVocal.add(califSegundoVocal)&#xD;&#xA;return sustentacion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gb0A4Du5Ee6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_gb0A4Tu5Ee6zgISda82lQw" name="califSegundoVocal" type="DECIMAL">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_gb0A4ju5Ee6zgISda82lQw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_OGx1Nzu3Ee6zgISda82lQw" type="JAVA_METHOD" expression="setCalifSegundoVocal">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_0FK6lC1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_0FK6lS1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_0FK6li1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_0FK6mC1qEe6HDomt5F7PqA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_0FK6ly1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_0SuOai1qEe6HDomt5F7PqA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_0SuOay1qEe6HDomt5F7PqA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_l5BQcDu5Ee6zgISda82lQw" name="calificacionSegundoVocalForm" content="02614e88-1efd-46da-8d37-efa6239a7ba8" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_0SuOaS1qEe6HDomt5F7PqA"/>
+          <contract xmi:type="process:Contract" xmi:id="_0SuOaS1qEe6HDomt5F7PqA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_XV6MUDu5Ee6zgISda82lQw" name="califSegundoVocal" type="DECIMAL">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_XV6MUTu5Ee6zgISda82lQw"/>
+            </inputs>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_0SuObC1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:ServiceTask" xmi:id="_95UVMC1qEe6HDomt5F7PqA" name="Calcular nota promedio" outgoing="__oTmmC1qEe6HDomt5F7PqA" incoming="_95UVPC1qEe6HDomt5F7PqA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_95UVMi1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_95UVMS1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_95UVMy1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_OuFs0Du3Ee6zgISda82lQw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_OuFs0Tu3Ee6zgISda82lQw" name="sustentacion" content="sustentacion" type="TYPE_VARIABLE" returnType="com.tic.model.Sustentacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_PQZIoDu3Ee6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_OuFs0ju3Ee6zgISda82lQw" name="newScript()" content="import org.slf4j.Logger;&#xD;&#xA;import org.slf4j.LoggerFactory;&#xD;&#xA;&#xD;&#xA;Logger logger = LoggerFactory.getLogger(&quot;ScriptLogger&quot;);&#xD;&#xA;sustentacion.promedioCalificacion = (sustentacion.califPresidente + sustentacion.califPrimerVocal + sustentacion.califSegundoVocal)/3&#xD;&#xA;&#xD;&#xA;logger.info(&quot;------------> Calificacion promedio: PRESI: &quot; + sustentacion.califPresidente + &quot; primero &quot; + sustentacion.califPrimerVocal + &quot; Segundo: &quot; + sustentacion.califSegundoVocal + &quot; promedio &quot; + sustentacion.promedioCalificacion);&#xD;&#xA;return sustentacion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Sustentacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_atFNYDvCEe6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_OuFs0zu3Ee6zgISda82lQw" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_95UVNC1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_95UVNS1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_95UVNi1qEe6HDomt5F7PqA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -72,7 +171,37 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="__oTmkS1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="__oTmky1qEe6HDomt5F7PqA" name="" content="" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_OEhA0Du2Ee6zgISda82lQw" name="designarCalificacionVocalB" definitionId="bonita-actorfilter-custom-user-info" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_OEhA0Tu2Ee6zgISda82lQw" definitionId="bonita-actorfilter-custom-user-info" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_OEhA0ju2Ee6zgISda82lQw" key="customUserInfoName">
+              <expression xmi:type="expression:Expression" xmi:id="_OEhA0zu2Ee6zgISda82lQw" name="customUserInfoName()" content="import com.mpt.constantes.MPTConstants&#xD;&#xA;&#xD;&#xA;return MPTConstants.IDENTIFICATION_DOCUMENT_TYPE.toString()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_OEhA1Du2Ee6zgISda82lQw" key="customUserInfoValue">
+              <expression xmi:type="expression:Expression" xmi:id="_OEhA1Tu2Ee6zgISda82lQw" name="customUserInfoValue()" content="tribunal.segundoVocal.cedula" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_OEhA1ju2Ee6zgISda82lQw" name="tribunal" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Tribunal"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_OEhA1zu2Ee6zgISda82lQw" key="usePartialMatch">
+              <expression xmi:type="expression:Expression" xmi:id="_OEhA2Du2Ee6zgISda82lQw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_OEhA2Tu2Ee6zgISda82lQw" key="autoAssign">
+              <expression xmi:type="expression:Expression" xmi:id="_OEhA2ju2Ee6zgISda82lQw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_2GSGEDu1Ee6zgISda82lQw" name="tribunal" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Tribunal">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_2GSGETu1Ee6zgISda82lQw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_3mIIMDu1Ee6zgISda82lQw" name="tic" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.TrabajoTitulacion">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_3mIIMTu1Ee6zgISda82lQw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_5BcPoDu1Ee6zgISda82lQw" name="historial" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Historial">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_5BcPoTu1Ee6zgISda82lQw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_C_U_oDu3Ee6zgISda82lQw" name="sustentacion" dataType="_xCSYlC1qEe6HDomt5F7PqA" className="com.tic.model.Sustentacion">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_C_U_oTu3Ee6zgISda82lQw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_xCSYdC1qEe6HDomt5F7PqA">
         <targetForm xmi:type="expression:Expression" xmi:id="_xCSYdS1qEe6HDomt5F7PqA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
@@ -99,7 +228,9 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="__oTmmS1qEe6HDomt5F7PqA"/>
         <condition xmi:type="expression:Expression" xmi:id="__oTmmi1qEe6HDomt5F7PqA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <actors xmi:type="process:Actor" xmi:id="_xCSYey1qEe6HDomt5F7PqA" documentation="Este es un ejemplo de actor que está mapeado a cualquier usuario de la organización ACME" name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_ic2oYDu1Ee6zgISda82lQw" name="Presidente"/>
+      <actors xmi:type="process:Actor" xmi:id="_jvtXYDu1Ee6zgISda82lQw" name="Vocal A"/>
+      <actors xmi:type="process:Actor" xmi:id="_kkV5UDu1Ee6zgISda82lQw" name="Vocal B"/>
       <contract xmi:type="process:Contract" xmi:id="_xCSYfC1qEe6HDomt5F7PqA"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_xCSYfS1qEe6HDomt5F7PqA">
         <name xmi:type="expression:Expression" xmi:id="_xCSYfi1qEe6HDomt5F7PqA" content="" returnTypeFixed="true"/>
@@ -141,7 +272,7 @@
           <children xmi:type="notation:DecorationNode" xmi:id="_xCSYmy1qEe6HDomt5F7PqA" type="7002">
             <children xmi:type="notation:Shape" xmi:id="_xCSYnC1qEe6HDomt5F7PqA" type="3005" element="_xCSYZy1qEe6HDomt5F7PqA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_xCSYnS1qEe6HDomt5F7PqA" type="5005"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xCSYni1qEe6HDomt5F7PqA" x="160" y="60"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xCSYni1qEe6HDomt5F7PqA" x="160" y="60" width="120" height="60"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_xCSYny1qEe6HDomt5F7PqA" type="3002" element="_xCSYYy1qEe6HDomt5F7PqA" fontName="Segoe UI">
               <children xmi:type="notation:DecorationNode" xmi:id="_xCSYoC1qEe6HDomt5F7PqA" type="5024">
@@ -161,7 +292,7 @@
           <children xmi:type="notation:DecorationNode" xmi:id="_x_zwly1qEe6HDomt5F7PqA" type="7002">
             <children xmi:type="notation:Shape" xmi:id="_znFQbS1qEe6HDomt5F7PqA" type="3005" element="_znFQYC1qEe6HDomt5F7PqA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_znOaUS1qEe6HDomt5F7PqA" type="5005"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_znOaUC1qEe6HDomt5F7PqA" x="155" y="116" width="100" height="50"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_znOaUC1qEe6HDomt5F7PqA" x="155" y="116" width="120" height="60"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_x_zwki1qEe6HDomt5F7PqA"/>
@@ -175,7 +306,7 @@
           <children xmi:type="notation:DecorationNode" xmi:id="_yUBtFy1qEe6HDomt5F7PqA" type="7002">
             <children xmi:type="notation:Shape" xmi:id="_0SuObS1qEe6HDomt5F7PqA" type="3005" element="_0SuOYC1qEe6HDomt5F7PqA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_0SuOby1qEe6HDomt5F7PqA" type="5005"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0SuObi1qEe6HDomt5F7PqA" x="155" y="135" width="100" height="50"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0SuObi1qEe6HDomt5F7PqA" x="155" y="135" width="120" height="60"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_95UVOS1qEe6HDomt5F7PqA" type="3027" element="_95UVMC1qEe6HDomt5F7PqA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_95UVOy1qEe6HDomt5F7PqA" type="5017"/>

@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1690312771996,
+  "lastUpdate" : 1692158436552,
   "rows" : [
     [
       {
@@ -136,6 +136,218 @@
         "rows" : [
           [
             {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "oculto"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "156a864e-688b-4ed8-b54d-1c30352fb168",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Documento generado"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 4"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "2e0b1771-7451-4798-96a5-93b6b8cc81f6",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Process document"
+                      },
+                      "url" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "document" : {
+                        "type" : "variable",
+                        "value" : "context.docGenerado_ref"
+                      },
+                      "showPreview" : {
+                        "type" : "constant",
+                        "value" : true
+                      }
+                    },
+                    "reference" : "55ac2e92-667e-48af-83c1-e715a5606326",
+                    "hasValidationError" : false,
+                    "id" : "pbFileViewer"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "!oculto"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "9a6a0d4b-9f72-49ec-ba6e-a8f038f6f9b7",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Documentos generados"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 4"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "bdf34624-a899-420e-b2da-22ed134c42aa",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Process document"
+                      },
+                      "url" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "document" : {
+                        "type" : "variable",
+                        "value" : "context.docGenerado_ref"
+                      },
+                      "showPreview" : {
+                        "type" : "constant",
+                        "value" : true
+                      }
+                    },
+                    "reference" : "8e99b253-b187-42b0-8e86-2f4f41e91982",
+                    "hasValidationError" : false,
+                    "id" : "pbFileViewer"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
               "type" : "component",
               "dimension" : {
                 "xs" : 12,
@@ -162,14 +374,54 @@
                 },
                 "document" : {
                   "type" : "variable",
-                  "value" : "context.docGenerado_ref"
+                  "value" : "context.docGenerado2_ref"
                 },
                 "showPreview" : {
                   "type" : "constant",
                   "value" : true
                 }
               },
-              "reference" : "55ac2e92-667e-48af-83c1-e715a5606326",
+              "reference" : "2d859432-df26-441d-a634-775bcc6a34a9",
+              "hasValidationError" : false,
+              "id" : "pbFileViewer"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "Process document"
+                },
+                "url" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "document" : {
+                  "type" : "variable",
+                  "value" : "context.docGenerado3_ref"
+                },
+                "showPreview" : {
+                  "type" : "constant",
+                  "value" : true
+                }
+              },
+              "reference" : "7945229b-8e70-44dd-8965-5502b1f7159f",
               "hasValidationError" : false,
               "id" : "pbFileViewer"
             }
@@ -518,7 +770,7 @@
                       },
                       "label" : {
                         "type" : "interpolation",
-                        "value" : "Continuar"
+                        "value" : "Enviar"
                       },
                       "alignment" : {
                         "type" : "constant",
@@ -725,6 +977,58 @@
                 "reference" : "df3c5ac9-1a8d-41dc-99db-fe01e703377c",
                 "hasValidationError" : false,
                 "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Default label"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Si existe algún error de información en el documento, firmelo y en la siguiente sección puede volver a generar el documento"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "65313a73-39d0-48fa-8441-120493dbfe98",
+                "hasValidationError" : false,
+                "id" : "pbText"
               }
             ],
             [
@@ -1307,6 +1611,16 @@
         "../{{context.auxiliar_ref.link}}"
       ],
       "advancedOptions" : { },
+      "exposed" : false
+    },
+    "oculto" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.auxiliar.autorS !== null || $data.auxiliar.autorS !== undefined){",
+        "    return true;    ",
+        "}",
+        "return false;"
+      ],
       "exposed" : false
     }
   },

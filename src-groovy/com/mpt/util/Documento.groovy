@@ -14,6 +14,8 @@ import com.mpt.util.Estudiante;
 import com.mpt.constantes.MPTConstants;
 import com.mpt.payloads.Payload
 import com.tic.model.Usuario;
+import com.mpt.util.Usuario as UsuarioMPT;
+import java.text.DecimalFormat;
 
 
 /**
@@ -64,7 +66,8 @@ class Documento {
 		String timeInMs = System.currentTimeMillis().toString().substring(8) + "_"
 		String tipoName = ""
 		
-			if (idCert == CertificateFields.SOLICITUD_PERTINENCIA_ID_1 || idCert == CertificateFields.INFORME_PERTINENCIA_ID_2
+			if (idCert == CertificateFields.SOLICITUD_PERTINENCIA_ID_1 
+				|| idCert == CertificateFields.INFORME_PERTINENCIA_ID_2
 				|| idCert == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_ID_4) {
 				//_pertinencia
 				tipoName = CertificateFields.FILENAME_PERTINENCIA
@@ -73,15 +76,19 @@ class Documento {
 				tipoName = CertificateFields.FILENAME_DIRECTOR
 			}
 			else if(idCert == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6){
-				//_director
+				//_certificado
 				tipoName = CertificateFields.FILENAME_CERTIFICADO
+			}
+			else if(idCert == CertificateFields.INFORME_SUSTENTACION_ID_7 
+				|| idCert == CertificateFields.ACTA_SUSTENTACION_ID_8){
+				//_tribunal
+				tipoName = CertificateFields.FILENAME_TRIBUNAL
 			}
 
 			certificateName = MPTConstants.BASE_DOCUMENT_NAME + certificateName
 			documentCode = generarDocumentCode(processInstanceId, false)		
 
-			//UNL_FEIRNNR_CISC_PO_025_2022_M.,
-			//return certificateName + auxIdentifiers + timeInMs + documentCode + tipoName + MPTConstants.DOCX_EXTENSION;
+			//UNL_FEIRNNR_CISC_PO_3537518_13_2023_M_director.docx			
 			return certificateName + auxIdentifiers + timeInMs + documentCode + tipoName + MPTConstants.DOCX_EXTENSION;
 	}
 	
@@ -128,6 +135,10 @@ class Documento {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_SOLICITUD_ESTUDIANTE_DIRECTOR
 			}else if (idTipoInforme == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6) {
 				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_CERTIFICADO_TIC_COMPLETO			
+			}else if (idTipoInforme == CertificateFields.INFORME_SUSTENTACION_ID_7) {
+					urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_ASIGNACION_TRIBUNAL
+			}else if (idTipoInforme == CertificateFields.ACTA_SUSTENTACION_ID_8) {
+				urlDocumentTemplateAlfresco = urlDocumentTemplateAlfresco + CertificateFields.TEMPLATE_ACTA_SUSTENTACION		
 			}else {
 				logger.severe("No existe la plantilla docx con el ID solicitado")
 				urlDocumentTemplateAlfresco = ""
@@ -142,15 +153,29 @@ class Documento {
 	 * Permite obtener los reemplazos para la platilla del DOCUMENTO correspondiente.
 	 * 
 	 * @param identityAPI
-	 * @param idSolicitanteBonitaBPM
+	 * @param idSolicitanteBonitaBPM ID del usuario que inició el proceso
 	 * @param idTipoDocumento
 	 * @param vpUserNameDocente
 	 * @param ticTitulo
+	 * @param vpMemoPasado
 	 * @param vpMemo
 	 * @param pertinencia
-	 * @param fecha_fin
+	 * @param fecha_fin Segunda fecha (Fecha de culminación, fecha de sustentación, etc)	 
 	 * @param itinerario
-	 * @param AutorSec
+	 * @param AutorSec Objeto de tipo Usuario que contiene al autor secundario
+	 * @param rol El rol dentro del tribunal(presidente, vocales) NO rol de Bonita
+	 * @param lugar
+	 * @param fecha
+	 * @param userNamePresidente Solo para Acta de titulacion
+	 * @param userNameVocalP Solo para Acta de titulacion
+	 * @param userNameVocalS Solo para Acta de titulacion
+	 * @param nota 
+	 * @param nota2 
+	 * @param nota3
+	 * @param notas
+	 * @param notar
+	 * @param vpTituloProfesional
+	 * @param hora    
 	 * @return Lista de reemplazos para la plantilla del certificado
 	 * 
 	 */
@@ -159,7 +184,13 @@ class Documento {
 													String vpUserNameDocente, String ticTitulo, 
 													String vpMemoPasado, String vpMemo,
 													Boolean pertinencia, String fecha_fin,
-													String itinerario, Usuario AutorSec) {
+													String itinerario, Usuario AutorSec,
+													String rol, String lugar, String fecha,
+													String userNamePresidente, String userNameVocalP,
+													String userNameVocalS, String nota,
+													String nota2, String nota3,
+													Double notas, Double notar,
+													String vpTituloProfesional, String hora) {
 		List replacementsList = []
 		try {
 			String fullNameStudent = Estudiante.getFullName(identityAPI, idSolicitanteBonitaBPM)
@@ -224,7 +255,11 @@ class Documento {
 				fullNameStudent
 			])
 			
-			
+			replacementsList.add([
+				CertificateFields.STUDENT_ID_CARD,
+				cedulaStudent
+			])
+						
 			
 			// Datos adicionales de acuerdo a la solicitud
 			if (idTipoDocumento == CertificateFields.INFORME_PERTINENCIA_ID_2) {
@@ -247,7 +282,8 @@ class Documento {
 					CertificateFields.VALIDO,
 					valido
 				])
-			}else if (idTipoDocumento == CertificateFields.INFORME_DIRECTOR_ID_3) {
+			}else if (idTipoDocumento == CertificateFields.INFORME_DIRECTOR_ID_3 
+					|| idTipoDocumento == CertificateFields.INFORME_SUSTENTACION_ID_7) {
 								
 				replacementsList.add([
 					CertificateFields.FECHA_FIN,
@@ -255,17 +291,13 @@ class Documento {
 				])
 								
 			}else if (idTipoDocumento == CertificateFields.SOLICITUD_PERTINENCIA_ESTUDIANTE_ID_4 
-				|| idTipoDocumento == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_ID_5
-				|| idTipoDocumento == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6) {								
+					|| idTipoDocumento == CertificateFields.SOLICITUD_DIRECTOR_ESTUDIANTE_ID_5
+					|| idTipoDocumento == CertificateFields.CERTIFICACION_TIC_COMPLETO_ID_6) {								
 				replacementsList.add([
 					CertificateFields.ITINERARIO,
 					itinerario
 				])
-				
-				replacementsList.add([
-					CertificateFields.STUDENT_ID_CARD,
-					cedulaStudent
-				])
+								
 				
 				replacementsList.add([
 					CertificateFields.EMAIL,
@@ -310,7 +342,118 @@ class Documento {
 					])
 				}
 														
+			}else if (idTipoDocumento == CertificateFields.INFORME_SUSTENTACION_ID_7) {
+				replacementsList.add([
+					CertificateFields.ROL,
+					rol
+				])
+				replacementsList.add([
+					CertificateFields.LUGAR,
+					lugar
+				])
+				
+				replacementsList.add([
+					CertificateFields.FECHA_FIN,
+					FormatearFecha.formatearFecha(fecha_fin) + " a las " + hora
+				])
+			}else if (idTipoDocumento == CertificateFields.ACTA_SUSTENTACION_ID_8) {
+				replacementsList.add([
+					CertificateFields.FECHA,
+					fecha
+				])
+				
+				replacementsList.add([
+					CertificateFields.FECHA_FIN,
+					fecha_fin
+				])
+				
+				replacementsList.add([
+					CertificateFields.DIA,
+					FormatearFecha.obtenerFechaYHoraSeparada().get("dia")
+				])
+				replacementsList.add([
+					CertificateFields.MES,
+					FormatearFecha.obtenerFechaYHoraSeparada().get("mes")
+				])
+				replacementsList.add([
+					CertificateFields.ANIO,
+					FormatearFecha.obtenerFechaYHoraSeparada().get("anio")
+				])
+				replacementsList.add([
+					CertificateFields.HORA,
+					FormatearFecha.obtenerFechaYHoraSeparada().get("hora")
+				])						
+				
+				String fullNamePresidente = Funcionario.getFullNameWithUserName(userNamePresidente, identityAPI)
+				String fullNameVocalP = Funcionario.getFullNameWithUserName(userNameVocalP, identityAPI)
+				String fullNameVocalS = Funcionario.getFullNameWithUserName(userNameVocalS, identityAPI)
+				
+				String fullNameSecreAbo = Funcionario.getFullName("facultad", identityAPI)
+				
+				replacementsList.add([
+					CertificateFields.PRESIDENTE,
+					fullNamePresidente
+				])
+				replacementsList.add([
+					CertificateFields.VOCAL,
+					fullNameVocalP
+				])
+				replacementsList.add([
+					CertificateFields.VOCALS,
+					fullNameVocalS
+				])
+				replacementsList.add([
+					CertificateFields.SECRETARIO_ABOGADO,
+					fullNameSecreAbo
+				])
+				
+				replacementsList.add([
+					CertificateFields.NOTA,
+					nota
+				])
+				
+				replacementsList.add([
+					CertificateFields.NOTA2,
+					nota2
+				])
+
+				replacementsList.add([
+					CertificateFields.NOTA3,
+					nota3
+				])
+
+				replacementsList.add([
+					CertificateFields.NOTAS,
+					notas
+				])
+
+				replacementsList.add([
+					CertificateFields.NOTAR,
+					notar
+				])
+
+				Double promedio = (notas + notar)/2
+				// Formatear el resultado con dos decimales sin redondear
+				DecimalFormat df = new DecimalFormat("#.##");
+				String promedioFormateado = df.format(promedio);
+				
+				replacementsList.add([
+					CertificateFields.PROMEDIO,
+					promedioFormateado
+				])
+				
+				replacementsList.add([
+					CertificateFields.EQUIVALENCIA,
+					notaAEquivalencia(promedio)
+				])
+				
+				replacementsList.add([
+					CertificateFields.TITULO_PROFESIONAL,
+					vpTituloProfesional
+				])
+				
 			}
+			
 			
 
 			return replacementsList
@@ -428,6 +571,7 @@ class Documento {
 	}
 	
 	
+	
 	/**
 	 * Genera un ID para el documento firmado
 	 * @return el UUID en Long
@@ -452,5 +596,24 @@ class Documento {
 		}
 
 		return text;
+	}
+	
+	/**
+	 * Obtiene la equivalencia de la nota de acuerdo al promedio ingresado.
+	 * @param promedio El promedio de las notas.
+	 * @return La equivalencia de la nota según el promedio.
+	 */
+	private static String notaAEquivalencia(Double promedio) {
+		if (promedio < 7.0) {
+			return "Reprobado";
+		} else if (promedio >= 7.0 && promedio <= 7.99) {
+			return "Buena";
+		} else if (promedio >= 8.0 && promedio <= 8.99) {
+			return "Muy Buena";
+		} else if (promedio >= 9.0 && promedio <= 10.0) {
+			return "Sobresaliente";
+		} else {
+			return "";
+		}
 	}
 }
