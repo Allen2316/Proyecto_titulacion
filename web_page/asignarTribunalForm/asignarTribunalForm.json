@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "asignarTribunalForm",
   "name" : "asignarTribunalForm",
-  "lastUpdate" : 1692172782921,
+  "lastUpdate" : 1692499953114,
   "rows" : [
     [
       {
@@ -145,7 +145,7 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "readOnly" : {
+                  "disabled" : {
                     "type" : "constant",
                     "value" : false
                   },
@@ -170,7 +170,8 @@
                     "value" : 1
                   },
                   "placeholder" : {
-                    "type" : "interpolation"
+                    "type" : "interpolation",
+                    "value" : "Presidente"
                   },
                   "availableValues" : {
                     "type" : "expression",
@@ -189,9 +190,9 @@
                     "value" : "formInput.presidente"
                   }
                 },
-                "reference" : "2648136b-20a0-4d58-8caf-6b92b91ef7d8",
+                "reference" : "f062eacb-c8da-4806-9305-a3a25cb6b010",
                 "hasValidationError" : false,
-                "id" : "pbAutocomplete"
+                "id" : "pbSelect"
               }
             ],
             [
@@ -212,7 +213,7 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "readOnly" : {
+                  "disabled" : {
                     "type" : "constant",
                     "value" : false
                   },
@@ -237,7 +238,8 @@
                     "value" : 1
                   },
                   "placeholder" : {
-                    "type" : "interpolation"
+                    "type" : "interpolation",
+                    "value" : "Vocal"
                   },
                   "availableValues" : {
                     "type" : "expression",
@@ -256,9 +258,9 @@
                     "value" : "formInput.vocal_p"
                   }
                 },
-                "reference" : "ff277a7d-7ce0-41e9-b9d1-1ef465ef9222",
+                "reference" : "15ad2488-a0ed-4679-a113-27014f199881",
                 "hasValidationError" : false,
-                "id" : "pbAutocomplete"
+                "id" : "pbSelect"
               }
             ],
             [
@@ -279,7 +281,7 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "readOnly" : {
+                  "disabled" : {
                     "type" : "constant",
                     "value" : false
                   },
@@ -304,7 +306,8 @@
                     "value" : 1
                   },
                   "placeholder" : {
-                    "type" : "interpolation"
+                    "type" : "interpolation",
+                    "value" : "Vocal"
                   },
                   "availableValues" : {
                     "type" : "expression",
@@ -323,9 +326,9 @@
                     "value" : "formInput.vocal_s"
                   }
                 },
-                "reference" : "3707bb14-2f9e-4d96-941d-68329f692acd",
+                "reference" : "327b8e88-f9b5-47a4-a878-a4aca535e713",
                 "hasValidationError" : false,
-                "id" : "pbAutocomplete"
+                "id" : "pbSelect"
               }
             ],
             [
@@ -439,7 +442,8 @@
                           "value" : "Lugar"
                         },
                         "placeholder" : {
-                          "type" : "constant"
+                          "type" : "constant",
+                          "value" : "Sala 2, Bloque 13"
                         },
                         "type" : {
                           "type" : "constant",

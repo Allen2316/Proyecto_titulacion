@@ -89,7 +89,7 @@
   ],
   "id" : "customButtonPdf",
   "name" : "buttonPdf",
-  "lastUpdate" : 1692189077749,
+  "lastUpdate" : 1692658646999,
   "template" : "@customButtonPdf.tpl.html",
   "controller" : "@customButtonPdf.ctrl.js",
   "custom" : true,

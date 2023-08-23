@@ -54,7 +54,7 @@ class Payload {
 	 * @param pdfFirmado
 	 * @param processAPI
 	 * @param identityAPI
-	 * @param idSolicitanteBonitaBPM
+	 * @param idSolicitanteBonitaBPM para obtener cedula del firmante
 	 * @param processDefinitionId
 	 * @return String en formato json
 	 */
@@ -119,15 +119,15 @@ class Payload {
 	 * Permite generar el payload de la lista de documentos a enviar al servicio web de firma
 	 *
 	 * @param groupName indica a que grupo pertenece el usuario que requiere el payload
-	 * @param pdfGenerado Lista de documentos generados
-	 * @param pdfFirmado Lista de PDF Firmados
+	 * @param pdfGenerado
+	 * @param pdfFirmado
+	 * @param processAPI
 	 * @param identityAPI
-	 * @param idSolicitanteBonitaBPM
-	 * @param processDefinitionId
+	 * @param idSolicitanteBonitaBPM para obtener cedula del firmante
 	 * @return String en formato json
 	 */
-	static String buildPayloadList(String groupName, List<Document> pdfGenerado, List<Document> pdfFirmado, ProcessAPI processAPI, IdentityAPI identityAPI,
-			Long idSolicitanteBonitaBPM) {
+	static String buildPayloadList(String groupName, List<Document> pdfGenerado, List<Document> pdfFirmado,
+			ProcessAPI processAPI, IdentityAPI identityAPI, Long idSolicitanteBonitaBPM) {
 		if (groupName.isEmpty()) {
 			throw new Exception("Se debe enviar el groupName")
 		}

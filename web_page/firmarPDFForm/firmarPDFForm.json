@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1692188845891,
+  "lastUpdate" : 1692662459199,
   "rows" : [
     [
       {
@@ -256,7 +256,7 @@
                 },
                 "hidden" : {
                   "type" : "expression",
-                  "value" : "!oculto"
+                  "value" : "!oculto || !ocultoActaFirmar"
                 },
                 "repeatedCollection" : {
                   "type" : "variable",
@@ -342,13 +342,93 @@
                     "hasValidationError" : false,
                     "id" : "pbFileViewer"
                   }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Process document"
+                      },
+                      "url" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "document" : {
+                        "type" : "variable",
+                        "value" : "context.docGenerado2_ref"
+                      },
+                      "showPreview" : {
+                        "type" : "constant",
+                        "value" : true
+                      }
+                    },
+                    "reference" : "2d859432-df26-441d-a634-775bcc6a34a9",
+                    "hasValidationError" : false,
+                    "id" : "pbFileViewer"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Process document"
+                      },
+                      "url" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "document" : {
+                        "type" : "variable",
+                        "value" : "context.docGenerado3_ref"
+                      },
+                      "showPreview" : {
+                        "type" : "constant",
+                        "value" : true
+                      }
+                    },
+                    "reference" : "7945229b-8e70-44dd-8965-5502b1f7159f",
+                    "hasValidationError" : false,
+                    "id" : "pbFileViewer"
+                  }
                 ]
               ]
             }
           ],
           [
             {
-              "type" : "component",
+              "type" : "container",
               "dimension" : {
                 "xs" : 12,
                 "sm" : 12,
@@ -361,69 +441,135 @@
                   "value" : ""
                 },
                 "hidden" : {
-                  "type" : "constant",
-                  "value" : false
+                  "type" : "expression",
+                  "value" : "ocultoActaFirmar"
                 },
-                "type" : {
-                  "type" : "constant",
-                  "value" : "Process document"
-                },
-                "url" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "document" : {
+                "repeatedCollection" : {
                   "type" : "variable",
-                  "value" : "context.docGenerado2_ref"
-                },
-                "showPreview" : {
-                  "type" : "constant",
-                  "value" : true
+                  "value" : ""
                 }
               },
-              "reference" : "2d859432-df26-441d-a634-775bcc6a34a9",
+              "reference" : "6c988dd8-12c3-45c7-912c-a93ff023e63b",
               "hasValidationError" : false,
-              "id" : "pbFileViewer"
-            }
-          ],
-          [
-            {
-              "type" : "component",
-              "dimension" : {
-                "xs" : 12,
-                "sm" : 12,
-                "md" : 12,
-                "lg" : 12
-              },
-              "propertyValues" : {
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "type" : {
-                  "type" : "constant",
-                  "value" : "Process document"
-                },
-                "url" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "document" : {
-                  "type" : "variable",
-                  "value" : "context.docGenerado3_ref"
-                },
-                "showPreview" : {
-                  "type" : "constant",
-                  "value" : true
-                }
-              },
-              "reference" : "7945229b-8e70-44dd-8965-5502b1f7159f",
-              "hasValidationError" : false,
-              "id" : "pbFileViewer"
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Acta/s a firmar"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 4"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "8417a2c5-975d-4657-bb91-0f91866e20ec",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Process document"
+                      },
+                      "url" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "document" : {
+                        "type" : "variable",
+                        "value" : "context.pdfFirmado_ref"
+                      },
+                      "showPreview" : {
+                        "type" : "constant",
+                        "value" : true
+                      }
+                    },
+                    "reference" : "4dc37107-aca9-431f-b7ef-c67b6ce17ed4",
+                    "hasValidationError" : false,
+                    "id" : "pbFileViewer"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Process document"
+                      },
+                      "url" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "document" : {
+                        "type" : "variable",
+                        "value" : "context.pdfFirmado2_ref"
+                      },
+                      "showPreview" : {
+                        "type" : "constant",
+                        "value" : true
+                      }
+                    },
+                    "reference" : "96c7111d-3244-44db-8399-f385ff4c7c94",
+                    "hasValidationError" : false,
+                    "id" : "pbFileViewer"
+                  }
+                ]
+              ]
             }
           ]
         ]
@@ -1294,7 +1440,7 @@
         " * @return {document} ",
         " */",
         "if ($data.context) {",
-        "   if ($data.context.docGenerados_ref !== null && Array.isArray($data.context.docGenerados_ref) && $data.context.docGenerados_ref.length > 0) {",
+        "   if ($data.context.docGenerados_ref !== null && Array.isArray($data.context.docGenerados_ref) && $data.context.docGenerados_ref.length > 1) {",
         "       console.log(\"Documentos Generados\", $data.context.docGenerados_ref);",
         "       return $data.context.docGenerados_ref;",
         "    }",
@@ -1346,6 +1492,7 @@
         "    ",
         "    getFirmarPayload: function (urlExternaDelDocFirmado) {",
         "    console.log(\"getFirmarPayload aqui se va a retornar todo y la URL es \", urlExternaDelDocFirmado);",
+        "    console.log(\"getFirmarPayload URLEXTENERADOCFIRMADO es array \", Array.isArray(urlExternaDelDocFirmado));",
         "",
         "    if (Array.isArray(urlExternaDelDocFirmado)) {",
         "        var contratoUrlPdfFirmadoMultiples = [];",
@@ -1704,34 +1851,51 @@
         "    const urlApiProd = $data.constants.PARAM_URL +",
         "            $data.firmarCtrl.getUrlServerFirmaEc($data.constants.PARAM_ID_URL_SERVER_FIRMAEC) +",
         "            $data.constants.API_CONTEXT_FIRMAEC;",
-        "          ",
+        "    ",
+        "    let posicion = 0",
+        "    ",
+        "    switch ($data.auxiliar.nroFirma) {",
+        "    case 1:",
+        "        posicion = ",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "        break;",
+        "    case 2:",
+        "        posicion = ",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '190' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "        break;",
+        "    case 3:",
+        "        posicion = ",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '290' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "        break;",
+        "    case 4:",
+        "        posicion = ",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '390' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "        break;",
+        "    default:",
+        "        // Valor predeterminado si $data.auxiliar.nroFirma no coincide con ningún caso",
+        "        posicion = $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "}",
+        "        ",
         "    linkGenerado = $data.constants.FIRMAEC_PROTOCOL +",
         "                    $data.constants.SYSTEM_NAME +",
         "                    \"/firmar?token=\" + miToken +",
         "                    $data.constants.PARAM_CERTIFICATE_TYPE + $data.constants.VALUE_CERTIFICATE_TYPE_FILE +",
-        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
-        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290' +",
+        "                    posicion +",
         "                    $data.constants.PARAM_TYPE_STAMPING + $data.constants.VALUE_TYPE_STAMPING_QR +",
         "                    urlApiProd;",
         "   ",
         "",
-        "  //console.log(\"linkGenerado: \", linkGenerado);",
+        "  console.log(\"posicion: \", posicion);",
+        "  console.log(\"linkGenerado: \", linkGenerado);",
         "  //Ejemplo link generado: firmaec://mce/firmar?token=XXXXXXXX&tipo_certificado=2&url=http://...&razon=...",
         "  return linkGenerado;",
         "}"
       ],
-      "exposed" : false
-    },
-    "valorVpTokenAEnviar" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/caseVariable/{{task.caseId}}/vpTokenAEnviar"
-      ],
-      "advancedOptions" : {
-        "headers" : "",
-        "statusCode" : "",
-        "failedResponseValue" : ""
-      },
       "exposed" : false
     },
     "auxiliar" : {
@@ -1746,6 +1910,16 @@
       "type" : "expression",
       "value" : [
         "if($data.auxiliar.autorS !== null || $data.auxiliar.autorS !== undefined){",
+        "    return true;    ",
+        "}",
+        "return false;"
+      ],
+      "exposed" : false
+    },
+    "ocultoActaFirmar" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.auxiliar.nroFirma === 1){",
         "    return true;    ",
         "}",
         "return false;"

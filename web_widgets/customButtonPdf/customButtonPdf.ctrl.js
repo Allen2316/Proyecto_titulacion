@@ -13,13 +13,20 @@ function PbButtonPdfCtrl($scope, $http, $window, modalService) {
 
     var vm = this
     this.action = function action() {
-        var urlsToCheck = JSON.parse($scope.properties.url);
-        if (Array.isArray(urlsToCheck)) {
-            urlsToCheck.forEach(function(url) {
-                doRequest($scope.properties.action, url);
-            });
+        if ($scope.properties.url.startsWith('[') && $scope.properties.url.endsWith(']')) {
+            // Si comienza y termina con corchetes, probablemente sea un array JSON
+            var urlsToCheck = JSON.parse($scope.properties.url);
+            if (Array.isArray(urlsToCheck)) {
+                // Si es un array, itera a través de las URLs y realiza solicitudes para cada una
+                urlsToCheck.forEach(function(url) {
+                    doRequest($scope.properties.action, url);
+                });
+            } else {
+                console.error('El contenido de los corchetes no es un array válido: ', $scope.properties.url);
+            }
         } else {
-            doRequest($scope.properties.action, urlsToCheck);
+            // Si no comienza y termina con corchetes, asume que es una URL simple
+            doRequest($scope.properties.action, $scope.properties.url);
         }
     }
 
