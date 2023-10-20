@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "asignarDirectorForm",
   "name" : "asignarDirectorForm",
-  "lastUpdate" : 1690243740595,
+  "lastUpdate" : 1690899420886,
   "rows" : [
     [
       {
@@ -568,7 +568,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "<strong>Debug message</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                    "value" : "formOutput: {{ formOutput | json }}"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -577,6 +577,14 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "99f0d17e-fdb0-42fd-81d4-51fd33f5ca46",
@@ -669,8 +677,6 @@
         "    return true\r",
         "}else{\r",
         "var fechaFin = new Date($data.formInput.fechaFin); \r",
-        "console.log(\"fechaFin \",fechaFin);\r",
-        "console.log(\"out \",$data.formOutput.fechaFin);\r",
         "  \r",
         "var fechaHoy = new Date(); // Obtiene la fecha actual\r",
         "fechaHoy.setHours(fechaHoy.getHours() - 5); // Ajusta la fecha actual para la zona horaria de Ecuador (GMT-5)\r",

@@ -1,158 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
     <businessObjects>
-        <businessObject qualifiedName="com.sspm.model.Alternative">
-            <fields>
-                <field type="STRING" length="255" name="description" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Answer">
-            <fields>
-                <field type="STRING" length="255" name="question" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="alternative" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Degree">
-            <fields>
-                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Integrant" fetchType="LAZY" name="commission" nullable="true" collection="true"/>
-                <relationField type="AGGREGATION" reference="com.sspm.model.Grade" fetchType="LAZY" name="grades" nullable="true" collection="true"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Manager" fetchType="LAZY" name="manager" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.sspm.model.Tracking" fetchType="LAZY" name="tracking" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Grade">
-            <fields>
-                <field type="INTEGER" length="255" name="number" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="parallel" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Student" fetchType="LAZY" name="students" nullable="true" collection="true"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Syllabus" fetchType="LAZY" name="syllabuses" nullable="true" collection="true"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.ImproveAction">
-            <fields>
-                <field type="STRING" length="255" name="description" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="completed" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.ImprovePlan">
-            <fields>
-                <field type="INTEGER" length="255" name="duration" nullable="true" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.ImproveAction" fetchType="LAZY" name="improveActions" nullable="true" collection="true"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Integrant">
-            <fields>
-                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Manager">
-            <fields>
-                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Period">
-            <fields>
-                <field type="LOCALDATE" length="255" name="initDate" nullable="false" collection="false"/>
-                <field type="LOCALDATE" length="255" name="endDate" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Degree" fetchType="LAZY" name="degree" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Question">
-            <fields>
-                <field type="STRING" length="255" name="description" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Sheet">
-            <fields>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Answer" fetchType="LAZY" name="answers" nullable="true" collection="true"/>
-                <field type="STRING" length="255" name="denomination" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Stage">
-            <fields>
-                <field type="STRING" length="255" name="denomination" nullable="false" collection="false"/>
-                <field type="LOCALDATE" length="255" name="executionDate" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.sspm.model.ImprovePlan" fetchType="LAZY" name="improvePlan" nullable="true" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Question" fetchType="LAZY" name="questions" nullable="true" collection="true"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Student">
-            <fields>
-                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="lastName" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-                <field type="FLOAT" length="255" name="rate" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Syllabus">
-            <fields>
-                <field type="STRING" length="255" name="denomination" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Teacher" fetchType="LAZY" name="teacher" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.sspm.model.Sheet" fetchType="LAZY" name="sheets" nullable="true" collection="true"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Teacher">
-            <fields>
-                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.sspm.model.Tracking">
-            <fields>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Stage" fetchType="LAZY" name="stages" nullable="true" collection="true"/>
-                <relationField type="COMPOSITION" reference="com.sspm.model.Alternative" fetchType="LAZY" name="alternatives" nullable="true" collection="true"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
         <businessObject qualifiedName="com.tic.model.AvanceTIC">
             <fields>
                 <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
@@ -189,6 +37,7 @@
                 <field type="LOCALDATETIME" length="255" name="fechaActaSustPrivada" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="actaGrado" nullable="true" collection="true"/>
                 <field type="LOCALDATETIME" length="255" name="fechaActaGrado" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaCulminacion" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -199,6 +48,10 @@
                 <field type="STRING" length="255" name="autor" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="autorS" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="token" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nroSustentacion" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nroFirma" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombres" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -208,8 +61,9 @@
             <fields>
                 <field type="STRING" length="255" name="tipo" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fecha" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="lugar" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fecha" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="hora" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="califPresidente" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="califPrimerVocal" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="califSegundoVocal" nullable="true" collection="true"/>
@@ -228,6 +82,7 @@
             <fields>
                 <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="autor" nullable="true" collection="true"/>
                 <field type="STRING" length="255" name="titulo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="itinerario" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="revisor" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="solicitudPIC" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="solicitudInformePert" nullable="true" collection="false"/>
@@ -237,19 +92,17 @@
                 <relationField type="AGGREGATION" reference="com.tic.model.Usuario" fetchType="LAZY" name="director" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="progreso" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="informeDesarrolloTT" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudSustPrivada" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="designacionSustPrivada" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="solicitudSustPublica" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="designacionSustPublica" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="actaSustPrivada" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="actaGrado" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="solicitudSustentacion" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="designacionSustentacion" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="actaGrado" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.tic.model.Historial" fetchType="LAZY" name="historial" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="tiempo_activo" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.tic.model.AvanceTIC" fetchType="LAZY" name="avanceTT" nullable="true" collection="true"/>
                 <relationField type="AGGREGATION" reference="com.tic.model.Sustentacion" fetchType="LAZY" name="sustentacion" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="calificacionRecordA" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="calificacionFinal" nullable="true" collection="true"/>
-                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="true"/>
-                <field type="STRING" length="255" name="itinerario" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="aprobado" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="abandonado" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -310,35 +163,6 @@
                     <description>Permite recibir varios ids y retornar una lista parametros</description>
                     <queryParameters>
                         <queryParameter name="idsList" className="[Ljava.lang.Integer;"/>
-                    </queryParameters>
-                </query>
-            </queries>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.unl.model.ObjetoSolicitud">
-            <description>Objeto de negocio para almacenar las solicitudes de certificado.</description>
-            <fields>
-                <field type="LONG" length="255" name="idSolicitanteBonitaBPM" nullable="false" collection="false">
-                    <description>Este atributo representa el userId del estudiante que solicita el certificado</description>
-                </field>
-                <field type="LONG" length="255" name="idRevisorBonitaBPM" nullable="true" collection="false"/>
-                <field type="STRING" length="64" name="estado" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="comentariosDelRevisor" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="fechaDeCreacion" nullable="false" collection="false"/>
-                <field type="LONG" length="255" name="idNuevaInstanciaDeProcesoDeSolicitud" nullable="false" collection="false"/>
-                <field type="LOCALDATE" length="255" name="fechaDeEmision" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries>
-                <query name="findByIdSolicitanteYEstado" content="SELECT o &#10;FROM ObjetoSolicitud o &#10;WHERE o.idSolicitanteBonitaBPM = :idSolicitanteBonitaBPM&#10;AND o.estado = :estado&#10;ORDER BY o.persistenceId" returnType="java.util.List">
-                    <queryParameters>
-                        <queryParameter name="idSolicitanteBonitaBPM" className="java.lang.Long"/>
-                        <queryParameter name="estado" className="java.lang.String"/>
-                    </queryParameters>
-                </query>
-                <query name="findByIdSolicitanteBonitaBPMCustom" content="SELECT o &#10;FROM ObjetoSolicitud o &#10;WHERE o.idSolicitanteBonitaBPM = :idSolicitanteBonitaBPM&#10;ORDER BY o.persistenceId DESC" returnType="java.util.List">
-                    <queryParameters>
-                        <queryParameter name="idSolicitanteBonitaBPM" className="java.lang.Long"/>
                     </queryParameters>
                 </query>
             </queries>

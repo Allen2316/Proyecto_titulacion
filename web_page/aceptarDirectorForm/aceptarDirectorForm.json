@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "aceptarDirectorForm",
   "name" : "aceptarDirectorForm",
-  "lastUpdate" : 1690423123903,
+  "lastUpdate" : 1697772328691,
   "rows" : [
     [
       {
@@ -183,11 +183,11 @@
                         },
                         "labelHidden" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Director Asignado:"
+                          "value" : "Default label"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -203,14 +203,14 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{tic.director.nombres}} {{tic.director.apellidos}}"
+                          "value" : "Se le ha designado un director para el TIC, revise el documento adjunto a continuación"
                         },
                         "alignment" : {
                           "type" : "constant",
                           "value" : "left"
                         }
                       },
-                      "reference" : "ddbc2056-7840-4fe8-ba4f-75e818313e21",
+                      "reference" : "826e53cd-d7a3-4459-88d7-b59b9665f209",
                       "hasValidationError" : false,
                       "id" : "pbText"
                     }

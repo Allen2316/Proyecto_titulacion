@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "certificarTICCompletoForm",
   "name" : "certificarTICCompletoForm",
-  "lastUpdate" : 1690423382011,
+  "lastUpdate" : 1697773212381,
   "rows" : [
     [
       {
@@ -257,7 +257,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "TIC Completo"
+                    "value" : "Revisión de TIC Completo"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -305,115 +305,6 @@
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Completo"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "avance.aprobado"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        }
-                      },
-                      "reference" : "6895c17d-a443-486b-9ad9-23c30439590f",
-                      "hasValidationError" : false,
-                      "id" : "pbCheckbox",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Comentarios"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "avance.observaciones"
-                        }
-                      },
-                      "reference" : "c59d7c60-4853-4d58-bcfd-ab610c74489f",
-                      "hasValidationError" : false,
-                      "id" : "pbTextarea"
-                    }
-                  ],
                   [
                     {
                       "type" : "component",
@@ -512,6 +403,66 @@
                           "type" : "constant",
                           "value" : false
                         },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Comentarios"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "avance.observaciones"
+                        }
+                      },
+                      "reference" : "c59d7c60-4853-4d58-bcfd-ab610c74489f",
+                      "hasValidationError" : false,
+                      "id" : "pbTextarea"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
                         "required" : {
                           "type" : "constant",
                           "value" : false
@@ -552,6 +503,58 @@
                       "reference" : "4756c6c6-3c13-4caf-93a5-f847494c1130",
                       "hasValidationError" : false,
                       "id" : "pbUpload"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : "text-danger"
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "isValidFileWidgetValue"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "<b>*Solo se permite la carga de documentos PDF</b>"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "6afe05fd-f0a7-4411-a2ce-ade608b58808",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
                     }
                   ]
                 ]
@@ -617,7 +620,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid"
+                    "value" : "$form.$invalid || !isValidFileWidgetValue"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -681,7 +684,7 @@
                   },
                   "hidden" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : true
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -769,7 +772,6 @@
         "\treturn {",
         "\t\t//map avance variable to expected task contract input",
         "\t\tavanceInput: {",
-        "\t\t\taprobado: $data.avance.aprobado !== undefined ? $data.avance.aprobado : null,",
         "\t\t\tobservaciones: $data.avance.observaciones !== undefined ? $data.avance.observaciones : null,",
         "\t\t\tprogreso: $data.avance.progreso !== undefined ? $data.avance.progreso : null",
         "\t\t},",
@@ -818,6 +820,20 @@
         "{\r",
         "  \"docAvancesTICDocumentInput\" : null\r",
         "}"
+      ],
+      "exposed" : false
+    },
+    "isValidFileWidgetValue" : {
+      "type" : "expression",
+      "value" : [
+        "// This expression return true if either one of the following conditions are met:",
+        "// - If no file widget has been set (empty JSON object: {}).",
+        "// We do that because we don't want to display warning message if user didn't select any file.",
+        "// - If selected and uploaded file (upload is triggered immediately after file selection) is a PDF file",
+        "",
+        "return angular.isDefined($data.formOutput) ",
+        "    && (angular.equals(null, $data.formOutput.docAvancesTICDocumentInput)",
+        "    || $data.formOutput.docAvancesTICDocumentInput.contentType == \"application/pdf\");"
       ],
       "exposed" : false
     }

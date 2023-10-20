@@ -12,9 +12,12 @@ class Mensaje {
 									height='92' alt='logo-unl-cisc' style='display: block; margin-left: auto; margin-right: auto;'/> <br><br>";
 	static final String FOOTER_ADICIONAL = "<h4>NOTA: Imprima este documento, solamente si es necesario. El cuidado del ambiente es Tu responsabilidad.</h4>";
 	static final String SUBJECT_START_NOMENCLATURE = "[MPT #";
-	static final String SUBJECT_END_NOMENCLATURE = "] ";	
+	static final String SUBJECT_END_NOMENCLATURE = "] ";		
 	static final String SUBJECT_NOTIFICATION_DOCENT_PERTINENCIA = "Notificación de asignación para realizar informe de pertinencia"
 	static final String SUBJECT_NOTIFICATION_DOCENT_DIRECTOR = "Notificación de asignación como Director de TIC"
+	static final String SUBJECT_NOTIFICATION_DOCENT_PRESIDENT = "Notificación de asignación como Presidente de Tribunal"
+	static final String SUBJECT_NOTIFICATION_DOCENT_VOCAL_A = "Notificación de asignación como Primer Vocal de Tribunal"
+	static final String SUBJECT_NOTIFICATION_DOCENT_VOCAL_B = "Notificación de asignación como Segundo Vocal de Tribunal"
 	static final String SUBJECT_NOTIFICATION_STUDENT = "La documentación adjuntada es incorrecta"	
 	static final String	SUBJECT_NOTIFICATION_STUDENT_DIRECTOR = "Asignación de Director de TIC"
 	static final String SUBJECT_NOTIFICATION_STUDENT_REJECTION = "Lo sentimos, su solicitud de obtención de pertinencia fue rechazada"
@@ -23,6 +26,7 @@ class Mensaje {
 	static final String	SUBJECT_NOTIFICATION_DIRECTOR_PERTINENCIA = "Informe de pertinencia listo para revisión"
 	static final String	SUBJECT_NOTIFICATION_DIRECTOR_INCUMPLIMIENTO = "Notificación de incumplimiento de Informe de Pertinencia"
 	static final String SUBJECT_DIRECTOR_REMINDER = "Recordatorio de documento pendiente de firmar"
+	static final String SUBJECT_REMINDER = "Recordatorio de actividad pendiente de realizar"
 	static final String	SUBJECT_CERTIFICATE_SENT = "Su certificado solicitado ha sido enviado"
 	static final String MESSAGE_HEADER_SECRETARY = "Estimada(o) Secretaria(o)"
 	static final String MESSAGE_HEADER_STUDENT = "Estimado/s estudiante/s"

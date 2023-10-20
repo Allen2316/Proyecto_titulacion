@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "avancesTICForm",
   "name" : "avancesTICForm",
-  "lastUpdate" : 1690249138883,
+  "lastUpdate" : 1697772426570,
   "rows" : [
     [
       {
@@ -194,7 +194,7 @@
                         },
                         "placeholder" : {
                           "type" : "constant",
-                          "value" : "Browse to upload a new file..."
+                          "value" : "Seleccionar archivo"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -221,6 +221,58 @@
                       "hasValidationError" : false,
                       "id" : "pbUpload",
                       "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : "text-danger"
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "isValidFileWidgetValue"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "<b>*Solo se permite la carga de documentos PDF</b>"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "5807ed00-c5bd-4a27-a2b8-640b8dee99cc",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
                     }
                   ]
                 ]
@@ -286,7 +338,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid"
+                    "value" : "$form.$invalid || !isValidFileWidgetValue"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -350,7 +402,7 @@
                   },
                   "hidden" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : true
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -460,6 +512,20 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "isValidFileWidgetValue" : {
+      "type" : "expression",
+      "value" : [
+        "// This expression return true if either one of the following conditions are met:",
+        "// - If no file widget has been set (empty JSON object: {}).",
+        "// We do that because we don't want to display warning message if user didn't select any file.",
+        "// - If selected and uploaded file (upload is triggered immediately after file selection) is a PDF file",
+        "",
+        "return angular.isDefined($data.formOutput) ",
+        "    && (angular.equals(null, $data.formOutput.docAvancesTICDocumentInput)",
+        "    || $data.formOutput.docAvancesTICDocumentInput.contentType == \"application/pdf\");"
       ],
       "exposed" : false
     }

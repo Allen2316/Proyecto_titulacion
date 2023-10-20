@@ -1,6 +1,6 @@
 /**
  * Función que permite verificar si el existe el pdf firmado en un servidor web 
- * nediante su ruta absoluta o url y de acuerdo al código de respuesta recibido 
+ * mediante su ruta absoluta o url, y de acuerdo al código de respuesta recibido 
  * abrirá el modal correspondiente.
  * 
  * @param {*} $scope
@@ -12,9 +12,22 @@ function PbButtonPdfCtrl($scope, $http, $window, modalService) {
     'use strict'
 
     var vm = this
-
     this.action = function action() {
-        doRequest($scope.properties.action, $scope.properties.url)
+        if ($scope.properties.url.startsWith('[') && $scope.properties.url.endsWith(']')) {
+            // Si comienza y termina con corchetes, probablemente sea un array JSON
+            var urlsToCheck = JSON.parse($scope.properties.url);
+            if (Array.isArray(urlsToCheck)) {
+                // Si es un array, itera a través de las URLs y realiza solicitudes para cada una
+                urlsToCheck.forEach(function(url) {
+                    doRequest($scope.properties.action, url);
+                });
+            } else {
+                console.error('El contenido de los corchetes no es un array válido: ', $scope.properties.url);
+            }
+        } else {
+            // Si no comienza y termina con corchetes, asume que es una URL simple
+            doRequest($scope.properties.action, $scope.properties.url);
+        }
     }
 
     /**
@@ -58,19 +71,19 @@ function PbButtonPdfCtrl($scope, $http, $window, modalService) {
                 })
             })
             .finally(function () {
-                vm.busy = false
+                vm.busy = false;
 
-                var modalIden = ''
+                var modalIden = '';
                 if ($scope.properties.responseStatusCode == 200) {
-                    modalIden = 'modalEstaPdfFirmado'
+                    modalIden = 'modalEstaPdfFirmado';
                 } else if ($scope.properties.responseStatusCode == 404) {
-                    $scope.properties.mensajeParaElModal = 'El documento aún no ha sido firmado'
-                    modalIden = 'modalWarnings'
+                    $scope.properties.mensajeParaElModal = 'El documento aún no ha sido firmado';
+                    modalIden = 'modalWarnings';
                 } else {
-                    $scope.properties.mensajeParaElModal = 'No es posible conectarse con el servidor web'
-                    modalIden = 'modalWarnings'
+                    $scope.properties.mensajeParaElModal = 'No es posible conectarse con el servidor web';
+                    modalIden = 'modalWarnings';
                 }
-                openModal(modalIden)
+                openModal(modalIden);
             })
             
     }

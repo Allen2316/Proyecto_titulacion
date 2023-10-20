@@ -40,12 +40,7 @@ class MPTConstants {
 	 * Nombre del campo Cédula de la sección Información personalizada de cada usuario
 	 */
 	static final String IDENTIFICATION_DOCUMENT_TYPE = "Cédula"
-	/**
-	 * Nombres de las tareas Firmar certificado
-	 */
-	static final String TASK_NAME_SIGN_CERTIFICATE_SECRETARY = "Firmar certificado S"
-	static final String TASK_NAME_SIGN_CERTIFICATE_GESTOR= "Firmar certificado G"
-	static final String TASK_NAME_SIGN_CERTIFICATE_DEAN = "Firmar certificado D"
+	
 	
 	/**
 	 * Duración en milisegundos del token de firma enviado por el servicio web de firma
@@ -139,5 +134,15 @@ class MPTConstants {
 	 */
 	static final Integer PARAM_ID_APYKEY_WS_FIRMAEC = 12
 	static final Integer PARAM_ID_URL_ATOMPUB_ALFRESO = 13
+	
+	/**
+	 * Nombre del titulo profesional que otorga la carrera
+	 */
+	static final Integer PARAM_ID_TITULO_PROFESIONAL = 16
+	
+	/**
+	 * Numero del acta siguiente a generar
+	 */
+	static final Integer PARAM_ID_NRO_ACTA = 17
 
 }

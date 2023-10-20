@@ -47,12 +47,24 @@
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Fv9B0CscEe6kQLqtJMuneg" name="auxiliar" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.ObjAuxiliar"/>
             </processSource>
           </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_OP8S4G7pEe62t8rP39in8Q" subprocessTarget="autorSecundario" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_OP8S4W7pEe62t8rP39in8Q" name="autorSecundario" content="autorSecundario" type="TYPE_VARIABLE" returnType="com.tic.model.Usuario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_PAx58G7pEe62t8rP39in8Q" name="autorSecundario" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Usuario"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_99ur0G7sEe62t8rP39in8Q" subprocessTarget="carpetaUser" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_99ur0W7sEe62t8rP39in8Q" name="carpetaUser" content="carpetaUser" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_-wQU8G7sEe62t8rP39in8Q" documentation="será la carpeta del usuario donde se almacenarán todos sus documentos del proceso" name="carpetaUser" dataType="_8d1kcftaEe2jXvmcOqjeoQ"/>
+            </processSource>
+          </inputMappings>
           <outputMappings xmi:type="process:OutputMapping" xmi:id="_OfwRcCtGEe6kQLqtJMuneg" subprocessSource="autor" processTarget="_viXzsCXpEe6n39ND1jy1eg"/>
           <outputMappings xmi:type="process:OutputMapping" xmi:id="_Sb26oCtGEe6kQLqtJMuneg" subprocessSource="auxiliar" processTarget="_4ITgYCsbEe6kQLqtJMuneg"/>
           <outputMappings xmi:type="process:OutputMapping" xmi:id="_TcR10CtGEe6kQLqtJMuneg" subprocessSource="historial" processTarget="_BPpnYCXiEe6n39ND1jy1eg"/>
           <outputMappings xmi:type="process:OutputMapping" xmi:id="_UsuxECtGEe6kQLqtJMuneg" subprocessSource="tic" processTarget="_3N3-cCX3Ee6R7bWkN3Fn7Q"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_GPit0G7pEe62t8rP39in8Q" subprocessSource="autorSecundario" processTarget="_QRH-8G7SEe62t8rP39in8Q"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_CCPqIG7tEe62t8rP39in8Q" subprocessSource="carpetaUser" processTarget="_09LRUG7sEe62t8rP39in8Q"/>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_I9PrQ_tbEe2jXvmcOqjeoQ" name="Elaboración y Aprobación" content="Elaboración y Aprobación" returnTypeFixed="true"/>
-          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_I9QSUPtbEe2jXvmcOqjeoQ" name="2.0" content="2.0" returnTypeFixed="true"/>
+          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_I9QSUPtbEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:CallActivity" xmi:id="_PPDnkPtbEe2jXvmcOqjeoQ" name="Ejecución" outgoing="_S73QgPtbEe2jXvmcOqjeoQ" incoming="_OrIbIPtbEe2jXvmcOqjeoQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_OrBGYvtbEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
@@ -88,10 +100,26 @@
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_b1_SwCtGEe6kQLqtJMuneg" name="tic" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.TrabajoTitulacion"/>
             </processSource>
           </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_EOm0AG7tEe62t8rP39in8Q" subprocessTarget="carpetaUser" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_EOm0AW7tEe62t8rP39in8Q" name="carpetaUser" content="carpetaUser" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_EyjOkG7tEe62t8rP39in8Q" documentation="será la carpeta del usuario donde se almacenarán todos sus documentos del proceso" name="carpetaUser" dataType="_8d1kcftaEe2jXvmcOqjeoQ"/>
+            </processSource>
+          </inputMappings>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_kFMH4G7pEe62t8rP39in8Q" subprocessSource="autor" processTarget="_viXzsCXpEe6n39ND1jy1eg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_lGS_kG7pEe62t8rP39in8Q" subprocessSource="auxiliar" processTarget="_4ITgYCsbEe6kQLqtJMuneg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_lvvlMG7pEe62t8rP39in8Q" subprocessSource="avance" processTarget="_oJ_3gCtFEe6kQLqtJMuneg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_nbO2oG7pEe62t8rP39in8Q" subprocessSource="historial" processTarget="_BPpnYCXiEe6n39ND1jy1eg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_oIWbUG7pEe62t8rP39in8Q" subprocessSource="tic" processTarget="_3N3-cCX3Ee6R7bWkN3Fn7Q"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_DUSg0G7tEe62t8rP39in8Q" subprocessSource="carpetaUser" processTarget="_09LRUG7sEe62t8rP39in8Q"/>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_PPEOo_tbEe2jXvmcOqjeoQ" name="Ejecución" content="Ejecución" returnTypeFixed="true"/>
           <calledActivityVersion xmi:type="expression:Expression" xmi:id="_PPEOpPtbEe2jXvmcOqjeoQ" name="1.0" content="1.0" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:CallActivity" xmi:id="_UgQbcPtbEe2jXvmcOqjeoQ" name="Presentación" outgoing="_uo754A72Ee63HMoeTIyo2A" incoming="_S73QgPtbEe2jXvmcOqjeoQ">
+        <elements xmi:type="process:EndTerminatedEvent" xmi:id="_uomisA72Ee63HMoeTIyo2A" name="Fin1" incoming="_uo754A72Ee63HMoeTIyo2A">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_uowTsQ72Ee63HMoeTIyo2A" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_uowTsA72Ee63HMoeTIyo2A" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_uowTsg72Ee63HMoeTIyo2A" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:CallActivity" xmi:id="_Z2VRIDv6Ee6cFp--g7Y1NQ" name="Presentación" outgoing="_uo754A72Ee63HMoeTIyo2A" incoming="_S73QgPtbEe2jXvmcOqjeoQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_S7zmIvtbEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_S7zmIftbEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_S7zmI_tbEe2jXvmcOqjeoQ" name="" content="" returnTypeFixed="true"/>
@@ -100,13 +128,65 @@
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_S7zmJvtbEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_S7zmKPtbEe2jXvmcOqjeoQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_S7zmJ_tbEe2jXvmcOqjeoQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <calledActivityName xmi:type="expression:Expression" xmi:id="_UgQbdPtbEe2jXvmcOqjeoQ" name="Presentaciónx" content="Presentaciónx" returnTypeFixed="true"/>
-          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_UgQbdftbEe2jXvmcOqjeoQ" name="1.0" content="1.0" returnTypeFixed="true"/>
-        </elements>
-        <elements xmi:type="process:EndTerminatedEvent" xmi:id="_uomisA72Ee63HMoeTIyo2A" name="Fin1" incoming="_uo754A72Ee63HMoeTIyo2A">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_uowTsQ72Ee63HMoeTIyo2A" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_uowTsA72Ee63HMoeTIyo2A" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_uowTsg72Ee63HMoeTIyo2A" name="" content="" returnTypeFixed="true"/>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_aQ6U8G7qEe62t8rP39in8Q" subprocessTarget="autor" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_aQ6U8W7qEe62t8rP39in8Q" name="autor" content="autor" type="TYPE_VARIABLE" returnType="com.tic.model.Usuario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_a1vgUG7qEe62t8rP39in8Q" name="autor" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Usuario"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_a-KcgG7qEe62t8rP39in8Q" subprocessTarget="autorSecundario" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_a-KcgW7qEe62t8rP39in8Q" name="autorSecundario" content="autorSecundario" type="TYPE_VARIABLE" returnType="com.tic.model.Usuario">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_baDuUG7qEe62t8rP39in8Q" name="autorSecundario" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Usuario"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_bi4TIG7qEe62t8rP39in8Q" subprocessTarget="auxiliar" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_bi4TIW7qEe62t8rP39in8Q" name="auxiliar" content="auxiliar" type="TYPE_VARIABLE" returnType="com.tic.model.ObjAuxiliar">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_b9fLgG7qEe62t8rP39in8Q" name="auxiliar" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.ObjAuxiliar"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_cEVaYG7qEe62t8rP39in8Q" subprocessTarget="historial" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_cEVaYW7qEe62t8rP39in8Q" name="historial" content="historial" type="TYPE_VARIABLE" returnType="com.tic.model.Historial">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cdqgYG7qEe62t8rP39in8Q" name="historial" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Historial"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_d2J9UG7qEe62t8rP39in8Q" subprocessTarget="sustentacion" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_d2J9UW7qEe62t8rP39in8Q" name="sustentacion" content="sustentacion" type="TYPE_VARIABLE" returnType="com.tic.model.Sustentacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_eqAcIG7qEe62t8rP39in8Q" name="sustentacion" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Sustentacion"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_exCRMG7qEe62t8rP39in8Q" subprocessTarget="tic" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_exC4QG7qEe62t8rP39in8Q" name="tic" content="tic" type="TYPE_VARIABLE" returnType="com.tic.model.TrabajoTitulacion">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fXAsEG7qEe62t8rP39in8Q" name="tic" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.TrabajoTitulacion"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_hfW4oG7qEe62t8rP39in8Q" subprocessTarget="tribunal" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_hfW4oW7qEe62t8rP39in8Q" name="tribunal" content="tribunal" type="TYPE_VARIABLE" returnType="com.tic.model.Tribunal">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_h4HW4G7qEe62t8rP39in8Q" name="tribunal" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Tribunal"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_5vMgwG7qEe62t8rP39in8Q" subprocessTarget="listaDocentes" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_5vMgwW7qEe62t8rP39in8Q" name="listaDocentes" content="listaDocentes" type="TYPE_VARIABLE" returnType="java.util.List">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_62pRAG7qEe62t8rP39in8Q" documentation="Es la lista que mostrará a los docentes agregados" name="listaDocentes" dataType="_8d1kcvtaEe2jXvmcOqjeoQ" className="java.util.List"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_69oCwG7qEe62t8rP39in8Q" subprocessTarget="listaEstudiantes" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_69oCwW7qEe62t8rP39in8Q" name="listaEstudiantes" content="listaEstudiantes" type="TYPE_VARIABLE" returnType="java.util.List">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_7YojwG7qEe62t8rP39in8Q" name="listaEstudiantes" dataType="_8d1kcvtaEe2jXvmcOqjeoQ" className="java.util.List"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_9gNpYG7sEe62t8rP39in8Q" subprocessTarget="carpetaUser" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_9gNpYW7sEe62t8rP39in8Q" name="carpetaUser" content="carpetaUser" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_G50dEG7tEe62t8rP39in8Q" documentation="será la carpeta del usuario donde se almacenarán todos sus documentos del proceso" name="carpetaUser" dataType="_8d1kcftaEe2jXvmcOqjeoQ"/>
+            </processSource>
+          </inputMappings>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_YnkYkG7qEe62t8rP39in8Q" subprocessSource="autor" processTarget="_viXzsCXpEe6n39ND1jy1eg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_pfR8kG7qEe62t8rP39in8Q" subprocessSource="autorSecundario" processTarget="_QRH-8G7SEe62t8rP39in8Q"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_qKPlIG7qEe62t8rP39in8Q" subprocessSource="auxiliar" processTarget="_4ITgYCsbEe6kQLqtJMuneg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_rTwx8G7qEe62t8rP39in8Q" subprocessSource="historial" processTarget="_BPpnYCXiEe6n39ND1jy1eg"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_sHsJQG7qEe62t8rP39in8Q" subprocessSource="sustentacion" processTarget="_-ToKsG7pEe62t8rP39in8Q"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_vZtToG7qEe62t8rP39in8Q" subprocessSource="tic" processTarget="_3N3-cCX3Ee6R7bWkN3Fn7Q"/>
+          <outputMappings xmi:type="process:OutputMapping" xmi:id="_vxuLAG7qEe62t8rP39in8Q" subprocessSource="tribunal" processTarget="_Af0VcG7qEe62t8rP39in8Q"/>
+          <calledActivityName xmi:type="expression:Expression" xmi:id="_Z2XGUzv6Ee6cFp--g7Y1NQ" name="Presentación" content="Presentación" returnTypeFixed="true"/>
+          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_Z2XGVDv6Ee6cFp--g7Y1NQ" name="1.0" content="1.0" returnTypeFixed="true"/>
         </elements>
         <filters xmi:type="process:ActorFilter" xmi:id="_dzXCMCYTEe6R7bWkN3Fn7Q" name="asginarTareasEstudiante" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
           <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_dzXCMSYTEe6R7bWkN3Fn7Q" definitionId="bonita-actorfilter-initiator" version="1.0">
@@ -117,8 +197,8 @@
         </filters>
       </elements>
       <data xmi:type="process:JavaObjectData" xmi:id="_kfj2gCU5Ee6jwPrAR4p7Rg" documentation="Es la lista que mostrará a los docentes agregados" name="listaDocentes" dataType="_8d1kcvtaEe2jXvmcOqjeoQ" className="java.util.List">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_kfj2gSU5Ee6jwPrAR4p7Rg" name="init_listaDocentes()" content="import java.util.logging.Logger&#xD;&#xA;import org.bonitasoft.engine.identity.User&#xD;&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xD;&#xA;import com.mpt.util.Usuario as UsuarioMPT&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Logger logger = Logger.getLogger(User.class.toString())&#xD;&#xA;def rol = UsuarioMPT.getRoleId(apiAccessor.getIdentityAPI(),&quot;docente_esp&quot;)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;List&lt;User> docentes = apiAccessor.getIdentityAPI().getActiveUsersInRole(rol, 0, Integer.MAX_VALUE, UserCriterion.FIRST_NAME_ASC)&#xD;&#xA;&#xD;&#xA;logger.info(&quot;-------------------->LISTAAA &quot;+docentes);&#xD;&#xA;&#xD;&#xA;return docentes&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_wUrugCX2Ee6R7bWkN3Fn7Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_kfj2gSU5Ee6jwPrAR4p7Rg" name="init_listaDocentes()" content="import java.util.logging.Logger&#xD;&#xA;import org.bonitasoft.engine.identity.User&#xD;&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xD;&#xA;import com.mpt.util.Usuario as UsuarioMPT&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Logger logger = Logger.getLogger(User.class.toString())&#xD;&#xA;def rol = UsuarioMPT.getRoleId(apiAccessor.getIdentityAPI(),&quot;docente&quot;)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;List&lt;User> docentes = apiAccessor.getIdentityAPI().getActiveUsersInRole(rol, 0, Integer.MAX_VALUE, UserCriterion.FIRST_NAME_ASC)&#xD;&#xA;&#xD;&#xA;logger.info(&quot;-------------------->LISTAAA &quot;+docentes);&#xD;&#xA;&#xD;&#xA;return docentes&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_nevxQDWcEe6_EZh9X_-02g" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_BPpnYCXiEe6n39ND1jy1eg" name="historial" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Historial">
@@ -136,16 +216,28 @@
         </defaultValue>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_3N3-cCX3Ee6R7bWkN3Fn7Q" name="tic" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.TrabajoTitulacion">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_3N3-cSX3Ee6R7bWkN3Fn7Q" name="init_tic()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;import com.mpt.constantes.EstadosSolicitud&#xD;&#xA;import com.mpt.util.FormatearFecha&#xD;&#xA;import com.mpt.util.Usuario as UsuarioMPT&#xD;&#xA;import com.tic.model.TrabajoTitulacion&#xD;&#xA;import com.tic.model.Usuario&#xD;&#xA;import java.util.logging.Logger&#xD;&#xA;&#xD;&#xA;def trabajoTitulacionVar = new TrabajoTitulacion()&#xD;&#xA;Long startedByUserId = apiAccessor.getProcessAPI().getProcessInstance(processInstanceId).getStartedBy()&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;List&lt;Usuario> listaAutores = new ArrayList&lt;Usuario>()&#xD;&#xA;def user = apiAccessor.getIdentityAPI().getUser(startedByUserId)&#xD;&#xA;def userContact = apiAccessor.getIdentityAPI().getUserContactData(startedByUserId, false)&#xD;&#xA;&#xD;&#xA;def usuario = new Usuario()&#xD;&#xA;usuario.idSolicitanteBonitaBPM = startedByUserId&#xD;&#xA;usuario.idRol = UsuarioMPT.getRoleId(apiAccessor.getIdentityAPI(),&quot;estudiante&quot;)//apiAccessor.getIdentityAPI().getRoleByName(&quot;estudiante&quot;).getId()&#xD;&#xA;usuario.nombres = user.getFirstName()&#xD;&#xA;usuario.apellidos = user.getLastName()&#xD;&#xA;usuario.correo = userContact.getEmail()&#xD;&#xA;usuario.telefono = userContact.getPhoneNumber() ? userContact.getPhoneNumber(): userContact.getMobileNumber()&#xD;&#xA;&#xD;&#xA;listaAutores.add(usuario)&#xD;&#xA;&#xD;&#xA;trabajoTitulacionVar.autor = listaAutores&#xD;&#xA;Logger logger = Logger.getLogger(TrabajoTitulacion.class.toString())&#xD;&#xA;logger.info(&quot;-------------------->TrabajoTitulacion &quot;+trabajoTitulacionVar.autor[0].apellidos);&#xD;&#xA;&#xD;&#xA;return trabajoTitulacionVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.TrabajoTitulacion">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_rdSckCYIEe6R7bWkN3Fn7Q" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_rdSckSYIEe6R7bWkN3Fn7Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_3N3-cSX3Ee6R7bWkN3Fn7Q" name="init_tic()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;import com.mpt.constantes.EstadosSolicitud&#xD;&#xA;import com.mpt.util.FormatearFecha&#xD;&#xA;import com.mpt.util.Usuario as UsuarioMPT&#xD;&#xA;import com.mpt.util.Estudiante&#xD;&#xA;import com.tic.model.TrabajoTitulacion&#xD;&#xA;import com.tic.model.Usuario&#xD;&#xA;import java.util.logging.Logger&#xD;&#xA;&#xD;&#xA;def trabajoTitulacionVar = new TrabajoTitulacion()&#xD;&#xA;Long startedByUserId = apiAccessor.getProcessAPI().getProcessInstance(processInstanceId).getStartedBy()&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;List&lt;Usuario> listaAutores = new ArrayList&lt;Usuario>()&#xD;&#xA;def user = apiAccessor.getIdentityAPI().getUser(startedByUserId)&#xD;&#xA;def userContact = apiAccessor.getIdentityAPI().getUserContactData(startedByUserId, false)&#xD;&#xA;&#xD;&#xA;def usuario = new Usuario()&#xD;&#xA;usuario.idSolicitanteBonitaBPM = startedByUserId&#xD;&#xA;usuario.idRol = UsuarioMPT.getRoleId(apiAccessor.getIdentityAPI(),&quot;estudiante&quot;)//apiAccessor.getIdentityAPI().getRoleByName(&quot;estudiante&quot;).getId()&#xD;&#xA;usuario.nombres = user.getFirstName()&#xD;&#xA;usuario.apellidos = user.getLastName()&#xD;&#xA;usuario.correo = userContact.getEmail()&#xD;&#xA;usuario.cedula = Estudiante.getCedulaStudent(apiAccessor.getIdentityAPI(), startedByUserId)&#xD;&#xA;usuario.telefono = userContact.getPhoneNumber() ? userContact.getPhoneNumber(): userContact.getMobileNumber()&#xD;&#xA;&#xD;&#xA;listaAutores.add(usuario)&#xD;&#xA;&#xD;&#xA;trabajoTitulacionVar.autor = listaAutores&#xD;&#xA;Logger logger = Logger.getLogger(TrabajoTitulacion.class.toString())&#xD;&#xA;logger.info(&quot;-------------------->TrabajoTitulacion &quot;+trabajoTitulacionVar.autor[0].apellidos);&#xD;&#xA;&#xD;&#xA;return trabajoTitulacionVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.TrabajoTitulacion">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_cUKqYGbMEe6aw7cJMo8G5g" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_cUKqYWbMEe6aw7cJMo8G5g" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_4ITgYCsbEe6kQLqtJMuneg" name="auxiliar" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.ObjAuxiliar">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_4ITgYSsbEe6kQLqtJMuneg" name="init_auxiliar()" content="import com.tic.model.ObjAuxiliar&#xD;&#xA;&#xD;&#xA;return new ObjAuxiliar()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.ObjAuxiliar"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_4ITgYSsbEe6kQLqtJMuneg" name="init_auxiliar()" content="import com.tic.model.ObjAuxiliar&#xD;&#xA;&#xD;&#xA;ObjAuxiliar aux = new ObjAuxiliar()&#xD;&#xA;aux.nroFirma = 0&#xD;&#xA;return aux&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.ObjAuxiliar"/>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_oJ_3gCtFEe6kQLqtJMuneg" name="avance" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.AvanceTIC">
         <defaultValue xmi:type="expression:Expression" xmi:id="_oJ_3gStFEe6kQLqtJMuneg" name="init_avance()" content="import com.tic.model.AvanceTIC&#xD;&#xA;return new AvanceTIC()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.AvanceTIC"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_QRH-8G7SEe62t8rP39in8Q" name="autorSecundario" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Usuario">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_QRH-8W7SEe62t8rP39in8Q" name="init_autorSecundario()" content="import com.tic.model.Usuario&#xD;&#xA;return new Usuario()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Usuario"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_-ToKsG7pEe62t8rP39in8Q" name="sustentacion" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Sustentacion">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_-ToKsW7pEe62t8rP39in8Q" name="init_sustentacion()" content="import com.tic.model.Sustentacion&#xD;&#xA;return new Sustentacion()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Sustentacion"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_Af0VcG7qEe62t8rP39in8Q" name="tribunal" dataType="_8d1kdPtaEe2jXvmcOqjeoQ" className="com.tic.model.Tribunal">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_Af0VcW7qEe62t8rP39in8Q" name="init_tribunal()" content="import com.tic.model.Tribunal&#xD;&#xA;&#xD;&#xA;return new Tribunal()&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.tic.model.Tribunal"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_09LRUG7sEe62t8rP39in8Q" documentation="será la carpeta del usuario donde se almacenarán todos sus documentos del proceso" name="carpetaUser" dataType="_8d1kcftaEe2jXvmcOqjeoQ">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_09MfcG7sEe62t8rP39in8Q" content=""/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_8d1kVPtaEe2jXvmcOqjeoQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_0b5KkCXtEe6q9KmmmRIkJw" name="inicioForm" content="d2be5582-8b9b-442a-931a-19d65afdf897" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -161,11 +253,11 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_OrIbIftbEe2jXvmcOqjeoQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_OrIbIvtbEe2jXvmcOqjeoQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_S73QgPtbEe2jXvmcOqjeoQ" target="_UgQbcPtbEe2jXvmcOqjeoQ" source="_PPDnkPtbEe2jXvmcOqjeoQ">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_S73QgPtbEe2jXvmcOqjeoQ" target="_Z2VRIDv6Ee6cFp--g7Y1NQ" source="_PPDnkPtbEe2jXvmcOqjeoQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_S73QgftbEe2jXvmcOqjeoQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_S73QgvtbEe2jXvmcOqjeoQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_uo754A72Ee63HMoeTIyo2A" target="_uomisA72Ee63HMoeTIyo2A" source="_UgQbcPtbEe2jXvmcOqjeoQ">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_uo754A72Ee63HMoeTIyo2A" target="_uomisA72Ee63HMoeTIyo2A" source="_Z2VRIDv6Ee6cFp--g7Y1NQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_uo754Q72Ee63HMoeTIyo2A"/>
         <condition xmi:type="expression:Expression" xmi:id="_uo754g72Ee63HMoeTIyo2A" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
@@ -246,17 +338,17 @@
             </children>
             <children xmi:type="notation:Shape" xmi:id="_PPEOqvtbEe2jXvmcOqjeoQ" type="3063" element="_PPDnkPtbEe2jXvmcOqjeoQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_PPEOrPtbEe2jXvmcOqjeoQ" type="5093"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PPEOq_tbEe2jXvmcOqjeoQ" x="346" y="58" width="100" height="50"/>
-            </children>
-            <children xmi:type="notation:Shape" xmi:id="_UgQbe_tbEe2jXvmcOqjeoQ" type="3063" element="_UgQbcPtbEe2jXvmcOqjeoQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
-              <children xmi:type="notation:DecorationNode" xmi:id="_UgRCgPtbEe2jXvmcOqjeoQ" type="5093"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UgQbfPtbEe2jXvmcOqjeoQ" x="574" y="64" width="100" height="50"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PPEOq_tbEe2jXvmcOqjeoQ" x="384" y="65" width="100" height="50"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_uo2aUA72Ee63HMoeTIyo2A" type="3062" element="_uomisA72Ee63HMoeTIyo2A" fontName="Segoe UI">
               <children xmi:type="notation:DecorationNode" xmi:id="_uo3BYA72Ee63HMoeTIyo2A" type="5090">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_uo3BYQ72Ee63HMoeTIyo2A" y="5"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo2aUQ72Ee63HMoeTIyo2A" x="738" y="73"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo2aUQ72Ee63HMoeTIyo2A" x="738" y="75"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_Z2XtYDv6Ee6cFp--g7Y1NQ" type="3063" element="_Z2VRIDv6Ee6cFp--g7Y1NQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_Z2YUcDv6Ee6cFp--g7Y1NQ" type="5093"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z2XtYTv6Ee6cFp--g7Y1NQ" x="574" y="63" width="108" height="54"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_8d1kg_taEe2jXvmcOqjeoQ"/>
@@ -287,14 +379,14 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_OrJCMftbEe2jXvmcOqjeoQ" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OrJCMvtbEe2jXvmcOqjeoQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_S73Qg_tbEe2jXvmcOqjeoQ" type="4001" element="_S73QgPtbEe2jXvmcOqjeoQ" source="_PPEOqvtbEe2jXvmcOqjeoQ" target="_UgQbe_tbEe2jXvmcOqjeoQ" roundedBendpointsRadius="10" routing="Rectilinear">
+    <edges xmi:type="notation:Connector" xmi:id="_S73Qg_tbEe2jXvmcOqjeoQ" type="4001" element="_S73QgPtbEe2jXvmcOqjeoQ" source="_PPEOqvtbEe2jXvmcOqjeoQ" target="_Z2XtYDv6Ee6cFp--g7Y1NQ" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_S73QhvtbEe2jXvmcOqjeoQ" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_S73Qh_tbEe2jXvmcOqjeoQ" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_S73QhPtbEe2jXvmcOqjeoQ" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S73QhftbEe2jXvmcOqjeoQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_uo754w72Ee63HMoeTIyo2A" type="4001" element="_uo754A72Ee63HMoeTIyo2A" source="_UgQbe_tbEe2jXvmcOqjeoQ" target="_uo2aUA72Ee63HMoeTIyo2A" roundedBendpointsRadius="10" routing="Rectilinear">
+    <edges xmi:type="notation:Connector" xmi:id="_uo754w72Ee63HMoeTIyo2A" type="4001" element="_uo754A72Ee63HMoeTIyo2A" source="_Z2XtYDv6Ee6cFp--g7Y1NQ" target="_uo2aUA72Ee63HMoeTIyo2A" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_uo8g8A72Ee63HMoeTIyo2A" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uo8g8Q72Ee63HMoeTIyo2A" y="-10"/>
       </children>
