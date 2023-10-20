@@ -139,5 +139,10 @@ class MPTConstants {
 	 * Nombre del titulo profesional que otorga la carrera
 	 */
 	static final Integer PARAM_ID_TITULO_PROFESIONAL = 16
+	
+	/**
+	 * Numero del acta siguiente a generar
+	 */
+	static final Integer PARAM_ID_NRO_ACTA = 17
 
 }

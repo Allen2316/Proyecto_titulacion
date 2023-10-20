@@ -1,7 +1,7 @@
 package com.mpt.constantes
 
 /**
- * Nombres de los campos de las plantillas de todos los certificados, actualmente son 38 campos en total
+ * Nombres de los campos de las plantillas de todos los certificados
  * 
  * @author Allen
  * @version 1.0
@@ -34,12 +34,12 @@ class CertificateFields {
 	static final String AUXILIAR = "auxiliar"
 	static final String PRESIDENTE = "presidente"
 	static final String VOCAL = "vocal"
-	static final String VOCALS = "vocals"
+	static final String VOCALS = "vocales"
 	static final String ROL = "rol"
 	static final String LUGAR = "lugar"
-	static final String DIA = "dia"
+	static final String DIA = "data"
 	static final String MES = "mes"
-	static final String ANIO = "anio"
+	static final String ANIO = "anualidad"
 	static final String HORA = "hora"
 	static final String NOTA = "nota"
 	static final String NOTA2 = "nota2"
@@ -48,7 +48,8 @@ class CertificateFields {
 	static final String NOTAR = "notar"
 	static final String PROMEDIO = "promedio"
 	static final String EQUIVALENCIA = "equivalencia"
-	static final String TITULO_PROFESIONAL = "tituloProfesional"
+	static final String TITULO_PROFESIONAL = "profesional"
+	static final String NRO_ACTA = "numero"
 	
 	
 
@@ -69,6 +70,8 @@ class CertificateFields {
 	static final String INFORME_SUSTENTACION_NAME = "informeTribunal"
 	static final Integer ACTA_SUSTENTACION_ID_8 = 8
 	static final String ACTA_SUSTENTACION_NAME = "actaSustentacion"
+	static final Integer INFORME_TIC_ABANDONO_ID_9 = 9
+	static final String INFORME_TIC_ABANDONO_NAME = "informeAbandono"
 	
 
 	/**
@@ -80,6 +83,7 @@ class CertificateFields {
 	static final String TEMPLATE_ASIGNACION_DIRECTOR = "Asignacion_Director.docx"
 	static final String TEMPLATE_SOLICITUD_ESTUDIANTE_DIRECTOR = "Solicitud_Estudiante_Director.docx"
 	static final String TEMPLATE_CERTIFICADO_TIC_COMPLETO = "Certificacion_TIC_Completo.docx"
+	static final String TEMPLATE_INFORME_ABANDONO = "Certificacion_TIC_Abandonado.docx"
 	static final String TEMPLATE_ASIGNACION_TRIBUNAL = "Asignacion_Tribunal.docx"
 	static final String TEMPLATE_ACTA_SUSTENTACION = "Acta_Sustentacion.docx"
 

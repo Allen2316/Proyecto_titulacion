@@ -16,7 +16,7 @@ class Mensaje {
 	static final String SUBJECT_NOTIFICATION_DOCENT_PERTINENCIA = "Notificación de asignación para realizar informe de pertinencia"
 	static final String SUBJECT_NOTIFICATION_DOCENT_DIRECTOR = "Notificación de asignación como Director de TIC"
 	static final String SUBJECT_NOTIFICATION_DOCENT_PRESIDENT = "Notificación de asignación como Presidente de Tribunal"
-	static final String SUBJECT_NOTIFICATION_DOCENT_VOCAL_A = "Notificación de asignación como Primero Vocal de Tribunal"
+	static final String SUBJECT_NOTIFICATION_DOCENT_VOCAL_A = "Notificación de asignación como Primer Vocal de Tribunal"
 	static final String SUBJECT_NOTIFICATION_DOCENT_VOCAL_B = "Notificación de asignación como Segundo Vocal de Tribunal"
 	static final String SUBJECT_NOTIFICATION_STUDENT = "La documentación adjuntada es incorrecta"	
 	static final String	SUBJECT_NOTIFICATION_STUDENT_DIRECTOR = "Asignación de Director de TIC"

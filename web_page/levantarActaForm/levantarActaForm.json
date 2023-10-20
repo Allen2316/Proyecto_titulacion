@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "levantarActaForm",
   "name" : "levantarActaForm",
-  "lastUpdate" : 1692196914085,
+  "lastUpdate" : 1697773506159,
   "rows" : [
     [
       {
@@ -131,81 +131,41 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
                   "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "dateFormat" : {
-                    "type" : "constant",
-                    "value" : "dd/MM/yyyy"
-                  },
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 1
-                  },
-                  "readOnly" : {
+                  "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "label" : {
+                  "text" : {
                     "type" : "interpolation",
-                    "value" : "Inicio Estudios"
+                    "value" : "Autor/es aprobados:"
                   },
-                  "type" : {
-                    "type" : "constant"
-                  },
-                  "required" : {
+                  "level" : {
                     "type" : "constant",
-                    "value" : true
+                    "value" : "Level 4"
                   },
-                  "todayLabel" : {
+                  "alignment" : {
                     "type" : "constant",
-                    "value" : "Today"
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "showToday" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "placeholder" : {
-                    "type" : "constant",
-                    "value" : "dd/mm/yyyy"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "formInput.inicioEstudio"
+                    "value" : "left"
                   }
                 },
-                "reference" : "bddaf2e0-80ae-43a2-865d-a1d4329e051e",
+                "reference" : "a1d6a2aa-9449-48c6-b31b-f6c90f108506",
                 "hasValidationError" : false,
-                "id" : "pbDatePicker",
-                "description" : ""
+                "id" : "pbTitle"
               }
             ],
             [
               {
-                "type" : "component",
+                "type" : "container",
                 "dimension" : {
                   "xs" : 12,
                   "sm" : 12,
@@ -218,69 +178,511 @@
                     "value" : ""
                   },
                   "hidden" : {
-                    "type" : "constant",
-                    "value" : false
+                    "type" : "expression",
+                    "value" : "oculto"
                   },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "minLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Nota Record Académico"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation",
-                    "value" : "9,5"
-                  },
-                  "value" : {
+                  "repeatedCollection" : {
                     "type" : "variable",
-                    "value" : "formInput.notaRecord"
-                  },
-                  "type" : {
-                    "type" : "constant",
-                    "value" : "number"
-                  },
-                  "min" : {
-                    "type" : "constant",
-                    "value" : 0
-                  },
-                  "max" : {
-                    "type" : "constant",
-                    "value" : 10
-                  },
-                  "step" : {
-                    "type" : "constant",
-                    "value" : 0.1
+                    "value" : ""
                   }
                 },
-                "reference" : "e7c13a53-436e-4014-b823-7dd67a676a20",
+                "reference" : "b4627feb-0211-4b3c-8d10-4da57779d8bd",
                 "hasValidationError" : false,
-                "id" : "pbInput"
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{auxiliar.nombre}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "d4cd7544-127b-4500-bd27-06db0deab078",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 6,
+                        "sm" : 6,
+                        "xs" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dateFormat" : {
+                          "type" : "constant",
+                          "value" : "dd/MM/yyyy"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Inicio Estudios"
+                        },
+                        "type" : {
+                          "type" : "constant"
+                        },
+                        "required" : {
+                          "type" : "expression",
+                          "value" : "!oculto"
+                        },
+                        "todayLabel" : {
+                          "type" : "constant",
+                          "value" : "Today"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "showToday" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "placeholder" : {
+                          "type" : "constant",
+                          "value" : "dd/mm/yyyy"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.inicioEstudio[0]"
+                        }
+                      },
+                      "reference" : "bddaf2e0-80ae-43a2-865d-a1d4329e051e",
+                      "hasValidationError" : false,
+                      "id" : "pbDatePicker",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "1c59433c-e7c3-4de3-b656-d44abf463bc8",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [ ]
+                      ]
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "expression",
+                          "value" : "!oculto"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Nota Record Académico"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "9,5"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.notaRecord[0]"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "number"
+                        },
+                        "min" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "max" : {
+                          "type" : "constant",
+                          "value" : 10
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 0.1
+                        }
+                      },
+                      "reference" : "e7c13a53-436e-4014-b823-7dd67a676a20",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "oculto2"
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "b33aabf1-efd6-4024-bc09-df69dc00c264",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{auxiliar.nombres}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "abdac963-c4a0-40ae-8bd4-00fec9c6693b",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "expression",
+                          "value" : "!oculto2"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Inicio Estudios"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.inicioEstudio[1]"
+                        },
+                        "dateFormat" : {
+                          "type" : "constant",
+                          "value" : "dd/MM/yyyy"
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "dd/mm/yyyy"
+                        },
+                        "showToday" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "todayLabel" : {
+                          "type" : "interpolation",
+                          "value" : "Today"
+                        }
+                      },
+                      "reference" : "9737c1e0-2868-44a4-b4a6-322c048a1f53",
+                      "hasValidationError" : false,
+                      "id" : "pbDatePicker"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "416e31db-3ff4-4da5-95b3-11fd578e778f",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [ ]
+                      ]
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "expression",
+                          "value" : "!oculto2"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Nota Record Académico"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "9,5"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.notaRecord[1]"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "number"
+                        },
+                        "min" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "max" : {
+                          "type" : "constant",
+                          "value" : 10
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 0.1
+                        }
+                      },
+                      "reference" : "88bc88b9-f8ca-474f-8485-81efde1c78ec",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    }
+                  ]
+                ]
               }
             ],
             [
@@ -407,7 +809,7 @@
                   },
                   "hidden" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : true
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -477,8 +879,8 @@
       "type" : "json",
       "value" : [
         "{\r",
-        "  \"inicioEstudio\" : null,\r",
-        "  \"notaRecord\" : 0\r",
+        "  \"inicioEstudio\" : [ ],\r",
+        "  \"notaRecord\" : [ ]\r",
         "}"
       ],
       "exposed" : false
@@ -519,6 +921,53 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "auxiliar" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.auxiliar_ref.link}}"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "oculto" : {
+      "type" : "expression",
+      "value" : [
+        "//es decir se hizo grupo",
+        "if($data.auxiliar.nombres !== null){",
+        "    if($data.auxiliar.autor !== null){",
+        "        return false",
+        "    }else{",
+        "        return $data.auxiliar.autor === null;    ",
+        "    }    ",
+        "//ne hizo individual",
+        "}else{",
+        "    return false",
+        "}",
+        "",
+        "//return $data.auxiliar.autor === null;  "
+      ],
+      "exposed" : false
+    },
+    "oculto2" : {
+      "type" : "expression",
+      "value" : [
+        "//return $data.auxiliar.autorS === null;",
+        "//es decir se hizo grupo",
+        "if($data.auxiliar.nombres !== null){",
+        "    if($data.auxiliar.autorS !== null){",
+        "        return false",
+        "    }else{",
+        "        return $data.auxiliar.autorS === null;  ",
+        "    }    ",
+        "//ne hizo individual",
+        "}else{",
+        "    return true",
+        "}",
+        "",
+        "//return $data.auxiliar.autorS === null;    "
       ],
       "exposed" : false
     }

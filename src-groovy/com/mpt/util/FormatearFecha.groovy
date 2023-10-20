@@ -166,20 +166,70 @@ class FormatearFecha {
 	 * @return Un mapa con los campos "dia", "mes", "anio" y "hora" como claves y sus respectivos valores.
 	 */
 	public static Map<String, String> obtenerFechaYHoraSeparada() {
-		Map<String, String> fechaYHoraActual = new HashMap<>();
-		LocalDateTime fechaHoraActual = LocalDateTime.now();
+        Map<String, String> fechaYHoraActual = new HashMap<>();
+        LocalDateTime fechaHoraActual = LocalDateTime.now();
+                             
+    
+        String dia = obtenerDiaLetras(fechaHoraActual);
+        String mes = obtenerMesLetras(fechaHoraActual);
+        String anio = obtenerAnioLetras(fechaHoraActual);
+        String hora = obtenerHoraLetras(fechaHoraActual);
+        
+        fechaYHoraActual.put("dia", dia);
+        fechaYHoraActual.put("mes", mes);
+        fechaYHoraActual.put("anio", anio);
+        fechaYHoraActual.put("hora", hora);
+    
+        return fechaYHoraActual;
+    }
 
-		// Obtener la fecha actual
-		LocalDate fechaActual = fechaHoraActual.toLocalDate();
-		fechaYHoraActual.put("dia", Integer.toString(fechaActual.getDayOfMonth()));
-		fechaYHoraActual.put("mes", Integer.toString(fechaActual.getMonthValue()));
-		fechaYHoraActual.put("anio", Integer.toString(fechaActual.getYear()));
+    private static String obtenerDiaLetras(LocalDateTime fechaHora) {
+        int dia = fechaHora.getDayOfMonth();
+        return convertirNumeroALetras(dia);
+    }
 
-		// Obtener la hora pura sin minutos y segundos
-		LocalTime horaPura = fechaHoraActual.toLocalTime();
-		fechaYHoraActual.put("hora", horaPura.toString());
+    private static String obtenerMesLetras(LocalDateTime fechaHora) {
+        DateTimeFormatter formatoMes = DateTimeFormatter.ofPattern("MMMM", new Locale("es", "ES"));
+        return fechaHora.format(formatoMes);
+    }
 
-		return fechaYHoraActual;
-	}
+    private static String obtenerAnioLetras(LocalDateTime fechaHora) {
+        int anio = fechaHora.getYear();
+        return convertirNumeroALetras(anio);
+    }
+
+    private static String obtenerHoraLetras(LocalDateTime fechaHora) {
+        DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH'h'mm");
+        return fechaHora.format(formatoHora);
+    }
+
+	private static String convertirNumeroALetras(int numero) {
+	    if (numero < 1 || numero > 9999) {
+	        return "Número fuera del rango admitido.";
+	    }
+
+	    String[] unidades = ["", "UNO", "DOS", "TRES", "CUATRO", "CINCO", "SEIS", "SIETE", "OCHO", "NUEVE", "DIEZ", "ONCE", "DOCE", "TRECE", "CATORCE", "QUINCE", "DIECISÉIS", "DIECISIETE", "DIECIOCHO", "DIECINUEVE"];
+	    String[] decenas = ["", "", "VEINTE", "TREINTA", "CUARENTA", "CINCUENTA", "SESENTA", "SETENTA", "OCHENTA", "NOVENTA"];
+	    String[] centenas = ["", "CIEN", "DOSCIENTOS", "TRESCIENTOS", "CUATROCIENTOS", "QUINIENTOS", "SEISCIENTOS", "SETECIENTOS", "OCHOCIENTOS", "NOVECIENTOS"];
+	
+	    if (numero < 20) {
+	        return unidades[numero];
+	    } else if (numero < 100) {
+	        int unidad = numero % 10;
+	        int decena = numero / 10;
+	        return decenas[decena] + (unidad != 0 ? (" Y " + unidades[unidad]) : "");
+	    } else if (numero < 1000) {
+	        int unidad = numero % 10;
+	        int decena = (numero % 100) / 10;
+	        int centena = numero / 100;
+	        return centenas[centena] + (decena != 0 ? (" " + decenas[decena]) : "") + (unidad != 0 ? (" Y " + unidades[unidad]) : "");
+	    } else {
+	        int unidad = numero % 10;
+	        int decena = (numero % 100) / 10;
+	        int centena = (numero % 1000) / 100;
+	        int millar = numero / 1000;
+	        return unidades[millar] + " MIL" + (centena != 0 ? (" " + centenas[centena]) : "") + (decena != 0 ? (" " + decenas[decena]) : "") + (unidad != 0 ? (" " + unidades[unidad]) : "");
+	    }
+    }
 	
 }

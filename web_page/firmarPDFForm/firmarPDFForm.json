@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "firmarPDFForm",
   "name" : "firmarPDFForm",
-  "lastUpdate" : 1692662459199,
+  "lastUpdate" : 1697774108168,
   "rows" : [
     [
       {
@@ -517,7 +517,7 @@
                       },
                       "document" : {
                         "type" : "variable",
-                        "value" : "context.pdfFirmado_ref"
+                        "value" : "context.docGenerado_ref"
                       },
                       "showPreview" : {
                         "type" : "constant",
@@ -557,7 +557,7 @@
                       },
                       "document" : {
                         "type" : "variable",
-                        "value" : "context.pdfFirmado2_ref"
+                        "value" : "context.docGenerado2_ref"
                       },
                       "showPreview" : {
                         "type" : "constant",
@@ -1181,7 +1181,7 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12,
+                  "xs" : 6,
                   "sm" : 6,
                   "md" : 6,
                   "lg" : 6
@@ -1205,7 +1205,7 @@
                   },
                   "alignment" : {
                     "type" : "constant",
-                    "value" : "center"
+                    "value" : "right"
                   },
                   "buttonStyle" : {
                     "type" : "constant",
@@ -1271,7 +1271,7 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12,
+                  "xs" : 6,
                   "sm" : 6,
                   "md" : 6,
                   "lg" : 6
@@ -1295,7 +1295,7 @@
                   },
                   "alignment" : {
                     "type" : "constant",
-                    "value" : "center"
+                    "value" : "left"
                   },
                   "buttonStyle" : {
                     "type" : "constant",
@@ -1857,23 +1857,28 @@
         "    switch ($data.auxiliar.nroFirma) {",
         "    case 1:",
         "        posicion = ",
-        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '90' +",
-        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '110' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '260';",
         "        break;",
         "    case 2:",
         "        posicion = ",
-        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '190' +",
-        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '280' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '260';",
         "        break;",
         "    case 3:",
         "        posicion = ",
-        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '290' +",
-        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '430' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '260';",
         "        break;",
         "    case 4:",
         "        posicion = ",
-        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '390' +",
-        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '290';",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '200' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '150';",
+        "        break;",
+        "    case 5:",
+        "        posicion = ",
+        "            $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_X + '370' +",
+        "                    $data.constants.PARAM_POSITION_ON_PAGE_LOWER_LEFT_Y + '150';",
         "        break;",
         "    default:",
         "        // Valor predeterminado si $data.auxiliar.nroFirma no coincide con ningún caso",
@@ -1919,7 +1924,7 @@
     "ocultoActaFirmar" : {
       "type" : "expression",
       "value" : [
-        "if($data.auxiliar.nroFirma === 1){",
+        "if($data.auxiliar.nroFirma === 0){",
         "    return true;    ",
         "}",
         "return false;"

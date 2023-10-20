@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "solicitudPertinenciaForm",
   "name" : "solicitudPertinenciaForm",
-  "lastUpdate" : 1690313206118,
+  "lastUpdate" : 1697771078385,
   "rows" : [
     [
       {
@@ -154,22 +154,38 @@
                     "type" : "constant",
                     "value" : false
                   },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Default label"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
                   "text" : {
                     "type" : "interpolation",
                     "value" : "Solicitud adjuntada por el/los estudiantes: <br><strong>{{auxiliar.autor}} <br> {{auxiliar.autorS}}</strong>"
-                  },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 4"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "left"
                   }
                 },
-                "reference" : "ec1a5d30-b5b6-407c-9be8-bf0c5d09d1fb",
+                "reference" : "c3b8ccec-59da-483d-9838-a2116ce591ce",
                 "hasValidationError" : false,
-                "id" : "pbTitle"
+                "id" : "pbText"
               }
             ],
             [
@@ -452,58 +468,6 @@
                       "hasValidationError" : false,
                       "id" : "pbSelect"
                     }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Default label"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{obtenerLista}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        }
-                      },
-                      "reference" : "79579e17-20ff-4e57-91b8-4417e01ef0c3",
-                      "hasValidationError" : false,
-                      "id" : "pbText"
-                    }
                   ]
                 ]
               }
@@ -652,6 +616,14 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "5c0f3376-45c4-49e2-b62d-385df82cef6c",

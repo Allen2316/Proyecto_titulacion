@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "aceptarDirectorForm",
-  "name" : "aceptarDirectorForm",
-  "lastUpdate" : 1697772328691,
+  "id" : "validarDocumentacionFinalForm",
+  "name" : "validarDocumentacionFinalForm",
+  "lastUpdate" : 1697494608946,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "918b0e93-3a76-49ab-999e-444f80801035",
+        "reference" : "3ab4f16a-72e8-4024-bb9b-42a0d0935489",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "9315f23c-154c-459a-8881-00f7e55484ba",
+              "reference" : "72c40bd4-274b-494e-9c5b-f42d97cfb3b4",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "191ba5f5-75a0-4105-977b-831c42980f02",
+              "reference" : "254ceba0-054b-43a1-959b-34b696cf8e80",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -113,17 +113,8 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "31686ac3-91ad-4844-98e7-a2e56a5c42eb",
+        "propertyValues" : { },
+        "reference" : "5fb2e045-2191-4aa2-ba5a-b4955852ed51",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -132,13 +123,13 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "3b558e7e-8cea-4b4a-9d43-cbc704c1f12f",
+          "reference" : "8fce4f43-d069-46eb-bbdd-98d5f9b76968",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
             [
               {
-                "type" : "container",
+                "type" : "component",
                 "dimension" : {
                   "xs" : 12,
                   "sm" : 12,
@@ -154,108 +145,102 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "repeatedCollection" : {
-                    "type" : "variable",
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "Process document"
+                  },
+                  "url" : {
+                    "type" : "constant",
                     "value" : ""
+                  },
+                  "document" : {
+                    "type" : "variable",
+                    "value" : "context.pdfFirmado_ref"
+                  },
+                  "showPreview" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
-                "reference" : "4c3a6d0c-c470-43b0-9112-5781189cb40f",
+                "reference" : "81ae1262-9d3c-441a-b720-e005c64db67a",
                 "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Default label"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "Se le ha designado un director para el TIC, revise el documento adjunto a continuación"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        }
-                      },
-                      "reference" : "826e53cd-d7a3-4459-88d7-b59b9665f209",
-                      "hasValidationError" : false,
-                      "id" : "pbText"
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "Process document"
-                        },
-                        "url" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "document" : {
-                          "type" : "variable",
-                          "value" : "context.pdfFirmado_ref"
-                        },
-                        "showPreview" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "2ba3a0ad-92ca-467c-ab7c-08352b155644",
-                      "hasValidationError" : false,
-                      "id" : "pbFileViewer"
-                    }
-                  ]
-                ]
+                "id" : "pbFileViewer"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "Process document"
+                  },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "document" : {
+                    "type" : "variable",
+                    "value" : "context.pdfFirmado2_ref"
+                  },
+                  "showPreview" : {
+                    "type" : "constant",
+                    "value" : true
+                  }
+                },
+                "reference" : "ba170a43-b34a-414d-a7b5-b40325823f8b",
+                "hasValidationError" : false,
+                "id" : "pbFileViewer"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "¿Las actas generadas son correctas?"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 4"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "b71fc56c-28ea-468d-afee-e3bd3197941c",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
               }
             ],
             [
@@ -317,8 +302,8 @@
                     "type" : "expression"
                   },
                   "disabled" : {
-                    "type" : "constant",
-                    "value" : false
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -352,7 +337,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "e5113406-bacd-4704-a407-35daddbee7a0",
+                "reference" : "18ec7a7a-6350-40e3-9c84-4d7028928235",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -404,7 +389,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "23d98311-1878-4c6b-a5aa-257d111ffce0",
+                "reference" : "c6f8bc4b-decc-48b8-88c3-475769d09efc",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -417,16 +402,16 @@
   ],
   "assets" : [
     {
-      "id" : "1e416787-9019-47e8-8c81-6231b2a3777b",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "59e263b0-32c5-4aa6-9d9f-6703a9f6133a",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "383e19d4-8547-4f2f-9fd1-9904abd97ff9",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "98f78e5e-3c4b-4552-ba35-966e34918c21",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -477,18 +462,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "tic" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.tic_ref.link}}"
-      ],
-      "advancedOptions" : { },
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "d1d98210-fcb3-485f-8da8-05389676afe2",
+  "uuid" : "87eedb84-5aac-46b8-9ae0-306a42d3550b",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

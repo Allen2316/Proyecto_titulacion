@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "calificacionPresidenteForm",
   "name" : "calificacionPresidenteForm",
-  "lastUpdate" : 1692749542808,
+  "lastUpdate" : 1697773423307,
   "rows" : [
     [
       {
@@ -140,6 +140,46 @@
               {
                 "type" : "component",
                 "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "Process document"
+                  },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "document" : {
+                    "type" : "variable",
+                    "value" : "context.docTIC_ref"
+                  },
+                  "showPreview" : {
+                    "type" : "constant",
+                    "value" : true
+                  }
+                },
+                "reference" : "dcb4feff-3c5a-417c-80a4-62de0db61592",
+                "hasValidationError" : false,
+                "id" : "pbFileViewer"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
                   "xs" : 6,
                   "sm" : 6,
                   "md" : 6,
@@ -154,121 +194,56 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
+                  "text" : {
                     "type" : "interpolation",
                     "value" : "Autor/es"
                   },
-                  "labelPosition" : {
+                  "level" : {
                     "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "{{auxiliar.autor}}"
+                    "value" : "Level 4"
                   },
                   "alignment" : {
                     "type" : "constant",
                     "value" : "left"
                   }
                 },
-                "reference" : "7788510d-d2e8-4732-a48d-43db81e9e180",
+                "reference" : "b62f5a8e-e011-4602-9785-dfb187625c20",
                 "hasValidationError" : false,
-                "id" : "pbText"
+                "id" : "pbTitle"
               },
               {
                 "type" : "component",
                 "dimension" : {
-                  "md" : 6,
-                  "sm" : 6,
                   "xs" : 6,
+                  "sm" : 6,
+                  "md" : 6,
                   "lg" : 6
                 },
                 "propertyValues" : {
-                  "labelHidden" : {
+                  "cssClasses" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 1
-                  },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
+                  "text" : {
                     "type" : "interpolation",
                     "value" : "Calificación"
                   },
-                  "placeholder" : {
+                  "level" : {
                     "type" : "constant",
-                    "value" : "9,5"
+                    "value" : "Level 4"
                   },
-                  "type" : {
+                  "alignment" : {
                     "type" : "constant",
-                    "value" : "number"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "formInput.califPresidente[0]"
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "minLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "min" : {
-                    "type" : "constant",
-                    "value" : 0
-                  },
-                  "max" : {
-                    "type" : "constant",
-                    "value" : 10
-                  },
-                  "step" : {
-                    "type" : "constant",
-                    "value" : 0.1
+                    "value" : "left"
                   }
                 },
-                "reference" : "7799a4ef-2c92-4d71-9d35-834c5dcf49cc",
+                "reference" : "d3ec31fb-615f-4f39-8262-d4f4aa09d0f0",
                 "hasValidationError" : false,
-                "id" : "pbInput",
-                "description" : ""
+                "id" : "pbTitle"
               }
             ],
             [
@@ -288,6 +263,171 @@
                   "hidden" : {
                     "type" : "expression",
                     "value" : "oculto"
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "2e763515-8a7d-40d6-88e6-be4d735bbd6d",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : ""
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{auxiliar.nombre}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "7788510d-d2e8-4732-a48d-43db81e9e180",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 6,
+                        "sm" : 6,
+                        "xs" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : ""
+                        },
+                        "placeholder" : {
+                          "type" : "constant",
+                          "value" : "9,5"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "number"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.califPresidente[0]"
+                        },
+                        "required" : {
+                          "type" : "expression",
+                          "value" : "!oculto"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "max" : {
+                          "type" : "constant",
+                          "value" : 10
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 0.1
+                        }
+                      },
+                      "reference" : "7799a4ef-2c92-4d71-9d35-834c5dcf49cc",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "oculto2"
                   },
                   "repeatedCollection" : {
                     "type" : "variable",
@@ -338,7 +478,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{auxiliar.autorS}}"
+                          "value" : "{{auxiliar.nombres}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -368,7 +508,7 @@
                         },
                         "required" : {
                           "type" : "expression",
-                          "value" : "!oculto"
+                          "value" : "!oculto2"
                         },
                         "minLength" : {
                           "type" : "constant",
@@ -555,7 +695,7 @@
                   },
                   "hidden" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : true
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -676,10 +816,49 @@
       "advancedOptions" : { },
       "exposed" : false
     },
+    "oculto2" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.auxiliar.nroSustentacion == 1){",
+        "    return $data.auxiliar.autorS === null;    ",
+        "}else{",
+        "    //es decir se hizo grupo",
+        "    if($data.auxiliar.nombres !== null){",
+        "        if($data.auxiliar.autor !== null && $data.auxiliar.autorS !== null){",
+        "            return false",
+        "        }else{",
+        "            return $data.auxiliar.autorS !== null;        ",
+        "        }    ",
+        "    //ne hizo individual",
+        "    }else{",
+        "        return true",
+        "    }",
+        "}",
+        "//return $data.auxiliar.autorS === null;    "
+      ],
+      "exposed" : false
+    },
     "oculto" : {
       "type" : "expression",
       "value" : [
-        "return $data.auxiliar.autorS === null;"
+        "if($data.auxiliar.nroSustentacion == 1){",
+        "    return $data.auxiliar.autor === null;    ",
+        "}else{",
+        "    //es decir se hizo grupo",
+        "    if($data.auxiliar.nombres !== null){",
+        "        if($data.auxiliar.autor !== null && $data.auxiliar.autorS !== null){",
+        "            return false",
+        "        }else{",
+        "            return $data.auxiliar.autor !== null;        ",
+        "        }    ",
+        "    //ne hizo individual",
+        "    }else{",
+        "        return false",
+        "    }",
+        "    ",
+        "}",
+        "",
+        "//return $data.auxiliar.autor === null;    "
       ],
       "exposed" : false
     }

@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "reSustentacionForm",
   "name" : "reSustentacionForm",
-  "lastUpdate" : 1692163367994,
+  "lastUpdate" : 1696887349447,
   "rows" : [
     [
       {
@@ -193,7 +193,7 @@
                         },
                         "placeholder" : {
                           "type" : "constant",
-                          "value" : "Browse to upload a new file..."
+                          "value" : "Seleccionar archivo"
                         },
                         "dimension" : {
                           "type" : "constant",
