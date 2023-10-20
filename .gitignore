@@ -9,26 +9,3 @@ h2_database/bonita_journal.db.mv.db
 h2_database/business_data.db.lock.db
 h2_database/business_data.db.mv.db
 
-bin
-.classpath
-/src-providedGroovy
-/template
-/META-INF
-target/
-node/
-node_modules/
-/build.properties
-/web_widgets/pb*/
-/web_widgets/.metadata
-/web_fragments/.metadata
-/web_page/.metadata
-/web_page/*/js
-/web_fragments/*/*.js
-/web_widgets/*/*.js
-!/web_widgets/*/*.ctrl.js
-/lib/bdm-client-pojo.jar
-/database_connectors_properties
-
-
-/process_configurations
-.settings
